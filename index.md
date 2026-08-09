@@ -1,86 +1,87 @@
 ---
-title: "The Essence of AI: A Microsoft Copilot Master Class for BankUnited"
+title: "GES Learns AI: A Microsoft Copilot & Cowork Master Class"
 description: |
-  A hands-on master class in AI and Microsoft Copilot designed exclusively for BankUnited professionals. Master the concepts, tools, and mindsets that will define competitive advantage in banking for the next decade.
+  A hands-on master class in AI, Microsoft Copilot, and Copilot Cowork designed exclusively for GES professionals. Master the concepts, tools, and mindsets that will define competitive advantage in the experience industry for the next decade.
 ---
 
 :::{figure} ./images/cover.png
 :label: fig-cover
-:alt: The Essence of AI — A Microsoft Copilot Master Class for BankUnited by Dr. Ernesto Lee
+:alt: GES Learns AI — A Microsoft Copilot & Cowork Master Class by Dr. Ernesto Lee
 :width: 100%
 :align: center
 
-*The Essence of AI: A Microsoft Copilot Master Class for BankUnited* · Dr. Ernesto Lee
+*GES Learns AI: A Microsoft Copilot & Cowork Master Class* · Dr. Ernesto Lee
 :::
 
-# The Essence of AI: A Microsoft Copilot Master Class for BankUnited
+# GES Learns AI
 
-**A corporate training master class for BankUnited professionals**  
+**A Microsoft Copilot & Cowork Master Class for Global Experience Specialists**
 *By Dr. Ernesto Lee*
 
 ---
 
-BankUnited is the largest independent depository institution headquartered in Florida — built on a culture of excellence, client focus, and forward-thinking leadership. This master class brings that same standard to AI education.
+Every year, GES delivers **4,000+ live experiences** in **75+ countries** for **150,000+ exhibitors**. Show floors go up in days and come down in hours. Freight moves across borders. Labor gets forecast, booked, and reconciled. Designs get built, shipped, installed, and struck — over and over, at a scale most organizations never touch.
 
-This is not a general AI overview. Every concept, every exercise, and every example has been designed for the specific realities of banking at BankUnited — commercial lending, relationship management, operations, compliance, and executive leadership.
+That operational reality is exactly why AI matters here more than almost anywhere else.
 
-By the time you complete this program, you will not just understand AI. You will be using it — every day, for real work — in ways that measurably improve your performance and your value inside this organization.
+This is not a general AI overview. Every concept, every exercise, and every example in this master class has been built for the specific realities of the experience industry — show operations, exhibit design and graphics production, freight and material handling, exhibitor services, sales and account management, housing, and corporate functions.
+
+By the time you complete this program, you will not just understand AI. You will be using it — every day, for real work — in ways that measurably improve your performance and the experiences GES delivers.
+
+---
+
+## Why Now
+
+Two things changed.
+
+**First, GES changed.** On December 31, 2024, GES became an independent company for the first time in over five decades. New ownership, new roadmap, new freedom to move. Transformation moments like this don't come around often — and the organizations that use them well pull away from the ones that don't.
+
+**Second, the technology changed.** Microsoft 365 Copilot moved from a helpful assistant to something categorically different. With the general availability of **Copilot Cowork** in June 2026, you can now *delegate* complex, multi-step, long-running work — across Outlook, Teams, Word, Excel, PowerPoint, and SharePoint — and get back finished output, not a rough draft.
+
+GES is already on this path. The **onPeak AI Smart Suite** — AI-powered hotel search, contract reading, and email categorization — is proof that this organization doesn't wait for permission to modernize.
+
+This master class is how the rest of the company catches up to that standard.
+
+---
+
+## Built on T.R.U.E.
+
+This program is deliberately anchored to the GES values, because AI adoption is a culture problem before it is a technology problem.
+
+| Value | What It Means With AI |
+|---|---|
+| **Trust** | AI is a tool, not an oracle. Verify what matters. Be honest about what the machine did and what you did. |
+| **Responsibility** | You own every output that carries your name. AI does not transfer accountability. |
+| **Understanding** | People come first. AI takes the toil so you can give clients and colleagues more of your actual attention. |
+| **Excellence** | AI raises the floor. Humans still raise the ceiling. Use it to clear the routine so you can go deeper on the work that matters. |
 
 ---
 
 ## What You Will Learn
 
 - The conceptual foundations of AI — explained clearly, without jargon
-- How Microsoft Copilot actually works and what it can do for you
-- Context engineering — the most important skill in the AI era
-- How to configure your AI persona and become 10x more effective
+- How Microsoft Copilot actually works, and what it can genuinely do for your role
+- **Copilot Cowork** — how to delegate multi-step work end-to-end and review it like a manager, not a typist
+- Context engineering — the most important skill of the AI era
+- How to configure your AI persona and become dramatically more effective
 - Meta-prompting — how to learn anything from an expert AI
-- How your BankUnited data is already connected to your AI
-- How to build your first AI agent — a synthetic employee, configured by you
+- How GES data is already connected to your AI, and what that means for security and oversharing
+- How to build your first AI agent — a synthetic teammate, configured by you
 
 ---
 
-## 📥 Session Decks
+## Who This Is For
 
-**[⬇ Session 1 — The Essence of AI with Microsoft Enterprise Copilot (PDF)](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/decks/The_Essence_of_AI_with_Microsoft_Enterprise_Copilot.pdf)**
+This master class is written for the whole company, not just the desk-bound.
 
-**[⬇ Session 2 (Part 1) (PDF)](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/decks/2_Session2_Part1.pdf)**
-
-**[⬇ Session 2 (Part 2) (PDF)](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/decks/2_Session2_Part2.pdf)**
-
-**[⬇ Session 3 — AI as Culture: The BankUnited Advantage (PDF)](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/decks/3_AI_as_Culture_The_BankUnited_Advantage.pdf)**
-
-**[⬇ Session 4 — From Pilot to Enterprise (PDF)](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/decks/4_From_Pilot_to_Enterprise.pdf)**
-
-**[⬇ Session 7 — The Analyst Inside the Spreadsheet (PDF)](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/decks/7_The_Analyst_Inside_the_Spreadsheet.pdf)**
-
-**[⬇ Advanced Copilot in Excel (PDF)](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/decks/Advanced_Copilot_in_Excel.pdf)**
-
----
-
-## 📁 Chapter Resources
-
-Download the files for each chapter below.
-
-### Chapter 6: Copilot in OneNote
-
-| File | Type | Download |
-|------|------|----------|
-| Chapter 6 — Copilot in OneNote | PDF | [⬇ Download](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/decks/Chapter_6_Copilot_in_OneNote.pdf) |
-
-### Chapter 7: Copilot in Excel
-
-| File | Type | Download |
-|------|------|----------|
-| BankUnited Copilot Excel Masterclass Demo Workbook | Excel | [⬇ Download](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/resources/BankUnited_Copilot_Excel_Masterclass_Demo_Workbook.xlsx) |
-| Hands-On Lab: Building an AI-Assisted Banking Analytics Workflow in Excel | PDF | [⬇ Download](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/resources/Hands-On_Lab_Building_an_AI-Assisted_Banking_Analytics_Workflow_in_Excel.pdf) |
-| Step-by-Step Live Demo Guide: AI-Assisted Data Analytics in Excel | PDF | [⬇ Download](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/resources/Step-by-Step_Live_Demo_Guide_AI-Assisted_Data_Analytics_in_Excel.pdf) |
-
-### Chapter 13: Advanced Copilot in Excel
-
-| File | Type | Download |
-|------|------|----------|
-| BankUnited Training — Branch Exception Review | Excel | [⬇ Download](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/resources/BankUnited_Training_Branch_Exception_Review.xlsx) |
+| If you work in… | You'll learn to… |
+|---|---|
+| **Show & Event Operations** | Turn site surveys, punch lists, and move-in/move-out plans into structured, searchable, shareable knowledge |
+| **Creative & Design** | Accelerate concepting, briefs, spec docs, and graphics production handoffs |
+| **Sales & Account Management** | Build sharper proposals, faster RFP responses, and post-show recaps that win renewals |
+| **Logistics & Freight** | Analyze drayage, material handling, and shipment data without waiting on a report |
+| **Exhibitor Services** | Handle order volume, service kit content, and exhibitor questions at scale |
+| **Corporate Functions** | Compress the reporting, drafting, and analysis cycle across finance, people, legal, and marketing |
 
 ---
 
@@ -90,7 +91,7 @@ Download the files for each chapter below.
 
 :::{grid-item-card} Introduction: Why This Moment Matters
 :link: ./chapters/ch00-introduction.md
-The story of BankUnited, the AI transformation of banking, and why this moment is different from every technology shift that came before.
+The story of GES, the AI transformation of the experience industry, and why this moment is different from every technology shift that came before.
 :::
 
 :::{grid-item-card} Chapter 1: The Essentials
@@ -100,51 +101,63 @@ LLMs, tokens, context engineering, the Flashlight Theory, personas, meta-prompti
 
 :::{grid-item-card} Chapter 2: The Mindset Shift
 :link: ./chapters/ch02-mindset-shift.md
-From Task Doer to AI Orchestrator. The inner work that determines whether everything that follows actually sticks.
+From Task Doer to AI Orchestrator. The inner work that determines whether everything that follows actually sticks — grounded in T.R.U.E.
 :::
 
 :::{grid-item-card} Chapter 3: Change Management
 :link: ./chapters/ch03-change-management.md
-Leading and sustaining AI transformation inside BankUnited — Kotter, ADKAR, Champions, the 100-day playbook, and the governance line between protection and paralysis.
+Leading and sustaining AI transformation inside GES — Kotter, ADKAR, Champions, the 100-day playbook, and the governance line between protection and paralysis.
 :::
 
 :::{grid-item-card} Chapter 4: Adoption & Implementation
 :link: ./chapters/ch04-adoption-implementation.md
-From pilot to enterprise. The regulatory landscape, Microsoft's compliance architecture, risk frameworks, the AI CoE, and the economics that make the case.
+From pilot to enterprise. The risk landscape, Microsoft's compliance architecture, the AI Center of Excellence, and the economics that make the case.
 :::
 
 :::{grid-item-card} Chapter 5: Prompting Essentials
 :link: ./chapters/ch05-prompting-essentials.md
-The five prompting techniques — Role-Based, Chain-of-Thought, Few-Shot, Reverse, and Sparring Partner — that separate average Copilot users from power users. Grounded in how Microsoft 365 Copilot actually works.
+The five prompting techniques — Role-Based, Chain-of-Thought, Few-Shot, Reverse, and Sparring Partner — that separate average Copilot users from power users.
 :::
+
 :::{grid-item-card} Chapter 6: Copilot in Word
 :link: ./chapters/ch06-copilot-in-word.md
-Drafting, summarization, tone adjustment, and the verification discipline — how BankUnited professionals use Copilot in Word to produce credit memos, compliance briefs, lease summaries, and client memos faster and more accurately.
+Drafting, summarization, tone adjustment, and the verification discipline — RFP responses, show operations manuals, exhibitor service kits, SOWs, and post-show reports.
 :::
+
 :::{grid-item-card} Chapter 7: Copilot in Excel
 :link: ./chapters/ch07-copilot-in-excel.md
-Formula generation, natural-language charts, Pivot Tables, trend identification, outlier detection, and the verification discipline — the complete Copilot-in-Excel toolkit for BankUnited professionals.
+Formula generation, natural-language charts, Pivot Tables, trend identification, and outlier detection — applied to labor forecasts, drayage costs, and show P&L.
 :::
+
 :::{grid-item-card} Chapter 8: Copilot in PowerPoint
 :link: ./chapters/ch08-copilot-in-powerpoint.md
-From working doc to boardroom deck in minutes — board prep, loan committee packages, examiner-ready briefings, and client presentations using Copilot in PowerPoint.
+From working doc to client-ready deck in minutes — organizer pitches, sponsorship proposals, design concept reviews, and post-show recaps.
 :::
+
 :::{grid-item-card} Chapter 9: Copilot in Teams
 :link: ./chapters/ch09-copilot-in-teams.md
-Meeting intelligence, real-time summaries, action item extraction, the two Copilot modes, organizer controls, consent and transparency, and BankUnited workflows for loan committees, deal reviews, examiner meetings, and client calls.
+Meeting intelligence, real-time summaries, and action item extraction for cross-timezone show teams, agency partners, and pre-show to on-site handoffs.
 :::
+
 :::{grid-item-card} Chapter 10: Copilot in OneNote
 :link: ./chapters/ch10-copilot-in-onenote.md
-Notes that think with you — summarizing meeting notes, rewriting rough captures, generating action item lists, drafting new content, and building structured Client Discovery, Deal Review, and Exam Prep notebooks for BankUnited professionals.
+Notes that think with you — site surveys, show walkthroughs, punch lists, and install & dismantle notes turned into structured, reusable knowledge.
 :::
+
 :::{grid-item-card} Chapter 12: Copilot in SharePoint
 :link: ./chapters/ch12-copilot-in-sharepoint.md
-Where knowledge lives — and how AI makes it findable. Permission inheritance, the oversharing risk every bank must understand, content governance for Copilot readiness, and practical workflows for BankUnited teams.
+Where knowledge lives — and how AI makes it findable. Permission inheritance, the oversharing risk, content governance, and show document libraries done right.
 :::
+
 :::{grid-item-card} Chapter 13: Advanced Copilot in Excel
 :link: ./chapters/ch13-advanced-excel.md
-Automation, anomaly detection, and scenario modeling for banking analytics. Copilot in Excel for ALCO-ready dashboards, transaction analysis, and building analytical systems — not just answering questions.
+Automation, anomaly detection, and scenario modeling. Building analytical systems for show economics — not just answering one-off questions.
 :::
+
 <!-- GRID_PLACEHOLDER -->
 
 :::
+
+---
+
+*Prepared for Global Experience Specialists · Dr. Ernesto Lee*

@@ -2,14 +2,14 @@
 # Docs: https://mystmd.org/guide/configuration
 version: 1
 project:
-  title: "The Essence of AI: A Microsoft Copilot Master Class for BankUnited"
+  title: "GES Learns AI: A Microsoft Copilot & Cowork Master Class"
   authors:
     - name: Dr. Ernesto Lee
   # Book-level attributes
   keywords: []
   license: CC-BY-4.0
   open_access: true
-  github: https://github.com/liquid-books/ai-copilot-bankunited
+  github: https://github.com/liquid-books/ges-learns-ai
   # Numbering
   numbering:
     heading_1: true
@@ -49,9 +49,10 @@ project:
       file: chapters/ch13-advanced-excel.md
 
 site:
-  title: "The Essence of AI: A Microsoft Copilot Master Class for BankUnited"
+  url: https://geslearnsai.com
+  title: "GES Learns AI: A Microsoft Copilot & Cowork Master Class"
   options:
-    logo_text: "The Essence of AI: A Microsoft Copilot Master Class for BankUnited"
-    logo_url: "/"
+    logo_text: "GES Learns AI: A Microsoft Copilot & Cowork Master Class"
+    logo_url: "https://geslearnsai.com"
   parts:
     primary_sidebar_footer: primary-sidebar-footer.md

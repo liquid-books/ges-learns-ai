@@ -47,6 +47,8 @@ project:
       file: chapters/ch12-copilot-in-sharepoint.md
     - title: "Chapter 13: Advanced Copilot in Excel"
       file: chapters/ch13-advanced-excel.md
+    - title: "Chapter 14: Copilot Cowork — Delegating Real Work"
+      file: chapters/ch14-copilot-cowork.md
 
 site:
   url: https://geslearnsai.com

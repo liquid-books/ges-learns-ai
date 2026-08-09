@@ -154,6 +154,11 @@ Where knowledge lives — and how AI makes it findable. Permission inheritance, 
 Automation, anomaly detection, and scenario modeling. Building analytical systems for show economics — not just answering one-off questions.
 :::
 
+:::{grid-item-card} Chapter 14: Copilot Cowork — Delegating Real Work
+:link: ./chapters/ch14-copilot-cowork.md
+The agentic leap. Delegate complex, multi-step, multi-app work end-to-end and get back finished artifacts — not drafts. Approvals, skills, plugins, credit economics, and the shift from doing the work to reviewing it.
+:::
+
 <!-- GRID_PLACEHOLDER -->
 
 :::

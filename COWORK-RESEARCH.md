@@ -132,5 +132,47 @@ Cowork asks permission before sensitive actions — sending email, posting in Te
 - A team compared nearly **4,000 files** across two product versions — work that would have taken weeks
 - A sales lead pointed Cowork at a stalled pipeline and got back a ranked list of at-risk opportunities with the exact follow-up that had gone cold on each — collapsing a week of manual review into a single morning
 
+## Chat vs Cowork vs Agents — Microsoft's Official Comparison Table
+*(This is the single most useful teaching table in the chapter. Reproduce and adapt it.)*
+
+| | **Chat** | **Cowork** | **Agents** |
+|---|---|---|---|
+| **Best for** | Conversational AI for drafting, Q&A, and ideation | Delegate and execute long-running, multi-step work across your apps | Ready-made agents for specialized or repeatable tasks |
+| **How you interact** | A conversation: you steer each step from prompt → response | An assignment: you describe the goal, check in at key milestones | A workflow: you pick an agent built for a specific job |
+| **Typical work pattern** | **You're in the loop** — one prompt, one result, then you choose what's next | **You step away** — Cowork plans, manages files and tasks across apps, and delivers completed work | **You run it on demand** — the agent handles the same scoped task each time |
+
+## Effective Prompting With Cowork — The Five-Part Structure
+*(Microsoft's official guidance. This is the core practical skill of the chapter.)*
+
+Most Cowork outcomes depend on how clearly you scope the request. "Clean up my calendar" leaves too much open to interpretation — Cowork has to guess, and guessing shapes results. Be specific about what success looks like.
+
+1. **Outcome** — one sentence describing what *done* looks like
+2. **Inputs** — the specific people, files, sites, or time ranges the task should use
+3. **Definition of done** — the concrete deliverable (an email sent, a document saved in OneDrive, a meeting on the calendar)
+4. **Constraints** — things to avoid or honor (do not contact customers; keep it under one page; use the FY27 template)
+5. **Approval scope** — which actions you want to review explicitly, beyond the default checkpoints
+
+**Before:** "Help me prep for my offsite next week."
+**After:** "Outcome: A briefing pack and a draft agenda for the offsite on June 12. Inputs: the offsite invite, the three pre-reads I attached… [plus definition of done, constraints, approval scope]"
+
+## Development History / Anthropic Relationship
+- Microsoft worked **closely with Anthropic** and **integrated the technology behind Claude Cowork into Microsoft 365 Copilot**
+- Microsoft's positioning: the **multi-model advantage** — "your work is not limited by one brand of models. Copilot hosts the best innovation from across the industry and chooses the right model for the job regardless of who built it."
+- Runs in a **protected, sandboxed cloud environment**, so tasks keep progressing safely as you move across devices
+- Identity, permissions, and compliance policies apply by default; actions and outputs are auditable
+- **Timeline:** Research Preview (limited customers) → Frontier program late March 2026 → GA June 16 2026
+
+## Microsoft's Four Flagship Scenarios (adapt each to GES)
+
+**1. Clean up your calendar** — reviews your Outlook schedule, asks what you're prioritizing, flags conflicts and low-value meetings, proposes changes. On approval it accepts/declines/reschedules meetings and adds focus blocks. Can send a prep document for the meeting.
+
+**2. Build the meeting packet and align the team** — pulls inputs from email, meetings, and files; schedules prep time on the calendar; produces a connected set of deliverables: a briefing document, supporting analysis, and a client-ready deck. Everything saved in Microsoft 365 for team refinement. Output: shareable deck + briefing doc + scheduled prep time + draft customer status email with latest files attached.
+
+**3. Research a company fast** — gathers earnings reports, SEC filings, analyst commentary, and news with emphasis on primary sources; organizes findings with citations. Output: an executive summary formatted for email, a structured research memo with clear assumptions and supporting analysis, and an Excel workbook with labeled tabs.
+
+**4. Create the launch plan** — builds a competitive comparison in Excel, distills differentiation into a value proposition document, generates a customer pitch deck, and outlines milestones, owners, and next steps.
+
+**Key quote to use:** "It is easy to have a dozen tasks in flight at once, each one moving forward while you focus on what only you can do."
+
 ## Key Teaching Angle for GES
 The prompt-craft skill of Copilot Chat is *describing a task*. The skill of Cowork is **describing an outcome and then reviewing like a manager**. This is a genuine shift in professional behavior — from doing the work to delegating and quality-controlling the work. For a company running 4,000+ events a year across 75+ countries with lean teams and hard show dates, the "tasks keep running when your laptop is off" property is not a footnote — it's the whole point. A show manager on the floor in Las Vegas can delegate a post-show reconciliation package and review it between meetings.

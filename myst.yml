@@ -49,6 +49,10 @@ project:
       file: chapters/ch13-advanced-excel.md
     - title: "Chapter 14: Copilot Cowork — Delegating Real Work"
       file: chapters/ch14-copilot-cowork.md
+    - title: "Chapter 15: Creative AI with Nano Banana"
+      file: chapters/ch15-nano-banana.md
+    - title: "Chapter 16: Power Automate — From Assistance to Automation"
+      file: chapters/ch16-power-automate.md
 
 site:
   url: https://geslearnsai.com

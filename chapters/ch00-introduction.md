@@ -35,7 +35,7 @@ And as of **June 16, 2026**, it has a second gear. Microsoft released **Copilot 
 
 This book is your master class for understanding it, using it, and — most importantly — thinking with it.
 
-## A Message from be hmn
+## A Note from Our Founders
 
 :::{figure} ../images/ch00-behmn-message.png
 :label: fig-ch00-behmn
@@ -46,15 +46,15 @@ This book is your master class for understanding it, using it, and — most impo
 The thesis behind this program: AI capability is only worth what human adaptability can absorb.
 :::
 
-This master class was built for GES by **be hmn** ([behmn.com](https://behmn.com)) — a firm founded on a single idea, which is also its tagline: **be hmn, adapt faster.**
+This master class was built for GES by **behmn.com** ([behmn.com](https://behmn.com)) — a firm founded on a single idea, which is also its tagline: **Be Human, adapt faster.**
 
 We describe our work as *the glue that binds AI capabilities with human adaptability*. That phrase is doing more work than it might appear. The bottleneck in enterprise AI has almost never been the technology. Models improve on a schedule measured in months. Organizations absorb change on a schedule measured in years. The gap between those two curves is where transformation budgets go to die — not because the tools failed, but because the humans were handed a capability without being handed a way to adapt to it.
 
 Closing that gap is the entire purpose of this book.
 
-> **A note from our founder**
+> **From the Founder & CEO**
 >
-> When we started be hmn, the prevailing story about AI was that it would replace people. We thought that story was not just wrong — it was strategically expensive. It caused organizations to invest in tools while under-investing in the only thing that determines whether tools matter: whether people actually change how they work.
+> When we started behmn.com, the prevailing story about AI was that it would replace people. We thought that story was not just wrong — it was strategically expensive. It caused organizations to invest in tools while under-investing in the only thing that determines whether tools matter: whether people actually change how they work.
 >
 > GES is exactly the kind of company we built this firm to serve. Not a software company where AI adoption is a foregone conclusion, but an operating company — one where the work is physical, the deadlines are immovable, and a mistake shows up on a show floor in front of a client. AI has to earn its place in an environment like that. It cannot be a demo. It has to survive contact with a move-out at two in the morning.
 >
@@ -62,7 +62,17 @@ Closing that gap is the entire purpose of this book.
 >
 > Adapt faster.
 >
-> — **Alex Schwartz**, Founder & Chief Executive Officer, be hmn
+> — **Alex Schwartz**, Founder & Chief Executive Officer, behmn.com
+
+> **From the Chief Data Officer & Co-founder**
+>
+> Alex and I started this firm from opposite ends of the same problem. He was watching organizations buy capability they could not absorb. I was watching the technology outrun the people expected to use it — not because the people were slow, but because nobody had bothered to translate.
+>
+> Translation is the work. Not simplification — translation. A freight coordinator does not need to know what a transformer architecture is. They need to know that if they hand the model more context, they get a better answer, and that the number it hands back still has to be checked before their name goes on it. Those two sentences are worth more than a semester of theory.
+>
+> That is the standard I hold this book to. If a page does not change what you do on Monday, it should not be in here.
+>
+> — **Dr. Ernesto Lee**, Chief Data Officer & Co-founder, behmn.com
 
 ## A Message from the Author
 
@@ -92,7 +102,7 @@ Do that, and the specific products in these pages can change — and they will �
 Let's get to work.
 
 — **Dr. Ernesto Lee**
-Author; Chief Data Officer & Co-founder, be hmn
+Author; Chief Data Officer & Co-founder, behmn.com
 
 ## Why GES? Why Now?
 

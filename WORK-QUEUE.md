@@ -16,11 +16,23 @@ Concurrency cap is 5 subagents. Launch queued items as slots free.
 - [ ] img-ch04-05 (20 images)
 
 ## QUEUED — IMAGES (launch as slots free)
-- [ ] img-ch06-07 — 22 images (ch06 Word x10, ch07 Excel x12)
 - [ ] img-ch08-09 — 20 images (ch08 PowerPoint x10, ch09 Teams x10)
-- [ ] img-ch10-12 — 21 images (ch10 OneNote x10, ch12 SharePoint x11) — ch12 files DO NOT EXIST yet
-- [ ] img-ch13-14 — ch13 x10 (DO NOT EXIST yet) + ch14 Cowork images (check refs)
+- [ ] img-ch10 — 10 images (OneNote). BLOCKED until ges-ch10 finishes (refs may change)
+- [ ] img-ch12 — 11 images, ALL MISSING FROM DISK. Ch12 text is DONE, so safe to run now.
+- [ ] img-ch13 — 10 images, ALL MISSING FROM DISK. BLOCKED until ges-ch13 finishes.
+- [ ] ch14 — HAS ZERO IMAGES AND ZERO FIGURE REFERENCES. 13,461 words, 16 sections,
+      no figures at all. Needs ~12 figure directives INSERTED into the chapter, then
+      12 images generated. This is an insertion job, not a regeneration job.
 - [ ] img-ch15 — new NanoBanana chapter images (after chapter written)
+
+## SCREENSHOT POLICY (decided 2026-08-10)
+Dr. Lee asked about capturing real screenshots. Constraint: we have NO licensed M365
+Copilot / Cowork tenant, so we cannot capture authentic product UI. AI-generated fake UI
+screenshots are the WORST case for this model — they produce garbled fake menu text
+(confirmed: "FREISHT SEHEDULE", "EAPANDED FLOOR PLAN").
+DECISION: Do NOT attempt photorealistic fake screenshots. Use stylized schematic UI
+diagrams — simplified panes, boxes, and 1-3 word labels — which read as intentional
+diagrams rather than failed screenshots. Revisit if Dr. Lee can supply real captures.
 
 ## QUEUED — CONTENT
 - [ ] NEW Chapter 15: Creative AI with Nano Banana (via AI Studio)

@@ -35,7 +35,47 @@ And as of **June 16, 2026**, it has a second gear. Microsoft released **Copilot 
 
 This book is your master class for understanding it, using it, and — most importantly — thinking with it.
 
+## A Message from be hmn
+
+:::{figure} ../images/ch00-behmn-message.png
+:label: fig-ch00-behmn
+:alt: Illustration representing the partnership between artificial intelligence capability and human adaptability, showing people and AI systems connected as one working system
+:width: 80%
+:align: center
+
+The thesis behind this program: AI capability is only worth what human adaptability can absorb.
+:::
+
+This master class was built for GES by **be hmn** ([behmn.com](https://behmn.com)) — a firm founded on a single idea, which is also its tagline: **be hmn, adapt faster.**
+
+We describe our work as *the glue that binds AI capabilities with human adaptability*. That phrase is doing more work than it might appear. The bottleneck in enterprise AI has almost never been the technology. Models improve on a schedule measured in months. Organizations absorb change on a schedule measured in years. The gap between those two curves is where transformation budgets go to die — not because the tools failed, but because the humans were handed a capability without being handed a way to adapt to it.
+
+Closing that gap is the entire purpose of this book.
+
+> **A note from our founder**
+>
+> When we started be hmn, the prevailing story about AI was that it would replace people. We thought that story was not just wrong — it was strategically expensive. It caused organizations to invest in tools while under-investing in the only thing that determines whether tools matter: whether people actually change how they work.
+>
+> GES is exactly the kind of company we built this firm to serve. Not a software company where AI adoption is a foregone conclusion, but an operating company — one where the work is physical, the deadlines are immovable, and a mistake shows up on a show floor in front of a client. AI has to earn its place in an environment like that. It cannot be a demo. It has to survive contact with a move-out at two in the morning.
+>
+> What you will find in these pages is not a technology tour. It is a set of working habits, built for your work, that we believe will still be useful long after the specific product names in this book have changed.
+>
+> Adapt faster.
+>
+> — **Alex Schwartz**, Founder & Chief Executive Officer, be hmn
+
+The curriculum, examples, and exercises in this book were developed by **Dr. Ernesto Lee**, Chief Data Officer and Co-founder of be hmn, working from GES operational context — show operations, exhibit design and graphics production, freight and material handling, exhibitor services, event technology, and the corporate functions behind all of it.
+
 ## Why GES? Why Now?
+
+:::{figure} ../images/ch00-ges-by-numbers.png
+:label: fig-ch00-numbers
+:alt: Infographic displaying GES scale — 4,000 events annually, 150,000 exhibitors, 75 countries, 24 facilities, 2,600 employees, founded 1939
+:width: 90%
+:align: center
+
+The operational surface area that makes AI compound at GES rather than merely help.
+:::
 
 GES is not just a service contractor. It is a story of longevity, reinvention, and operational excellence that very few companies in any industry can match. What started in **1939** as a small sign and exhibit shop called Manncraft has become **Global Experience Specialists** — a company that now produces **4,000+ live experiences every year**, serves **150,000+ exhibitors annually**, operates in **75+ countries**, runs **24 global warehouse and production facilities**, and employs roughly **2,600+ people** from its headquarters on Lindell Road in Las Vegas.
 
@@ -54,6 +94,15 @@ The question is not whether AI will reshape the exhibitions and experiential mar
 This master class says: you will not watch. You will lead.
 
 ## Anchored in T.R.U.E.
+
+:::{figure} ../images/ch00-true-values.png
+:label: fig-ch00-true
+:alt: Four-pillar diagram of the GES T.R.U.E. values — Trust, Responsibility, Understanding, Excellence — shown as the foundation supporting AI practice
+:width: 85%
+:align: center
+
+Trust, Responsibility, Understanding, Excellence. AI does not replace these values — it tests them.
+:::
 
 Everything in this book sits on top of the four values GES already lives by. AI does not replace them. It tests them.
 
@@ -84,6 +133,15 @@ This book won't just give you knowledge. It will give you a new *relationship* w
 Most people meet AI as a **conversation**. You ask, it answers. You refine, it revises. That is Microsoft 365 Copilot, and it is genuinely useful: summarize a 60-page exhibitor service kit, draft a reply to an organizer, build a first-pass deck, explain a formula in a labor reconciliation workbook.
 
 **Copilot Cowork**, generally available since **June 16, 2026**, is a different mode of working. Instead of a conversation, it is a **delegation**.
+
+:::{figure} ../images/ch00-copilot-vs-cowork.png
+:label: fig-ch00-copilot-cowork
+:alt: Side-by-side comparison showing Copilot as a back-and-forth conversation producing an answer, versus Cowork as a delegated task producing a finished multi-part deliverable
+:width: 90%
+:align: center
+
+Ask versus delegate. One document is Copilot. A project is Cowork.
+:::
 
 Cowork executes complex, long-running, multi-step tasks end to end across **Outlook, Teams, Word, Excel, PowerPoint, and SharePoint** — and returns *completed results*, not drafts you still have to assemble. A few things make it meaningfully different from the chat experience you may already know:
 
@@ -121,6 +179,15 @@ Every concept we cover — from Large Language Models to context windows to AI a
 And because this is GES, the bridge we build will start from things you already live with: a freight target, a floor plan revision, an aisle carpet order that changed at 11 p.m., a labor call that has to be right the first time.
 
 ## Who This Book Is For
+
+:::{figure} ../images/ch00-who-this-is-for.png
+:label: fig-ch00-audience
+:alt: Six audience groups shown as illustrated role cards — show operations, creative and design, sales and account management, logistics and freight, corporate functions, and technology product teams
+:width: 90%
+:align: center
+
+Six audiences, one book. GES is not a company of desk workers, and this material does not pretend otherwise.
+:::
 
 GES is not a company of desk-bound knowledge workers, and this book does not pretend otherwise. The examples in these chapters are written for the whole organization:
 
@@ -160,6 +227,15 @@ For a workforce that spends a lot of its life standing on a show floor with a ra
 Before this program is over, we want you to try it. You may never go back.
 
 ## What's Ahead
+
+:::{figure} ../images/ch00-book-roadmap.png
+:label: fig-ch00-roadmap
+:alt: Visual roadmap of the book showing progression from foundations through mindset and change management into hands-on application across Microsoft 365 applications
+:width: 90%
+:align: center
+
+The path ahead: foundations, then the human side, then hands-on work in the tools.
+:::
 
 In **Chapter 1: The Essentials**, we build your complete conceptual foundation. You will understand what a Large Language Model actually is, how tokens work, what context engineering means and why it is the most valuable skill in the AI era, how to set your AI's persona, how to communicate with AI like an expert (meta-prompting), how your data is already connected to Copilot, and what an AI agent is and how to build your first one.
 

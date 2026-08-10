@@ -29,13 +29,11 @@ The six pillars of advanced Copilot-in-Excel mastery — each one represents the
 
 There is a frustration experienced exhibition professionals recognize immediately. It is not the frustration of not knowing how to do something. It is knowing exactly what needs to be done — the venue-move cost comparison, the drayage variance across the account's six shows, the labor overtime picture by jurisdiction — and watching hours evaporate in mechanical execution while the actual thinking waits.
 
-Chapter 7 resolved one layer of that. Formatting tables, generating formulas, building Pivot Tables from plain-English questions removed a large share of the mechanical overhead. You can now ask for *"material handling charge per hundredweight by venue for the last four quarters"* and have it in seconds.
-
-This chapter operates at a different level.
+Chapter 7 resolved one layer of that. Formatting tables, generating formulas, building Pivot Tables from plain-English questions removed a large share of the mechanical overhead. This chapter operates at a different level.
 
 The distinction between a casual Copilot user and a power user is not knowing more prompts. It is a shift in what you are building. A casual user asks Copilot questions. A power user builds **analytical systems** — templates that run the same rigorous analysis on every show without being rebuilt, anomaly workflows that flag a mis-billed drayage line before the exhibitor finds it, scenario models that answer *"what happens to margin if this show moves from Las Vegas to Chicago"* in an afternoon rather than a week.
 
-At GES that shift is not a nice-to-have. It is arithmetic. We produce **4,000+ live experiences a year** across **75+ countries**, serving **150,000+ exhibitors** through **24 global production and warehouse facilities**. The same analysis — freight target versus actual, forecast versus actual I&D hours, pre-show estimate versus reconciled margin — repeats thousands of times a year with a different show code on top. **That repetition is exactly what justifies automation.** A one-off analysis is worth doing well. An analysis that runs 4,000 times a year is worth *engineering*.
+At GES that shift is arithmetic, not preference. We produce **4,000+ live experiences a year** across **75+ countries**, serving **150,000+ exhibitors** through **24 global production and warehouse facilities**. The same analysis — freight target versus actual, forecast versus actual I&D hours, pre-show estimate versus reconciled margin — repeats thousands of times a year with a different show code on top. **That repetition is exactly what justifies automation.** A one-off analysis is worth doing well. An analysis that runs 4,000 times a year is worth *engineering*.
 
 ::::{admonition} 🧭 T.R.U.E. Check — Excellence
 :class: note
@@ -103,7 +101,7 @@ A well-designed template separates concerns across five layers. Copilot accelera
 
 That last clause matters. A show with a zero freight target — which happens when the organizer absorbs freight — produces a divide-by-zero that cascades through every summary above it.
 
-**Step 4 — Create the summary layer.** Have Copilot propose structure before you build: *"What four or five views would give a show operations director the clearest picture of portfolio health in under 60 seconds? Suggest chart types and data ranges, and tell me what each is designed to reveal."*
+**Step 4 — Create the summary layer.** Have Copilot propose structure before you build: *"What four or five views would give a show operations director the clearest picture of portfolio health in under 60 seconds? Suggest chart types and tell me what each is designed to reveal."*
 
 **Step 5 — Document it.** What data to paste, where it comes from, what each output means, who to call when a number looks wrong. A template only you can run is a productivity tool. A template any analyst can run is an institutional asset — and at 4,000 shows a year, only the second kind matters.
 
@@ -267,7 +265,7 @@ Three protections:
 
 Everything so far describes Copilot working inside a workbook you have open, on a task you initiated. That is the right model for building a template. It is the wrong model for **running** one 4,000 times a year.
 
-This is the natural home of **Microsoft 365 Copilot Cowork**, generally available worldwide since **June 16, 2026**. Chapter 7 introduced it as the way to handle analysis spanning more than one file. Here we use it for analysis that repeats on a **schedule** or fires on an **event** — Cowork supports both. And because it runs in a hosted, sandboxed cloud environment, work proceeds whether or not your laptop is open, which for a workforce that lives on show floors is not a footnote. It is the entire proposition.
+This is the natural home of **Microsoft 365 Copilot Cowork**, generally available worldwide since **June 16, 2026**. Chapter 7 introduced it for analysis spanning more than one file. Here we use it for analysis that repeats on a **schedule** or fires on an **event** — Cowork supports both. And because it runs in a hosted, sandboxed cloud environment, work proceeds whether or not your laptop is open, which for a workforce that lives on show floors is not a footnote. It is the entire proposition.
 
 ### The Monthly Cross-Show Drayage Variance Report
 
@@ -315,31 +313,31 @@ The value here is timing, not effort. A reconciliation that starts the moment th
   - Weekly schedule
   - onPeak analyst
   - Attrition deadlines move; exposure must be current
-* - Labor overtime exception report by jurisdiction
+* - Labor overtime exception report
   - Weekly schedule
   - Show operations director
-  - Catches compression patterns while the show is still live
-* - Account portfolio performance roll-up
+  - Catches compression while the show is still live
+* - Account portfolio roll-up
   - Monthly schedule
   - Account director
   - Multi-show, multi-file, always needed before the QBR
-* - Cost per square foot benchmark across facilities
+* - Cost per square foot benchmark
   - Quarterly schedule
   - Finance analyst
   - 24 facilities is beyond manual comparison
-* - ESG emissions and diversion trend pack
+* - ESG emissions and diversion pack
   - Quarterly schedule
   - Sustainability lead
-  - Reporting cadence is fixed and externally committed
+  - Cadence is fixed and externally committed
 ```
 
 ### Three Assignments That Are Impossible Manually
 
-**Multi-show portfolio analysis for an account** — an account director covering six shows across four venues needs a consolidated view before every QBR: reconciled performance for the last eight editions, with tabs for revenue and margin by show, attach rate trend, freight variance, labor cost per net square foot by venue, and a movers tab naming the five largest year-over-year changes in either direction.
+**Multi-show portfolio analysis for an account** — an account director covering six shows across four venues needs a consolidated view before every QBR: reconciled performance for the last eight editions, with tabs for revenue and margin by show, attach rate trend, freight variance, labor cost per net square foot by venue, and a movers tab naming the five largest year-over-year changes.
 
-**Cost per square foot benchmarking across 24 facilities** — for every show at every facility over 24 months, direct cost per net square foot split into material handling, labor, and other, normalized for show size band and ranked with each facility's own trend alongside. Nobody was ever going to build this by hand for a Tuesday planning meeting. The output separates which venues are structurally expensive from which shows were run expensively — different problems, different owners.
+**Cost per square foot benchmarking across 24 facilities** — for every show at every facility over 24 months, direct cost per net square foot split into material handling, labor, and other, normalized for show size band and ranked with each facility's own trend alongside. Nobody was ever going to build this by hand for a Tuesday planning meeting. The output separates which venues are structurally expensive from which shows were run expensively.
 
-**ESG and emissions trend modeling** — emissions per net square foot and per exhibitor, reuse rate on structural stand components, waste diverted from landfill, normalized by region and tracked over time. GES EMEA's data-led emissions reporting and the Roadmap to Net Zero are exactly the externally committed, fixed-cadence reporting where a scheduled assembly job pays for itself immediately.
+**ESG and emissions trend modeling** — emissions per net square foot and per exhibitor, reuse rate on structural stand components, waste diverted from landfill, normalized by region and tracked over time. GES EMEA's data-led emissions reporting and the Roadmap to Net Zero are exactly the externally committed, fixed-cadence reporting where a scheduled job pays for itself immediately.
 
 ::::{admonition} ⚠️ Automation Multiplies Whatever You Built
 :class: danger
@@ -370,7 +368,7 @@ The discipline that makes automation safe is non-negotiable: **you read every ar
 
 ## 6. Python in Excel — The Expanding Frontier
 
-**Python in Excel** brings Python computation directly into Excel worksheets. Instead of a formula, you write Python in a cell and it executes with access to pandas, matplotlib, seaborn, and scikit-learn. The code runs in a secure Microsoft cloud environment rather than on your machine, which is what makes it viable in an enterprise tenant.
+**Python in Excel** brings Python computation directly into Excel worksheets. Instead of a formula, you write Python in a cell and it executes with access to pandas, matplotlib, and scikit-learn, running in a secure Microsoft cloud environment rather than on your machine — which is what makes it viable in an enterprise tenant.
 
 :::{figure} ../images/ch13-python-in-excel-overview.png
 :label: fig-ch13-python-excel
@@ -381,11 +379,11 @@ The discipline that makes automation safe is non-negotiable: **you read every ar
 Python in Excel removes the separation between spreadsheet analysis and data science computation. Python executes directly in the worksheet, with outputs rendered as values, charts, or tables that integrate with the rest of the workbook.
 :::
 
-**Current status, stated precisely.** Python in Excel is generally available and rolling out across commercial Microsoft 365 subscriptions. **Copilot's ability to write Python inside Excel is expanding but is not confirmed as generally available** as of this writing. In some tenant configurations you can ask Copilot to suggest Python for a cell; in others you cannot. Check your GES tenant before building a workflow that depends on it. What *is* confirmed: Copilot in Excel and Python in Excel work side by side — Copilot for formula design and exploration, Python cells for computation native formulas handle badly.
+**Current status, stated precisely.** Python in Excel is generally available across commercial Microsoft 365 subscriptions. **Copilot's ability to write Python inside Excel is expanding but is not confirmed as generally available** as of this writing — in some tenant configurations you can ask Copilot to suggest Python for a cell; in others you cannot. Check your GES tenant before building a workflow that depends on it. What *is* confirmed: Copilot and Python work side by side — Copilot for formula design, Python cells for computation native formulas handle badly.
 
-**What it enables:** pandas joins a freight manifest, a labor file, and an order extract with mismatched keys and dates far more gracefully than nested lookup chains. `scipy.stats` supports significance testing — which matters when deciding whether a jurisdiction's overtime share is genuinely different or just noisy across a handful of shows. And predicting labor hours from show characteristics (square footage, exhibitor count, exhibit profile, venue, historical actuals) is a regression problem, which is where Python earns its place.
+**What it enables:** pandas joins a freight manifest, a labor file, and an order extract with mismatched keys and dates far more gracefully than nested lookup chains. `scipy.stats` supports significance testing, which matters when deciding whether a jurisdiction's overtime share is genuinely different or just noisy across a handful of shows. And predicting labor hours from show characteristics — square footage, exhibitor count, exhibit profile, venue — is a regression problem, which is where Python earns its place.
 
-For most GES professionals this is a capability to leverage with analytics or IT colleagues. For those with a Python background, it removes the round trip between the analytical environment and the reporting environment leadership actually reads.
+For most GES professionals this is a capability to leverage with analytics or IT colleagues. For those with a Python background, it removes the round trip between the analytical environment and the reporting environment leadership reads.
 
 ---
 
@@ -418,13 +416,9 @@ Every operational file needs venue, jurisdiction, facility, and region attribute
 
 The unmapped count is the point. A join that silently drops eleven shows produces a portfolio analysis confidently missing eleven shows.
 
-### Dynamic Arrays for Multi-Show Reporting
+### Dynamic Arrays and the LET Function
 
-`FILTER`, `SORT`, `UNIQUE`, and `SEQUENCE` resize themselves as data changes — essential in a template pointed at a different number of shows every month.
-
-> *"Write a formula extracting every show at the venue named in cell B2 where freight variance exceeds 15 percent, sorted by dollar variance descending. The output must resize automatically as shows are added or removed, and display 'No shows above threshold' rather than an error when nothing qualifies."*
-
-### The LET Function for Auditable Logic
+`FILTER`, `SORT`, `UNIQUE`, and `SEQUENCE` resize themselves as data changes — essential in a template pointed at a different number of shows every month. *"Write a formula extracting every show at the venue named in cell B2 where freight variance exceeds 15 percent, sorted by dollar variance descending. The output must resize automatically as shows are added or removed, and display 'No shows above threshold' rather than an error when nothing qualifies."*
 
 For any calculation with intermediate steps, `LET` names those steps — converting an unreadable formula into one a colleague can audit.
 
@@ -459,7 +453,7 @@ A three-layer dashboard separates executive summary from operational detail from
 
 Then generate each visual by description: *"Create a clustered bar chart of cost per net square foot by venue, with a horizontal reference line at the portfolio average, sorted descending."*
 
-**What humans must do.** **Validate every number** — a dashboard built from an export with a formula error propagates that error to every card and chart, and a dashboard is the most trusted artifact in the building precisely because it looks resolved. **Curate ruthlessly** — Copilot will suggest more than you need, and fourteen charts do not communicate, they overwhelm; the hardest skill in dashboard design is deciding what to leave out. **Interpret** — a dashboard shows *what*, a professional explains *why, so what,* and *now what*. Copilot can draft the commentary. What it means for the account, the venue relationship, or next year's targets is yours.
+**What humans must do.** **Validate every number** — a dashboard built from an export with a formula error propagates it to every card and chart, and a dashboard is the most trusted artifact in the building precisely because it looks resolved. **Curate ruthlessly** — fourteen charts do not communicate, they overwhelm; the hardest skill in dashboard design is deciding what to leave out. **Interpret** — a dashboard shows *what*; a professional explains *why, so what,* and *now what*. Copilot can draft the commentary. What it means for the account, the venue relationship, or next year's targets is yours.
 
 ---
 
@@ -550,19 +544,17 @@ Build a scenario model in Excel using Copilot, then apply the full review protoc
 
 *Show Profile:* Show Code, Venue, Union Jurisdiction, Net Booth Sq Ft, Exhibitor Count, Estimated Inbound Weight (lbs), Move-In Days Available.
 
-*Assumptions:* one row per variable — Union Straight Time Rate (USD/hr), Overtime Multiplier, Straight Time Hours per Day, Crew Size, Estimated Install Hours per 1,000 Net Sq Ft, Material Handling Rate per 100 lbs (USD) — with columns for Value, **Source**, and **Effective Date**. Realistic placeholder values are fine.
+*Assumptions:* one row per variable — Union Straight Time Rate (USD/hr), Overtime Multiplier, Straight Time Hours per Day, Crew Size, Estimated Install Hours per 1,000 Net Sq Ft, Material Handling Rate per 100 lbs (USD) — with columns for Value, **Source**, and **Effective Date**. Placeholder values are fine.
 
-**Step 1 — Baseline.** *"Using my Assumptions table, calculate total required install hours for the show in my Show Profile table, then split those hours into straight time and overtime given the available move-in days, crew size, and straight-time hours per day. Calculate total labor cost. Explain each formula and list every assumption you made that I did not provide."*
-
-Read the enumerated assumptions carefully. That list is the most important output of this exercise.
+**Step 1 — Baseline.** *"Using my Assumptions table, calculate total required install hours for the show in my Show Profile table, then split those hours into straight time and overtime given the available move-in days, crew size, and straight-time hours per day. Calculate total labor cost. Explain each formula and list every assumption you made that I did not provide."* Read the enumerated assumptions carefully — that list is the most important output of this exercise.
 
 **Step 2 — Compression.** *"Model the same show with move-in days reduced from 5 to 3, holding total required install hours constant. Show straight time hours, overtime hours, overtime share, and total labor cost for both cases, plus the incremental cost of compression in dollars and as a percentage of baseline."*
 
-**Step 3 — Sensitivity.** *"Build a sensitivity table showing total labor cost as Estimated Install Hours per 1,000 Net Sq Ft varies from 6 to 16 in increments of 2, at 3 move-in days. Use Excel's data table functionality and explain the setup."* Which input moves the answer most? That is where your estimating effort belongs on every future show.
+**Step 3 — Sensitivity.** *"Build a sensitivity table showing total labor cost as Estimated Install Hours per 1,000 Net Sq Ft varies from 6 to 16 in increments of 2, at 3 move-in days."* Which input moves the answer most? That is where your estimating effort belongs on every future show.
 
-**Step 4 — Rate Sheet Rule check.** Go through the Assumptions table row by row. For every value, can you name the document it came from and its effective date? Any blank in the Source column is a guess — and a model built on it is a guess with better formatting. Fix it or flag it on the face of the model.
+**Step 4 — Rate Sheet Rule check.** Go through the Assumptions table row by row. For every value, can you name the document it came from and its effective date? Any blank Source is a guess — and a model built on it is a guess with better formatting. Fix it or flag it on the face of the model.
 
-**Step 5 — Review protocol.** Apply all five steps. Logic review on every formula. Assumption audit using Copilot's own enumeration. Boundary test at zero move-in days and at 100 percent overtime share. Source verification against a closed show whose answer you already know. Then have a colleague review the methodology.
+**Step 5 — Review protocol.** Apply all five steps: logic review on every formula; assumption audit using Copilot's own enumeration; boundary test at zero move-in days and 100 percent overtime share; source verification against a closed show whose answer you already know; then a colleague on the methodology.
 
 **Step 6 — Write the assignment.** Write (do not run) a Cowork assignment using the five-part structure that would run this model across an account's full portfolio quarterly. Include an explicit Rate Sheet Rule constraint and a staleness check on the Effective Date column.
 

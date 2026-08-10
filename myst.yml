@@ -53,6 +53,10 @@ project:
       file: chapters/ch15-nano-banana.md
     - title: "Chapter 16: Power Automate — From Assistance to Automation"
       file: chapters/ch16-power-automate.md
+    - title: "Chapter 17: Under the Hood — The Graph, Tools, and How Copilot Actually Thinks"
+      file: chapters/ch17-under-the-hood.md
+    - title: "Chapter 18: Copilot Notebooks — Your Persistent AI Workspace"
+      file: chapters/ch18-notebooks.md
 
 site:
   url: https://geslearnsai.com

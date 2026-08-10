@@ -1,10 +1,10 @@
 ---
 title: "Chapter 16: Microsoft Power Automate — From Assistance to Automation"
-subtitle: "The Third Gear — Where Work Happens Without You"
+subtitle: "The Third Gear: Work That Happens Without You"
 short_title: "Power Automate"
-description: "Power Automate is where the progression completes: from asking Copilot (one question, one answer) to delegating to Cowork (multi-step, run once) to automating permanently (the work happens every time the trigger fires, forever, without a human in the loop). This capstone chapter covers cloud flows versus desktop flows, triggers, Copilot inside Power Automate, AI Builder for document processing, the Cowork-to-flow progression, ten GES automation scenarios, governance that prevents automation from becoming machine-speed error production, honest limitations, and a build-your-first-flow walkthrough."
+description: "The capstone chapter. Copilot answers questions. Cowork completes projects. Power Automate runs processes forever — without a human in the loop — every time a trigger fires. This chapter teaches the progression from asking to delegating to automating, the critical difference between cloud flows and desktop RPA, AI Builder for document extraction, governance risks unique to automation, and ten fully worked GES scenarios from exhibitor order intake to post-show reconciliation to cross-show drayage variance reporting."
 label: ch-16-power-automate
-tags: [Power Automate, automation, RPA, cloud flows, desktop flows, triggers, AI Builder, Copilot, document processing, GES, drayage, material handling, exhibitor services, onPeak, governance, T.R.U.E., connectors, approval flows]
+tags: [Power Automate, automation, RPA, desktop flows, cloud flows, AI Builder, triggers, Copilot, Cowork, GES, governance, exhibitor services, drayage, material handling, post-show reconciliation, T.R.U.E., flow ownership]
 ---
 
 ```{admonition} Download this Chapter as PDF
@@ -17,779 +17,784 @@ tags: [Power Automate, automation, RPA, cloud flows, desktop flows, triggers, AI
 
 :::{figure} ../images/ch16-power-automate-infographic.png
 :label: fig-ch16-infographic
-:alt: Illustrated explainer infographic showing the progression from Copilot (conversation) to Cowork (delegation) to Power Automate (permanent automation), with trigger types, cloud and desktop flows, and GES automation scenarios arranged in a connected system diagram. Blue and orange color scheme with exhibition industry examples.
+:alt: Illustrated explainer infographic showing the progression from Copilot (conversational, one answer) to Cowork (delegated multi-step project) to Power Automate (permanent automation, trigger fires forever). Three interconnected gears in blue and orange, with GES exhibition industry scenarios illustrated beneath each gear.
 :width: 80%
 :align: center
 
-The three gears of Microsoft 365 intelligence — Copilot for asking, Cowork for delegating, Power Automate for automating. This chapter completes the arc: from human-in-the-loop to human-at-the-start, from one-off assistance to permanent operational infrastructure.
+The three gears of Microsoft 365 AI: ask, delegate, automate. Each one changes how you work — and the last one changes whether you need to be there at all.
 :::
 
 > *"The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency."*
 > — Bill Gates
 
-It is 6:47 a.m. on a Monday. Nobody is in the office yet. In a SharePoint library, a file appears: the final labor actuals for a show that closed over the weekend. That file's appearance triggers a flow.
+There is a moment, usually around the third or fourth time you delegate the same task to Cowork, when a different question surfaces. Not *can I delegate this?* — you have already answered that. The new question is: *why am I delegating this at all?*
 
-Within seconds, the flow opens the labor data, cross-references it against the forecast, computes the variance by crew and by phase, flags anything over eight percent, generates a reconciliation workbook, drafts a summary narrative, and posts a notification to the show team's channel with a link to the finished package — all before the first coffee is poured.
+It is 6:45 a.m. on the Monday after a show closes. A GES logistics analyst opens Copilot and types the same prompt they have typed for twelve weeks running: run the freight target variance report for the shows that closed this week, compare to the same shows last year, flag any venue with a consistent overage pattern. The analyst waits, reviews the output, approves the Teams post to the logistics channel.
 
-The show manager reviews it on the train. The account director sees it before their 9 a.m. call with the organizer. What used to be a four-hour task that waited until someone had a free afternoon is done, documented, and waiting for human judgment on the parts that require it.
+That analyst just spent fifteen minutes on work that is identical every week. Not *similar* — identical. Same prompt. Same libraries. Same output location. Same approval scope.
 
-That is Power Automate. And it is where everything in this book converges.
+Here is the question this chapter answers: *why is a human involved at all?*
 
 ---
 
-## 1. The Three Gears — And Why This Is the Third
+## 1. The Three Gears — Ask, Delegate, Automate
 
-Every chapter before this one taught you to work with AI. Chapter 14 taught you to delegate to it. This chapter teaches you to **step out of the loop entirely** — to build automation that runs without you, every time the trigger fires, forever.
+Every chapter before this one taught you to work with AI. Chapter 14 taught you to delegate to it. This chapter teaches you to **remove yourself entirely**.
 
 :::{figure} ../images/ch16-three-gears.png
 :label: fig-ch16-three-gears
-:alt: Three interconnected gears diagram showing the progression from Copilot (you ask, human in the loop every turn) to Cowork (you delegate, human approves at checkpoints) to Power Automate (you automate, work happens without you). Each gear is labeled with its mode, human involvement level, and a GES example.
+:alt: Three interconnected gears diagram showing Copilot Chat (Ask — human in the loop every turn), Copilot Cowork (Delegate — human approves at checkpoints), and Power Automate (Automate — trigger fires, work happens, no human required until review). Visual progression from left to right showing decreasing human involvement.
 :width: 80%
 :align: center
 
-The three gears of Microsoft 365 intelligence. Each gear serves a different purpose, and knowing when to use which is the professional skill this chapter builds.
+The three gears of Microsoft 365 AI work. As you move from left to right, human involvement decreases — and so does the tolerance for an unverified process.
 :::
 
-The distinction is structural, not just a matter of degree.
+**Copilot Chat** is a conversation. You ask, Copilot answers, you evaluate, you refine. You are the loop. Every step passes through you. This is the right model for drafting, ideation, and one-off questions where you want to see the answer before deciding what to do with it.
 
-```{list-table} The three gears compared
-:header-rows: 1
-:name: table-ch16-three-gears
+**Copilot Cowork** is delegation. You describe an outcome, Cowork plans and executes the steps, and you review and approve at checkpoints. You are no longer the loop — you are the manager. The work keeps running while your laptop is off. This is the right model for multi-step, multi-file projects you need done rather than watched.
 
-* - 
-  - **Copilot**
-  - **Cowork**
-  - **Power Automate**
-* - **Mode**
-  - You ASK
-  - You DELEGATE
-  - You AUTOMATE
-* - **Interaction**
-  - Conversation — one prompt, one response
-  - Assignment — describe the outcome, review at checkpoints
-  - Trigger — set it once, it runs forever
-* - **Human role**
-  - In the loop every turn
-  - Approves at designed checkpoints
-  - At the start (design) and the end (review outputs)
-* - **Runs when**
-  - You ask
-  - You assign (or schedule)
-  - The trigger fires — a file appears, a form is submitted, a date arrives
-* - **Best for**
-  - One-off questions, drafting, ideation
-  - Multi-step projects, finished artifacts
-  - Repetitive tasks that should never require a human again
-* - **GES example**
-  - "Summarize the venue's dock restrictions"
-  - "Produce the post-show reconciliation package"
-  - "Every time a labor file posts, generate and distribute the reconciliation"
-```
+**Power Automate** is automation. You build a flow once. A trigger fires — an email arrives, a file posts, a scheduled time passes — and work happens. No prompt. No approval request. No human at all, unless you designed a checkpoint into the flow. This is the right model for the work that is *exactly the same every time*.
+
+The decision rule is simple enough to memorize: **how much human judgment is required at execution time?**
+
+- A lot → Chat
+- Some, at checkpoints → Cowork
+- None → Power Automate
 
 :::{important}
-**The key insight: Cowork is how you discover what is worth automating.**
+**The insight that makes this chapter land**
 
-You delegate a task to Cowork a few times. You see it work. You understand its shape, its edge cases, and where it needs human judgment versus where it is purely mechanical. Then — and only then — you build a Power Automate flow so the mechanical part never needs a human again.
+Cowork is how you discover what is worth automating.
 
-Cowork is the prototype. Power Automate is production.
+Delegate a task three or four times. Watch how it behaves. See where it succeeds reliably and where it needs correction. Notice the constraints you add because last week's run surfaced an edge case you had not thought of.
+
+That iterated Cowork prompt — tight, tested, edge-case-aware — is your automation prototype. Power Automate is how you promote it to production so it never needs a human again.
+
+Skip the prototype phase and you automate an unverified process. Do that and you learn the hardest lesson in this chapter the hard way.
 :::
-
-This progression matters because it prevents the most common automation failure: building a flow for a process you do not fully understand. Delegating first, manually, teaches you the process. Then automation codifies what you learned.
 
 ---
 
-## 2. What Power Automate Actually Is
+## 2. Why Power Automate Exists at GES
 
-Power Automate is Microsoft's automation platform within the Power Platform family. It connects systems, moves data, and executes logic — either through APIs in the cloud or through UI automation on a desktop.
+GES runs **4,000+ live experiences a year**, serves **150,000+ exhibitors**, operates across **75+ countries**, and manages **24 global warehouse and production facilities**. The sheer volume of repetitive work is staggering.
+
+Consider just one task: the freight target variance report after a show closes. It takes the logistics analyst twenty minutes to run. It runs once per show. At 4,000 shows a year, that is **1,333 hours** of human time — the equivalent of two-thirds of a full-time employee — on a task that is *identical every time*.
+
+Now multiply that across every repeatable process in show operations, exhibitor services, creative, onPeak, and Visit by GES. The math is not subtle.
+
+Power Automate exists because some work does not need a human present. Not because the human adds no value — they designed the process, they verified it, they built the constraints that make it safe. But once that design work is done, the execution work is pure overhead.
+
+**Automation is how you convert repetitive execution into design work.** Instead of running the freight variance report 4,000 times, you build it once, verify it carefully, set the trigger, and let it run forever. Your time goes to the exceptions it flags, not the routine it handles.
+
+---
+
+## 3. Cloud Flows vs. Desktop Flows — and Why RPA Exists
+
+Power Automate offers two fundamentally different types of automation. Understanding the difference is not optional; it determines which tool you reach for and what risks you accept.
 
 :::{figure} ../images/ch16-cloud-vs-desktop-flows.png
-:label: fig-ch16-cloud-desktop
-:alt: Split comparison diagram showing cloud flows on the left (API-to-API, runs in Microsoft's cloud, connects modern systems via connectors) and desktop flows on the right (UI automation, runs on a Windows machine, clicks and types in legacy applications). Center shows how the two can be combined.
+:label: fig-ch16-cloud-vs-desktop
+:alt: Side-by-side comparison of cloud flows (left) and desktop flows (right). Cloud flows show API connections between cloud services — Outlook, SharePoint, Teams, Dataverse — running on Microsoft servers. Desktop flows show UI automation on a local Windows machine — clicking buttons, typing into fields, reading screens — running on the user's device or a hosted machine.
 :width: 80%
 :align: center
 
-Cloud flows connect modern systems through APIs. Desktop flows automate legacy applications by recording and replaying user actions. The combination handles everything from modern SaaS platforms to green-screen terminals.
+Cloud flows talk to APIs. Desktop flows talk to screens. The difference determines reliability, maintenance burden, and when each is the right choice.
 :::
 
-### Cloud Flows — The Modern Path
+### Cloud flows
 
-Cloud flows run in Microsoft's cloud. They connect systems through **connectors** — pre-built integrations with over 1,000 services including SharePoint, Outlook, Teams, Excel, Dataverse, Dynamics 365, Salesforce, ServiceNow, SAP, and hundreds more.
+Cloud flows run on Microsoft's servers. They connect applications through **connectors** — standardized API integrations. When a file lands in a SharePoint library, a cloud flow can read it, extract values, send an email, update a row in Excel, post to Teams, and file the result — all through documented, versioned APIs.
 
-When a cloud flow runs, it calls APIs. No human clicks anything. No browser opens. The work happens in the background, at machine speed, and you receive the output.
+**Microsoft offers over 1,000 connectors.** The Microsoft 365 suite is fully covered: Outlook, SharePoint, Teams, OneDrive, Planner, Forms, Excel. So are major external services: Salesforce, ServiceNow, SAP, DocuSign, and hundreds more.
 
-**At GES:** An exhibitor submits an order through the exhibitor portal. A cloud flow captures the submission, extracts the order data, routes it to the appropriate show operations team, logs it in the tracking workbook, and sends the exhibitor a confirmation — all within seconds of the submit button being clicked.
+Cloud flows are **stable** because APIs are versioned and documented. When SharePoint changes its interface, the API remains backward-compatible, and your flow keeps working. Cloud flows are **scalable** because they run in Microsoft's cloud — you do not need a machine running somewhere for the flow to execute.
 
-### Desktop Flows — The RPA Path
+### Desktop flows (RPA)
 
-Not every system has a modern API. Freight management systems, legacy show operations platforms, venue-specific terminals, and older ERP systems often have no programmatic interface at all. The only way to get data in or out is through the same screens a human uses.
+Desktop flows run on a Windows machine. They automate applications by **clicking buttons, typing into fields, reading text from screens** — the same actions a human would take. This is Robotic Process Automation (RPA), and Power Automate Desktop is Microsoft's RPA tool.
 
-**Desktop flows** solve this through Robotic Process Automation (RPA). Power Automate Desktop records a user's actions — clicks, keystrokes, screen navigation — and replays them. It literally operates the application the way a human would, just faster and more reliably.
+**Why does RPA exist?** Because not everything has an API.
 
-**Why RPA exists:** Not because it is elegant, but because the alternative is manual data entry in perpetuity. When the only interface is a 1990s terminal, RPA is the bridge.
+GES, like most companies with decades of operational history, uses applications that were built before APIs became standard. A freight management system from 2008. A labor reporting tool from a union jurisdiction. A venue's proprietary ordering portal that exists only as a web form. A customs and carnet system that only accepts Excel files in a very specific format uploaded through a browser.
 
-**At GES:** A legacy freight system has no API. Every weight and piece count must be keyed manually from the manifest. A desktop flow reads the manifest workbook, opens the legacy terminal, navigates the screens, and enters the data — forty shipments in the time it takes a human to do three.
+None of these have connectors. None of them expose APIs. The only way to automate them is to simulate what a human does: open the application, navigate to the right screen, paste data, click submit.
 
-### The Combination
+That works. It is also **fragile**.
 
-The real power appears when cloud and desktop flows work together. A cloud flow triggers on an event (a file appears, a form is submitted), calls a desktop flow to interact with a legacy system, and then continues in the cloud to update SharePoint, send notifications, or feed the data downstream.
+:::{warning}
+**RPA is brittle — design for it**
 
-**At GES:** A reconciliation file arrives in SharePoint (cloud trigger). The flow calls a desktop flow to extract data from a legacy show operations system that has no API. The desktop flow returns the data. The cloud flow computes the variance, generates the report, and posts to the show team's channel.
+Desktop flows break when the user interface changes. A button moves. A field is renamed. A dialog box appears that was not there before. The flow keeps clicking where the button *used to be*, and either fails or does something unintended.
+
+RPA is maintenance-intensive. Every application update is a potential flow-breaking event. Every vendor UI refresh is a debugging session.
+
+Use cloud flows whenever a connector exists. Use desktop flows only when there is no other path — and budget for maintenance when you do.
+:::
+
+### The decision rule
+
+**If every application in your workflow has a connector, use a cloud flow.** It will be more reliable, easier to maintain, and cheaper to run.
+
+**If any application requires UI interaction — clicking, typing, reading from screens — you need a desktop flow.** Understand that you are accepting a maintenance burden for the capability.
+
+For many GES workflows, the answer is both: a cloud flow that triggers on a SharePoint event, calls a desktop flow to interact with a legacy system, and returns to cloud actions for the downstream steps. Hybrid patterns are normal, and they concentrate the fragility in the desktop portion where it can be monitored and maintained.
 
 ---
 
-## 3. Triggers — The Conceptual Heart of Automation
+## 4. Triggers — What Starts the Work
 
-A flow without a trigger is just a process waiting to be manual again. The trigger is what makes automation automatic.
+Every flow has a trigger. The trigger is what makes automation *automated* — work that starts itself rather than waiting for a human to initiate it.
 
 :::{figure} ../images/ch16-trigger-types.png
-:label: fig-ch16-triggers
-:alt: Four-quadrant diagram showing trigger types for Power Automate flows. Top left: Scheduled (runs on a cadence — daily, weekly, monthly). Top right: Event-Driven (runs when something happens — file created, email received, form submitted). Bottom left: Manual (instant — runs when a user clicks a button). Bottom right: Approval-Based (runs when an approval is granted or rejected).
+:label: fig-ch16-trigger-types
+:alt: Four-panel diagram showing the four trigger types in Power Automate. Panel 1: Scheduled (clock icon) — runs at a set time or interval. Panel 2: Event-driven (lightning bolt) — runs when something happens in a connected system. Panel 3: Manual (hand icon) — runs when a user clicks a button. Panel 4: Approval-based (checkmark icon) — runs when an approval is granted or denied. Each panel includes a GES example.
 :width: 80%
 :align: center
 
-The four trigger types determine when automation fires. Choosing the right trigger is half the design decision.
+The four trigger types determine *when* your flow runs. The trigger you choose defines what automation means for that workflow.
 :::
 
-```{list-table} Trigger types and GES applications
-:header-rows: 1
-:name: table-ch16-triggers
+### Scheduled triggers
 
-* - Trigger Type
-  - When It Fires
-  - GES Example
-* - **Scheduled**
-  - On a defined cadence — hourly, daily, weekly, at a specific time
-  - Every Monday at 6 a.m., generate the cross-show freight variance report for shows in move-in this week
-* - **Event-driven**
-  - When something happens — a file appears, an email arrives, a form is submitted, a record is created
-  - When a final labor file posts to SharePoint, generate the reconciliation package
-* - **Manual (Instant)**
-  - When a user clicks a button or invokes the flow
-  - An account director clicks "Generate QBR Package" and receives the assembled deck and data in five minutes
-* - **Approval-based**
-  - When an approval is granted, rejected, or times out
-  - When a show manager approves the exhibitor order change, update the tracking workbook and notify the exhibitor
-```
+The flow runs at a set time or on a recurring schedule. Every Monday at 6 a.m. Every day at midnight. The first business day of each month.
 
-### Event-Driven Is Where the Magic Lives
+**GES examples:** The weekly freight target variance report. The monthly cross-show drayage analysis. The daily exhibitor order summary during move-in week.
 
-Scheduled flows are useful — the Monday morning report, the Friday compliance sweep, the monthly cost analysis. But **event-driven flows** are what make automation feel like infrastructure rather than a scheduled chore.
+### Event-driven triggers
 
-The pattern: something happens in the real world, and the system responds without waiting for a human to notice.
+The flow runs when something happens in a connected system. A file is created in a SharePoint library. An email arrives in a shared mailbox. A row is added to an Excel table. A form is submitted.
 
-- An exhibitor service kit question arrives via email → extract the question, classify it, route it to the right inbox, and post to the show channel
-- A venue's updated rules document is uploaded → notify every show team working at that venue this season
-- A safety walk checklist is submitted with a failed item → escalate immediately to the facility safety lead
-- A hotel block pickup report shows a threshold breach → alert the onPeak team and draft a recommendation
+**GES examples:** When the final labor file posts to a show's SharePoint library, run the post-show reconciliation. When an email arrives from a venue's exhibitor services desk, extract the request and route it to the show team. When an exhibitor order form is uploaded, extract the data and populate the order system.
 
-The discipline: **design the trigger before you design the actions.** The trigger is the business logic. The actions are just execution.
+### Manual triggers
+
+The flow runs when a user clicks a button — in Power Automate, in Teams, or embedded in a SharePoint page. It is not truly "automated" in the fire-and-forget sense; it is a standardized, repeatable action that a human initiates on demand.
+
+**GES examples:** A button in Teams that runs the hotel block pickup analysis for the show the user selects. A button that generates the organizer QBR deck from the account's current data.
+
+### Approval-based triggers
+
+A special case of event-driven: the flow runs (or branches) based on the outcome of an approval. This is how you build human checkpoints into otherwise automated processes.
+
+**GES examples:** When an exhibitor requests a rate exception, the flow routes the request to the account director. If approved, the flow updates the order system and sends confirmation. If rejected, it sends a different response. The human judgment is the trigger; the downstream work is automated.
 
 ---
 
-## 4. Copilot Inside Power Automate — Describing Flows in Plain English
+## 5. Copilot Inside Power Automate — Describing Flows in Plain English
 
-The single biggest barrier to Power Automate adoption has always been the learning curve. Building flows required understanding connectors, actions, conditions, and loops — skills that took time to develop.
-
-**Copilot changes that equation.** You can now describe what you want a flow to do in natural language, and Copilot builds it.
+Microsoft has embedded Copilot directly into the Power Automate designer. You can describe what you want in natural language, and Copilot will generate the flow structure for you.
 
 :::{figure} ../images/ch16-copilot-builds-flow.png
-:label: fig-ch16-copilot-flow
-:alt: Screenshot-style diagram showing the Copilot flow creation experience. Left panel shows a natural language prompt describing the desired automation. Right panel shows the flow structure Copilot generated, with connectors, triggers, and actions visible in the designer.
+:label: fig-ch16-copilot-builds-flow
+:alt: Screenshot-style diagram showing the Power Automate designer with a Copilot chat panel. The user has typed "When a new file is added to the Exhibitor Orders folder in SharePoint, extract the company name and order total, and email me a summary." Copilot has generated a three-step flow: SharePoint trigger, Parse JSON action, Send Email action.
 :width: 80%
 :align: center
 
-Copilot in Power Automate translates natural language descriptions into working flow structures. The barrier to entry drops dramatically — but the responsibility to review what was built does not.
+Copilot in Power Automate lets you describe what you want in plain English. It generates the flow structure — you review, refine, and deploy.
 :::
 
-**The prompt:** *"When an email arrives from any address ending in @ges.com with 'Urgent' in the subject, extract the sender's name and the subject, post a message to the Show Operations channel in Teams, and send me a mobile notification."*
+**What Copilot can do in Power Automate:**
 
-**Copilot's response:** A complete flow structure with the email trigger, condition logic, Teams posting action, and push notification — ready to review, refine, and deploy.
+- Generate a complete flow from a natural-language description
+- Suggest actions based on what you are trying to accomplish
+- Explain what an existing flow does
+- Help troubleshoot errors
+- Generate expressions and formulas for conditions and data transformation
 
-### What This Means for GES
+**What Copilot cannot do:**
 
-The operational teams who know the process best are no longer dependent on a developer to translate that knowledge into automation. A show manager who has run the same show four years in a row understands exactly when escalations should fire and what information needs to reach whom. With Copilot, they can describe that directly and see a working draft.
+- Verify that the flow does what your business actually needs
+- Know which SharePoint library is the right one for this show
+- Understand that the "Company Name" field in your order form is called "Exhibitor" in your downstream system
+- Test the flow against edge cases you have not mentioned
+- Accept responsibility for a flow that runs incorrectly
 
-That said: **Copilot lowers the barrier to building. It does not lower the barrier to building well.** A flow built in five minutes from a vague prompt is still a vague flow. The professional skill is in the specificity of the description and the rigor of the review.
+The pattern should be familiar by now: **Copilot accelerates construction. Verification is yours.**
 
-:::{tip}
-**The good prompt pattern for Copilot flow creation**
-
-1. **State the trigger explicitly.** "When a file is created in the Show 5108 Post-Show folder..."
-2. **Name the specific actions.** "...extract the labor hours from column C, compare them to the forecast in the Labor Forecast workbook..."
-3. **Specify the outputs.** "...create a variance summary in a new row of the Reconciliation Tracker, and post to the Show 5108 channel with a link to the file."
-4. **Include constraints.** "Do not run on files that contain 'DRAFT' in the filename."
-
-Vague in, vague out. Specific in, specific out.
-:::
+A flow built in five minutes with Copilot's help still needs the same testing and validation as a flow built in two hours by hand. In fact, it needs *more* careful review — because speed of construction creates the temptation to skip the review, and an untested flow running on a schedule is exactly how GES ends up sending the wrong freight target to 800 exhibitors.
 
 ---
 
-## 5. AI Builder — Intelligence Inside the Flow
+## 6. AI Builder — Teaching Automation to Read Documents
 
-AI Builder is Microsoft's embedded AI capability for Power Platform. It brings document processing, text classification, object detection, and prediction directly into Power Automate flows.
+AI Builder is Microsoft's low-code AI capability integrated into the Power Platform. For GES, its most relevant feature is **document processing** — the ability to extract structured data from unstructured documents like PDFs, scanned forms, and images.
 
 :::{figure} ../images/ch16-ai-builder-extraction.png
-:label: fig-ch16-ai-builder
-:alt: Process diagram showing AI Builder document processing within a Power Automate flow. A PDF form enters the flow, AI Builder extracts structured fields (exhibitor name, booth number, order items, quantities), and the extracted data flows into downstream actions (database update, confirmation email, tracking workbook).
+:label: fig-ch16-ai-builder-extraction
+:alt: Diagram showing AI Builder document processing. An exhibitor order form (PDF) enters on the left. AI Builder extracts fields: Company Name, Booth Number, Order Items, Total Amount. The extracted data flows into Power Automate, which routes it to the order system and sends a confirmation email.
 :width: 80%
 :align: center
 
-AI Builder extracts structured data from unstructured documents — forms, invoices, letters — and feeds it into the flow as usable fields. No manual data entry required.
+AI Builder turns unstructured documents into structured data. For GES, this means exhibitor order forms, freight paperwork, and invoices can flow directly into automated workflows without manual data entry.
 :::
 
-### Document Processing at GES Scale
+### Pre-built models
 
-Consider the volume: 150,000+ exhibitors, many submitting paper or PDF order forms. Each form contains exhibitor name, booth number, show code, order items, quantities, and special instructions. Historically, that is manual data entry — slow, error-prone, and scaling linearly with show size.
+AI Builder includes pre-built models for common document types:
 
-AI Builder's document processing models extract those fields automatically. The flow receives a PDF, AI Builder reads it, and the structured data flows downstream — into the order tracking system, the confirmation email, the billing workbook.
+- **Invoice processing** — extracts vendor, amounts, line items, dates
+- **Receipt processing** — extracts merchant, total, date, payment method
+- **Identity document processing** — extracts name, date of birth, document number
+- **Business card processing** — extracts name, company, contact information
 
-**Pre-built models** handle common document types: invoices, receipts, business cards, identity documents. **Custom models** can be trained on GES-specific forms — exhibitor service kit order forms, freight authorization forms, badge request forms — with training requiring only a handful of labeled examples.
+### Custom models
 
-### Other AI Builder Capabilities
+For documents specific to your business — like GES exhibitor order forms — you can train a **custom document processing model**. You upload sample documents, tag the fields you want to extract, and AI Builder learns to recognize and extract those fields from new documents.
 
-- **Text classification:** Automatically categorize incoming exhibitor questions by topic (freight, labor, electrical, deadlines) and route accordingly
-- **Sentiment analysis:** Flag exhibitor communications showing frustration before they escalate
-- **Object detection:** Identify and count items in site survey photos
-- **Prediction:** Forecast labor hours based on historical show characteristics
+**GES applications:**
 
-The pattern is consistent: intelligence that used to require a human to interpret now happens inside the flow, at machine speed.
+- **Exhibitor order forms:** Extract company name, booth number, services ordered, quantities, and totals — then route to the order system automatically
+- **Freight manifests:** Extract weight, dimensions, carrier, and arrival window — then compare against freight targets
+- **Venue rule documents:** Extract key constraints and deadlines — then populate the show operations manual
+- **Material handling invoices:** Extract line items — then match against expected charges for reconciliation
+
+### The trade-off
+
+Custom models require training data — typically 5-15 sample documents per document type, with fields manually tagged. The model improves as it processes more documents. But the initial investment is real, and the model needs retraining when document formats change.
+
+For documents that arrive in high volume and consistent format — exhibitor order forms, freight paperwork — the investment pays off quickly. For one-off or highly variable documents, manual processing may still be the better path.
 
 ---
 
-## 6. The Handoff Pattern — Cowork → Power Automate
+## 7. The Handoff Pattern — Cowork to Power Automate
+
+Here is the workflow that makes automation safe:
 
 :::{figure} ../images/ch16-cowork-to-flow-progression.png
-:label: fig-ch16-progression
-:alt: Three-stage progression diagram showing the journey from manual process to automated flow. Stage 1: Cowork Prototype (delegate the task 2-3 times, learn its shape). Stage 2: Refinement (adjust the prompt, understand edge cases). Stage 3: Power Automate Production (build the flow, deploy, monitor).
+:label: fig-ch16-cowork-to-flow-progression
+:alt: Three-stage progression diagram. Stage 1 (Prototype): Cowork prompt run manually 3-4 times, edge cases discovered, constraints refined. Stage 2 (Validation): Final Cowork prompt tested against known good outputs, verified by a second person. Stage 3 (Production): Cowork prompt converted to Power Automate flow, trigger set, monitoring configured.
 :width: 80%
 :align: center
 
-The Cowork-to-flow progression: prototype with delegation, refine through iteration, then automate for production. This sequence prevents the most common automation failure — building a flow for a process you do not fully understand.
+The prototype-to-production pathway. Cowork is your testbed; Power Automate is your deployment platform. Skip the prototype phase at your peril.
 :::
 
-Never build a flow for a process you have only done once. The failure mode is obvious in hindsight: you automate the wrong thing, or you automate it incompletely, and then the flow runs hundreds of times before anyone notices.
+**Stage 1 — Prototype with Cowork**
 
-The discipline is a progression:
+Run the task as a Cowork prompt three or four times. Each time, note:
 
-**Stage 1 — Cowork prototype.** Delegate the task to Cowork two or three times. Use the five-part structure from Chapter 14 (Outcome, Inputs, Definition of done, Constraints, Approval scope). Observe what works and what does not. Note the edge cases.
+- Where did it work exactly as expected?
+- Where did it need correction mid-task?
+- What edge case surfaced that you had not anticipated?
+- What constraint did you add after the second run that you should have included from the start?
 
-**Stage 2 — Refinement.** Adjust the assignment based on what you learned. Where did Cowork need clarification? Where did the output require manual correction? Those are the places your flow will break if you do not account for them.
+After several runs, your Cowork prompt is tight, tested, and edge-case-aware. It has constraints that emerged from real execution, not assumptions.
 
-**Stage 3 — Power Automate production.** Only now — after you understand the process, its variations, and its exceptions — build the flow. The Cowork prompt becomes the flow's specification. The edge cases become condition logic. The manual corrections become error handling.
+**Stage 2 — Validate against known outputs**
 
-```{list-table} Decision framework — which gear to use
-:header-rows: 1
-:name: table-ch16-decision-framework
+Before you automate anything, run the Cowork version against a show whose correct output you already know. Does it reproduce what a human produced? If yes, the logic is verified. If no, you have found a bug before it ran 4,000 times.
 
-* - If...
-  - Then use...
-  - Because...
-* - One question, one answer, right now
-  - **Copilot Chat**
-  - You need the response in conversation, not as a finished artifact
-* - Multi-step work producing a finished artifact, run once or on request
-  - **Cowork**
-  - You need a deliverable, not a conversation, and it is not yet routine
-* - The same task, every time the trigger fires, without human initiation
-  - **Power Automate**
-  - You have delegated it enough times to understand its shape, and now you want it to run forever
-* - You have done the task manually only once
-  - **Not Power Automate yet**
-  - Automating a process you do not understand multiplies the uncertainty
-```
+Have a second person review the prompt, the logic, and the test results. The person who built it is the worst reviewer — they know what it *should* do and miss what it *actually* does.
+
+**Stage 3 — Convert to Power Automate**
+
+Take the tested Cowork prompt and implement it as a flow:
+
+- Define the trigger (scheduled, event-driven, manual)
+- Build the action sequence that mirrors what Cowork did
+- Add error handling for cases that could not occur in Cowork but can occur in automation (files not found, permissions denied, timeouts)
+- Set up monitoring and alerting so you know when the flow fails
+
+The flow is now in production. It runs without you. It also fails without you — which is why error handling and monitoring are not optional.
 
 ::::{admonition} 🧭 T.R.U.E. Check — Trust
 :class: note
 
 **Trust each other to always be honest and do what's right.**
 
-Trust in automation is earned, not assumed. A flow you built after prototyping with Cowork carries the credibility of tested logic. A flow you built from a guess carries the risk of guessed logic running at machine speed. Prototype first. Automate second. Trust third.
+A Cowork prompt you ran four times is a prototype. A Power Automate flow running on a schedule is a commitment. When your name is on a flow, you are promising every colleague who depends on its output that you did the verification work.
+
+Trust is built by verification, not by confidence in the tool.
 ::::
 
 ---
 
-## 7. GES Automation Scenarios — Ten Flows That Compound
+## 8. Ten GES Automation Scenarios
 
-At 4,000+ events a year, GES work is overwhelmingly **repetitive**. The same show returns to the same venue. The same exhibitor submits the same kind of order. The same reconciliation happens after every move-out. That repetition is exactly what automation compounds against.
-
-A flow that saves 20 minutes and runs 4,000 times a year is not a convenience. It is over 1,300 hours.
+This is the practical heart of the chapter. Each scenario names the trigger, the flow logic, the output, and the governance considerations.
 
 :::{figure} ../images/ch16-ges-automation-map.png
-:label: fig-ch16-automation-map
-:alt: Visual map showing ten GES automation scenarios arranged by function (Show Operations, Exhibitor Services, Logistics, Safety, Housing, Sales) and trigger type (event-driven vs scheduled). Lines connect related flows to show how automation compounds across the show lifecycle.
+:label: fig-ch16-ges-automation-map
+:alt: Visual map showing ten GES automation scenarios arranged by function: Exhibitor Services (order intake, service kit questions), Logistics (freight variance, drayage report), Show Operations (post-show reconciliation, daily log distribution, site survey filing, safety escalation), Housing (hotel block monitoring), and Governance (access review). Each scenario shows the trigger type and key output.
 :width: 80%
 :align: center
 
-Ten automation scenarios mapped across GES functions. Each flow represents time recovered — time that compounds across thousands of shows.
+Ten automation scenarios across GES functions. Each one saves hours of repetitive work — and each one carries governance responsibilities.
 :::
 
-### Scenario 1 — Exhibitor Order Form Intake
+### Scenario 1: Exhibitor Order Form Intake
 
-**Trigger:** An exhibitor submits an order form (PDF or web form)
+**Trigger:** When a file is created in the Exhibitor Orders folder for a show  
+**Flow logic:**
+1. AI Builder extracts company name, booth number, services ordered, quantities, totals
+2. Validate extracted data against the exhibitor master list (company exists, booth assignment matches)
+3. If valid: create order record, send confirmation email to exhibitor
+4. If invalid: flag for manual review, send notification to exhibitor services lead
 
-**The flow:**
-1. AI Builder extracts: exhibitor name, booth number, show code, order items, quantities, special instructions
-2. Validate against the show's exhibitor list — is this a registered exhibitor?
-3. Route to the appropriate show operations team based on show code
-4. Log the order in the tracking workbook
-5. Send the exhibitor a confirmation email with order summary and deadlines
-6. If rush order (move-in < 7 days), post an alert to the show channel
+**Output:** Order record in the system, confirmation sent, exceptions flagged  
+**Governance note:** The AI Builder model needs retraining when the order form format changes between seasons. Build a version check into the flow.
 
-**Time saved per instance:** 12 minutes of manual processing
+### Scenario 2: Post-Show Reconciliation Trigger
 
-**Annual impact at GES scale:** With tens of thousands of exhibitor orders annually, even conservative estimates yield thousands of hours recovered.
+**Trigger:** When the final labor file is created in the show's Post-Show folder  
+**Flow logic:**
+1. Pull labor actuals from the new file
+2. Pull freight manifest, exhibitor orders, and pre-show estimate from the show library
+3. Run the reconciliation calculation (labor variance, material handling variance, service revenue variance)
+4. Generate the Excel workbook and Word summary
+5. Save to the Post-Show folder
+6. Send notification to show manager: "Reconciliation ready for review"
 
-### Scenario 2 — Post-Show Reconciliation on Labor File
+**Output:** Reconciliation package, notification  
+**Governance note:** This flow does *not* send the reconciliation to the organizer. That remains a human decision after review.
 
-**Trigger:** Final labor actuals file posted to the show's SharePoint library
+### Scenario 3: Freight Target Variance Alert
 
-**The flow:**
-1. Open the labor file and the original forecast
-2. Compute variance by crew, by phase, by jurisdiction
-3. Flag any variance over 8%
-4. Generate the reconciliation workbook on the standard template
-5. Draft the summary narrative
-6. Save both to the Post-Show folder
-7. Post to the show channel with links
+**Trigger:** Scheduled — daily at 6 a.m. during move-in week for each show  
+**Flow logic:**
+1. Pull current freight receiving data from the advance warehouse
+2. Compare against freight targets by exhibitor
+3. Calculate variance percentage
+4. If any exhibitor is more than 15% over target: send alert to logistics lead with the list
+5. If all within tolerance: log run, no notification
 
-**Time saved per show:** 3-4 hours
+**Output:** Alert only when threshold exceeded  
+**Governance note:** The 15% threshold is a business decision, not a technical one. Document it in the flow description and review it annually.
 
-**Annual impact:** At 4,000+ shows, even if half have automated reconciliation, the compounding is substantial.
+### Scenario 4: Site Survey Filing
 
-### Scenario 3 — Freight Target Variance Alert
+**Trigger:** When a file is created in the Site Surveys folder  
+**Flow logic:**
+1. Read file metadata (venue name, date)
+2. Check if venue exists in the Venue Knowledge Library
+3. If yes: move file to the venue's folder, update the venue profile's "last surveyed" date
+4. If no: create venue folder, move file, notify operations to complete the venue profile
 
-**Trigger:** Daily at 6 a.m. during move-in week, or when a weight file updates
+**Output:** Survey filed correctly, venue profile updated  
+**Governance note:** This flow modifies the authoritative Venue Knowledge Library. Any error compounds across every show at that venue. Test thoroughly.
 
-**The flow:**
-1. Pull current inbound weights from the advance warehouse receiving log
-2. Compare against agreed freight targets
-3. If variance exceeds threshold (e.g., 15% over target with 3+ days remaining):
-   - Alert the logistics team
-   - Draft talking points for the organizer conversation
-4. Log the variance to the tracking workbook
+### Scenario 5: Move-In Daily Log Distribution
 
-**Value:** Catches freight surprises before they become show-floor surprises.
+**Trigger:** Scheduled — daily at 7 p.m. during move-in for each show  
+**Flow logic:**
+1. Collect entries from the show's Daily Log list in SharePoint
+2. Format as a summary: issues reported, resolutions, open items carried forward
+3. Post to the show's Teams channel
+4. Email to the show manager and organizer contact
 
-### Scenario 4 — Site Survey Photo and Report Filing
+**Output:** Daily log summary in Teams and email  
+**Governance note:** The email to the organizer is external communication. Build in a review step if the show requires organizer approval before distribution.
 
-**Trigger:** A site survey report or photo batch is uploaded to the staging folder
+### Scenario 6: Organizer RFP Intake and Acknowledgement
 
-**The flow:**
-1. Identify the venue from the file name or metadata
-2. Move to the correct folder in the Venue Knowledge Library
-3. Apply the standard naming convention
-4. Update the venue profile with "Last Survey" date
-5. Notify the regional operations director
+**Trigger:** When an email arrives in the RFP shared mailbox  
+**Flow logic:**
+1. Parse email for show name, organizer name, key dates
+2. Create a new row in the RFP tracking list
+3. Create a new folder in the Proposals library with show name and year
+4. Move the email attachments (typically the RFP document) to the new folder
+5. Send acknowledgement email to the sender: "Thank you for your inquiry. Our team will respond within [SLA] business days."
 
-**Value:** Institutional knowledge lands in the right place automatically instead of sitting in someone's OneDrive.
+**Output:** RFP tracked, folder created, acknowledgement sent  
+**Governance note:** The acknowledgement email commits GES to an SLA. Make sure the SLA in the template is accurate and approved.
 
-### Scenario 5 — Move-In Daily Log Distribution
+### Scenario 7: Hotel Block Pickup Monitoring
 
-**Trigger:** Daily at 6 p.m. during move-in, or when the daily log file is created
+**Trigger:** Scheduled — weekly, 90 days before each show through cutoff  
+**Flow logic:**
+1. Pull current pickup data from onPeak reporting
+2. Compare against contracted block and historical pickup curves
+3. Calculate projected final pickup and attrition exposure
+4. If projected pickup is below 70% of block and attrition exposure exceeds threshold: alert housing manager and account director
+5. Generate weekly pickup report and save to show folder
 
-**The flow:**
-1. Compile the day's activity: exhibitors checked in, freight received, issues logged
-2. Format as a summary email
-3. Send to the show team distribution list
-4. Post to the show channel with any flagged items highlighted
+**Output:** Weekly report, alert when at-risk  
+**Governance note:** This flow reads onPeak data, which may contain attendee information subject to privacy regulations. Ensure the flow's output does not expose individual attendee data.
 
-**Value:** The show team starts the next day knowing what happened while they were off the floor.
+### Scenario 8: Safety Walk Checklist Escalation
 
-### Scenario 6 — Organizer RFP Intake and Acknowledgement
+**Trigger:** When a safety checklist is submitted via Forms with any item marked "Failed"  
+**Flow logic:**
+1. Extract the failed items and their locations
+2. Determine severity based on item category (life safety vs. general compliance)
+3. If life safety: immediate notification to show manager, safety lead, and venue contact; create urgent issue in tracking system
+4. If general compliance: notification to show manager; create standard issue in tracking system
+5. Log the submission with timestamp for audit trail
 
-**Trigger:** An email arrives at the RFP inbox with an attachment
+**Output:** Escalation notifications, issue tracking records  
+**Governance note:** Safety documentation has legal implications. Retention policies apply. Ensure the flow creates an auditable record.
 
-**The flow:**
-1. Extract the RFP document
-2. Save to the RFP Library with the sender's organization name and date
-3. Send an automated acknowledgement to the sender
-4. Post to the Sales channel with sender info and a link
-5. Create a follow-up task due in 48 hours
+### Scenario 9: Access Review at Move-Out
 
-**Value:** No RFP sits unacknowledged, and the paper trail starts immediately.
-
-### Scenario 7 — onPeak Hotel Block Pickup Monitoring
-
-**Trigger:** Weekly (or when a pickup report uploads)
-
-**The flow:**
-1. Pull current pickup data by property
-2. Compare against the historical curve for this show at equivalent weeks-to-cutoff
-3. Calculate attrition exposure at current pace
-4. If exposure exceeds threshold, alert the onPeak team with:
-   - The properties driving the shortfall
-   - The dollar exposure by property
-   - Draft recommendation (release rooms, extend deadline, or hold)
-5. Log to the pickup tracking workbook
-
-**Value:** Attrition risk is surfaced while there is still time to act.
-
-### Scenario 8 — Safety Walk Checklist Escalation
-
-**Trigger:** A safety walk checklist is submitted via Microsoft Forms
-
-**The flow:**
-1. Parse the responses
-2. If any critical item is marked "Fail":
-   - Immediately notify the facility safety lead
-   - Post to the Safety channel with the failed item and location
-   - Create a corrective action task
-3. If all items pass, log to the safety record and confirm to the submitter
-
-**Value:** Safety failures escalate in seconds, not hours.
-
-### Scenario 9 — Access Review Triggered at Move-Out
-
-**Trigger:** The show's move-out date passes
-
-**The flow:**
+**Trigger:** When the show status changes to "Closed" in the show tracking list  
+**Flow logic:**
 1. Pull the current access list for the show's SharePoint site
-2. Generate a review report: who has access, when it was granted, last activity
-3. Send to the show manager for review
-4. Flag any external sharing or organization-wide links for immediate attention
-5. Schedule a follow-up in 14 days if review not completed
+2. Compare against the core show team (those who should retain access post-close)
+3. Generate a report of access to be removed
+4. Send to IT and show manager for review
+5. After approval: remove access for non-core members
 
-**Value:** This is Chapter 12's cross-client contamination control, automated. Access does not outlive the show.
+**Output:** Access review report, access cleanup after approval  
+**Governance note:** This directly addresses the cross-client contamination risk from Chapter 12. Access that outlives the show is how a competitor's material becomes visible. This flow is governance infrastructure.
 
-### Scenario 10 — Recurring Cross-Show Drayage Variance Report
+### Scenario 10: Recurring Cross-Show Drayage Variance Report
 
-**Trigger:** Monthly on the third business day
+**Trigger:** Scheduled — monthly, first business day  
+**Flow logic:**
+1. Pull reconciliation data for all shows closed in the prior month
+2. Normalize by net square footage to enable comparison
+3. Calculate cost per hundredweight, freight target compliance, advance warehouse vs. direct-to-show split
+4. Group by venue to identify systematic patterns vs. isolated outliers
+5. Generate workbook with tabs per venue plus consolidated view
+6. Post summary to Logistics Analytics channel in Teams
 
-**The flow:**
-1. Pull all reconciliation files for shows that closed in the prior month
-2. Compute drayage and material handling variance for each
-3. Normalize by net square footage for comparability
-4. Generate the variance workbook with tabs by venue and by account
-5. Generate the summary narrative
-6. Post to the Logistics Analytics channel
-
-**Value:** The analysis Chapter 13 described — cross-show cost patterns — runs without anyone initiating it.
+**Output:** Monthly variance analysis, Teams post  
+**Governance note:** This is the analysis from Chapter 13, automated. Ensure the rate reference data is current — the same Rate Sheet Rule applies to automated flows as to manual analysis.
 
 ---
 
-## 8. Governance — The Discipline That Makes Automation Safe
+## 9. Governance — The Automation Multiplier
 
 :::{figure} ../images/ch16-approval-checkpoint.png
-:label: fig-ch16-approval
-:alt: Flowchart showing an approval step embedded within a Power Automate flow. The flow pauses, sends an approval request to a designated approver, waits for response, and branches based on approved/rejected outcome. Labels indicate where human judgment re-enters the automated process.
+:label: fig-ch16-approval-checkpoint
+:alt: Flow diagram showing an approval checkpoint in a Power Automate flow. The flow pauses at an approval step, sends a request to the designated approver, and branches based on the response: Approved continues the flow, Rejected stops it and sends a notification.
 :width: 80%
 :align: center
 
-Approval steps are designed control points, not friction. They embed human judgment exactly where it belongs — at moments of consequence.
+Approval steps are designed control points. They insert human judgment exactly where the process requires it — and nowhere else.
 :::
 
-Automation is not inherently good. **An automated bad process is a bad process running at machine speed, forever.**
+Automation multiplies whatever you built. That is the promise and the peril.
 
-This section is not optional. It is the difference between automation as operational infrastructure and automation as risk multiplication.
+**If you automated an efficient, verified process**, you have just scaled that efficiency to every instance where the trigger fires. Every show. Every week. Forever.
 
-### The Cardinal Rule: Never Automate an Unverified Process
+**If you automated an unverified process**, you have just scaled that error to the same degree. An incorrect rate calculation, a wrong recipient list, a missing validation step — now running 4,000 times a year at machine speed with no human to notice.
 
-:::{warning}
-**Before you build a flow, ask: have I done this manually at least twice?**
+::::{admonition} ⚠️ Never Automate an Unverified Process
+:class: danger
 
-If the answer is no, you are automating a guess. Guesses at machine speed, repeated thousands of times, produce outcomes nobody anticipated — and they produce them confidently, without error messages, because the flow is doing exactly what you told it to.
+The single most expensive automation mistake is not a failed flow. It is a *successful* flow running an incorrect process.
 
-Cowork exists precisely so you can prototype before you automate. Use it.
-:::
+A failed flow produces an error message. Someone investigates. The problem is found and fixed.
+
+A flow running an incorrect process produces outputs that look correct. Nobody investigates because nothing failed. The incorrect output becomes the basis for decisions, invoices, reconciliations, and client communications.
+
+By the time someone notices, the damage is distributed across months of work.
+
+**Before any flow goes to production:**
+1. Run the equivalent process manually at least twice with verified outputs
+2. Run the flow against historical data where you know the correct answer
+3. Have a second person review the logic
+4. Run in production with monitoring before trusting it silently
+::::
 
 ### Flow Ownership and Orphaned Flows
 
-Every flow runs under the identity of its **owner** — the person who created it or was assigned ownership. The flow sees what the owner can see. It acts with the owner's permissions.
-
-When someone leaves the company, their flows do not stop running. They become **orphaned** — still executing, still using connections that may become stale, still producing outputs nobody is reviewing.
-
-**The governance requirement:**
-- Every flow has a named owner, visible and accountable
-- Flow ownership transfers explicitly when someone changes roles or leaves
-- Quarterly sweeps identify orphaned flows and decommission or reassign them
-- Flows touching client data or external communications require a secondary reviewer
+A flow runs with the permissions of its **owner** — the person who created it or to whom ownership was transferred. When that person leaves GES, their flows do not stop. They become **orphaned**: still running, still accessing data, but owned by an account that may be disabled or reassigned.
 
 :::{figure} ../images/ch16-flow-ownership-risk.png
-:label: fig-ch16-ownership
-:alt: Risk diagram showing flow ownership and the orphaned flow problem. Left: Active flow with owner, monitored and maintained. Center: Owner leaves without transfer. Right: Orphaned flow continues running, connections fail silently, outputs go unreviewed.
+:label: fig-ch16-flow-ownership-risk
+:alt: Risk diagram showing orphaned flow scenario. Original creator leaves company, flow continues running with their stale permissions, accesses data they should no longer see, or fails silently when their account is disabled. Arrows show the cascading failure modes.
 :width: 80%
 :align: center
 
-The orphaned flow problem: when an owner leaves without transferring ownership, flows continue running without oversight — a silent failure waiting to become a visible one.
+Orphaned flows are automation liabilities. When the owner leaves, the flow's permissions become stale — and its failures become invisible.
 :::
 
-:::{danger}
-**A flow runs with its owner's permissions.**
+**The risk**: A flow created by an account director who had access to client account sites continues running after that person moves to a different role — or leaves GES entirely. The flow still reads client data. If the account is disabled, the flow fails silently. Nobody finds out until someone asks why the report stopped appearing.
 
-If an account director who has broad access to multiple client sites builds a flow, that flow inherits that access. A poorly scoped flow can read from one client's library and write to another's — not through malice, but through overly broad design.
+**The mitigation**: Flow ownership must be part of offboarding. When someone leaves a role, their flows transfer to their successor — explicitly, with documentation. IT should maintain an inventory of flows by owner and audit it quarterly.
 
-This is Chapter 12's cross-client contamination risk, expressed in automation. The mitigation is the same: **scope narrowly, name what the flow must not touch, review outputs.**
-:::
+::::{admonition} ⚠️ A Flow Runs as Its Owner
+:class: danger
+
+The permission model from Chapter 12 applies to flows exactly as it applies to Cowork: **a flow can access anything its owner can access**.
+
+If you have broad access across client accounts and you create a flow that reads from "all show libraries," that flow inherits your broad access. It can read client material you have access to but should not be combining into a single output.
+
+Cross-client contamination is not prevented by flow design alone. It requires that flow owners have appropriate access limits — and that flows are scoped to specific libraries rather than broad searches.
+
+Before creating a flow that touches client data, ask: **if this flow's output were sent to the wrong person, what would be in it?** Then scope the flow so the answer is "nothing."
+::::
 
 ### Error Handling and Silent Failure
 
 :::{figure} ../images/ch16-error-handling.png
-:label: fig-ch16-error
-:alt: Two flow diagrams side by side. Left: Flow with no error handling — errors cause silent failure, nobody notified. Right: Flow with proper error handling — try-catch pattern, notifications on failure, logging for audit.
+:label: fig-ch16-error-handling
+:alt: Comparison diagram showing two flows. Left: flow with no error handling — an action fails, the whole flow fails, no notification, nobody knows. Right: flow with error handling — an action fails, the flow catches the error, logs it, sends notification to the owner, continues with remaining actions or fails gracefully.
 :width: 80%
 :align: center
 
-Flows without error handling fail silently. Flows with error handling fail visibly — which is the only kind of failure you can fix.
+The difference between error handling and hope. The flow on the left fails invisibly. The flow on the right fails loudly — which is the only kind of failure you can fix.
 :::
 
-The most dangerous failure is not a flow that crashes spectacularly. It is a flow that **stopped working and nobody noticed**.
+A flow that fails silently is worse than a flow that fails loudly.
 
-A connector authorization expires. A file path changes. A column header is renamed. The flow encounters an error, logs it to a run history nobody checks, and moves on — or stops entirely. The Monday report does not arrive. Nobody realizes until Wednesday, when someone asks where it went.
+**Silent failure modes:**
+- A file was not where the flow expected it; the flow logged nothing and exited
+- An approval request was sent to an approver who is on leave; the flow waits forever
+- A connector timed out; the flow retried three times and stopped; nobody was notified
+- The flow succeeded but produced the wrong output because an upstream data source changed format
 
-**The governance requirement:**
-- Every flow sends a failure notification to a monitored channel or inbox
-- Flows with scheduled triggers include a "heartbeat" — a success notification that confirms the run completed
-- Run history is reviewed at least weekly for flows processing client or financial data
-- Error rates above threshold trigger an automatic pause for human review
+**Error handling is not optional:**
 
-### Approval Steps as Designed Control Points
+1. **Try-catch scopes** — wrap actions that might fail and define what happens when they do
+2. **Notifications on failure** — send an email or Teams message to the flow owner when something breaks
+3. **Logging** — write to a run history that someone can review
+4. **Timeouts with escalation** — if an approval does not come within X hours, escalate or fail explicitly
 
-Approval actions in Power Automate pause the flow and route a decision to a human. The flow waits until approved, rejected, or timed out.
+The goal is not to prevent all failures — some failures are legitimate (a file really was missing). The goal is to make failures *visible* so someone can act on them.
 
-This is not friction. It is **designed human judgment** embedded at the moments that require it.
+### Approval Steps as Control Points
 
-**GES examples where approval steps belong:**
-- Before sending any communication to an exhibitor or organizer
-- Before posting variances or reconciliation figures to a client-visible channel
-- Before releasing information that involves competitive or embargo-sensitive content
-- Before any action that modifies a rate, a deadline, or a contractual term
+Not every flow should run without human oversight. Approval steps are how you insert human judgment where the process requires it.
 
-The discipline: **decide at design time where humans must re-enter the loop.** Do not leave it to chance.
+**Use approval steps for:**
+- External communications (email to organizers, exhibitors, clients)
+- Rate exceptions or pricing outside standard parameters
+- Safety escalations that require management awareness
+- Any output that will be used as the basis for client billing
 
-### Environments and Connections
+**Do not use approval steps for:**
+- Every action in the flow (that defeats the purpose of automation)
+- Internal logging and filing (if you trust the logic, let it run)
+- Notifications that are informational rather than action-requiring
 
-Power Automate flows run in **environments** — organizational containers that determine what data the flow can access and what connections are available.
+The design principle: **automate the work that does not require judgment; pause for judgment where it does**.
 
-Connections are the credentials that link Power Automate to external services. They include OAuth tokens, service accounts, and API keys. Connections are **per-user** by default — which means the flow uses the connection owner's identity and permissions.
+---
 
-**The governance implications:**
-- Flows accessing sensitive systems should use service accounts with scoped permissions, not personal accounts
-- Connections should be reviewed quarterly to ensure they still belong to active employees
-- Premium connectors (which require additional licensing) should be governed centrally to manage costs
+## 10. Honest Limitations
 
-### The Cross-Client Contamination Risk in Automation
+This section exists because the vendors will not write it.
 
-Chapter 12 established the principle: GES serves direct competitors at the same show. A permission gap that exposes one client's material to another is a business-critical failure.
+**Desktop RPA is brittle.** It breaks when UIs change. It requires a machine to be running (or a hosted RPA bot, which costs money). It is maintenance-intensive. Use it only when there is no connector and no API — and budget for the maintenance.
 
-Automation raises the stakes. A flow that runs nightly, processing data from every show site its owner can access, can systematically traverse content it should not touch — and produce outputs that blend client data in ways no human ever would.
+**Premium connectors cost money.** The Power Automate Premium license is approximately $15 per user per month. Some connectors require additional licensing. Hosted RPA bots are approximately $215 per bot per month. Budget before you build.
 
-**The mitigation:**
-- Flows are scoped to specific sites, libraries, or data sources — never "all sites the owner can access"
-- Constraints are explicit in the flow design: "Only process files in Show 5108 library"
-- Outputs are reviewed before distribution, especially on cross-show or cross-account flows
-- Flows that touch multiple client workspaces require explicit approval from legal or compliance
+**Not everything should be automated.** If the process requires nuanced judgment at every step, automation does not help — it just creates a flow that pauses for approval constantly. If the process runs twice a year, the automation investment may exceed the time it saves. If the process is not yet well-understood, automating it locks in whatever you think it is, which may not be what it actually is.
+
+**Maintenance burden is real and under-estimated.** Flows break when connectors are updated, when file locations change, when personnel change, when business logic changes. Every flow is a small piece of infrastructure that requires occasional attention. Twenty flows require attention twenty times as often.
+
+**Automation can mask problems.** A manual process forces someone to look at the data every time. An automated process runs whether the data is right or wrong. If the upstream data quality is poor, automation hides it until the downstream outputs are obviously wrong — at which point the problem has compounded.
+
+The right mindset: automation is a trade-off, not a gift. It trades ongoing execution time for upfront design and ongoing maintenance. That trade is usually favorable for high-frequency, stable processes. It is often unfavorable for low-frequency or rapidly changing ones.
+
+---
+
+## 11. Build Your First Flow — A Walkthrough
+
+This walkthrough builds a simple, practical flow that a non-technical GES employee can complete in 30 minutes. It demonstrates the core concepts without requiring premium connectors or complex logic.
+
+**The scenario:** Every week, you want to receive an email summarizing how many files were added to your team's SharePoint folder in the past 7 days.
+
+**Step 1 — Open Power Automate**
+
+Go to [make.powerautomate.com](https://make.powerautomate.com) and sign in with your GES Microsoft 365 account.
+
+**Step 2 — Create a new flow**
+
+Click **+ Create** in the left navigation, then select **Scheduled cloud flow**. Name it "Weekly SharePoint Summary" and set the schedule: every Monday at 8 a.m.
+
+**Step 3 — Add the first action**
+
+Click **+ New step** and search for "SharePoint." Select **Get files (properties only)** from the SharePoint connector.
+
+- **Site Address:** Select your team's SharePoint site
+- **Library Name:** Select the document library you want to monitor
+
+**Step 4 — Filter to recent files**
+
+Click **+ New step** and search for "Filter array." This is a Data Operations action.
+
+- **From:** Select the "value" output from the previous SharePoint step
+- **Condition:** Select the "Created" field, choose "is greater than," and enter an expression: `addDays(utcNow(), -7)`
+
+This filters to only files created in the last 7 days.
+
+**Step 5 — Count the files**
+
+Click **+ New step** and search for "Compose" (Data Operations). In the **Inputs** field, enter the expression: `length(body('Filter_array'))`
+
+This gives you the count of recent files.
+
+**Step 6 — Send the email**
+
+Click **+ New step** and search for "Outlook." Select **Send an email (V2)**.
+
+- **To:** Your email address
+- **Subject:** Weekly SharePoint Summary
+- **Body:** Compose a message like: "In the past 7 days, [output of Compose] files were added to [folder name]."
+
+**Step 7 — Save and test**
+
+Click **Save** in the top right. Then click **Test**, select **Manually**, and click **Test** again. The flow will run immediately. Check your email.
+
+**Step 8 — Review and refine**
+
+Look at the test results. Did it count correctly? If not, check your filter expression. Once it works, the flow will run automatically every Monday.
+
+---
+
+## 12. The Compounding ROI of Automation
+
+:::{figure} ../images/ch16-automation-roi-compounding.png
+:label: fig-ch16-automation-roi
+:alt: Graph showing automation ROI over time. X-axis is time in months, Y-axis is cumulative hours saved. The curve shows initial investment (negative), break-even point, and then accelerating returns as the flow runs repeatedly. A callout shows the compounding effect: 20 minutes saved × 4,000 runs = 1,333 hours.
+:width: 80%
+:align: center
+
+Automation ROI compounds over time. The initial investment is repaid, and then the savings accelerate — because the flow keeps running while you do other work.
+:::
+
+The math of automation at GES scale is dramatic.
+
+A 20-minute task, automated, running 4,000 times a year, saves **1,333 hours** annually. That is not a rounding error. It is eight months of a full-time employee's working hours.
+
+But the compounding effect is larger than the raw time savings:
+
+**Consistency improves.** The 4,001st run of the flow is identical to the first. Human execution drifts — shortcuts, variations, forgotten steps. Automated execution does not.
+
+**Speed improves.** The flow runs in seconds. A human takes 20 minutes. For time-sensitive processes — freight alerts during move-in, safety escalations — that speed difference matters.
+
+**Scalability improves.** Adding ten more shows does not require ten more people running the report. The flow handles them all.
+
+**Attention shifts.** Instead of running the report, the analyst reviews the exceptions the report flagged. That is higher-value work — pattern recognition, judgment, intervention.
+
+The cost is real: design time, testing time, maintenance time. But at 4,000+ shows a year, the math almost always favors automation for any process that is truly repetitive.
+
+::::{admonition} 🧭 T.R.U.E. Check — Excellence
+:class: note
+
+**Provide excellent service and execution.**
+
+Excellence is not heroic effort. It is consistent delivery — the 4,000th show receiving the same rigorous analysis as the first. Automation is how excellence scales beyond what individual humans can sustain.
+::::
+
+---
+
+## 13. Try This: Convert a Cowork Task to a Flow
+
+Pick a Cowork task you have run at least three times and that produces the same output structure each time.
+
+**Step 1 — Document the Cowork prompt**
+
+Write out the current five-part prompt: Outcome, Inputs, Definition of done, Constraints, Approval scope.
+
+**Step 2 — Identify the trigger**
+
+What event would naturally start this task without you? A file posting? A date arriving? A form submission?
+
+**Step 3 — Map the actions**
+
+List every step Cowork takes. For each step, identify the Power Automate connector or action that would accomplish the same thing.
+
+**Step 4 — Identify the human checkpoints**
+
+Where in the Cowork version do you stop and review before approving? Those become approval actions in the flow.
+
+**Step 5 — Build it (or spec it)**
+
+If you have Power Automate access, build the flow. If not, write a specification document that someone could build from — detailed enough that they would not need to ask clarifying questions.
+
+**Step 6 — Test against known output**
+
+Run the flow against a show where you already know the correct output. Does it match?
+
+---
+
+## 14. Productive Struggle Problem
+
+You are the logistics director for a portfolio of 140 shows across 12 venues. You have noticed that freight target compliance varies dramatically by venue — some venues consistently hit targets, others consistently miss.
+
+You have three data sources:
+1. Freight target agreements (by show, in SharePoint)
+2. Advance warehouse receiving logs (by show, in a legacy system accessible only through a web portal)
+3. Material handling reconciliations (by show, in Excel files in SharePoint)
+
+**The challenge:** Design an automated analysis system.
+
+1. **Define the trigger.** What event or schedule would initiate the analysis? Justify your choice.
+
+2. **Map the flow.** List the actions in sequence. Identify which use cloud connectors and which require desktop flows (RPA). For each RPA action, describe why it is necessary and what maintenance burden it creates.
+
+3. **Design the output.** What does the report look like? Where is it delivered? Who receives it?
+
+4. **Add governance.** What approval steps, if any, belong in this flow? What error handling is required? How do you prevent cross-client contamination if venues host competing exhibitors?
+
+5. **Estimate ROI.** If the manual version takes 4 hours per month and the flow takes 20 hours to build and 2 hours per month to maintain, how many months until break-even?
+
+6. **Identify what you would not automate.** What part of this analysis still requires human judgment, and why?
+
+---
+
+## 15. Closing the Arc — From Asking to Automating
+
+This is the final chapter of the book.
+
+Look back at where you started. In Chapter 1, you learned what AI can and cannot do. In Chapter 4, you learned to prompt well. In Chapters 7-11, you learned to use Copilot in Word, Excel, PowerPoint, Outlook, and Teams. In Chapter 12, you learned why SharePoint governance is AI governance. In Chapter 13, you learned to build analytical systems. In Chapter 14, you learned to delegate to Cowork. In Chapter 15, you learned to build agents.
+
+Now you have learned to automate.
+
+The arc is not technological. It is professional.
+
+**Asking** teaches you what AI can do and builds trust through verification. You see every output. You approve every action.
+
+**Delegating** teaches you to scope work precisely and review like a manager. You define outcomes and constraints; AI handles execution. You step back from the middle of the work and focus on the ends.
+
+**Automating** teaches you to remove yourself entirely — for the work that does not need you. You design once, verify carefully, and let the process run forever.
+
+That progression describes a career, not a curriculum. The GES professional who started this book asking Copilot to rewrite an email ends it designing automation that runs 4,000 times a year without human intervention.
+
+What does that mean for a career at GES?
+
+It means **more time on judgment and less time on execution**. The freight variance report runs itself; you analyze the patterns it surfaces. The exhibitor order form routes itself; you handle the exceptions that require human creativity. The post-show reconciliation assembles itself; you explain the story to the organizer.
+
+It means **higher leverage**. A single logistics analyst with well-designed automation can cover territory that previously required a team. Not because the analyst works harder, but because the repeatable work is handled by systems.
+
+It means **new skills matter**. The ability to design a good process, verify it rigorously, and scope automation appropriately is as valuable as the ability to execute the process manually — more valuable, because the design scales and the execution does not.
+
+GES became independent on December 31, 2024, for the first time in 55 years. That independence means GES defines its own technology roadmap. onPeak's AI Smart Suite and Visit by GES's intelligent hardware prove the company can build AI into products. This book proves the company can build AI into operations.
+
+The work is not finished. It is barely started. Across 4,000+ shows, 150,000+ exhibitors, 75+ countries, and 24 facilities, there are thousands of processes waiting to be designed better, verified carefully, and automated permanently.
+
+That is the work. And now you know how to do it.
 
 ::::{admonition} 🧭 T.R.U.E. Check — Responsibility
 :class: note
 
 **Be responsible for our actions and deliver on our commitments.**
 
-A flow runs under your name. Its outputs carry your implicit endorsement. If a reconciliation report goes to an organizer from a flow you built, that report is yours — whether you assembled it at your desk or it ran at 6 a.m. while you were asleep.
+Automation is a commitment. A flow you built and deployed runs on GES's infrastructure, accesses GES's data, and produces outputs that bear GES's name. It is not "the AI's" work. It is yours — automated.
 
-The discipline that makes automation safe is non-negotiable: **you review every artifact before anyone else does.** If you do not have time to review it, you do not have time to schedule it.
+The responsibility does not diminish because the execution is handled by software. If anything, it increases: you are responsible not just for one output, but for every output the flow will ever produce.
+
+Build carefully. Verify thoroughly. Own the result.
 ::::
 
 ---
 
-## 9. Honest Limitations — What Automation Cannot Do
+## 16. Leader's Takeaway
 
-Power Automate is powerful. It is not omnipotent. Understanding its limits prevents the expensive discovery of those limits in production.
+Automation changes what your team does. That requires changing how you lead them.
 
-### Desktop RPA Is Brittle
+**First: the prototype discipline is non-negotiable.** No flow goes to production without being tested as a Cowork prompt first, validated against known outputs, and reviewed by a second person. The cost of an unverified automated process — scaled across 4,000 shows — is far higher than the cost of taking an extra week to verify.
 
-Desktop flows automate by interacting with user interfaces — clicking buttons, typing in fields, navigating menus. When the UI changes, the flow breaks.
+**Second: flow ownership is a governance issue.** Every flow must have a named owner. When people leave roles, their flows transfer — explicitly, documented, that day. IT should maintain an inventory and audit it quarterly. Orphaned flows are ticking liabilities.
 
-A software update that moves a button, renames a menu item, or changes a screen layout can turn a working desktop flow into a series of failed clicks. The flow does not adapt. It follows the recording.
+**Third: error handling is not optional.** A flow that fails silently produces invisible damage. Every flow must log its runs, catch its errors, and notify someone when something breaks. If you cannot answer "who gets notified when this flow fails," the flow is not ready for production.
 
-**The implication:** Desktop flows require maintenance. Every update to the underlying application is a potential breaking change. Budget for ongoing adjustments, and do not assume a desktop flow will run unchanged for years.
+**Fourth: automation does not reduce headcount — it changes work.** The analyst who used to run the freight report now analyzes the patterns the report surfaces. The exhibitor services rep who used to key in order forms now handles the exceptions that require judgment. Automation shifts people from execution to design, from doing to reviewing. That is a higher-value role — but only if you train for it and manage to it.
 
-### Premium Connectors Cost Money
+**Fifth: start with the high-frequency, stable processes.** The freight variance report that runs 4,000 times a year is a better automation target than the annual strategy deck. The exhibitor order form that arrives in consistent format is a better target than the one-off venue rule document. Prioritize by frequency × stability.
 
-Power Automate offers hundreds of connectors. Some are included with Microsoft 365. Others require the **Power Automate Premium** license (approximately $15/user/month) or specific add-ons.
+The organizations that extract the most from automation are not the ones that automate the most. They are the ones that automate *carefully* — choosing the right processes, verifying rigorously, and maintaining deliberately.
 
-Connectors to Salesforce, ServiceNow, SAP, SQL Server databases, and many third-party services fall in the premium category. Unattended RPA — desktop flows that run without a logged-in user — requires approximately $150/bot/month.
+At GES, with 4,000+ live experiences a year, the opportunity is enormous. So is the risk of doing it poorly.
 
-**The implication:** Before designing a flow that relies on premium connectors, confirm the licensing is in place. A brilliant flow that requires a connector nobody has licensed is a blueprint, not a solution.
-
-### Not Everything Should Be Automated
-
-Some processes are too variable. Some decisions require too much judgment. Some situations demand a human presence.
-
-- **Exception-heavy processes** where the "edge case" is actually most cases
-- **High-stakes communications** where tone and relationship matter more than speed
-- **Situations requiring emotional intelligence** — an exhibitor who is frustrated, an organizer who is concerned, a crew member who needs support
-- **Novel situations** where the process does not exist yet
-
-Automation amplifies consistency. It does not replace judgment. If a process requires significant human judgment at every step, automating the steps between those judgments may add complexity without adding value.
-
-### The Maintenance Burden Is Real and Underestimated
-
-Flows are not fire-and-forget. They require:
-- **Monitoring** — checking run history, reviewing error rates, confirming outputs
-- **Updates** — adjusting when source systems change, when requirements evolve, when edge cases emerge
-- **Ownership transfer** — ensuring continuity when the original builder moves on
-- **Retirement** — decommissioning flows that are no longer needed
-
-A portfolio of fifty flows without a maintenance discipline is not automation infrastructure. It is technical debt that compounds monthly.
-
-::::{admonition} 🧭 T.R.U.E. Check — Understanding
-:class: note
-
-**People come first. Be understanding and compassionate.**
-
-Automation can process an exhibitor's order in seconds. It cannot understand why they submitted it late. It cannot hear the stress in their voice when they call asking if it is too late. It cannot exercise the judgment to make an exception for a client relationship that matters.
-
-When the right answer requires understanding a person, not processing a form, the right tool is a human.
-::::
-
----
-
-## 10. Build Your First Flow — A Walkthrough
-
-This section is designed for someone who has never built a Power Automate flow. If you are experienced with the platform, skip to the Try This section.
-
-### The Scenario
-
-You want a flow that notifies the show team whenever a new file is added to the show's "Critical Updates" folder — a simple event-driven notification.
-
-### Step by Step
-
-**Step 1 — Access Power Automate**
-
-Navigate to [make.powerautomate.com](https://make.powerautomate.com) and sign in with your Microsoft 365 account.
-
-**Step 2 — Create a New Flow**
-
-Click **Create** in the left navigation, then select **Automated cloud flow**. This type fires on an event rather than a schedule.
-
-**Step 3 — Name and Choose Trigger**
-
-Name your flow: "Critical Updates Notification — Show 5108"
-
-Search for the trigger: "When a file is created (properties only)" from the SharePoint connector.
-
-**Step 4 — Configure the Trigger**
-
-- **Site Address:** Select the SharePoint site for Show 5108
-- **Library Name:** Select or enter "Critical Updates"
-
-The flow will now fire every time a new file appears in that folder.
-
-**Step 5 — Add the Notification Action**
-
-Click **+ New step**. Search for "Post message in a chat or channel" from the Microsoft Teams connector.
-
-Configure:
-- **Post as:** Flow bot
-- **Post in:** Channel
-- **Team:** Select the Show 5108 team
-- **Channel:** Select the appropriate channel (e.g., "General" or "Critical Alerts")
-- **Message:** Compose using dynamic content:
-
-```
-🚨 New Critical Update Posted
-
-File: [File name with extension]
-Added: [Created]
-Link: [Link to item]
-```
-
-Use the dynamic content picker to insert the actual file properties.
-
-**Step 6 — Save and Test**
-
-Click **Save**. Then click **Test** in the upper right. Choose "Manually" and trigger the test.
-
-Upload a test file to the Critical Updates folder. Within seconds, you should see the notification appear in the Teams channel.
-
-**Step 7 — Review Run History**
-
-Return to the flow and click the flow name to see run history. Each run shows status (succeeded, failed), duration, and details. This is where you will monitor for errors.
-
-### What You Built
-
-A complete event-driven automation: file appears → notification posts. No human had to notice the file, open Teams, compose a message, and post it. The flow handles the mechanical part; the team handles the response.
-
----
-
-## 11. The Compounding Math
-
-:::{figure} ../images/ch16-automation-roi-compounding.png
-:label: fig-ch16-roi
-:alt: Line graph showing cumulative time savings from automation over one year. X-axis shows months 1-12. Y-axis shows hours saved. Multiple lines represent different flow frequencies (daily, weekly, per-show). The compounding effect is visible as lines curve upward. A callout shows: 20 minutes saved per run × 4,000 runs per year = 1,333 hours.
-:width: 80%
-:align: center
-
-Automation ROI compounds with repetition. A 20-minute task automated across 4,000 annual shows recovers over 1,300 hours — the equivalent of more than half a full-time position.
-:::
-
-At GES, the math is not subtle.
-
-- **4,000+ live experiences per year**
-- **150,000+ exhibitors**
-- **24 global production and warehouse facilities**
-- **75+ countries**
-
-A flow that saves 20 minutes and runs once per show: 1,333 hours annually.
-
-A flow that saves 5 minutes and runs for every exhibitor order: tens of thousands of hours annually.
-
-A flow that saves 2 minutes and runs daily at every facility: 17,520 minutes — 292 hours — annually.
-
-The question is not whether automation is worth the investment. The question is which automations deliver the most value, and that answer is usually: **the ones that fire most frequently on the most repetitive, least judgment-requiring tasks.**
-
----
-
-## 12. Try This: Your First Automated Notification
-
-::::{admonition} 🧪 Try This: Build a File-Arrival Notification
-:class: tip
-
-**Time required:** 20 minutes
-
-**Goal:** Build a flow that notifies you when a file arrives in a SharePoint folder you monitor.
-
-**Steps:**
-
-1. Navigate to [make.powerautomate.com](https://make.powerautomate.com)
-2. Create an **Automated cloud flow**
-3. Name it: "My Folder Monitor"
-4. Trigger: "When a file is created (properties only)" — SharePoint
-5. Configure with a folder you have access to
-6. Add action: "Send me an email notification" (or Teams notification if you prefer)
-7. Compose the notification with the file name and link
-8. Save, test by uploading a file, confirm the notification arrives
-
-**Then answer:**
-
-1. How long did it take from file upload to notification arrival?
-2. What happens if the flow encounters an error? (Check your flow's settings for failure notifications)
-3. What would you add to make this production-ready for a show team?
-::::
-
----
-
-## 13. Productive Struggle Problem
-
-You are the GES operations director for a major venue. Three recurring problems consume your team's time:
-
-1. **Exhibitor service questions** arrive by email at a rate of 40-60 per day during the pre-show period. They currently sit in a shared inbox until someone triages them — often several hours later. Questions about deadlines and freight targets need faster response.
-
-2. **Site survey reports** are submitted by show managers after venue walks, but they end up scattered across OneDrive folders instead of in the Venue Knowledge Library where other teams can find them.
-
-3. **Labor forecast variance reviews** should happen daily during move-in, but nobody has time to pull the numbers, compare them to forecast, and flag issues until the show is over — by which point the information is historical rather than actionable.
-
-**Your challenge:**
-
-For each of the three problems:
-- Decide whether to use Copilot Chat, Cowork, or Power Automate — and justify your choice using the decision framework
-- If Power Automate: specify the trigger type, the key actions, and where human approval should re-enter the loop
-- Identify one governance control that must be in place before deploying each flow
-- Estimate the time saved per instance and the annual compounding effect
-
-For at least one of the three, sketch the Cowork assignment you would use to prototype before building the flow. Include the five-part structure: Outcome, Inputs, Definition of done, Constraints, Approval scope.
-
-There is no single right answer. The quality of your reasoning — especially your justification for what you chose *not* to automate — matters more than the flow designs themselves.
+Lead accordingly.
 
 ---
 
@@ -797,153 +802,94 @@ There is no single right answer. The quality of your reasoning — especially yo
 
 ```{glossary}
 Power Automate
-  Microsoft's automation platform within the Power Platform family. Enables cloud flows (API-based automation), desktop flows (RPA), and combinations of both.
+  Microsoft's automation platform for building workflows (flows) that run on triggers. Part of the Microsoft Power Platform alongside Power Apps, Power BI, and Copilot Studio.
 
-Cloud Flow
-  An automation that runs in Microsoft's cloud, connecting systems through API-based connectors. Triggers include scheduled, event-driven, instant (manual), and approval-based.
+Cloud flow
+  A Power Automate flow that runs on Microsoft's servers, connecting applications through API-based connectors. More reliable and easier to maintain than desktop flows.
 
-Desktop Flow
-  An automation that runs on a Windows machine, interacting with applications through recorded UI actions (clicks, keystrokes, screen navigation). The RPA component of Power Automate.
+Desktop flow
+  A Power Automate flow that runs on a Windows machine, automating applications through UI interaction (clicking, typing, reading screens). Required when applications lack API connectors. Also called RPA.
 
-RPA (Robotic Process Automation)
-  Technology that automates tasks by mimicking human interactions with software interfaces. Used when systems lack modern APIs.
+Robotic Process Automation (RPA)
+  Automation that mimics human interaction with software — clicking buttons, typing into fields, reading text from screens. Necessary for legacy applications without APIs; brittle and maintenance-intensive.
 
 Trigger
-  The event that starts a flow. Types include scheduled (time-based), event-driven (something happens), instant (user-initiated), and approval-based.
+  The event that starts a Power Automate flow. Types include scheduled (runs at a set time), event-driven (runs when something happens), manual (runs when a user clicks a button), and approval-based (runs based on approval outcome).
 
 Connector
-  A pre-built integration between Power Automate and another service (SharePoint, Outlook, Teams, Salesforce, SAP, etc.). Standard connectors are included with Microsoft 365; premium connectors require additional licensing.
+  A standardized API integration in Power Automate that enables flows to interact with a specific service (SharePoint, Outlook, Teams, Salesforce, etc.). Microsoft offers 1,000+ connectors.
 
 AI Builder
-  Microsoft's embedded AI capability for Power Platform. Provides document processing, text classification, object detection, and prediction within Power Automate flows.
+  Microsoft's low-code AI capability for document processing, object detection, text classification, and prediction. Integrated into Power Platform; enables extraction of structured data from unstructured documents.
 
-Approval Action
-  A Power Automate action that pauses the flow, routes a decision to one or more approvers, and branches based on the response. Embeds human judgment at designed control points.
+Document processing model
+  An AI Builder model that extracts specific fields from documents. Pre-built models exist for invoices, receipts, and identity documents; custom models can be trained for organization-specific documents like exhibitor order forms.
 
-Flow Owner
-  The user whose identity and permissions a flow uses when executing. Flow ownership determines what data the flow can access and what actions it can perform.
+Flow owner
+  The person responsible for a Power Automate flow. Flows run with the owner's permissions — a flow can access anything its owner can access. Ownership must transfer when people leave roles.
 
-Orphaned Flow
-  A flow whose owner has left the organization or changed roles without transferring ownership. Orphaned flows continue running without oversight until they fail or are discovered.
+Orphaned flow
+  A flow whose owner has left the organization or changed roles without transferring ownership. Continues running with stale permissions; may fail silently when the owner's account is disabled.
 
-Premium License
-  The Power Automate Premium license (approximately $15/user/month) required for premium connectors, attended desktop flows, and process mining. Unattended RPA requires approximately $150/bot/month.
+Approval action
+  A Power Automate action that pauses the flow, sends an approval request to designated approvers, and branches based on the response. Used to insert human judgment at control points.
 
-Environment
-  An organizational container in Power Platform that determines what data flows can access and what connections are available. Environments provide isolation between development, test, and production.
+Error handling
+  Flow logic that catches failures, logs them, and notifies appropriate people rather than failing silently. Includes try-catch scopes, failure notifications, and timeout escalations.
 
-Connection
-  The credential (OAuth token, service account, API key) that links Power Automate to an external service. Connections are typically per-user and inherit the user's permissions.
+Premium connector
+  A Power Automate connector that requires a Premium license ($15/user/month) to use. Includes many third-party services and advanced Microsoft capabilities.
 
-Cowork-to-Flow Progression
-  The recommended practice of prototyping with Copilot Cowork before building a Power Automate flow. Delegation teaches the process; automation codifies what was learned.
+Hosted RPA bot
+  A virtual machine running Power Automate Desktop, hosted in Microsoft's cloud, that executes desktop flows without requiring the user's local machine to be running. Approximately $215/bot/month.
 
-Silent Failure
-  A flow failure that produces no notification and goes unnoticed until someone asks where the expected output went. Prevented through error handling and failure notifications.
+Cowork-to-flow progression
+  The recommended pattern for building automation: prototype as a Cowork task, refine through iteration, validate against known outputs, then convert to a Power Automate flow for production deployment.
+
+Silent failure
+  A flow failure that produces no notification — the flow stops running but nobody is alerted. The most dangerous failure mode because problems compound before discovery.
 
 Drayage
-  The movement of exhibitor freight from the dock or advance warehouse to the booth space, and back at move-out. A core material handling service automated through reconciliation and variance flows.
+  The movement of exhibitor freight from the dock or advance warehouse to the booth space on the show floor, and back out at move-out. A core material handling service and cost line.
 
-Freight Target
-  An agreed target for exhibitor freight — weight, arrival window, or cost. Variance against freight targets is a key metric tracked through automated monitoring flows.
+Freight target
+  An agreed target date and time window for freight arrival, used to sequence move-in and manage marshaling yard capacity. Variance from target is a key operational metric.
 ```
 
 ---
 
 ## Discussion
 
-Power Automate completes the arc from asking to delegating to automating. The capability is real: work that used to require human initiation now runs on triggers, processing data, generating outputs, and notifying teams without anyone clicking "start."
+The progression from asking to delegating to automating is not just a technology adoption curve. It is a professional development arc.
 
-But capability is not strategy. The question facing GES is not "can we automate this?" The question is "should we, and under what governance?"
+Consider your current role at GES. Which of your regular tasks belong at each level — Chat, Cowork, or Power Automate? What would need to be true before you could move a task from one level to the next?
 
-Consider your own role. Where does repetition live in your work? What tasks fire the same way, with the same inputs, producing the same outputs, show after show? And critically: which of those are genuinely mechanical, and which only look mechanical until an edge case arrives?
+Then consider the harder question: if your execution work were automated, what would you do with the time?
 
 ::::{admonition} 📝 Discussion Guidelines
 :class: note
 
-Post your reflection in the course discussion forum before the next session. Your response should:
+Post your reflection in the course discussion forum before the session closes. Your response should:
 
-- Identify one process in your role that is a strong automation candidate, and one that should remain human-driven — justify both choices
-- Address the governance question: what would have to be true about a flow's design and oversight before you would trust it to run without you reviewing every output?
-- Describe the progression you would use to move from Cowork prototype to Power Automate production for your automation candidate
-- Respond to at least **two peers** with substantive engagement — challenge their automation/human-driven distinction, suggest governance controls they missed, or push back on a flow design
-- Reference at least one credible source — Microsoft Power Automate documentation, GES operational guidance, or automation governance research
+- Identify one process in your role that is currently manual, describe how it would be automated, and specify which trigger type you would use
+- Identify one process you would **refuse** to automate, and explain why — referencing governance, judgment requirements, or risk considerations from this chapter
+- Address the verification question: what testing would you require before deploying a flow that runs without human intervention?
+- Respond to at least **two peers** with substantive engagement — challenge an automation choice, identify a governance gap they missed, or build on their ideas
+- Reference at least one credible source — Microsoft Power Automate documentation, this chapter's governance framework, or GES's T.R.U.E. values
 
 Minimum 300 words for your main post.
 ::::
 
 ---
 
-## Leader's Takeaway
-
-Power Automate is where the capability gains from Copilot and Cowork become permanent operational infrastructure. The progression is complete: from AI that answers questions, to AI that executes assignments, to automation that runs without human initiation.
-
-For GES leaders deploying this:
-
-**1. Govern before you scale.** The first flow is an experiment. The fiftieth is a portfolio. Before you reach that scale, establish ownership standards, orphan flow processes, error handling requirements, and approval checkpoint rules. Automation without governance is risk multiplication.
-
-**2. Prototype with Cowork, then automate.** The Cowork-to-flow progression prevents the most common failure: automating a process you do not understand. Require that any flow processing client data or producing client-facing outputs was first delegated manually at least twice.
-
-**3. Budget for maintenance.** Flows are not fire-and-forget. Connectors expire. Source systems change. Edge cases emerge. Build maintenance into the operational model from day one, or watch your automation portfolio degrade into a collection of broken flows nobody owns.
-
-**4. Measure the compounding, and prioritize accordingly.** A 20-minute task automated across 4,000 shows is 1,333 hours. That is the math that justifies investment. Prioritize flows by frequency × time saved, not by complexity or novelty.
-
-**5. Never automate what requires judgment.** Automation amplifies consistency. It does not replace wisdom. The exhibitor who needs an exception, the organizer who needs reassurance, the crew member who needs support — those moments require humans, and protecting space for them is part of the automation strategy.
-
-GES runs 4,000+ live experiences a year with ~2,600 people across 75+ countries. The repetition in that scale is exactly what automation was built for. The discipline in deploying it — prototype, govern, maintain, review — is what makes the difference between automation as operational advantage and automation as expensive, machine-speed error production.
-
----
-
-## Closing: The Arc Complete
-
-This book has traveled a path.
-
-It began with a question: *what does it mean to work with AI?* The early chapters taught the fundamentals — prompting, context, the permission model, the boundaries of what Copilot knows and does not know. You learned to ask well.
-
-The middle chapters went deeper into the applications: Word, Excel, PowerPoint, Outlook, Teams, SharePoint. You learned where Copilot fits into the work you already do, and where it does not. You developed the verification discipline that turns AI outputs into trustworthy artifacts.
-
-Chapter 14 introduced a shift. Copilot Cowork was not about asking better questions. It was about delegating real work — multi-step, multi-app, finished artifacts returned while you focused on what only you could do. The skill changed from prompting to briefing, from consuming outputs to managing a capable collaborator.
-
-This chapter completes the arc. Power Automate is where delegation becomes permanent. The work that used to require you to initiate it now runs when the trigger fires — forever, without you, until you decide otherwise.
-
-**The three gears are not a ladder to climb. They are tools to choose.**
-
-Some work will always be conversation — one question, one answer, right now. Copilot Chat is not obsolete because Cowork exists. Some work will always be delegation — a project, a deliverable, run once or on request. Cowork is not obsolete because Power Automate exists. And some work should become automation — the same mechanical task, fired by the same trigger, producing the same output, thousands of times a year.
-
-The professional skill is knowing which gear fits which work.
-
-::::{admonition} 🧭 T.R.U.E. Check — Excellence
+::::{admonition} 🧭 T.R.U.E. Check — Understanding
 :class: note
 
-**Provide excellent service and execution.**
+**People come first. Be understanding and compassionate.**
 
-Excellence in 1939, when GES was a small sign and exhibit company in Kansas City, meant a craftsman standing over their work until it was right. Excellence in 2026, with 4,000+ live experiences across 75+ countries, means something more: it means **systems that deliver excellence at scale**, reliably, repeatedly, without depending on one person being awake at 6 a.m. to run a report.
+Automation changes jobs. Some people will see it as opportunity — less drudgery, more judgment work. Others will see it as threat — their expertise in execution becoming less valuable.
 
-Automation is not a replacement for the craftsman's care. It is how that care scales to serve 150,000+ exhibitors across shows the craftsman will never see.
+Both reactions are legitimate. The transition deserves patience, training, and honest conversation about what work looks like on the other side.
+
+AI does not replace people. It changes what people do. How that change lands depends on how leaders manage it.
 ::::
-
-**What this means for a GES professional's career:**
-
-The skills that mattered before this book still matter. Operational judgment. Client relationships. The ability to walk a floor and see what is wrong before it becomes a crisis. The institutional knowledge that says *"last time we did this at that venue, here is what went wrong."*
-
-What changes is the leverage available to apply those skills.
-
-A show manager who knows exactly which variance signals a real problem no longer has to pull the data to find it. The flow delivers the flagged lines; the manager applies the judgment. An account director who understands a client's priorities no longer has to assemble the QBR package to communicate them. Cowork produces the deck; the director shapes the conversation.
-
-The mechanical work — the assembly, the formatting, the routine processing that ate hours every week — recedes. What remains is the work that is genuinely yours: the judgment, the relationships, the decisions that shape outcomes.
-
-That is not a threat to professional value. It is an amplification of it.
-
-The question facing every GES professional reading this book is not *"will AI take my job?"* The question is *"how will I use these tools to do work that would have been impossible before?"*
-
-The cross-show cost analysis that nobody had time for. The exhibitor question that got answered in minutes instead of hours. The reconciliation that was done before you landed. The pattern across six years of shows at one venue that revealed why costs kept drifting — a pattern nobody could see because nobody had time to assemble the data.
-
-**That is the work that opens up.** The mechanical work contracts; the meaningful work expands.
-
-GES became independent on December 31, 2024, for the first time in 55 years. The company is setting its own course, making its own technology decisions, defining its own standards. onPeak shipped an AI Smart Suite. Visit by GES ships intelligent hardware. The organization has proven it can build AI into products.
-
-This book has been about building AI into operations — into the daily work of delivering 4,000+ live experiences with ~2,600 people who are more often on show floors than at desks.
-
-The capability is real. The governance is defined. The path from asking to delegating to automating is mapped.
-
-What happens next is up to you.

@@ -66,7 +66,7 @@ Copilot is not the hero here. The analytical design is. But Copilot dramatically
 The basic user answers a question with Copilot. The advanced user uses Copilot to build a system that answers the same question every show cycle — more reliably, faster, and with less cognitive overhead.
 :::
 
-**The three hallmarks of an advanced Copilot user:** **Reproducibility** — every analysis lives in a designed structure, not a one-time export; the logic is documented and anyone qualified can run it again and get the same answer. **Scalability** — the template works for every show at that venue, then every venue in the region, then the account's full portfolio; it scales horizontally across the business and vertically across time. **Auditability** — every formula is reviewed, understood, and validated before it produces a number that reaches an exhibitor invoice, an organizer settlement, or a leadership deck. The human is always the last check before output becomes decision.
+**The three hallmarks of an advanced Copilot user:** **Reproducibility** — the logic is documented and anyone qualified can run it again and get the same answer. **Scalability** — the template works for every show at that venue, then every venue in the region, then the account's full portfolio. **Auditability** — every formula is reviewed and validated before it produces a number that reaches an exhibitor invoice, an organizer settlement, or a leadership deck. The human is always the last check before output becomes decision.
 
 ---
 
@@ -112,8 +112,8 @@ Chapter 7 established the rule: **Copilot can compute on rates. Copilot must nev
 
 In a template the rule gets *harder*, because the rate is now buried in a design that runs for a year without anyone re-reading it. Two disciplines protect you:
 
-1. **Put every rate in a clearly labeled, dated reference sheet** — `Rate Reference — Source: [tariff name], Effective: [date]` — and have every formula point at that sheet rather than embedding a number inline.
-2. **Put an expiry check in the validation layer.** Have Copilot flag the workbook if the rate reference date predates the show's move-in date. Tariffs change annually. Jurisdictions renegotiate. A template quietly using last year's rate is the most expensive kind of automation.
+1. **Put every rate in a labeled, dated reference sheet** — `Rate Reference — Source: [tariff name], Effective: [date]` — and have every formula point at that sheet rather than embedding a number inline.
+2. **Put an expiry check in the validation layer.** Flag the workbook if the rate reference date predates the show's move-in date. Tariffs change annually. Jurisdictions renegotiate. A template quietly using last year's rate is the most expensive kind of automation.
 
 A wrong formula produces a number nobody believes. A wrong *rate*, running on a schedule, produces a year of numbers everybody believes.
 ::::
@@ -213,7 +213,7 @@ A well-structured scenario model presents clear alternatives with consistent ass
 
 An account director asks: the organizer is considering moving a 250,000 net square foot show to a different city. What happens to our cost structure and our margin?
 
-**Step 1 — Define the scenario precisely.** "Moving venues" is not a model input. The inputs are the union jurisdiction and its straight-time window, the hourly rates under that agreement, the material handling tariff at the new facility, the drayage distance from advance warehouse to dock, the dock count and how it constrains move-in, and the freight lane costs to the new city. Every one is a real number in a real document. **Copilot cannot supply any of them.**
+**Step 1 — Define the scenario precisely.** "Moving venues" is not a model input. The inputs are the union jurisdiction and its straight-time window, the rates under that agreement, the material handling tariff at the new facility, the drayage distance from advance warehouse to dock, the dock count and how it constrains move-in, and the freight lane costs to the new city. Every one is a real number in a real document. **Copilot cannot supply any of them.**
 
 **Step 2 — Build the assumption layer.** One labeled table, a row per variable, a column per scenario, a source note per row. Every downstream formula reads from this table and nowhere else.
 
@@ -231,11 +231,9 @@ Build this once and reuse it constantly, because the question recurs on nearly e
 
 ### Sensitivity Analysis
 
-A sensitivity table shows how the output moves as one input varies across a range — revealing which assumptions actually matter.
+A sensitivity table shows how the output moves as one input varies across a range — revealing which assumptions actually matter. *"Build a sensitivity table showing total labor cost as overtime share varies from 10 percent to 60 percent in 10-point increments, holding total hours constant at the Scenario B value."*
 
-> *"Build a sensitivity table showing total labor cost as overtime share varies from 10 percent to 60 percent in 10-point increments, holding total hours constant at the Scenario B value. Use Excel's data table functionality and explain the setup."*
-
-Run the same structure on the inputs that drive the business: material handling rate against drayage revenue, attach rate against service revenue, room block pickup against attrition exposure. In most GES cost models two or three inputs explain nearly all the variance and the rest is noise. The sensitivity table tells you which is which — and therefore where to spend estimating effort on every future show.
+Run the same structure on the inputs that drive the business: material handling rate against drayage revenue, attach rate against service revenue, pickup against attrition exposure. In most GES cost models two or three inputs explain nearly all the variance and the rest is noise. The sensitivity table tells you which is which — and therefore where to spend estimating effort on every future show.
 
 ### onPeak Pickup Forecasting and Attrition Risk
 

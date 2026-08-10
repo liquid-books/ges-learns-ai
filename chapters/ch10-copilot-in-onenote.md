@@ -243,7 +243,7 @@ These require reasoning across your content, not just condensing it. The chat in
 
 ## 8. The Venue Notebook — Where Institutional Memory Actually Lives
 
-:::{figure} ../images/ch10-exam-prep-notebook.png
+:::{figure} ../images/ch10-venue-notebook.png
 :label: fig-ch10-venue-notebook
 :alt: Illustration of a OneNote Venue Notebook for a convention center — notebook sidebar shows sections for Venue Profile, Docks and Freight, Labor and Jurisdiction, Utilities and Rigging, Site Survey History, and Lessons Learned — main page shows a structured Docks and Freight page with dock dimensions, trailer restrictions, marshaling yard gate hours and a status table with green checkmarks, and a Copilot summary panel showing recurring issues across past shows
 :width: 80%
@@ -297,7 +297,7 @@ A venue notebook is written for the colleague who comes after you and will never
 
 ## 9. The Show Notebook — One Cycle, Start to Finish
 
-:::{figure} ../images/ch10-deal-review-notebook.png
+:::{figure} ../images/ch10-show-notebook.png
 :label: fig-ch10-show-notebook
 :alt: Illustration of a OneNote Show Notebook for a trade show cycle — notebook sidebar shows sections for Show Overview, Pre-Con and Planning Calls, Site Surveys, Move-In Daily Log, Exhibitor Issues, Safety Walks, and Move-Out and Lessons Learned — the main page shows a Move-In Daily Log entry with hall-by-hall set progress, freight target variances, a booth issue table and a Copilot-generated punch list on the right side
 :width: 80%
@@ -335,7 +335,7 @@ That last one is the difference between reconciliation as a reconstruction exerc
 
 ## 10. The Account Notebook and the Design Ideation Notebook
 
-:::{figure} ../images/ch10-client-discovery-notebook.png
+:::{figure} ../images/ch10-account-notebook.png
 :label: fig-ch10-client-discovery
 :alt: Illustration of a structured OneNote Account Notebook for a GES account manager — notebook sidebar shows sections for Client Profile, Key Contacts, Show History, Meeting Notes, Open Questions, and Next Steps, with the main page showing a Show History page listing multiple show cycles with dates, scope, results and issues, and a Copilot summary panel at the bottom of the page
 :width: 80%

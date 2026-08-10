@@ -225,7 +225,7 @@ That last sentence is the most valuable clause you can put in a scenario prompt.
 
 The most operationally interesting scenario in our business is time, not money. What happens if move-in compresses from five days to three?
 
-> *"Using my assumption table, model the labor impact of reducing available move-in days from 5 to 3 while holding total required install work constant. Assume hours beyond the straight-time window in each remaining day are charged at the overtime multiplier. Show total, straight time, and overtime hours, overtime share, and total labor cost for both cases, plus the incremental cost of compression in dollars and as a percentage of the original labor budget."*
+> *"Using my assumption table, model the labor impact of reducing available move-in days from 5 to 3 while holding total required install work constant. Assume hours beyond the straight-time window in each remaining day are charged at the overtime multiplier. Show total, straight time, and overtime hours, overtime share, and total labor cost for both cases, plus the incremental cost of compression."*
 
 Build this once and reuse it constantly, because the question recurs on nearly every show — a prior tenant runs long, a venue changes a hall release time, an organizer adds a sponsor build. Having the answer in ten minutes instead of a day decides whether the conversation with the organizer happens before the decision or after it.
 
@@ -239,7 +239,7 @@ Run the same structure on the inputs that drive the business: material handling 
 
 Housing is a forecasting problem with a contractual cliff at the end of it — an ideal modeling target.
 
-> *"Using the historical pickup curves in this table — cumulative room nights booked by week out from show date for the last eight editions — build a projected pickup curve for the current show based on bookings to date, and calculate projected final pickup as a percentage of the contracted block. Then calculate attrition exposure in dollars at the contracted threshold for three cases: projected pickup, projected minus 10 points, and projected minus 20 points."*
+> *"Using the historical pickup curves in this table — cumulative room nights booked by week out from show date for the last eight editions — build a projected pickup curve for the current show based on bookings to date, and calculate projected final pickup as a percentage of the contracted block. Then calculate attrition exposure in dollars at the contracted threshold for projected pickup, projected minus 10 points, and projected minus 20 points."*
 
 Then the strategic version: *"Across all eight editions, is the booking window compressing — are bookings arriving later relative to show date each year?"* If the curve is compressing across the portfolio, that changes how blocks are sized and when attrition is renegotiated — invisible in any one show, unmistakable across thirty.
 
@@ -273,9 +273,9 @@ The template from Section 2 produces the analysis. Cowork runs it without you.
 >
 > **Inputs:** The reconciliation files in the SharePoint library *Show Reconciliation FY26*, the venue and jurisdiction attributes in *Ops Reference Data.xlsx*, and the rate reference sheet in *Tariff Reference — Current.xlsx*.
 >
-> **Definition of done:** One Excel workbook saved to the *Monthly Analytics* folder, named with the reporting month, with labeled tabs — *Summary*, *Cost per CWT by Venue*, *Advance Warehouse vs. Direct Split*, *Freight Target Variance by Show*, *Flagged Lines*, and *Source Notes* listing every file used and the date pulled. Plus a Teams post in *Logistics Analytics* with a five-bullet summary and a link.
+> **Definition of done:** One workbook saved to the *Monthly Analytics* folder, named with the reporting month, with labeled tabs — *Summary*, *Cost per CWT by Venue*, *Advance Warehouse vs. Direct Split*, *Freight Target Variance by Show*, *Flagged Lines*, and *Source Notes* listing every file used and the date pulled. Plus a Teams post in *Logistics Analytics* with a five-bullet summary and a link.
 >
-> **Constraints:** Use only rates present in the rate reference sheet — do not infer, estimate, or supply any rate not found there. If the reference sheet's effective date predates any show's move-in date, flag it on the Summary tab and do not calculate per-unit costs for that show. Flag missing fields rather than filling gaps.
+> **Constraints:** Use only rates present in the rate reference sheet — do not infer, estimate, or supply any rate not found there. If the reference sheet's effective date predates any show's move-in date, flag it on the Summary tab and skip per-unit costs for that show. Flag missing fields rather than filling gaps.
 >
 > **Approval scope:** Ask before posting to Teams. Do not email anyone.
 >

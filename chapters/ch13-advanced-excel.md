@@ -53,7 +53,7 @@ Watch two logistics analysts handle the same request: a monthly cross-show draya
 
 **The advanced user** built the analysis once: a defined input zone, validation checks that catch a missing venue or blank weight column before anything downstream breaks, formulas that recalculate the moment new data lands, a summary populating from one source table, and a documentation sheet so any analyst can run it. Each subsequent month takes eight minutes: paste, refresh, review, send.
 
-The time saving is real but not the point. The point is **institutional leverage**. The template applies the same logic every month. Errors get caught in design rather than discovered in month four. A coordinator who joined last week can run it on day one. And when the director asks the same question about a different portfolio, the answer is a copy of the workbook, not a new project.
+The time saving is real but not the point. The point is **institutional leverage**. Errors get caught in design rather than discovered in month four. A coordinator who joined last week can run it on day one. And when the director asks the same question about a different portfolio, the answer is a copy of the workbook, not a new project.
 
 Copilot is not the hero here. The analytical design is. But Copilot dramatically lowers the construction cost of that design — formula logic, outlier rules, scenario structure — work previously available only to people with deep Excel expertise, which in most show teams means one person, and they are busy.
 
@@ -74,7 +74,7 @@ The basic user answers a question with Copilot. The advanced user uses Copilot t
 
 The most powerful thing you can do with Copilot in Excel is not ask a question. It is design a **template** — a structured workbook producing the same rigorous output every time, regardless of who runs it or which show it points at.
 
-Consider the monthly freight and labor review. Every show operations director needs to know how shows performed against freight targets, how actual I&D hours landed against forecast, where overtime concentrated by jurisdiction, and which shows closed below their pre-show margin estimate. Historically that required a dedicated analyst, or an ops director building formula chains under deadline during move-in — which is when the question always arrives.
+Consider the monthly freight and labor review. Every show operations director needs to know how shows performed against freight targets, how actual I&D hours landed against forecast, where overtime concentrated by jurisdiction, and which shows closed below their pre-show margin estimate. Historically that required a dedicated analyst, or an ops director building formula chains under deadline during move-in — when the question always arrives.
 
 :::{figure} ../images/ch13-workflow-template-design.png
 :label: fig-ch13-workflow-template
@@ -124,7 +124,7 @@ A wrong formula produces a number nobody believes. A wrong *rate*, running on a 
 
 Chapter 7 introduced outlier detection as a question you can ask. This section treats it as a system you run.
 
-The stakes are specific here. An anomalous material handling charge per hundredweight may be a legitimate uncrated-freight special handling charge, or a keying error that becomes an exhibitor dispute on the show floor during move-in — the least recoverable moment in the show cycle. Margin drifting down across three editions is almost never visible in one reconciliation and almost always visible across the series.
+The stakes are specific here. An anomalous material handling charge per hundredweight may be a legitimate uncrated-freight special handling charge, or a keying error that becomes an exhibitor dispute on the show floor during move-in — the least recoverable moment in the show cycle. Margin drifting down across three editions of the same show organizer's event is almost never visible in one reconciliation and almost always visible across the series.
 
 Copilot finds these patterns in seconds. What it cannot do is validate them, investigate them, or decide whether they are a real problem or a normal operating fact. That division of labor is the whole discipline.
 
@@ -145,13 +145,13 @@ Vague questions produce vague flags. The useful pattern defines the **comparison
 
 > *"Compare material handling charge per hundredweight for every shipment against the median for the same venue and the same shipment type. Flag any line more than two standard deviations from that median, sorted by dollar impact."*
 
-The baseline is the design decision: same venue, same shipment type. A direct-to-show-floor shipment at one venue and an advance warehouse shipment at another are not comparable, and treating them as comparable flags thirty normal lines and buries the one real error.
+The baseline is the design decision: same venue, same shipment type. A direct-to-show-floor shipment routed through a marshaling yard and an advance warehouse shipment at another venue are not comparable, and treating them as comparable flags thirty normal lines and buries the one real error.
 
 **Freight target variance outliers by venue:**
 
 > *"Calculate freight actual versus target as a percentage for every show. Group by venue and show which venues have a consistent overage pattern — more than half their shows over target — versus which have isolated outliers. Flag the shows driving each."*
 
-That is a different question from "which shows blew their freight target." A venue with a *systematic* pattern means the targets are wrong. A venue with one bad show means the show was unusual. Different findings, different owners — and only the grouped question distinguishes them.
+That is a different question from "which shows blew their freight target." A venue with a *systematic* pattern means the targets are wrong. A venue with one bad show means the show was unusual. Different owners, different actions — and only the grouped question distinguishes them.
 
 **Labor overtime spikes by jurisdiction and crew:**
 
@@ -163,9 +163,9 @@ Comparing within jurisdiction is essential. A jurisdiction whose straight-time w
 
 > *"For every recurring show appearing three or more times, calculate reconciled gross margin percentage per edition and identify any where margin declined in each successive edition. Break out the change in revenue per net square foot, material handling revenue, and labor cost per net square foot so I can see which line is moving."*
 
-Margin erosion is the highest-value anomaly here and the hardest to see manually, because it is slow. Two points a year for three years is a six-point problem that never once triggered an alarm on a single reconciliation.
+This is the highest-value anomaly in the chapter and the hardest to see manually, because it is slow. Two points a year for three years is a six-point problem that never once triggered an alarm on a single reconciliation.
 
-**Exhibitor attach rate anomalies:** flag any recurring show where attach rate dropped more than 5 points versus its own prior edition — and, separately, any show above 70 percent attach but below the portfolio median on service revenue per exhibitor. That second condition finds shows where exhibitors *are* buying but buying small: a pricing question, not an outreach question, and one no single-metric ranking surfaces.
+**Exhibitor attach rate anomalies:** flag any recurring show where attach rate dropped more than 5 points versus its prior edition — and, separately, any show above 70 percent attach but below the portfolio median on revenue per exhibitor. That second condition finds shows where exhibitors *are* buying but buying small: a pricing question, not an outreach question, and one no single-metric ranking surfaces.
 
 ### Validating What Copilot Flags
 
@@ -213,9 +213,9 @@ A well-structured scenario model presents clear alternatives with consistent ass
 
 An account director asks: the organizer is considering moving a 250,000 net square foot show to a different city. What happens to our cost structure and our margin?
 
-**Step 1 — Define the scenario precisely.** "Moving venues" is not a model input. The inputs are the union jurisdiction and its straight-time window, the rates under that agreement, the material handling tariff at the new facility, the drayage distance from advance warehouse to dock, the dock count and how it constrains move-in, and the freight lane costs to the new city. Every one is a real number in a real document. **Copilot cannot supply any of them.**
+"Moving venues" is not a model input. The inputs are the union jurisdiction and its straight-time window, the rates under that agreement, the material handling tariff at the new facility, the drayage distance from advance warehouse to dock, the dock count and how it constrains move-in, and the freight lane costs to the new city. Every one is a real number in a real document, and **Copilot cannot supply any of them.**
 
-**Step 2 — Build the assumption layer.** One labeled table, a row per variable, a column per scenario, a source note per row. Every downstream formula reads from this table and nowhere else.
+So build the assumption layer first: one labeled table, a row per variable, a column per scenario, a source note per row. Every downstream formula reads from this table and nowhere else.
 
 > *"My assumption table has rows for Union Straight Time Rate, Overtime Multiplier, Straight Time Window End, Material Handling Rate per 100 lbs, Advance Warehouse Storage Rate, Estimated Inbound Weight, Net Booth Square Footage, Move-In Days Available, and Available Dock Positions, with columns for Scenario A, B, and C. Build the calculation structure deriving total labor hours, overtime hours, total labor cost, total material handling cost, and total direct cost for each. Explain each formula and list every assumption the structure makes that I did not explicitly give you."*
 
@@ -289,7 +289,7 @@ The more powerful pattern fires on an event rather than a date. A show closes. T
 
 The **outcome** is a post-show reconciliation package. The **inputs** are the freight manifest, labor actuals, exhibitor order extract, and pre-show estimate, all in that library. **Done** means an Excel workbook with a margin bridge from pre-show estimate to reconciled actual, a variance tab isolating freight, labor, and service revenue contributions, and an exceptions tab listing every line that failed validation — plus a one-page Word summary for the account director and a draft email to the show team, *held for review, not sent*. The **constraints** carry the weight: rates come only from the show's exhibitor service kit and the applicable labor agreement, both in the folder; do not contact the organizer or any exhibitor; if a crew call is missing a jurisdiction, flag it rather than inferring it from the venue. **Approval scope:** ask before sending anything or sharing outside the show team.
 
-The value here is timing, not effort. A reconciliation that starts the moment the last file lands — rather than when an analyst has a free afternoon — closes days earlier. Across a 4,000-show calendar, that is a materially different reporting position for the business.
+The value here is timing, not effort. A reconciliation that starts the moment the last file lands — rather than when an analyst has a free afternoon — closes days earlier. Across a 4,000-show calendar, that is a materially different reporting position.
 
 ```{list-table} Recurring GES Analyses Worth Automating with Cowork
 :header-rows: 1
@@ -329,13 +329,7 @@ The value here is timing, not effort. A reconciliation that starts the moment th
   - Cadence is fixed and externally committed
 ```
 
-### Three Assignments That Are Impossible Manually
-
-**Multi-show portfolio analysis for an account** — an account director covering six shows across four venues needs a consolidated view before every QBR: reconciled performance for the last eight editions, with tabs for revenue and margin by show, attach rate trend, freight variance, labor cost per net square foot by venue, and a movers tab naming the five largest year-over-year changes.
-
-**Cost per square foot benchmarking across 24 facilities** — for every show at every facility over 24 months, direct cost per net square foot split into material handling, labor, and other, normalized for show size band and ranked with each facility's own trend alongside. Nobody was ever going to build this by hand for a Tuesday planning meeting. The output separates which venues are structurally expensive from which shows were run expensively.
-
-**ESG and emissions trend modeling** — emissions per net square foot and per exhibitor, reuse rate on structural stand components, waste diverted from landfill, normalized by region and tracked over time. GES EMEA's data-led emissions reporting and the Roadmap to Net Zero are exactly the externally committed, fixed-cadence reporting where a scheduled job pays for itself immediately.
+Two of those entries deserve a note, because they are effectively impossible by hand and routine once automated. **Cost per square foot benchmarking across 24 facilities** — direct cost per net square foot for every show at every facility over 24 months, split into material handling, labor, and other, normalized for show size band, and ranked with each facility's own trend alongside. Nobody was ever going to build that for a Tuesday planning meeting, and the output separates which venues are structurally expensive from which shows were run expensively. And **ESG trend modeling** — emissions per net square foot and per exhibitor, reuse rate on structural stand components, waste diverted from landfill, normalized by region. GES EMEA's data-led emissions reporting and the Roadmap to Net Zero are exactly the externally committed, fixed-cadence reporting where a scheduled job pays for itself immediately.
 
 ::::{admonition} ⚠️ Automation Multiplies Whatever You Built
 :class: danger
@@ -408,11 +402,9 @@ That final clause is the professional move. Nested classification fails at the c
 
 ### XLOOKUP for Attribute Joining
 
-Every operational file needs venue, jurisdiction, facility, and region attributes joined on before analysis is meaningful.
+Every operational file needs venue, jurisdiction, facility, and region attributes joined on before analysis is meaningful. Ask for XLOOKUP formulas pulling those attributes from a Venue Reference table onto the show file, matched on Show Code — and specify that a missing code returns `'Unmapped'` rather than an error, plus a count of unmapped rows.
 
-> *"I have a Show Performance table keyed on Show Code and a Venue Reference table with Show Code, Venue Name, Union Jurisdiction, Region, and Servicing Facility. Write XLOOKUP formulas pulling Venue Name, Union Jurisdiction, and Servicing Facility into the Show Performance table. Return 'Unmapped' rather than an error when a code is not found, and explain how to count unmapped rows so I can catch reference table gaps."*
-
-The unmapped count is the point. A join that silently drops eleven shows produces a portfolio analysis confidently missing eleven shows.
+That unmapped count is the point. A join that silently drops eleven shows produces a portfolio analysis confidently missing eleven shows.
 
 ### Dynamic Arrays and the LET Function
 
@@ -420,7 +412,7 @@ The unmapped count is the point. A join that silently drops eleven shows produce
 
 For any calculation with intermediate steps, `LET` names those steps — converting an unreadable formula into one a colleague can audit.
 
-> *"Build a Show Health Score combining three weighted factors: labor hour variance versus forecast at 40 percent, freight variance versus target at 35 percent, and margin variance versus pre-show estimate at 25 percent. Use LET to create a named intermediate for each, normalize each to a 0–100 scale, then combine into a final score. Explain what each component contributes."*
+> *"Build a Show Health Score combining three weighted factors: labor hour variance versus forecast at 40 percent, freight variance versus target at 35 percent, and margin variance versus pre-show estimate at 25 percent. Use LET to create a named intermediate for each, normalize each to a 0–100 scale, then combine into a final score."*
 
 ::::{admonition} 🔑 The Formula Explanation Rule
 :class: tip
@@ -472,7 +464,7 @@ The Five-Step Review Protocol scales to any complexity level. Apply all five to 
 
 **Step 2 — Assumption Audit.** Ask directly: *"What assumptions did you make that I did not specify?"* Common ones: how ties break in rankings, what happens when a lookup misses, whether percentages use absolute or relative denominators, whether a multiplier applies to all hours or only those beyond a threshold. Every implicit assumption is a potential error with no error message attached.
 
-**Step 3 — Boundary Test.** What does the risk tier formula output for a show exactly 25 percent over forecast — the boundary between "Watch" and "Critical"? What does the compression model produce at zero move-in days? Boundary behavior reveals whether the logic is right for all inputs or only typical ones.
+**Step 3 — Boundary Test.** What does the risk tier formula output for a show exactly 25 percent over forecast — the boundary between "Watch" and "Critical"? Boundary behavior reveals whether the logic is right for all inputs or only typical ones.
 
 **Step 4 — Source Verification.** For anything informing a decision or reaching a customer, tie at least three figures to source: an invoice line, a manifest entry, a crew call sheet, a published tariff. Any discrepancy gets investigated before you proceed. The formula might be wrong; the export might be wrong. Either way you need to know before someone else finds out.
 
@@ -521,9 +513,9 @@ A well-structured playbook converts individual expertise into institutional capa
 
 **Data Standards** — column naming with units spelled out, required structure, source documentation, currency normalization for international shows, known quality issues in common exports. Prevents the failure mode where the formula is right and the input is wrong.
 
-**Escalation Guidelines** — what a flagged anomaly requires, from whom, through what channel. Prevents both under-escalation of real findings and the credibility damage of escalating routine variation.
+**Escalation Guidelines** — what a flagged anomaly requires, from whom, through what channel. Prevents under-escalation of real findings and the credibility damage of escalating routine variation.
 
-**How to build it.** Not in a day — in the course of the work. Each time you build a template, record it. Each time an assumption audit surfaces something Copilot assumed silently, add it to the checklist. Each time a flagged anomaly turns out to be normal, document the distinguishing feature so nobody investigates it twice. Copilot can draft the documentation itself from a description of the template.
+**How to build it.** Not in a day — in the course of the work. Each time you build a template, record it. Each time an assumption audit surfaces something Copilot assumed silently, add it to the checklist. Each time a flagged anomaly turns out to be normal, document the distinguishing feature so nobody investigates it twice.
 
 The playbook is the institutional return on every hour invested here. It means the analysis does not live in one person's head or one person's laptop. It lives in the company — which, since **December 31, 2024**, when GES completed its separation from Viad under Truelink Capital and became independent for the first time in 55 years, is a company that sets its own standard. Nobody else defines what good looks like here. That is a responsibility and an opportunity in the same sentence.
 
@@ -554,9 +546,7 @@ Build a scenario model in Excel using Copilot, then apply the full review protoc
 
 **Step 5 — Review protocol.** Apply all five steps: logic review on every formula; assumption audit using Copilot's own enumeration; boundary test at zero move-in days and 100 percent overtime share; source verification against a closed show whose answer you already know; then a colleague on the methodology.
 
-**Step 6 — Write the assignment.** Write (do not run) a Cowork assignment using the five-part structure that would run this model across an account's full portfolio quarterly. Include an explicit Rate Sheet Rule constraint and a staleness check on the Effective Date column.
-
-Notice how different that feels from writing a prompt. You are specifying a deliverable to a colleague who will work while you sleep — the professional shift this chapter has been building toward.
+**Step 6 — Write the assignment.** Write (do not run) a Cowork assignment using the five-part structure that would run this model across an account's full portfolio quarterly. Include an explicit Rate Sheet Rule constraint and a staleness check on the Effective Date column. Notice how different that feels from writing a prompt — you are specifying a deliverable to a colleague who will work while you sleep, which is the professional shift this chapter has been building toward.
 ::::
 
 ---
@@ -613,7 +603,7 @@ Union Jurisdiction
 
 Using Copilot as a system-building accelerator rather than a question-answering tool changes how analytics creates value at GES. Instead of one-off analyses living in individual inboxes, advanced workflows build infrastructure that scales across 4,000+ events a year, 24 facilities, and the full GES Collective — GES Exhibitions, Spiro, onPeak, SHOWTECH, and Visit by GES.
 
-Consider the analyses you produce regularly. Which are genuinely the same analysis with a different show code on top? What would it take to turn one into a template — then into a scheduled Cowork assignment? And what would have to be true about your verification discipline before you would let it run without you?
+Consider the analyses you produce regularly. Which are genuinely the same analysis with a different show code on top? What would it take to turn one into a template, then into a scheduled Cowork assignment? And what would have to be true about your verification discipline before you would let it run without you?
 
 ::::{admonition} 📝 Discussion Guidelines
 :class: note

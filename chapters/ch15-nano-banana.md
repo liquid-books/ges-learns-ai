@@ -275,21 +275,25 @@ Text rendering is the #1 failure mode. The model attempts to write what it think
 
 This is the number one problem. Nano Banana struggles with text, especially:
 
-- **Long words.** Anything beyond 6-7 characters becomes unreliable. "FREIGHT SCHEDULE" becomes "FREISHT SEHEDULE." "EXPANDED FLOOR PLAN" becomes "EAPANDED FLOOR PLAN." "POWER DISTRIBUTION MAP" becomes "POWER DISTINATION MAP."
+- **Long words.** Anything beyond 6-7 characters becomes unreliable. "FREIGHT SCHEDULE" becomes "FREISHT SEHEDULE." "EXPANDED FLOOR PLAN" becomes "EAPANDED FLOOR PLAN." "POWER DISTRIBUTION MAP" becomes "POWER DISTINATION MAP." This is not occasional — it is the default behavior. Expect every long word to fail unless proven otherwise.
 
-- **Uncommon terms.** Industry vocabulary that the model has not seen frequently in training data. "DRAYAGE" may render as "DRAYGE" or "DRAYGAE." "MARSHALING YARD" may become something unrecognizable.
+- **Uncommon terms.** Industry vocabulary that the model has not seen frequently in training data becomes unrecognizable. "DRAYAGE" may render as "DRAYGE" or "DRAYGAE." "MARSHALING YARD" may become something completely nonsensical. The more specialized the term, the more likely it fails. General consumer vocabulary ("SALE," "OPEN," "INFO") works. Exhibition industry vocabulary does not.
 
-- **Any text on props.** If your generated image includes a clipboard, a document, a computer screen, a spreadsheet, or any surface that could have text on it, the model will put text there — and that text will be gibberish. Generated documents show words like "CHAGAPE" and "PROPDEN" that have no meaning in any language.
+- **Any text on props.** If your generated image includes a clipboard, a document, a computer screen, a spreadsheet, or any surface that could have text on it, the model will put text there — and that text will be gibberish. Generated documents show words like "CHAGAPE" and "PROPDEN" that have no meaning in any language. In one test, a generated image of an exhibitor service kit showed a document prop with the heading "IMPORDENT FREISHT INFORMATON" — a creative interpretation of "Important Freight Information" that would embarrass anyone who showed it to a client.
+
+- **Numbers and dates.** Dates, times, and numerical sequences are equally unreliable. A booth rendering showing a schedule board might display "March 23-26" as "Mach 2326" or "Mrch 23-6." Booth numbers, hall designations, and any numerical labeling will require post-generation editing or careful prompt exclusion.
 
 ### Invented Attribution
 
 This is a real legal exposure. When generating images, Nano Banana sometimes invents:
 
-- **Fabricated copyright notices.** "© 2024 Meridian Displays LLC" stamped on an image — except Meridian Displays LLC does not exist. You generated that copyright claim.
+- **Fabricated copyright notices.** "© 2024 Meridian Displays LLC" stamped on an image — except Meridian Displays LLC does not exist. You generated that copyright claim. The model sees that professional images often have copyright notices, so it adds one. The specific company name is pure fabrication.
 
-- **Fake website URLs.** "www.phoenixexhibits.com" appearing on generated signage — except that is either a real company you did not intend to reference, or a fake company whose name you just created.
+- **Fake website URLs.** "www.phoenixexhibits.com" appearing on generated signage — except that is either a real company you did not intend to reference, or a fake company whose name you just created. Either way, it is a liability. A URL in a generated image could direct someone to a real website you have no relationship with, or create confusion about whether a fictional company is real.
 
-- **Invented trademarks.** In one observed case, a generated image included "GES®" stamped four times across a booth rendering — a registered trademark symbol on a logo placement the user never requested. This is a real legal issue if the image goes anywhere beyond your own screen.
+- **Invented trademarks.** In one observed case, a generated image included "GES®" stamped four times across a booth rendering — a registered trademark symbol on a logo placement the user never requested. The model invented a trademark assertion for a real company (our company) without any instruction to do so. This is a real legal issue if the image goes anywhere beyond your own screen. Even for internal use, seeing fabricated trademark placements creates confusion about what was requested and what was invented.
+
+- **Fake accreditations and certifications.** Generated images of professional settings sometimes include fabricated certification badges, award logos, or industry association marks. These do not exist and should never appear in anything shown to clients.
 
 ### Unwanted Captions and Labels
 
@@ -446,6 +450,15 @@ The winning concept goes to human designers for actual development. The generate
 - Significantly less time spent on exploration
 - Designers free to focus on execution, not ideation
 
+**What you do not have:**
+
+- A finished rendering ready for a client deck
+- Production-ready graphics
+- Accurate dimensions or build specifications
+- Work that can be presented as "GES design work"
+
+The distinction matters. The iteration workflow produces *direction* — the answer to "which way should we go?" It does not produce *deliverables* — the polished work that goes to clients. That gap is filled by human designers, and it is not a small gap. The translation from "AI-generated concept that captures a direction" to "professional rendering that GES stands behind" is where design skill lives.
+
 ---
 
 ## 8. Integrating with the GES Creative Workflow
@@ -497,16 +510,26 @@ When using it as reference for designers:
 The capabilities Venn diagram: AI tools and human designers have different strengths. Effective creative teams use both — AI for speed and volume in exploration, humans for judgment and quality in execution.
 :::
 
+::::{admonition} 🧭 T.R.U.E. Check — Understanding
+:class: note
+
+**People come first. Be understanding and compassionate.**
+
+Understanding in the context of AI tools means recognizing that the tool's limitations are not failures to be frustrated by — they are boundaries to be understood. A designer who sees their AI-generated concept fail to render text correctly should not feel like the tool failed them. The tool worked exactly as expected. Understanding its limits is part of using it well.
+
+More importantly: understanding applies to clients. A client who sees an AI-generated concept and asks "why can't we just use this?" deserves a thoughtful explanation, not dismissal. They are not trying to cut corners — they are trying to understand what is possible. Meet them where they are.
+::::
+
 **Cannot do:**
 
-- **Production-ready graphics.** Output is not print-ready and should not go to fabrication.
-- **Accurate dimensions.** Cannot be trusted for measurements, scale, or build specifications.
-- **Reliable text.** Long words, technical terms, and industry vocabulary fail frequently.
-- **Client logos.** Cannot reproduce actual brand assets accurately or legally.
-- **Structural accuracy.** Generated structures may be physically impossible.
-- **Code compliance.** Cannot know fire code, ADA requirements, or venue regulations.
-- **Photography replacement.** Cannot replace actual photos of actual products.
-- **Final renderings.** Cannot produce the polished 3D renderings that go in client decks.
+- **Production-ready graphics.** Output is not print-ready and should not go to fabrication. Resolution, color accuracy, and detail quality are insufficient for production work.
+- **Accurate dimensions.** Cannot be trusted for measurements, scale, or build specifications. A "40 by 40 booth" prompt produces an image of indeterminate actual size.
+- **Reliable text.** Long words, technical terms, and industry vocabulary fail frequently. Text rendering remains the model's most consistent weakness.
+- **Client logos.** Cannot reproduce actual brand assets accurately or legally. Even if you could get a logo to render, you should not — it creates attribution confusion.
+- **Structural accuracy.** Generated structures may be physically impossible. Beams that connect to nothing, cantilevers without support, walls that float.
+- **Code compliance.** Cannot know fire code, ADA requirements, or venue regulations. A generated booth may violate every rule in the exhibitor manual.
+- **Photography replacement.** Cannot replace actual photos of actual products. Generated "products" are inventions, not documentation.
+- **Final renderings.** Cannot produce the polished 3D renderings that go in client decks. The quality gap is immediately visible to anyone who has seen professional design work.
 
 **Can do, with caveats:**
 
@@ -692,6 +715,18 @@ Trust Boundary
 SynthID
   Google's invisible digital watermarking technology applied to AI-generated images, allowing them to be identified as AI-created or edited.
 ```
+
+---
+
+:::{seealso}
+**Resources for Chapter 15**
+
+- 🎨 Google AI Studio (access Nano Banana models): [aistudio.google.com](https://aistudio.google.com)
+- 📖 Gemini API Image Generation Documentation: [ai.google.dev/gemini-api/docs/image-generation](https://ai.google.dev/gemini-api/docs/image-generation)
+- 🔒 Google AI Studio Terms of Service: [ai.google.dev/terms](https://ai.google.dev/terms)
+- 🛡️ SynthID Digital Watermarking: [deepmind.google/science/synthid](https://deepmind.google/science/synthid/)
+- 📋 OpenRouter (alternative API access): [openrouter.ai](https://openrouter.ai)
+:::
 
 ---
 

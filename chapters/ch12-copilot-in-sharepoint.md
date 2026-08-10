@@ -2,26 +2,26 @@
 title: "Chapter 12: Week 4, Session B — Copilot in SharePoint"
 subtitle: "Where Knowledge Lives — and How AI Makes It Findable"
 short_title: "Copilot in SharePoint"
-description: "SharePoint is Copilot's most important data source at BankUnited. This chapter covers the permission inheritance model, the oversharing risk that every bank must understand, content governance for Copilot readiness, and the practical workflows that make SharePoint — and therefore Copilot — genuinely useful for every BankUnited team."
+description: "SharePoint is Copilot's most important data source at GES. This chapter covers the permission inheritance model, cross-client contamination as a business-critical control, grounding drift and content lifecycle, and the practical governance that makes SharePoint — and therefore Copilot — genuinely useful across shows, venues, facilities, and the GES Collective."
 label: ch-12-copilot-in-sharepoint
-tags: [SharePoint, Microsoft Copilot, knowledge management, content governance, permissions, BankUnited, Microsoft Graph, oversharing, compliance, banking]
+tags: [SharePoint, Microsoft Copilot, knowledge management, content governance, permissions, GES, Microsoft Graph, oversharing, cross-client contamination, grounding drift, exhibitor service kit, venue knowledge, Cowork]
 ---
 
 ```{admonition} Download this Chapter as PDF
 :class: tip
 
-[Download PDF](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/pdfs/ch12-copilot-in-sharepoint.pdf)
+[Download PDF](https://github.com/liquid-books/ges-learns-ai/raw/main/pdfs/ch12-copilot-in-sharepoint.pdf)
 ```
 
 # Chapter 12: Copilot in SharePoint
 
 :::{figure} ../images/ch12-sharepoint-copilot-infographic.png
 :label: fig-ch12-infographic
-:alt: Illustrated explainer infographic showing the relationship between SharePoint, Microsoft Graph, and Copilot — with permission flows, content governance layers, and BankUnited department sites arranged in a professional banking infographic layout
+:alt: Illustrated explainer infographic showing the relationship between SharePoint, Microsoft Graph, and Copilot — with permission flows, content governance layers, and GES document libraries for shows, venues, client accounts, and design assets arranged in a professional live-events infographic layout
 :width: 80%
 :align: center
 
-SharePoint is not just a file storage system. It is the organizational memory that Copilot draws from — which means how you organize, name, and govern your SharePoint content determines the quality of every Copilot response that touches BankUnited's knowledge base.
+SharePoint is not just a file storage system. It is the organizational memory that Copilot draws from — which means how you organize, name, permission, and retire your SharePoint content determines the quality of every Copilot answer that touches what GES knows.
 :::
 
 > *"Information is not knowledge. Knowledge is not wisdom. Wisdom is not foresight. But you need them all."*
@@ -29,19 +29,23 @@ SharePoint is not just a file storage system. It is the organizational memory th
 
 There is a question that surfaces in almost every Copilot training session, usually around week three, once people have gotten comfortable with the basics: *"Why did Copilot not find that file?"*
 
-The answer, almost every time, is not that Copilot failed. It is that the file was not where Copilot could find it — or that it was buried in a folder structure that made it invisible, or that the file name said nothing about its contents, or that the site had not been updated in two years and had been quietly excluded from active content.
+The answer, almost every time, is not that Copilot failed. It is that the file was not where Copilot could find it — buried in a folder structure that made it invisible, named something that said nothing about its contents, or sitting in a show site that nobody has touched since move-out two years ago.
 
-The other answer — the one that makes compliance teams pause — is: *"Copilot found exactly what the user had permission to see. And it turns out they had permission to see more than anyone realized."*
+There are two other answers, and they are the ones that make people sit up.
 
-Both of these answers point to the same root cause. **SharePoint governance is Copilot governance.** The quality of your Copilot experience is directly upstream of the quality of your SharePoint environment. That relationship is not metaphorical. It is architectural.
+The first: *"Copilot found exactly what you had permission to see. It turns out you had permission to see more than anyone realized — including a client you don't work on."*
 
-This chapter is about understanding that architecture — and using it strategically, at BankUnited.
+The second: *"Copilot found it. It was the 2023 version. And it read like the truth."*
+
+Those three answers point at the same root cause. **SharePoint governance is Copilot governance.** The quality — and the safety — of your Copilot experience is directly upstream of the state of your SharePoint environment. That relationship is not metaphorical. It is architectural.
+
+This chapter is about understanding that architecture and using it deliberately, at GES.
 
 ---
 
-## 1. Why SharePoint Is Copilot's Most Important Data Source at BankUnited
+## 1. Why SharePoint Is Copilot's Most Important Data Source at GES
 
-Microsoft 365 Copilot can access content from a wide range of sources: your emails in Exchange, your chat history in Teams, your calendar, your files in OneDrive. But for organizational knowledge — the policies, procedures, loan files, client documents, compliance frameworks, product guides, and institutional memory that define how BankUnited actually operates — the primary home is SharePoint.
+Microsoft 365 Copilot can draw on email in Exchange, chat history in Teams, your calendar, and files in OneDrive. But for *organizational* knowledge — the operations manuals, venue rules, service kits, design standards, rate sheets, SOPs, safety records, and contracts that define how GES actually delivers 4,000+ live experiences a year — the primary home is SharePoint.
 
 :::{figure} ../images/ch12-copilot-data-sources.png
 :label: fig-ch12-data-sources
@@ -49,24 +53,22 @@ Microsoft 365 Copilot can access content from a wide range of sources: your emai
 :width: 80%
 :align: center
 
-Copilot draws from all of Microsoft 365, but SharePoint holds the organizational knowledge that matters most — the documents, policies, and institutional memory that define how BankUnited works.
+Copilot draws from all of Microsoft 365, but SharePoint holds the knowledge that matters most — the show documents, venue libraries, design standards, and procedures that define how GES works across 24 facilities and 75+ countries.
 :::
 
-When a BankUnited relationship manager asks Copilot to summarize the current credit policy for commercial real estate lending, that answer does not come from an email or a Teams chat. It comes from the document library where Credit Policy lives. When a treasury analyst asks Copilot to pull up the most recent interest rate risk management framework, it comes from the Treasury SharePoint site. When a compliance officer asks Copilot what BankUnited's current BSA/AML procedure requires for beneficial ownership documentation, it comes from the Compliance site.
+When a show operations manager asks Copilot what the freight target sequence was for the last edition of a show, that answer does not come from an email. It comes from the show folder where the operations manual and the post-show reconciliation live. When an exhibitor services lead asks what the advance warehouse cutoff is for a given venue, it comes from the venue knowledge library. When a Spiro producer asks which substrate spec the client approved for a previous activation, it comes from the design asset library. When a safety lead asks what corrective actions followed a dock incident in a particular facility, it comes from the safety documentation site.
 
 **SharePoint is the institutional brain. Copilot is the interface to it.**
 
-This is a meaningful distinction from how most people use SharePoint today — which is primarily as a shared file drive, browsed manually, navigated through folder hierarchies, searched sporadically when you cannot remember where you put something. In the Copilot era, SharePoint stops being a place you navigate and becomes a knowledge base Copilot queries on your behalf, in natural language, in real time.
+That is a meaningful shift from how most people use SharePoint today — as a shared drive, browsed manually, navigated by folder, searched sporadically when you cannot remember where you saved something. In the Copilot era, SharePoint stops being a place you navigate and becomes a knowledge base Copilot queries on your behalf, in natural language, from a phone in a marshaling yard at 5 a.m.
 
-That transformation is only as powerful as the underlying content allows. A poorly organized, outdated, inconsistently named SharePoint environment produces poor Copilot answers. A well-governed, current, consistently structured SharePoint environment produces answers that surface exactly the right content at exactly the right moment.
-
-The implication is clear: every investment BankUnited makes in SharePoint governance is also an investment in Copilot quality.
+That transformation is only as good as the underlying content allows. A disorganized, outdated, inconsistently permissioned SharePoint environment produces poor Copilot answers — and in a business where a wrong answer becomes a crew in the wrong aisle at the wrong hour, poor answers are expensive. The implication is clean: **every investment GES makes in SharePoint governance is an investment in Copilot quality.**
 
 ---
 
 ## 2. How Copilot Accesses SharePoint — The Permission Inheritance Model
 
-Before we talk about organization and governance, we need to establish the foundational principle that governs everything Copilot can and cannot do with SharePoint content. This is the most important technical concept in this chapter — and for a bank, it is also a compliance requirement to understand.
+Before organization and governance, we need the foundational principle that governs everything Copilot can and cannot do with SharePoint content.
 
 :::{figure} ../images/ch12-permission-model.png
 :label: fig-ch12-permissions
@@ -77,68 +79,138 @@ Before we talk about organization and governance, we need to establish the found
 The permission inheritance model: Copilot accesses Microsoft 365 content through Microsoft Graph, and Microsoft Graph enforces the same permissions as SharePoint itself. Copilot cannot see what you cannot see. But it can see everything you can see.
 :::
 
-**The principle:** Copilot accesses SharePoint content through Microsoft Graph, the same API that underlies all Microsoft 365 services. Microsoft Graph enforces existing SharePoint permissions, sharing settings, and policies. There is no separate Copilot permission layer — Copilot inherits exactly the permissions of the signed-in user.
+**The principle:** Copilot accesses SharePoint content through Microsoft Graph, the same API that underlies all of Microsoft 365. Graph enforces existing SharePoint permissions, sharing settings, and policies. There is no separate Copilot permission layer. Copilot inherits exactly the permissions of the signed-in user.
 
-This means two things that banking professionals need to internalize:
+Two consequences follow, and both matter at GES.
 
-**First, Copilot cannot surface content the user does not already have permission to access.** If a commercial lending associate does not have access to the Executive Leadership SharePoint site, Copilot will not pull content from that site for them — not because Copilot is blocked from it, but because Microsoft Graph enforces the permission boundary before any content is returned. The AI respects the permission model. It is not a backdoor.
+**First, Copilot cannot surface content you do not already have access to.** If a Toronto operations coordinator has no access to a Spiro client account site, Copilot will not pull from it — not because Copilot is blocked, but because Graph enforces the boundary before any content is returned. The AI respects the permission model. It is not a backdoor.
 
-**Second — and this is the one that matters for compliance — Copilot can surface everything the user does have permission to see.** Every site they can browse. Every library they can read. Every folder they have been granted access to, whether explicitly or through a broad sharing link.
+**Second — and this is the one that changes how we work — Copilot will surface everything you *do* have access to.** Every site you can browse, every library you can read, every folder you were added to for one show in 2022 and never removed from.
 
-This is where the risk lives.
-
-Most SharePoint environments at organizations BankUnited's size have accumulated years of sharing decisions that seemed reasonable at the time — "I'll just give the whole team read access," "Let me add everyone in the department," "I'll just use the organization-wide sharing link for this one document" — that have resulted in a permission landscape that no single person fully understands. Content that was intended to be accessible to a small group is now readable by hundreds of people, because a sharing link was set to "Anyone in the organization."
-
-Under the old model, this was a latent risk. People had to know the content existed and navigate to it deliberately.
-
-Under the Copilot model, it is an active risk. A user who asks Copilot a broad question — "What does BankUnited have on commercial real estate exposure in South Florida?" — will get back content from every SharePoint location they have permission to read, regardless of whether they knew that content existed or would have sought it out manually.
-
-**Permission governance is Copilot governance. At a bank, this is not optional.**
-
-:::{admonition} The Banking-Specific Stakes
-:class: warning
-
-Under OCC and FFIEC guidance, financial institutions are expected to manage information access controls in a way that reflects need-to-know principles. If Copilot's responses surface non-public information — customer data, credit committee deliberations, regulatory examination findings — to personnel who would not have been given that information in a traditional workflow, that is a governance failure regardless of whether a human or an AI was the vehicle.
-
-BankUnited IT and compliance have the tools to audit and remediate oversharing. But every individual employee also has a role: if you find yourself reading content in a Copilot response that you would not normally see and probably should not see, report it. That is not a Copilot failure. That is a permission configuration that needs attention.
-:::
+That second consequence is where the risk lives, and at GES it has a specific name.
 
 ---
 
-## 3. The Oversharing Problem — Why What's in SharePoint Matters as Much as What Copilot Can Do
+## 3. Cross-Client Contamination — The Control That Matters Most Here
 
-"Oversharing" is the term Microsoft uses for a specific problem in SharePoint environments: content that has been shared more broadly than the content's sensitivity warrants. At BankUnited, oversharing is a real risk — and Copilot makes it visible in ways that may surprise people.
+Chapter 4 introduced the term. This is the chapter where we take it seriously.
+
+**GES serves direct competitors at the same show.** On a single show floor, our exhibitor services team supports rival manufacturers in adjacent aisles. Our design teams at Spiro build brand environments for companies that are in a bidding war with each other. Our account teams hold rate structures, budget ceilings, and negotiated terms for organizations that would very much like to know each other's numbers. And in the weeks before a launch, GES routinely sees **unreleased products** — the physical thing, the graphics, the reveal choreography, the embargo date — before the market does.
+
+That is the business. Trade shows are where companies show the world what is next, and someone has to build it, ship it, and stand it up. That someone is us — a genuine privilege and a genuine exposure.
 
 :::{figure} ../images/ch12-oversharing-risk.png
 :label: fig-ch12-oversharing
-:alt: Risk diagram showing the oversharing problem in SharePoint — illustrating how a document shared broadly via an organization-wide link becomes accessible to Copilot responses for users who should not have access to it, with a risk meter showing escalating compliance concern levels
+:alt: Risk diagram showing the cross-client contamination problem in SharePoint — illustrating how a client design folder shared broadly via an organization-wide link becomes accessible in Copilot responses to team members working for a competing client at the same show, with a risk meter showing escalating confidentiality concern levels
 :width: 80%
 :align: center
 
-The oversharing amplification effect: what was a latent permission gap in the manual-navigation era becomes an active information disclosure risk in the Copilot era. Content that people had access to but rarely found is now findable by AI in seconds.
+The oversharing amplification effect: what was a latent permission gap in the manual-navigation era becomes an active disclosure risk in the Copilot era. Content that people technically had access to but never found is now findable in a sentence.
 :::
 
-Consider a common scenario at any bank this size: A team working on a sensitive merger-related analysis creates a SharePoint site and shares it with their team — but inadvertently uses a sharing setting that extends access to the entire finance division. In the manual world, nobody outside the immediate team knows the site exists or thinks to look for it. The content is effectively hidden by obscurity.
+**Cross-client contamination** is what happens when material belonging to one client becomes visible — through a permission gap rather than a deliberate act — to someone working for another. Copilot does not cause it. Copilot *reveals* it, at speed, because from the system's point of view that access was authorized.
 
-In the Copilot world, a finance division employee who asks Copilot to summarize any recent M&A analysis might get back a summary of that sensitive content — because Copilot has no concept of "this exists but you weren't meant to find it." If the permission says readable, Copilot reads it.
+Here is the scenario, and it is not hypothetical in shape.
 
-This is not a Copilot bug. It is a permissions problem that Copilot makes impossible to ignore.
+Two exhibitors in the same category are at the same show. Both are GES clients. One is launching a product. Their stand drawings, reveal sequence, and embargoed graphics sit in a show folder that — for entirely well-meant reasons two years ago — was shared with "everyone in the show operations group" so a colleague could pull a floor plan on a Sunday.
 
-**Three categories of SharePoint oversharing at BankUnited:**
+An account coordinator who works on the *competing* exhibitor opens Copilot and types something completely ordinary: *"What's going into Hall B for this show and what are the install sequences?"*
 
-**Organizational sharing links.** Documents shared via "Anyone in BankUnited" links are accessible to every Copilot user in the organization. This is appropriate for genuinely organization-wide content (the holiday schedule, the cafeteria menu) and profoundly inappropriate for anything with customer data, financial projections, or internal governance content.
+Under the old model, nothing happens. Nobody browses to a folder they have no reason to know exists. That is not protection; it is luck.
 
-**Broad department access.** Sites where entire divisions have been granted access "because it's easier," even when specific sub-groups within that division have need-to-know considerations. In commercial banking, for example, not every relationship manager needs access to every credit committee deliberation.
+Under the Copilot model, the coordinator gets a tidy, well-cited summary that includes a competitor's unreleased product, because the permission said readable and Copilot read it. Nobody hacked anything. Nobody acted in bad faith. A sharing decision made in a hurry in 2024 became a confidentiality incident in 2026.
 
-**Stale access grants.** Former employees, former role-holders, and former project team members who retain SharePoint access after their involvement ended. In the Copilot era, stale access means stale access to Copilot queries.
+That is cross-client contamination, and at GES it is not IT housekeeping. It is a **business-critical control**, on the same tier as show-floor safety.
 
-The solution is not to restrict Copilot. The solution is to fix the permissions — and that process starts with understanding what is overshared.
+### Why the stakes are structurally higher at GES
+
+Three features of our business raise the consequence of a permission gap above what a typical company faces.
+
+**We hold competitors simultaneously, not sequentially.** Most companies have one client per deal. We have several per aisle. A permission model that works fine when your clients don't compete is inadequate the moment they do.
+
+**We see things before the market does.** Unreleased products, unannounced acquisitions revealed through booth branding, pricing shown in a client's own materials. Much of what sits in a GES show folder is market-moving information with a fixed embargo date attached.
+
+**The GES Collective has different confidentiality boundaries per brand.** GES Exhibitions is the General Service Contractor — the official contractor appointed by the show organizer, serving every exhibitor on the floor. Spiro is an experiential agency and frequently the Exhibitor Appointed Contractor for a specific brand, working *against* the general floor in a competitive design capacity. onPeak holds attendee and housing data with privacy obligations attached. SHOWTECH holds power and lighting plans. Visit by GES holds registration and lead-capture data governed by GDPR and equivalent regimes.
+
+These are not five departments of one team. They are five sets of client relationships with **five different confidentiality perimeters**, and they run on the same tenant. A Spiro designer holding an EAC engagement for one brand should not be inheriting general-floor GSC content about that brand's competitors, and vice versa. That separation is real, contractual, and enforced in exactly one place that Copilot cares about: **SharePoint permissions.**
+
+::::{admonition} 🎯 T.R.U.E. Check: Trust
+:class: note
+
+**Trust** — *we trust each other to always be honest and do what's right.*
+
+Clients hand GES their unreleased work because 87 years of doing this right earned that. Trust at our scale is not a feeling; it is a set of specific, boring, verifiable controls — and SharePoint permissions are now one of them. Every broad sharing link you create is a small withdrawal from an account that took since 1939 to build.
+::::
+
+### The three failure modes
+
+Nearly every case of cross-client contamination traces to one of three patterns.
+
+**Organization-wide sharing links.** A document shared via "Anyone in GES" is readable by every Copilot user in the company. That is correct for the holiday calendar and the travel policy. It is indefensible for a client's booth drawings, a negotiated rate exception, or an unreleased product spec.
+
+**Show-team access that outlives the show.** This is the most common failure at GES, and it comes directly from how we work. Show teams form fast, pull in labor coordinators, graphics production, freight, exhibitor services, and a Spiro producer or two, deliver a show, and dissolve. The team dissolves. **The access does not.** After a few seasons, a mid-career GES employee holds read access to dozens of show sites belonging to clients they have not thought about in years — and Copilot searches every one of them.
+
+**Convenience-driven breadth.** "Give the whole division access, it's easier." It is easier. It is also how a client account site ends up readable by 400 people with no engagement on that account — including the negotiated rate structure, which not every account manager needs to see.
+
+### What this means for you, concretely
+
+**When you own content:** Default to the tightest permission that lets the work happen. Client-specific material belongs in client-specific libraries with named access, not division-wide sites. Never use an organization-wide link for anything with a client name on it. If a document contains an unreleased product, an embargo date, a negotiated rate, or a competitive design, it gets explicit access control — every time, no exceptions, no "just for this week."
+
+**When a show closes:** Access review is part of move-out. The show is not done when the last crate leaves the dock; it is done when the reconciliation is filed and the show site's access list reflects who still needs it. Add it to the closeout checklist. It takes ten minutes.
+
+**When Copilot shows you something you shouldn't see:** Report it to IT immediately, without drama and without forwarding the content. You have not done anything wrong and neither has Copilot — you have found a misconfiguration, and finding it is genuinely valuable. What you must not do is act on it, mention it to the other account team, or quietly keep reading.
+
+::::{admonition} ⚠️ The Cross-Client Rule
+:class: warning
+
+If a Copilot response surfaces content belonging to a client you do not work on — particularly a competitor of a client you *do* work on — stop reading, do not copy or forward it, and report the site or file to GES IT the same day.
+
+Then ask the harder question about your own content: *which of the libraries I own could do this to someone else?*
+::::
 
 ---
 
-## 4. Content Governance for Copilot Readiness — The Content Management Assessment
+## 4. Grounding Drift — Your AI Is Only as Current as Your SharePoint
 
-Microsoft has published specific guidance for preparing SharePoint environments for Copilot, centered on a governance framework that BankUnited's IT and SharePoint administrators should implement. Understanding this framework is useful for every employee — not because you will be running it, but because you will be living with its outputs.
+Chapter 4 named the second risk: **grounding drift.** Copilot's generative models are Microsoft's problem. What Copilot is *grounded in* is ours.
+
+Grounding drift is what happens when Copilot retrieves content that is real, findable, well-formatted, and **no longer true** — and presents it in exactly the same confident register it uses for current content. There is no visual difference between a right answer and a stale one. That is the entire danger.
+
+In live events, staleness is not an abstraction. It has a price tag and a hard date.
+
+- A **superseded rate sheet** produces an exhibitor quote we then have to honor or walk back. Both are bad; one is expensive and the other is worse.
+- An **outdated venue rule** — a changed aisle obstruction policy, a new rigging restriction, a revised dock curfew — produces a move-in plan that the venue rejects at the door.
+- A **last-edition service kit** sends exhibitors to an advance warehouse address that changed, with a freight target date that no longer exists.
+- A **stale drayage tariff** drives a client estimate that misses by a margin nobody discovers until reconciliation.
+- A **superseded SOP** gets followed correctly by a crew in a facility that adopted version 6 while the SOP library still serves version 4.
+
+Every one of those is a document hygiene failure that used to cost one person some confusion and now, mediated by Copilot, scales instantly to everyone who asks a reasonable question.
+
+**This is the reframe that matters: document hygiene is now an AI quality issue.** Archiving a superseded rate sheet is no longer tidiness. It is the difference between an accurate quote and a wrong one, produced at volume.
+
+### The three disciplines that prevent drift
+
+**Ownership.** Every library has a named owner — a person, not a department. Ownerless sites are how content goes stale, because nobody is accountable for reviewing it. When someone leaves a role, ownership transfers explicitly, the way a show file does at handoff.
+
+**Lifecycle.** Every content type has a review cadence proportional to how fast it changes. Rate sheets and tariffs: every publication cycle, without exception. Venue knowledge: after every show at that venue, because that is when you learned something. Service kit templates: per season. SOPs: annually, or on incident. Design standards: per brand refresh. Safety documentation: continuously, because it is safety.
+
+**Archiving over deletion.** When something is superseded, move it out of the active pool — do not leave it beside the current version, and do not delete it either. We need history for reconciliation, contract disputes, and ESG reporting continuity. Archived content stays preserved and retrievable but is not surfaced in Copilot's default responses. Two versions of the same rate sheet in one folder is the single most reliable way to make Copilot confidently wrong.
+
+**Currency has to be visible in the document, not just in the metadata.** Copilot reads what documents say. A rate sheet whose first line reads *"Effective for shows moving in on or after 1 September 2026. Supersedes the rate schedule dated 1 March 2026."* is doing real work — for a human skimming it and for a model retrieving it. A rate sheet titled `Rates FINAL v3 (2).xlsx` with no effective date anywhere in it is a liability with a spreadsheet icon.
+
+::::{admonition} 🎯 T.R.U.E. Check: Responsibility
+:class: note
+
+**Responsibility** — *be responsible for our actions and deliver on our commitments.*
+
+If you own a library, you own its currency. Not the AI, not IT, not the person who wrote the document three seasons ago. A stale document you left in the active pool is a commitment you made to every colleague who asks Copilot a question this week — and did not keep.
+::::
+
+---
+
+## 5. Governance for Copilot Readiness — Assessment, Lifecycle, Archiving
+
+Microsoft has published specific guidance for preparing SharePoint for Copilot. GES IT administrators will run most of it; everyone else lives with the outputs, which is reason enough to understand it.
 
 :::{figure} ../images/ch12-governance-framework.png
 :label: fig-ch12-governance
@@ -149,153 +221,135 @@ Microsoft has published specific guidance for preparing SharePoint environments 
 The four pillars of SharePoint Copilot readiness: assessment, lifecycle management, archiving, and ongoing governance — a continuous cycle, not a one-time project.
 :::
 
-**The Content Management Assessment Hub**
+**The Content Management Assessment hub.** SharePoint Advanced Management (SAM) includes an assessment hub that gives administrators actionable insight into the environment: it identifies overshared content, finds inactive and ownerless sites, scores Copilot readiness, and tracks progress across recurring runs. Microsoft recommends running assessments every 30 days.
 
-Microsoft's SharePoint Advanced Management (SAM) includes a Content Management Assessment hub that gives administrators actionable insight into the state of a SharePoint environment. The Assessment hub:
+At GES the assessment cadence should be tied to something real: **run it against the show calendar.** Post-season is when show sites go dormant and access lists go stale, and it is exactly when an assessment is most likely to find something worth fixing.
 
-- Identifies overshared content — sites and libraries where sharing settings are broader than appropriate
-- Finds inactive or ownerless sites — content that is no longer actively maintained and may be outdated
-- Defines Copilot readiness — a scoring view of how prepared the environment is for high-quality AI responses
-- Ensures compliance — surfacing sites or content that may violate information governance policies
-- Tracks progress with recurring assessments — Microsoft recommends running assessments every 30 days to monitor the environment and catch new oversharing as it occurs
+**Site lifecycle management.** Some sites are actively owned and current. Others were spun up for a show that closed two years ago and still surface in Copilot answers because they contain documents full of relevant keywords. Lifecycle policies let administrators detect inactivity, prompt owners to review, and archive or decommission rather than leave stale content in the pool. For a company creating SharePoint content at the rate of 4,000+ events a year, this is the only thing standing between a useful knowledge base and a decade of dormant show folders.
 
-This is the governance instrument. Think of it as the audit report for your SharePoint environment, run automatically and surfaced to administrators who can act on it.
-
-**Site Lifecycle Management**
-
-Not all SharePoint sites are created equal. Some sites are actively maintained by engaged owners who keep content current. Others were created for a project that ended two years ago and have not been touched since — but still show up in Copilot searches because they contain documents with relevant keywords.
-
-Site lifecycle management policies allow administrators to manage the health of the site inventory. When a site is inactive for a defined period, administrators can be notified, site owners can be prompted to review, and sites can be archived or decommissioned rather than left as stale content in the environment.
-
-For Copilot quality, this matters enormously. **Copilot is only as current as the content it can access.** A SharePoint environment full of outdated policy documents, superseded procedures, and abandoned project sites will produce Copilot responses that mix current and stale information — which in banking is worse than no answer at all. A credit officer asking about current commercial lending underwriting standards should not be receiving content from a 2019 procedure that has since been revised.
-
-**Archiving**
-
-Archiving allows administrators to move inactive content out of Copilot's active search scope without deleting it. Archived content is preserved — it can be restored and made available again if needed — but it is not surfaced in Copilot's responses by default. This keeps Copilot's knowledge base current and relevant.
-
-The principle Microsoft articulates for SharePoint and Copilot readiness is straightforward: *"Copilot and agents work best when content is up to date and well governed."* This is not a marketing statement. It is an architectural truth.
+**Archiving.** Archiving moves inactive content out of Copilot's active search scope without deleting it. Archived content is preserved and restorable but is not surfaced by default. Microsoft's stated principle is plain: *"Copilot and agents work best when content is up to date and well governed."* That is not marketing. It is the architecture.
 
 :::{note}
 **What Restricted SharePoint Search does (and doesn't do)**
 
-During early Copilot rollouts, administrators have the option to enable Restricted SharePoint Search — a feature that limits Copilot's search to a defined list of curated SharePoint sites, rather than the full environment. This is designed as a rollout tool, not a permanent governance solution. It lets administrators gradually expand Copilot's reach as they confirm each site's governance readiness. BankUnited administrators should be aware that this option exists as a staged rollout tool, separate from the long-term permission governance work described in this chapter.
+During early rollouts, administrators can enable Restricted SharePoint Search, which limits Copilot's search to a curated list of sites rather than the full environment. It is a **rollout tool, not a governance strategy** — it lets administrators expand Copilot's reach site by site as each one's readiness is confirmed. For GES it is a sensible way to start with, say, the venue knowledge library and corporate SOPs while client account sites are being permission-reviewed. It is not a substitute for that review.
 :::
 
 ---
 
-## 5. Organizing SharePoint for BankUnited Teams
+## 6. Organizing SharePoint for GES Teams
 
-For Copilot to be genuinely useful, SharePoint needs to be organized for findability — not just for human navigation, but for AI search. These are related but not identical requirements. Folder hierarchies help humans browse; clear naming, consistent metadata, and logical site structure help Copilot retrieve.
+For Copilot to be genuinely useful, SharePoint has to be organized for findability — not just for human browsing. Folder hierarchies help people navigate. Clear naming, consistent structure, and correct permissions help Copilot retrieve.
 
 :::{figure} ../images/ch12-site-structure.png
 :label: fig-ch12-structure
-:alt: Department site structure diagram for BankUnited — showing six department SharePoint sites (Commercial Banking, Treasury, Retail Banking, Operations, Compliance, Internal Audit) each with standardized sub-library structure — Policies, Procedures, Templates, Reports, and Reference — connected to a central IT and Governance hub
+:alt: Site structure diagram for GES — showing six primary SharePoint sites (Show Operations, Venue Knowledge, Client Accounts, Spiro Design Assets, Safety and Sustainability, Commercial and Contracts) each with standardized sub-library structure, connected to a central IT and governance hub
 :width: 80%
 :align: center
 
-The BankUnited SharePoint department site model — six primary department sites with standardized internal library structures. Standardization is what makes Copilot search consistent and reliable across the organization.
+The GES SharePoint site model — six primary site families with standardized internal library structures. Standardization is what makes Copilot retrieval consistent across shows, facilities, and countries.
 :::
 
-**The BankUnited Department Site Model**
-
-Every major BankUnited function should have a dedicated SharePoint site that follows a consistent structural pattern. Here is the recommended model for BankUnited's core departments:
+**The GES Site Model**
 
 ::::{tab-set}
-:::{tab-item} Commercial Banking
-**Site name:** BankUnited Commercial Banking  
-**Owner:** Commercial Banking Division Head  
+:::{tab-item} Show Operations
+**Site pattern:** GES Show Operations — [Show Name] — [Year]
+**Owner:** Show Operations Manager
 **Libraries:**
-- Policies & Credit Standards
-- Loan Procedures & Workflows
-- Client Templates (CIM templates, term sheet templates, commitment letter templates)
-- Portfolio Reports (monthly by region/RM)
-- Reference & Market Data
+- Show Operations Manual & Move-In/Move-Out Sequencing
+- Exhibitor Service Kit (current edition + approved template)
+- Floor Plans, Booth/Stand Assignments & Aisle Carpet Plans
+- Freight Targets, Marshaling Yard & Material Handling Plans
+- Labor Calls, I&D Schedules & Union Jurisdiction Notes
+- Post-Show Reconciliation Archive
 
-**Governance note:** Credit committee materials and deal-specific files should be in permissioned sub-sites or libraries with explicit access control — not in the division-wide site.
+**Governance note:** Show sites are the highest-volume site type at GES and the most common source of stale access. Access review at move-out is mandatory, and the site should be archived on a defined schedule after reconciliation closes.
 :::
-:::{tab-item} Treasury
-**Site name:** BankUnited Treasury & ALM  
-**Owner:** Chief Financial Officer / Treasury Director  
+:::{tab-item} Venue Knowledge
+**Site name:** GES Venue Knowledge Library
+**Owner:** Global Operations / Regional Operations Directors
 **Libraries:**
-- Interest Rate Risk Management
-- Liquidity Risk Frameworks
-- Investment Portfolio Documentation
-- Regulatory Reporting (DFAST, FR Y-9C supporting docs)
-- ALM Model Documentation
+- Venue Profiles (dock configuration, freight door dimensions, ceiling and rigging limits)
+- Union Jurisdiction Summaries by Market
+- Freight Quirks & Known Constraints (the institutional memory)
+- Advance Warehouse, Marshaling Yard & Drayage Specifications
+- Facility Profiles — all 24 global production and warehouse facilities
+- Customs, Carnet & Cross-Border Guidance
 
-**Governance note:** Treasury content is among the most sensitive in any bank. This site should use explicit, individually-assigned permissions — no organization-wide links.
+**Governance note:** This is the highest-value shared library at GES and one of the few that should be broadly readable — it contains no client information. Currency is the entire point: update the venue profile the week after every show at that venue, while the lesson is still fresh.
 :::
-:::{tab-item} Compliance & BSA
-**Site name:** BankUnited Compliance & BSA/AML  
-**Owner:** Chief Compliance Officer  
+:::{tab-item} Client Accounts
+**Site pattern:** GES Client — [Account Name] (one site per account)
+**Owner:** Account Director
 **Libraries:**
-- BSA/AML Policies & Procedures
-- CIP/KYC Documentation Standards
-- Regulatory Examination Prep Materials
-- Training & Certification Records
-- SAR / CTR Procedural Guides (non-case-specific)
+- Contracts, SOWs & Amendments
+- Negotiated Rates & Commercial Terms
+- Show History & Performance
+- Client Brand Standards & Approved Assets
+- QBR Materials & Account Plans
 
-**Governance note:** Examination findings, SAR filings, and case-specific materials should NEVER be in a broadly-shared SharePoint site. These require separate, tightly-permissioned repositories.
+**Governance note:** **This is the cross-client contamination frontline.** One site per account, named access only, no organization-wide links, no division-wide grants, no exceptions. Access is granted on engagement and revoked at disengagement. If a competitor's account team can read this site, that is a reportable incident, not a preference.
 :::
-:::{tab-item} Internal Audit
-**Site name:** BankUnited Internal Audit  
-**Owner:** Chief Audit Executive  
+:::{tab-item} Spiro Design Assets
+**Site name:** Spiro Design & Production Library
+**Owner:** VP Creative + Design / Regional Creative Directors
 **Libraries:**
-- Audit Charter & Methodology
-- Annual Audit Plan
-- Completed Audit Reports (accessible to appropriate leaders)
-- Corrective Action Tracking
-- Regulatory Correspondence
+- Design Templates & Reusable Structural Systems
+- Graphics Production Standards & Color-Accurate Substrate Specs
+- Materials Library & Better Stands Reusable Components
+- Show Ready — The Edit Modular Product Documentation
+- Concept Archive (non-client-identifiable)
 
-**Governance note:** Audit workpapers and in-progress audit content should be in a separate, restricted site — not the general Internal Audit site.
+**Governance note:** Separate reusable *standards* from client-specific *work*. Templates, substrate specs, and structural systems belong here and should be widely available. Client concepts, unreleased product environments, and competitive pitch work belong in the client account site under named access. When in doubt about which side of that line a file falls on, it is client-specific.
 :::
-:::{tab-item} Operations
-**Site name:** BankUnited Operations  
-**Owner:** Chief Operating Officer / Operations Director  
+:::{tab-item} Safety & Sustainability
+**Site name:** GES Safety, Compliance & ESG
+**Owner:** Global Safety Director / ESG Lead
 **Libraries:**
-- Core Banking Procedures
-- Branch Operations Standards
-- Wire & Payment Processing Procedures
-- Vendor Management Documentation
-- BCP / Disaster Recovery Procedures
+- Safety Standards & Site Safety Plans
+- Incident Records & Corrective Action Tracking
+- Venue-Specific Safety Requirements
+- ESG Reporting Sources & Emissions Data
+- Better Stands Reuse Tracking & Sustainability Documentation
 
-**Governance note:** Vendor contracts with pricing terms may warrant separate permissioned access.
+**Governance note:** Safety standards should be broadly readable — everyone benefits. Specific incident records with named individuals require restricted access. ESG source data must be version-controlled and traceable; published reporting depends on it being reproducible.
 :::
-:::{tab-item} Retail Banking
-**Site name:** BankUnited Retail Banking  
-**Owner:** Retail Division Head  
+:::{tab-item} Commercial & SOPs
+**Site name:** GES Commercial Standards & Procedures
+**Owner:** Operations Standards Lead / Commercial Director
 **Libraries:**
-- Product Guides & Rate Sheets
-- Sales Scripts & Client Communication Templates
-- Branch Policies & Procedures
-- Training & Onboarding Materials
-- Customer Service Standards
+- Standard Operating Procedures (by function, applicable across facilities)
+- Published Rate Sheets & Material Handling Tariffs (current edition only)
+- Superseded Rates Archive (dated, clearly marked)
+- Exhibitor Service Kit Master Templates
+- Estimating Standards & Labor Forecasting Guidance
 
-**Governance note:** Rate sheets that change frequently should be clearly dated and superseded versions archived — not deleted — so Copilot retrieves the current version.
+**Governance note:** This site is the grounding-drift epicenter. Exactly one current rate sheet per market lives in the active library. Superseded versions move to the archive the day they are superseded — not at the end of the quarter, not when someone gets around to it.
 :::
 ::::
 
-**The BankUnited File Naming Convention**
+**The GES File Naming Convention**
 
-Copilot finds content based on what documents say and what they are named. Consistent naming is one of the highest-leverage improvements any team can make.
+Copilot's semantic search reads file names as context. Consistent naming is the highest-leverage improvement any team can make in an afternoon.
 
 ```
-[Department]-[DocumentType]-[Topic]-[YYYY-MM].docx
+[Show-or-Account]-[DocumentType]-[Topic]-[YYYY-MM].ext
 
 Examples:
-Commercial-Policy-CREUnderwritingStandards-2026-01.docx
-Compliance-Procedure-BeneficialOwnershipDocumentation-2025-11.docx
-Treasury-Report-IRRSensitivityAnalysis-2026-Q1.xlsx
-Retail-Template-ClientWelcomeLetter-2025-08.docx
+MeridianExpo2026-OpsManual-MoveInSequencing-2026-03.docx
+VenueLibrary-Profile-DockAndFreightDoors-ExCeLLondon-2026-02.docx
+Commercial-RateSheet-MaterialHandling-USMarkets-2026-09.xlsx
+MeridianExpo2026-ServiceKit-ExhibitorEdition-2026-04.pdf
+SOP-AdvanceWarehouseReceiving-v6-2026-01.docx
+MeridianExpo2026-Reconciliation-LaborAndDrayage-2026-06.xlsx
 ```
 
-This naming convention does two things: it makes documents findable by Copilot through meaningful keywords in the filename, and it makes version currency immediately visible — a 2024 document and a 2026 document with the same topic are distinguishable at a glance.
+This does two things: it makes documents findable through meaningful keywords, and it makes version currency visible at a glance. A `2024-11` service kit and a `2026-04` service kit are distinguishable without opening either.
 
 ---
 
-## 6. SharePoint Search + Copilot — How Well-Organized Content Surfaces Better
-
-There is a direct relationship between SharePoint organization quality and Copilot response quality. Understanding that relationship helps you understand why investing time in your SharePoint environment produces immediate Copilot dividends.
+## 7. Why Well-Organized Content Surfaces Better
 
 :::{figure} ../images/ch12-search-quality.png
 :label: fig-ch12-search
@@ -303,28 +357,22 @@ There is a direct relationship between SharePoint organization quality and Copil
 :width: 80%
 :align: center
 
-The organization-quality-to-response-quality pipeline: Copilot's answers are only as specific and accurate as the content it can find. Well-named, well-organized, current content produces precise answers with clear attribution. Disorganized content produces vague generalities.
+The organization-quality-to-response-quality pipeline: Copilot's answers are only as specific as the content it can find. Well-named, current content produces precise answers with clear attribution. Disorganized content produces vague generalities.
 :::
 
-**How Copilot searches SharePoint**
+When you ask Copilot a question requiring organizational knowledge, it queries Microsoft Graph for content you can access that is *semantically* relevant — meaning-based matching, not keyword matching. That is powerful, and it also means a document with no meaningful title, no descriptive opening, and no metadata will rank poorly even when it contains precisely the answer.
 
-When you ask Copilot a question that requires organizational knowledge, it queries Microsoft Graph for content you have permission to access that is semantically relevant to your question. This search is not keyword-matching — it is semantic matching, which means Copilot looks for content that is contextually related to your question, not just documents that contain your exact search terms.
+**Three things make content Copilot-findable:**
 
-This is powerful. But it means that documents with no meaningful title ("Final_v3_REVISED_USE THIS ONE.docx"), no descriptive content in the first page, and no metadata will rank poorly in semantic search — even if they contain exactly the information the user needs.
+**1. Meaningful file names.** Show or account, document type, topic, date. `Final_v3_USE THIS ONE.docx` is invisible to semantic search and, frankly, to humans.
 
-**The three things that make content Copilot-findable:**
+**2. Strong document openings.** The first paragraph is disproportionately influential in how Copilot understands a document. Compare an operations manual that opens with a letterhead and a table of contents against one that opens: *"This operations manual governs move-in, move-out, material handling, and labor sequencing for the Meridian Manufacturing Expo, 640 exhibiting companies, 310,000 net square feet, at [venue], March 2026. It supersedes the 2025 edition."* The second one is findable. The first one is a PDF in a haystack.
 
-**1. Meaningful file names.** As described in the naming convention above — department, document type, topic, and date. Copilot's semantic search reads file names as context.
-
-**2. Strong document openings.** The first paragraph of a document is disproportionately influential in how Copilot understands its content. Documents that open with a clear statement of purpose — "This procedure governs the beneficial ownership documentation requirements for BankUnited's commercial deposit accounts, effective November 2025" — are dramatically more findable than documents that open with a table of contents or a corporate letterhead.
-
-**3. Current content.** Copilot gives recency weight to content. An outdated 2021 procedure will be deprioritized behind a 2025 procedure on the same topic — which is the right behavior. But if your 2025 procedure is in a site that has not been updated recently, it may be caught in site lifecycle management's "inactive" flag. Keeping sites active — even just reviewing and touching them periodically — keeps them in Copilot's active content pool.
+**3. Current content, in an active site.** Copilot weights recency. But if your current service kit sits in a show site nobody has touched in eighteen months, lifecycle policy may flag that site as inactive. Keeping owned sites active — reviewing and touching them periodically — keeps them in the pool.
 
 ---
 
-## 7. The File Sharing + Summary Workflow — A New Way to Communicate
-
-Microsoft 365 Copilot adds a capability to the SharePoint file sharing workflow that changes how BankUnited professionals can communicate around documents. As of May 2026, this is a generally available feature — not a preview, not an experimental capability, but a standard part of how SharePoint sharing works.
+## 8. The Share-with-Summary Workflow
 
 :::{figure} ../images/ch12-share-summary-workflow.png
 :label: fig-ch12-sharing
@@ -335,61 +383,22 @@ Microsoft 365 Copilot adds a capability to the SharePoint file sharing workflow 
 The Copilot share-with-summary workflow: share a file and an AI-generated summary in a single action. The recipient gets context immediately — no need to open and scan the document before understanding what they are looking at.
 :::
 
-**How it works:**
+As of May 2026 this is generally available, not a preview. When sharing a file from SharePoint, you can choose to generate a Copilot summary as part of the sharing action. The recipient gets the file and a concise summary of its contents alongside it.
 
-When sharing a file from SharePoint, users now have the option to generate a Copilot summary as part of the sharing action. The workflow: choose Share, then select the option to generate a Copilot summary, and send the file along with the summary to the recipient.
+**GES applications:**
 
-The recipient receives the file and a concise AI-generated summary of its contents — key points, purpose, and main takeaways — delivered alongside the document itself.
-
-**BankUnited applications:**
-
-- **Credit memo distribution.** When sending a credit memo to a credit officer for review, include a Copilot summary that highlights the borrower name, loan amount, purpose, credit grade, and key risks. The reviewer can immediately orient to the document before reading in depth.
-
-- **Regulatory update distribution.** When sharing new regulatory guidance from the OCC or CFPB with compliance staff, include a Copilot summary of the key changes. This replaces the email that someone would normally write to explain what the attachment is about.
-
-- **Board package preparation.** When distributing pre-read materials to board members ahead of a meeting, each document can be sent with a Copilot summary that helps board members quickly identify the documents requiring their close attention versus those that are informational.
-
-- **Client deliverables.** When sending a financial analysis or market update to a commercial banking client, a summary provides immediate value and context — demonstrating that BankUnited is not just delivering a file, but curating intelligence.
+- **Operations manual distribution.** Send the manual to the show team with a summary flagging the move-in sequence, the hard-out constraint, and the escalation contacts — so a labor coordinator reading it on a phone knows in fifteen seconds what changed from last edition.
+- **Venue rules packages.** A venue's updated rules run 60–80 pages. Share it with a summary of what actually changed for GES as GSC, and the exhibitor services desk can act before anyone reads page 40.
+- **Client deliverables.** A post-show reconciliation sent to an organizer with a summary of variance drivers demonstrates that GES is delivering intelligence, not a spreadsheet.
+- **SOP rollouts across facilities.** Push a revised procedure to 24 facilities with a summary of the delta. Facilities that trained on version 5 need to know what version 6 changed, not re-read the whole document.
 
 :::{tip}
-**The summary replaces the forwarding email.** In current workflows, someone attaches a document and writes a paragraph explaining what it is and why the recipient should read it. The Copilot summary generates that paragraph from the document itself — consistently, accurately, and instantly. The human's job becomes reviewing and approving the summary, not writing it from scratch.
+**The summary replaces the forwarding email.** Today someone attaches a document and writes a paragraph explaining what it is. Copilot generates that paragraph from the document itself — consistently and instantly. Your job becomes reviewing and approving the summary rather than composing it. Review it: a summary that misstates a freight deadline is worse than no summary at all.
 :::
 
 ---
 
-## 8. Building Department Knowledge Bases — The Structure That Makes Copilot Useful
-
-The gap between a SharePoint site that makes Copilot useful and one that does not comes down to one concept: **intended findability.** When a document is created and stored, is it created with the intention that someone — or an AI — will need to find and understand it later?
-
-:::{figure} ../images/ch12-knowledge-base-structure.png
-:label: fig-ch12-knowledge-base
-:alt: Knowledge base architecture diagram for BankUnited department SharePoint sites — showing a three-tier structure of foundational documents (policies, procedures), working documents (templates, reports, analyses), and reference materials (guides, training, market data) — with Copilot retrieval arrows pointing into each tier
-:width: 80%
-:align: center
-
-The three-tier knowledge base structure — foundational, working, and reference layers — with Copilot retrieval illustrated at each layer. The structure makes it possible for Copilot to surface the right type of content for the right type of question.
-:::
-
-**The Three-Tier Knowledge Base Structure**
-
-Every BankUnited department site should organize content into three functional tiers:
-
-**Tier 1: Foundational Documents**  
-Policies, procedures, regulatory frameworks, standards, and governance documents. These are the authoritative sources — the things that define how work is supposed to be done. They are updated infrequently (quarterly or annually) but must always reflect the current, approved version. These documents should be clearly named, clearly dated, and version-controlled. Old versions should be archived, not deleted — Copilot should always surface the current version, but the history should be preserved.
-
-**Tier 2: Working Documents**  
-Templates, active reports, in-progress analyses, and working files. These are the tools and outputs of day-to-day work. They should follow the BankUnited naming convention and be stored in consistent, predictable library locations. When a report becomes a final deliverable, it should move from a working folder to an appropriate final repository and be clearly marked as final.
-
-**Tier 3: Reference Materials**  
-Market data, regulatory guidance, external publications, training materials, and reference guides that support the team's work but are not BankUnited's own policy. This tier is important for Copilot because it provides the context that allows AI to connect internal BankUnited policy with external frameworks and standards.
-
-**The knowledge base discipline:** Every time a team creates a significant document, they should ask: *Where does this live so someone — or Copilot — can find it six months from now?* That question is the habit that separates teams that build functional knowledge bases from those that build digital landfills.
-
----
-
-## 9. SharePoint + Teams + Copilot — The Integrated Pattern for Team Intelligence
-
-SharePoint does not operate in isolation in the Microsoft 365 ecosystem. Every Microsoft Teams channel has an associated SharePoint library where its files are stored. Every file shared in a Teams channel lives in SharePoint. Every Teams meeting recording is stored in SharePoint. This integration is intentional — and it is what makes the SharePoint-Teams-Copilot combination the most powerful pattern for team knowledge management at BankUnited.
+## 9. SharePoint + Teams — One Permission Surface
 
 :::{figure} ../images/ch12-teams-sharepoint-integration.png
 :label: fig-ch12-integration
@@ -397,145 +406,143 @@ SharePoint does not operate in isolation in the Microsoft 365 ecosystem. Every M
 :width: 80%
 :align: center
 
-The SharePoint-Teams-Copilot integration triangle: Teams is the workspace, SharePoint is the knowledge store, and Copilot is the intelligence layer that connects them. When all three are well-configured, team knowledge becomes instantly accessible through conversation.
+The SharePoint-Teams-Copilot triangle: Teams is the workspace, SharePoint is the knowledge store, Copilot is the intelligence layer connecting them. Every file dropped in a channel is a SharePoint file with SharePoint permissions.
 :::
 
-**How the integration works:**
+Every Teams channel has a backing SharePoint library. Every file shared in a channel lives there. Every meeting recording lands there. That integration is what makes the Teams–SharePoint–Copilot pattern powerful for show teams — and it is also where a lot of cross-client contamination originates, because **people think of Teams as chat and forget it is storage.**
 
-When a Teams channel is created, SharePoint automatically creates a corresponding document library. Files uploaded to the channel, shared in chats, or attached to meetings live in that SharePoint library — which means they are instantly accessible to Copilot queries.
+A producer drags a client's booth drawing into a show channel to answer a quick question during move-in. That file now lives in a SharePoint library whose membership is whoever was ever added to that channel — including the three people added for one weekend in a different season.
 
-Meeting recordings stored in SharePoint can be summarized, searched, and referenced by Copilot — which means a relationship manager who missed the weekly credit committee call can ask Copilot to summarize what was discussed and what decisions were made, rather than waiting for meeting minutes or listening to a recording.
+**The practical rules:**
 
-Files that a team discusses in Teams are already in SharePoint. When Copilot is asked "What did we decide about the rate structure on the Hernandez deal?", it can search across both the Teams conversation history and the SharePoint documents associated with that channel — giving a unified answer that draws from the full record of the team's work.
+- **A Teams channel is a permission boundary, not a chat window.** Before you drop a client file into a channel, ask who is in it. If you would not email the file to everyone on the member list, do not post it.
+- **Client-specific channels for client-specific work.** Not one general show channel where every exhibitor's material accumulates.
+- **Meeting recordings inherit channel permissions.** A design review where an unreleased product is on screen is a confidential asset stored in SharePoint. Treat it as one.
+- **Naming discipline compounds.** A file posted as `deck FINAL.pptx` is as unfindable in Teams as it is in SharePoint, because it is the same file in the same place.
 
-**The practical implication for BankUnited teams:**
-
-The file discipline that benefits SharePoint also benefits Teams. Every file shared in a Teams channel lands in a SharePoint library. If that file is named "Final_USETHIS.docx", it will be harder for Copilot to find and harder for teammates to identify later. If it is named "Commercial-Analysis-HernandezPortfolio-2026-04.docx", it is immediately findable and immediately understandable.
-
-The investment in naming discipline compounds across the whole ecosystem.
+The upside of the same architecture is real: a show manager who missed the pre-show call can ask Copilot to summarize what was decided and pull the associated documents in one query, drawing on both the conversation and the files — genuinely valuable across teams spanning 75+ countries that rarely share a timezone. It just requires that the boundary be correct first.
 
 ---
 
-## 10. What BankUnited IT and Compliance Need to Know — The Admin Side in Plain Language
+## 10. Copilot Cowork and SharePoint — More Reach, Same Rules
 
-Most of this chapter has been written for individual employees — the people doing the day-to-day work who interact with SharePoint through the user interface. But the governance layer is administered by IT and overseen by Compliance, and those teams need to understand what Copilot changes about their SharePoint responsibilities.
+Copilot Cowork became generally available worldwide on **June 16, 2026**. It matters in a SharePoint chapter because Cowork does not just *read* SharePoint. It works in it.
+
+Per Microsoft's documentation, Cowork can **browse OneDrive and SharePoint** to find and select the files it needs rather than requiring you to attach every source up front; **create SharePoint and OneDrive folders** and reorganize existing files into them; run **multi-file analysis** across large document sets; and produce finished artifacts saved where you asked — all while your laptop is closed. Microsoft cites a customer team that compared nearly 4,000 files across two product versions, work that would otherwise have taken weeks.
+
+The GES use cases are obvious and genuinely attractive:
+
+- **Reorganize a season of show folders** into the standard library structure, applying the naming convention as it goes, and produce a report of what could not be resolved automatically.
+- **Multi-file consistency sweep:** compare every regional exhibitor service kit against the approved master template and report every deviation in deadlines, rates, and advance warehouse instructions.
+- **Post-season currency audit:** identify every rate sheet, tariff, and venue profile in the active libraries that has not been reviewed within its cadence, and list them by owner — grounding drift, found and assigned.
+- **Reconciliation packaging:** assemble labor logs, material handling records, and the operations manual into a structured post-show archive in the right folder with the right names.
+
+Here is the part that must not get lost.
+
+**Cowork makes permission hygiene more important, not less.** Every Cowork task runs with *your* permissions and sees only what *you* can see — which is exactly the safeguard we want, and exactly why it is not a substitute for correct permissions. If your access is too broad, Cowork inherits that breadth and applies it autonomously, at machine speed, across thousands of files, while you are on a show floor and not watching. Copilot Chat surfaces an overshared file when you happen to ask a question that touches it. Cowork can systematically traverse everything you can reach.
+
+The controls are real and you should use them deliberately. Cowork pauses before sensitive actions and shows risk indicators; you can approve once, approve for the session, approve all, or cancel. Actions are auditable. But the governing discipline is in how you scope the assignment. Microsoft's five-part structure — outcome, inputs, definition of done, constraints, approval scope — is where you put the boundary:
+
+> **Constraints:** Operate only within the show folders listed. Do not open, read, move, or reference any client account site. Do not modify venue-specific or jurisdiction-specific content. Where a change requires judgment, flag it rather than resolving it.
+>
+> **Approval scope:** Ask before creating or overwriting any file. Do not send any email or post any Teams message without explicit approval.
+
+**Scope it narrowly. Name what it must not touch. Review what comes back.** The skill shift Chapter 6 described — from doing the work to delegating and quality-controlling it — carries a governance obligation with it. A tool that produces finished work faster produces *unreviewed* finished work faster, and unreviewed work is exactly what people are tempted to ship.
+
+::::{admonition} 🎯 T.R.U.E. Check: Excellence
+:class: note
+
+**Excellence** — *provide excellent service and execution.*
+
+Cowork can reorganize a season of show folders overnight. Excellence is not that it happened fast; it is that you scoped it so it could not wander into a client site, and you read the exception report in the morning. Delegation without review is not efficiency. It is just risk with a shorter timeline.
+::::
+
+---
+
+## 11. Who Does What — IT, Legal, and Everyone Else
 
 :::{figure} ../images/ch12-admin-governance-overview.png
 :label: fig-ch12-admin
-:alt: Administrative governance overview diagram for BankUnited SharePoint + Copilot — showing three governance tracks (IT Administration, Compliance Oversight, and Employee Responsibility) with responsibilities mapped at each level and connections to the Content Management Assessment hub, permission audit tools, and Copilot access controls
+:alt: Administrative governance overview diagram for GES SharePoint and Copilot — showing three governance tracks (IT Administration, Legal and Client Confidentiality Oversight, and Employee Responsibility) with responsibilities mapped at each level and connections to the Content Management Assessment hub, permission audit tools, and Copilot access controls
 :width: 80%
 :align: center
 
-The three governance tracks for BankUnited's SharePoint Copilot readiness — IT Administration, Compliance Oversight, and Employee Responsibility — with distinct but interconnected roles at each level.
+Three governance tracks for GES's SharePoint Copilot readiness — IT Administration, Legal and confidentiality oversight, and individual employee responsibility — distinct roles, one shared outcome.
 :::
 
-**For BankUnited IT Administration:**
+**GES IT.** Run the Content Management Assessment on a recurring cadence tied to the show calendar. Audit and remediate organization-wide sharing links, prioritizing client account sites and Spiro design libraries. Configure lifecycle policies so dormant show sites trigger owner review and archiving. Establish a site provisioning process so new show and account sites are created with correct permission templates from day one — this is the single highest-leverage control, because it prevents the problem instead of finding it later. SharePoint Advanced Management should be part of the Copilot deployment package, not a later phase.
 
-The Content Management Assessment hub, available through SharePoint Advanced Management (SAM), should be run on a regular basis — Microsoft recommends every 30 days. The assessment surfaces oversharing risks, inactive sites, and ownerless content that creates both Copilot quality problems and compliance risks.
+**GES Legal and client confidentiality.** Client NDAs and master service agreements already impose confidentiality obligations on GES. Copilot does not change those obligations; it changes the mechanism by which they can be breached. The mapping is direct: an NDA obligation to a client becomes a SharePoint permission requirement on that client's site. Where GES Exhibitions holds GSC obligations to the organizer and Spiro holds EAC obligations to a competing exhibitor at the same show, that separation must exist as an enforced permission boundary — not a professional understanding. Attendee and housing data at onPeak and registration data at Visit by GES carry GDPR and equivalent obligations that likewise resolve to access control. Information protection labels should be applied to unreleased-product and competitive-design material so classification travels with the file.
 
-SharePoint Advanced Management (SAM) is a licensed add-on to Microsoft 365 that provides these governance features. If BankUnited is deploying Copilot enterprise-wide, SAM should be part of the deployment package — it provides the tooling that makes Copilot safe and effective at enterprise scale.
+**Everyone else.** Three responsibilities, and none of them require a project:
 
-Key administrative actions before and during Copilot rollout:
-- Audit organization-wide sharing links and convert appropriate ones to more targeted permissions
-- Identify and contact owners of inactive sites for review and potential archiving
-- Establish a site request and approval process so new sites are created with appropriate governance from the start
-- Configure site lifecycle management policies that trigger review prompts after defined inactivity periods
-- Establish a recurring assessment schedule and assign accountability for acting on findings
-
-**For BankUnited Compliance:**
-
-The regulatory implications of Copilot in SharePoint are real but manageable. The key compliance principles:
-
-Copilot is not a new data system — it is a new interface to data that already exists in Microsoft 365. The same regulatory requirements that govern information access in manual workflows apply to Copilot-mediated access. If a BankUnited employee should not have access to certain information, they should not have it in SharePoint — and Copilot will then not surface that information to them.
-
-Data privacy regulations (GLBA, state-level requirements) that govern customer data in BankUnited's systems apply to customer data in SharePoint. Customer information should not be stored in broadly-shared SharePoint libraries — it belongs in permissioned systems with appropriate access controls.
-
-Examination-related content — findings, responses, corrective action materials — should be in restricted-access SharePoint sites or, where regulators require it, in separate systems. The broad accessibility that makes SharePoint useful for general knowledge management makes it inappropriate for sensitive examination correspondence.
-
-**For BankUnited employees:**
-
-You have three responsibilities in this governance framework:
-1. Follow the naming and organization conventions established by your department.
-2. Maintain appropriate permissions on content you own or manage — do not use broad organizational links for anything sensitive.
-3. Report to IT if Copilot surfaces content that you believe you should not have access to. That is valuable governance signal, not an embarrassing discovery.
+1. Follow the naming and organization conventions for your show, account, or function.
+2. Permission the content you own to the narrowest set that lets the work happen — and review show site access at move-out.
+3. Report anything Copilot surfaces that you should not be able to see, the same day, without forwarding it.
 
 ---
 
-## 11. The Governance Discipline — What Individuals Can Do to Improve Their Copilot Experience
-
-Governance is not only an IT function. Individual employees own SharePoint libraries, manage permissions on files they share, and create documents that either make Copilot smarter or contribute to the noise that makes Copilot less useful. This section is about what you can do, today, without waiting for an IT project.
+## 12. What You Can Do This Week
 
 :::{figure} ../images/ch12-individual-governance.png
 :label: fig-ch12-individual
-:alt: Individual employee SharePoint governance action guide — a four-step circular process showing Audit (review your libraries), Organize (apply naming conventions), Govern (check and fix permissions), and Maintain (keep content current) — with practical examples of each step in a banking context
+:alt: Individual employee SharePoint governance action guide — a four-step circular process showing Audit (review your libraries), Organize (apply naming conventions), Govern (check and fix permissions), and Maintain (keep content current) — with practical examples of each step in a live events and trade show context
 :width: 80%
 :align: center
 
-The individual governance cycle for BankUnited employees — a four-step process that every employee can perform on SharePoint libraries they own, without waiting for an IT project. Small actions compound into dramatically better Copilot experiences.
+The individual governance cycle — four steps any GES employee can perform on libraries they own, without waiting for an IT project. Small actions compound into dramatically better and safer Copilot results.
 :::
 
-**Step 1: Audit your libraries**
+**Step 1: Audit.** List every site or library where you are an owner or major contributor. How much is current? How much belongs to a show that closed two seasons ago? Thirty minutes on one library will surface real issues.
 
-Identify every SharePoint library or site where you are an owner or major contributor. Review the content: How much of it is current? How much is outdated? Are the files clearly named? Are there documents from projects that ended years ago?
-
-This audit does not have to be exhaustive to be useful. Even spending 30 minutes reviewing one library you own will identify issues that, if fixed, will improve Copilot's ability to find and surface that content accurately.
-
-**Step 2: Apply the naming convention**
-
-Rename the files that matter most — the current policies, the active templates, the regularly-referenced procedures — using the BankUnited naming convention. You do not need to rename everything. Start with the documents that Copilot is most likely to be asked about, and get those right.
+**Step 2: Rename what matters.** Do not rename everything. Rename the documents Copilot is most likely to be asked about — the current rate sheet, the active service kit, the venue profile, the SOP.
 
 Before:
-- `Final FINAL credit memo revised (3).docx`
-- `BSA procedure - UPDATED use this.docx`
-- `Rate Sheet April.xlsx`
+- `Final FINAL service kit revised (3).pdf`
+- `venue notes USE THIS.docx`
+- `Rates April.xlsx`
 
 After:
-- `Commercial-CreditMemo-PhoenixProperties-2026-04.docx`
-- `Compliance-Procedure-BSABeneficialOwnership-2025-11.docx`
-- `Retail-RateSheet-DepositProducts-2026-04.xlsx`
+- `MeridianExpo2026-ServiceKit-ExhibitorEdition-2026-04.pdf`
+- `VenueLibrary-Profile-DockAndFreightDoors-ExCeLLondon-2026-02.docx`
+- `Commercial-RateSheet-MaterialHandling-USMarkets-2026-04.xlsx`
 
-**Step 3: Review and fix permissions**
+**Step 3: Fix permissions.** For every library you own, ask: who can read this, and should they? Any organization-wide link on client material gets converted to named access today. If you are unsure how to check, ask GES IT — this is exactly the request they want to receive.
 
-For every major document you own, ask: who has access to this, and is that appropriate? In SharePoint, you can check sharing settings on any file or folder you own. If you have used "Anyone in BankUnited" links for sensitive documents, convert them to specific individual or group sharing.
-
-If you are unsure how to check permissions on a file or library, contact BankUnited IT — this is exactly the kind of governance review they should be supporting.
-
-**Step 4: Archive or delete outdated content**
-
-For documents that are no longer current, take explicit action. Either archive them (move to an "Archive" subfolder clearly marked with the archival date) or, if the content has no continuing value, delete it. The goal is a library where a reasonable person — or an AI — would not be confused about which version is current and authoritative.
+**Step 4: Archive the superseded.** Move outdated rate sheets, prior-edition service kits, and old venue rules into a clearly dated archive. The test: could a reasonable person — or an AI — open this library and be confused about which version is authoritative? If yes, you are not done.
 
 :::{admonition} Try This
 :class: tip
 
-Pick one underused SharePoint library you own — a project site from last year, a departmental resource library that has gotten disorganized, or a team document store that you know is a mess. Spend 45 minutes on it:
+Pick one library you own — a show site from last season, a venue folder, a template library that has drifted. Spend 45 minutes:
 
-1. Review the folder structure, file names, and sharing permissions
-2. Apply the BankUnited naming convention to the 5–10 most important files
-3. Convert any broad sharing links to specific group or individual sharing
-4. Archive any content that is clearly outdated
+1. Review folder structure, file names, and sharing permissions
+2. Apply the GES naming convention to the 5–10 most important files
+3. Convert any broad sharing links to named group or individual access
+4. Archive anything superseded, with the archive date in the folder name
 
-Then test Copilot. Ask it a specific question about content that lives in that library. Compare what you get before and after the cleanup.
+Then test it. Ask Copilot a specific question about content in that library — *"What is the current material handling rate for this market?"* or *"What are the dock restrictions at this venue?"* — and compare the answer to what you got before the cleanup.
 
-The difference is usually immediate and striking. When you have experienced it once, the governance discipline becomes self-reinforcing — because you have directly seen how organization quality translates to AI quality.
+The difference is usually immediate and striking. Once you have seen it once, the discipline becomes self-reinforcing, because you have watched organization quality turn directly into AI quality.
 :::
 
 ---
 
 ## Bringing It Together — SharePoint as a Strategic Asset
 
-There is a temptation, when thinking about SharePoint governance, to see it as maintenance — the unglamorous work of cleaning up folder structures and fixing file names while the exciting AI features happen somewhere else. That framing misunderstands the relationship.
+There is a temptation to see SharePoint governance as maintenance — unglamorous folder-tidying while the exciting AI work happens elsewhere. That framing gets the relationship backwards.
 
-**SharePoint is where BankUnited's institutional knowledge lives.** The policies that govern how credit is underwritten. The procedures that define how compliance is maintained. The analyses that inform how decisions are made. The templates and tools that define how client work gets done. All of it lives in SharePoint.
+**SharePoint is where GES's institutional knowledge lives.** Eighty-seven years of it, since a small sign and exhibit company opened in Kansas City in 1939. The venue quirks learned the hard way. The freight sequencing that works at one facility and fails at another. The design standards, the reuse tracking, the safety corrective actions, the reconciliation history that tells you what a show actually costs. That knowledge is why a client picks GES over a competitor, and most of it now sits in document libraries.
 
-Copilot is the interface that makes that knowledge accessible — not just to the people who know where to look and remember what folder they put things in, but to anyone who knows how to ask a clear question. That is a profound democratization of organizational knowledge. A new relationship manager can ask Copilot to explain BankUnited's commercial real estate underwriting standards and get an authoritative answer in 30 seconds. A compliance officer can ask Copilot to compare BankUnited's BSA procedures against the most recent FFIEC guidance and immediately see the relevant sections side by side.
+Copilot is the interface that makes it accessible — not only to the people who know which folder it is in, but to anyone who can ask a clear question. A coordinator in Paris can ask what the marshaling yard constraints are at a Las Vegas venue and get an authoritative answer in thirty seconds. A first-season exhibitor services rep can ask what the advance warehouse cutoff is and be right. That is a real democratization of hard-won operational knowledge across ~2,600 people, 24 facilities, and 75+ countries.
 
-But that only works when the knowledge base is ready. When SharePoint is well-organized, well-governed, and current, Copilot becomes a genuine intelligence multiplier for BankUnited. When it is not, Copilot becomes a well-intentioned AI that sometimes finds the right thing and sometimes surfaces something outdated and confusing.
+But it only works if two things are true at once: the knowledge base has to be **current**, or Copilot confidently repeats last year's rates; and it has to be **correctly permissioned**, or Copilot helpfully hands one client's unreleased product to another client's account team.
 
-The governance discipline this chapter describes is not optional for organizations serious about Copilot. It is the prerequisite.
+Those are the two disciplines of this chapter — grounding drift and cross-client contamination — and they are not IT problems. They are business controls owned by the people who create and hold the content.
 
-BankUnited has always been a bank that takes its information seriously — that is implicit in its compliance culture, its risk management standards, and its approach to client confidentiality. Applying that same discipline to SharePoint governance is not a new organizational muscle. It is the existing muscle applied to a new domain.
+GES became independent on December 31, 2024, for the first time in 55 years. That independence means we set our own standards and own the consequences — there is no parent company defining our information governance and no one else to hand the problem to. The muscle is not new; GES has always treated client confidentiality and operational precision as core to the work. It is the existing muscle, applied to a new domain, at a new speed.
 
-Start with one library. Fix one naming convention. Review one set of permissions. That is how the larger transformation happens — not in a single IT project, but in hundreds of individual decisions made by people who understand what is at stake.
+Start with one library. Fix one naming convention. Review one show site's access list before you file the reconciliation. That is how the larger transformation actually happens — not in a single IT project, but in thousands of small decisions made by people who understand what is at stake.
 
 ---
 
@@ -543,63 +550,83 @@ Start with one library. Fix one naming convention. Review one set of permissions
 
 :::{glossary}
 Microsoft Graph
-: The unified API that underlies all Microsoft 365 services, including SharePoint and Copilot. Microsoft Graph enforces permissions, retrieves content, and provides the data layer that Copilot queries when answering user questions.
+: The unified API underlying all Microsoft 365 services, including SharePoint and Copilot. Graph enforces permissions and provides the data layer Copilot queries when answering questions.
 
 Permission inheritance
-: The principle that Copilot can only access content that the signed-in user already has permission to see through Microsoft 365. Copilot does not have its own permissions — it operates within the user's existing access rights as enforced by Microsoft Graph.
+: The principle that Copilot can only access content the signed-in user already has permission to see. Copilot has no permissions of its own — it operates within the user's existing access rights as enforced by Microsoft Graph.
+
+Cross-client contamination
+: The exposure of one client's confidential material to personnel working for another client — frequently a direct competitor at the same show — through SharePoint permission gaps rather than deliberate disclosure. Copilot does not cause it; Copilot reveals it at speed. The business-critical SharePoint control at GES.
+
+Grounding drift
+: The degradation of AI answer quality caused by stale source content. Superseded rate sheets, outdated venue rules, and prior-edition service kits produce confidently wrong Copilot answers. Managed through ownership, review cadence, and archiving. *Your AI is only as current as your SharePoint.*
 
 Oversharing
-: The condition in which SharePoint content has been shared more broadly than its sensitivity warrants — via organization-wide links, excessively broad group access, or stale access grants that were not revoked when people changed roles.
+: The condition in which SharePoint content is shared more broadly than its sensitivity warrants — via organization-wide links, excessive group grants, or show-team access that outlives the show.
 
 Content Management Assessment hub
-: A SharePoint Advanced Management (SAM) feature that provides administrators with actionable insights into the state of a SharePoint environment — identifying overshared content, inactive sites, and ownerless resources that affect both compliance and Copilot quality.
+: A SharePoint Advanced Management feature giving administrators actionable insight into environment health — identifying overshared content, inactive sites, and ownerless resources affecting both confidentiality and Copilot quality. Recommended cadence: every 30 days.
 
 SharePoint Advanced Management (SAM)
-: A licensed Microsoft add-on to Microsoft 365 that provides enhanced governance tools for SharePoint, including the Content Management Assessment hub, site lifecycle management policies, and archiving capabilities relevant to Copilot readiness.
+: A licensed Microsoft add-on providing enhanced SharePoint governance tooling, including the Content Management Assessment hub, site lifecycle management policies, and archiving capabilities relevant to Copilot readiness.
 
 Site lifecycle management
-: Administrative policies that manage the health of SharePoint sites over time — triggering reviews when sites become inactive, prompting owners to confirm relevance, and enabling archiving or decommissioning of outdated content.
+: Administrative policies that manage site health over time — detecting inactivity, prompting owners to confirm relevance, and enabling archiving or decommissioning. At GES, most relevant to dormant show sites.
 
 Restricted SharePoint Search
-: A rollout feature that limits Copilot's SharePoint search to a defined list of administrator-curated sites during the initial deployment phase. Designed as a staged rollout tool, not a permanent governance solution.
+: A rollout feature limiting Copilot's SharePoint search to an administrator-curated list of sites during initial deployment. A staged rollout tool, not a permanent governance solution.
 
 Semantic search
-: The AI-powered search capability that Copilot uses to find relevant content based on meaning and context rather than exact keyword matching. Well-organized, clearly-named, and contextually rich documents perform better in semantic search.
+: Copilot's meaning-based retrieval, matching content by context rather than exact keywords. Clearly named documents with strong opening statements perform substantially better.
 
 Archiving
-: The process of moving inactive SharePoint content out of the active content pool accessible to Copilot, without permanently deleting it. Archived content is preserved for future reference but is not surfaced in Copilot's responses by default.
+: Moving inactive content out of Copilot's active search scope without deleting it. Archived content remains preserved and restorable but is not surfaced in Copilot responses by default — the primary defense against grounding drift.
 
 Copilot-generated summary
-: An AI-generated summary of a document's contents that can be included when sharing a SharePoint file. As of May 2026, this is a generally available feature — users choose Share, then generate a Copilot summary, and send the summary alongside the document.
+: An AI-generated summary of a document's contents included when sharing a SharePoint file. Generally available since May 2026: choose Share, generate the summary, and send it alongside the document.
 
-Knowledge base
-: A structured, intentionally-organized collection of documents in SharePoint designed for consistent retrieval by humans and AI. Distinguished from general file storage by consistent naming, clear version control, and active curation.
+Copilot Cowork
+: The Microsoft 365 Copilot capability, generally available June 16, 2026, that executes long-running multi-step work and returns finished artifacts. Relevant to SharePoint because it can browse OneDrive and SharePoint autonomously, create folders, reorganize files, and run multi-file analysis — always within the user's own permissions, which makes permission hygiene more consequential rather than less.
 
-Information governance
-: The policies, processes, and controls that manage how information is created, stored, accessed, shared, and retired within an organization. In banking, information governance is a regulatory expectation as well as an operational discipline.
-
-Need-to-know principle
-: The security and compliance principle that access to information should be limited to personnel who require that information to perform their job responsibilities. Relevant to SharePoint permission management and Copilot access controls.
-
-BankUnited naming convention
-: The standardized file naming format recommended for BankUnited SharePoint content: [Department]-[DocumentType]-[Topic]-[YYYY-MM].extension. Improves both human findability and Copilot semantic search accuracy.
+GES naming convention
+: The standardized file naming format for GES SharePoint content: [Show-or-Account]-[DocumentType]-[Topic]-[YYYY-MM].extension. Improves human findability and Copilot semantic retrieval, and makes version currency visible without opening the file.
 
 Site owner
-: The individual designated as responsible for a SharePoint site — responsible for content currency, permission management, and governance compliance. Site owners are the first line of defense against oversharing and content staleness.
+: The named individual accountable for a SharePoint site's content currency, permission accuracy, and governance compliance. Ownerless sites are the leading cause of both stale content and stale access.
+
+Exhibitor Appointed Contractor (EAC)
+: A contractor engaged directly by an exhibitor rather than appointed by the show organizer. Spiro frequently operates as an EAC, creating a confidentiality boundary distinct from GES Exhibitions' General Service Contractor role at the same show — a boundary that must be enforced in SharePoint permissions.
+
+General Service Contractor (GSC)
+: The official service provider appointed by a show organizer to serve the entire show floor. GES Exhibitions' core role, and the reason GES simultaneously holds material for competing exhibitors at the same event.
+:::
+
+---
+
+:::{seealso}
+**Resources for Chapter 12**
+
+- 🔒 Microsoft 365 Copilot Privacy, Security, and Compliance: [learn.microsoft.com — Copilot Privacy](https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy)
+- 🗂️ Prepare Your Content for Microsoft 365 Copilot (SharePoint): [learn.microsoft.com — Copilot readiness](https://learn.microsoft.com/en-us/sharepoint/get-ready-copilot-sharepoint)
+- 🛡️ SharePoint Advanced Management overview: [learn.microsoft.com — SAM](https://learn.microsoft.com/en-us/sharepoint/advanced-management)
+- 📋 Microsoft Copilot Adoption Hub: [adoption.microsoft.com/copilot](https://adoption.microsoft.com/en-us/copilot/)
+- 🎪 GES Exhibitor Resources and Ordering Portal: [ordering.ges.com](https://ordering.ges.com)
 :::
 
 ---
 
 ## Leader's Takeaway
 
-SharePoint governance is Copilot governance. The organizations that will get the most from Microsoft Copilot are not the ones with the most sophisticated prompting skills — they are the ones with the cleanest, most current, best-governed knowledge bases. For BankUnited, this means:
+SharePoint governance is Copilot governance. The teams that get the most from Copilot are not the ones with the cleverest prompts — they are the ones with the cleanest, most current, best-permissioned knowledge bases. For GES specifically:
 
-1. **Permission discipline is non-negotiable.** Copilot surfaces exactly what users have permission to see — no more, no less. Oversharing in SharePoint means oversharing in Copilot. Every banking leader should ensure their team's SharePoint content is permissioned appropriately.
+1. **Cross-client contamination is the control that matters most.** GES serves direct competitors at the same show and sees unreleased products before launch. Copilot surfaces anything a user has permission to see. Client account content gets named access only — and show site access gets reviewed at move-out, every time.
 
-2. **Content currency directly affects AI quality.** Outdated SharePoint content produces outdated Copilot responses. The investment in keeping departmental knowledge bases current is an investment in AI quality.
+2. **The GES Collective has five confidentiality perimeters, not one.** GES Exhibitions, Spiro, onPeak, SHOWTECH, and Visit by GES hold different client relationships and different obligations on a shared tenant. That separation lives in SharePoint permissions or it does not exist.
 
-3. **Naming and organization have strategic value.** The BankUnited naming convention is not bureaucratic overhead. It is the infrastructure that makes knowledge findable — by humans and by AI.
+3. **Grounding drift is a business risk with a price tag.** Stale rate sheets, superseded venue rules, and prior-edition service kits become confidently wrong answers delivered at volume. Ownership, review cadence, and archiving are now AI quality controls.
 
-4. **The SharePoint-Teams-Copilot integration is the pattern.** Files in Teams channels live in SharePoint. Meeting recordings live in SharePoint. When the SharePoint environment is well-governed, the entire Microsoft 365 ecosystem benefits from that governance through Copilot.
+4. **Naming and structure are infrastructure, not bureaucracy.** Consistent naming across shows, venues, accounts, and facilities is what makes 87 years of operational knowledge retrievable in thirty seconds.
 
-5. **Governance is everyone's job.** IT administers the tools. Compliance sets the standards. But every employee who owns a SharePoint library has the power to make it better — or worse — for every Copilot user who needs that content.
+5. **Cowork raises the stakes on permissions.** Autonomous browsing, folder creation, and multi-file work across SharePoint all run with the user's access. Scope assignments narrowly, name what must not be touched, and review what comes back.
+
+6. **Governance is everyone's job.** IT runs the tooling. Legal maps client obligations to access control. But every person who owns a library decides whether Copilot becomes an intelligence multiplier or a confidentiality incident with good formatting.

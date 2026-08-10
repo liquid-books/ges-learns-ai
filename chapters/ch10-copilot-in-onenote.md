@@ -2,57 +2,65 @@
 title: "Chapter 10: Week 3, Session C — Copilot in OneNote"
 subtitle: "Notes That Think With You"
 short_title: "Copilot in OneNote"
-description: "Mastering Microsoft Copilot in OneNote for banking professionals — summarizing meeting notes, rewriting rough captures into polished documentation, generating action item lists, drafting new content, and building structured notebooks that serve as living knowledge bases for deals, clients, and regulatory exams."
+description: "Mastering Microsoft Copilot in OneNote for GES — capturing site surveys on a phone, turning show-week logs into punch lists, rewriting rough field notes into finished documentation, and building venue, show, and account notebooks that carry hard-won institutional memory from one show cycle to the next."
 label: ch-10-copilot-in-onenote
-tags: [Copilot in OneNote, summarize notes, task lists, rewrite notes, OneNote, Microsoft 365, BankUnited, knowledge management, client discovery, deal review, exam prep, notebook organization, note-taking]
+tags: [Copilot in OneNote, summarize notes, task lists, rewrite notes, OneNote, Microsoft 365, GES, knowledge management, site survey, show floor, punch list, institutional memory, mobile capture, notebook organization]
 ---
 
 ```{admonition} Download this Chapter as PDF
 :class: tip
 
-[Download PDF](https://github.com/liquid-books/ai-copilot-bankunited/raw/main/pdfs/ch10-copilot-in-onenote.pdf)
+[Download PDF](https://github.com/liquid-books/ges-learns-ai/raw/main/pdfs/ch10-copilot-in-onenote.pdf)
 ```
 
 # Chapter 10: Week 3, Session C — Copilot in OneNote
 
 :::{figure} ../images/ch10-onenote-chapter-infographic.png
 :label: fig-ch10-infographic
-:alt: Illustrated explainer infographic for Copilot in OneNote — four capability panels showing Summarize, Create Task Lists, Rewrite, and Draft New Content radiating from a central OneNote icon, with BankUnited workflow examples at the bottom including Client Discovery, Deal Review, and Exam Prep notebooks, and the Copilot AI assistant shown inside the OneNote pane
+:alt: Illustrated explainer infographic for Copilot in OneNote — four capability panels showing Summarize, Create Task Lists, Rewrite, and Draft New Content radiating from a central OneNote icon, with GES workflow examples at the bottom including Site Survey, Show Week Log, and Venue Knowledge notebooks, and the Copilot AI assistant shown inside the OneNote pane
 :width: 80%
 :align: center
 
-Copilot in OneNote transforms the way banking professionals capture, organize, and act on knowledge. Four confirmed capabilities — summarize, create task lists, rewrite, and draft new content — work within the context of your actual notebook pages to turn raw notes into structured, actionable intelligence.
+Copilot in OneNote changes how GES people capture, organize, and act on what they learn in the field. Four confirmed capabilities — summarize, create task lists, rewrite, and draft new content — work on the actual pages in your notebook, turning walkthrough scribbles and show-floor observations into structured, actionable records.
 :::
 
 > *"Notes are only as valuable as the action they generate. Copilot closes the gap between capturing and acting."*
 
-Think about the last client meeting you attended. You came prepared, you asked good questions, you learned things — about the business, about the owner's priorities, about the relationship's potential. You took notes. Those notes exist somewhere: in a OneNote page, in a Word document, on a legal pad, in the Notes app on your phone.
+Think about the last venue walkthrough you did.
 
-Now think about what happened to those notes.
+You were standing up. You had a hard hat under one arm and a phone in your hand. The venue ops lead was walking fast and talking faster. You learned that dock four cannot take a 53-foot trailer without a repositioning move, that the freight elevator in the north hall has a weight limit nobody has written down anywhere official, that the union call time for the venue's electrical crew is a half hour earlier than the show organizer assumed, and that the ceiling rig points in hall B are on a different grid than the drawings show. You typed some of it. You photographed the dock. You wrote three words on a printed floor plan and shoved it in your bag.
 
-For most banking professionals, the honest answer is uncomfortable. The notes sat. They were captured with good intentions and reviewed rarely. The commitments buried in paragraph three of your client visit notes stayed buried until the client followed up, or until you were preparing for the next meeting and scrambled to reconstruct what happened in the last one. The knowledge you gathered deteriorated — not because you are disorganized, but because the gap between capturing information and acting on it is enormous, and the tools that existed before AI did little to help bridge it.
+Now think about what happened to all of that.
 
-This is the problem Copilot in OneNote is designed to solve. Not the problem of taking notes — OneNote has always handled that — but the problem of making notes useful. Getting from raw capture to structured summary. From a page full of meeting notes to a clear list of action items. From rough shorthand to polished documentation that a colleague can actually use. From scattered observations to a coherent synthesis.
+For most people in this business, the honest answer is uncomfortable. Some of it made it into an email. Some of it lived in your head until you moved to another show and it left with you. Most of it went nowhere. And eighteen months later the same show comes back to the same venue, a different GES team runs it, and somebody discovers dock four all over again — on move-in morning, with trucks stacked in the marshaling yard.
 
-According to Microsoft's official documentation, Copilot in OneNote is available with a Microsoft 365 Copilot (Work) license on OneNote for Windows, Mac, iPad, and OneNote for the web. It is also available with eligible M365 subscription plans on OneNote for Windows. That coverage — across every platform a BankUnited professional might use — makes it one of the most universally accessible Copilot features in the entire M365 suite.
+That is not a note-taking problem. That is an institutional memory problem, and it is the single most expensive knowledge failure in the event business.
 
-This chapter covers how it works, what it can do, how to access it, and — most importantly — how BankUnited professionals can apply it to the knowledge workflows that define the job: client discovery, deal review, regulatory exam preparation, and team knowledge management.
+This is what Copilot in OneNote is built to fix. Not the act of taking notes — OneNote always did that — but the gap between capturing something and being able to use it. Getting from raw capture to structured summary. From a page of move-in observations to a punch list with owners. From shorthand scrawled at a marshaling yard gate to documentation a colleague can actually act on. From four years of scattered venue notes to an answer in ten seconds.
+
+According to Microsoft's documentation, Copilot in OneNote is available with a Microsoft 365 Copilot (Work) license on OneNote for Windows, Mac, iPad, and OneNote for the web, and with eligible M365 subscription plans on OneNote for Windows. That platform coverage matters more at GES than at almost any company we could name. **Most of the GES workforce is not at a desk.** They are on show floors, in warehouses, in marshaling yards, in venues in 75+ countries. A tool that only works on a laptop in an office is a tool most of this company cannot use. OneNote is not that tool.
+
+This chapter covers how Copilot in OneNote works, how to reach it, and how GES people — show operations managers, floor managers, Spiro designers, account managers, logistics coordinators, exhibitor services reps — can apply it to the knowledge work that actually defines the job.
+
+:::{admonition} T.R.U.E. Check — Responsibility
+:class: note
+
+**Responsibility: Be responsible for our actions and deliver on our commitments.**
+
+A commitment you make on a show floor and do not write down is not a commitment. It is a hope. The whole argument of this chapter is that capture is not administrative overhead — it is the mechanism by which responsibility survives contact with a twelve-hour move-in day.
+:::
 
 ---
 
 ## 1. Why Notes Matter More in the AI Era, Not Less
 
-There is a common misconception about AI and note-taking. The misconception goes something like this: if AI can summarize meetings and generate recaps automatically, why do I need to take careful notes at all? Won't AI handle it?
+There is a tempting misconception: if AI can summarize and recap automatically, why bother taking careful notes at all?
 
-This reasoning gets the relationship exactly backwards. The truth is more important and more useful: **the quality of Copilot's output is directly proportional to the quality of the notes it works with.** AI amplifies what you give it. Rich, specific, well-organized notes produce rich, specific, well-organized summaries and action lists. Sparse, vague, or poorly structured notes produce sparse, vague, or poorly structured outputs — no matter how powerful the underlying model.
+This gets the relationship exactly backwards. **The quality of Copilot's output is directly proportional to the quality of the notes it works with.** AI amplifies what you give it. Hand the best production coordinator at GES a napkin with three illegible bullets and their output is limited by what you gave them. Hand them a site survey with dock dimensions, named venue contacts, and specific labor constraints, and you get something useful. Copilot organizes, synthesizes, and extends. It does not manufacture facts you never captured.
 
-Think of it this way. If you hire the best research analyst at your firm and hand them a napkin with three illegible bullet points, their output will be limited by what you gave them. If you hand them a thorough briefing document with clear context, specific data points, and named individuals and commitments, their analysis will be genuinely valuable. Copilot in OneNote operates on the same principle. The AI does not manufacture intelligence from nothing. It organizes, synthesizes, and extends what you have given it.
+So the discipline matters more now, not less. A floor manager who captures structured move-in notes has an asset Copilot can turn into punch lists, exhibitor escalation summaries, and a lessons-learned document that outlives the show. An account manager whose client notebook holds four show cycles of history can be brought current on a relationship in ninety seconds.
 
-This means the note-taking discipline still matters — and in fact matters more now than it did before AI. The professional who takes clear, structured, contextually rich notes during every client interaction does not just have better personal records. They now have an asset that Copilot can transform into summaries, action lists, new content, and institutional knowledge. The professional who takes vague notes gets vague AI outputs.
-
-In a banking environment, this has real stakes. A relationship manager whose client discovery notes are thorough and structured can use Copilot to surface action items before every follow-up call. A commercial lender whose deal review notes are organized by topic — borrower, financials, collateral, risk — can ask Copilot to analyze ideas across sections. An operations leader whose exam prep notebook is comprehensive and well-maintained can use Copilot to identify gaps and draft response documentation.
-
-The best news is that OneNote has always been the right tool for this kind of structured capture. The arrival of Copilot does not change what OneNote is good for. It exponentially increases the return on time invested in using it well.
+OneNote was always the right tool for structured capture. Copilot does not change what OneNote is for. It multiplies the return on the time you already spend using it.
 
 ---
 
@@ -64,388 +72,370 @@ The best news is that OneNote has always been the right tool for this kind of st
 :width: 80%
 :align: center
 
-OneNote occupies the knowledge capture layer of the Microsoft 365 stack — positioned between the communication tools above it and the storage infrastructure below. This placement makes it the connective tissue of the M365 knowledge ecosystem, and the place where information from meetings, documents, and conversations comes together into a structured record.
+OneNote occupies the knowledge capture layer of the Microsoft 365 stack — between the communication tools above it and the storage infrastructure below. That placement makes it the connective tissue of the M365 knowledge ecosystem, and the place where what happens in a venue turns into something the company can keep.
 :::
 
-To understand why Copilot in OneNote matters, you first need to understand OneNote's role in the M365 ecosystem — because OneNote is one of the most underused applications in the entire Microsoft 365 suite, and underused in ways that cost banking teams real productivity.
+Microsoft 365 is a knowledge ecosystem, not a bag of apps. Each layer does a distinct job.
 
-Microsoft 365 is a knowledge ecosystem, not just a collection of apps. Each application serves a distinct layer:
+**Teams and Outlook** are the communication layer — where calls happen and information moves in real time. Ephemeral by design. A Teams chat scrolls away. A pre-con call ends and the conversation dissipates.
 
-**Teams and Outlook** form the communication layer — where conversations happen, meetings occur, and information is exchanged in real time. These tools are ephemeral by nature. A Teams chat scrolls away. A meeting ends and the conversation dissipates. Email threads grow unwieldy and lose their shape.
+**SharePoint and OneDrive** are the storage layer — where finished documents live: show operations manuals, exhibitor service kits, floor plans, contracts. Excellent at storage and retrieval, poor at the messy, iterative work of capturing knowledge while it is still forming.
 
-**SharePoint and OneDrive** form the storage layer — where finished documents live, where formal records are maintained, where institutional files are organized and versioned. These tools excel at storage and retrieval, but they are not designed for the messy, iterative, context-rich work of capturing knowledge in flight.
+**OneNote** is the knowledge capture layer in between — where the ephemeral gets distilled into something structured and persistent, and where the raw material for formal documentation gets organized before it is ready for final form. It is a notebook, not a document. Flexible, hierarchical, permanent.
 
-**OneNote** is the knowledge capture layer in the middle — the place where the ephemeral communication above gets distilled into structured, searchable, persistent records, and where the raw material for formal documentation below gets organized before it is ready for final form. It is a notebook, not a document. Its structure is flexible, hierarchical, and permanent.
+In practice, most GES teams use Teams and SharePoint constantly and OneNote barely. The reasons are familiar: "I keep notes in email," "I have my own system," "I never set it up," "I'm never at a computer anyway."
 
-In practice, however, most banking professionals use SharePoint and Teams heavily and OneNote barely at all. When asked why, the common answers are: "I use Outlook to store notes," "I have my own system," "I'm not sure how to structure it," or "I didn't think it would be worth the effort to set up."
+Those are exactly the answers you would expect from people who have never had an AI assistant living inside their notebook. A notebook that syncs across devices was never quite compelling enough to displace an existing habit. A notebook that also reads everything you have written, summarizes it on demand, extracts your commitments, and makes four years of venue history searchable is a categorically different proposition.
 
-These are exactly the answers you would expect from professionals who have never had an AI assistant working inside their notebook. Because the value proposition of OneNote alone — a digital notebook that syncs across devices — was not always compelling enough to displace existing habits. The value proposition of OneNote with Copilot is categorically different. Now that notebook is also an AI analyst who reads everything you have written, summarizes it on demand, extracts your commitments, drafts new content based on your context, and helps you turn captured knowledge into action.
-
-The setup investment pays off immediately and compounds over time.
+The setup cost is one afternoon. The payoff compounds every show cycle.
 
 ---
 
-## 3. How to Access Copilot in OneNote
+## 3. How to Access Copilot in OneNote — Including on a Phone
 
-Microsoft's official documentation confirms three access points for Copilot in OneNote, each suited to a different working style and moment.
+Microsoft's documentation confirms three access points, each suited to a different working moment.
 
 :::{figure} ../images/ch10-copilot-pane-onenote.png
 :label: fig-ch10-copilot-pane
-:alt: Illustration of the Copilot pane inside Microsoft OneNote — the left side shows a OneNote page with structured meeting notes in bullet form, the right side shows the Copilot sidebar pane with a chat interface, prompt input box at the bottom, and AI-generated summary output above, with labels pointing to the Copilot Pane, Prompt Input Box, Generated Summary Output, and Page Context Indicator
+:alt: Illustration of the Copilot pane inside Microsoft OneNote — the left side shows a OneNote page with structured site survey notes in bullet form, the right side shows the Copilot sidebar pane with a chat interface, prompt input box at the bottom, and AI-generated summary output above, with labels pointing to the Copilot Pane, Prompt Input Box, Generated Summary Output, and Page Context Indicator
 :width: 80%
 :align: center
 
-The Copilot pane in OneNote opens on the right side of the screen via the Home tab on the ribbon. From here, banking professionals can enter prompts, receive summaries and task lists, chat with Copilot in real time, and copy outputs directly into their notebook pages or other applications.
+The Copilot pane opens on the right side of OneNote from the Home tab. From here you can enter prompts, get summaries and task lists, chat about your notes, and copy the output straight into another page, an email, or a Teams message.
 :::
 
-**The Ribbon Button (Home Tab):** The primary access point is the Copilot button on the Home tab of the OneNote ribbon. Clicking it opens the Copilot pane on the right side of the screen. From this pane, you can enter prompts, receive Copilot's responses, and interact with the output — all while your notebook page remains open and visible on the left. This is the full-featured Copilot interface, appropriate for complex requests, longer summaries, and multi-step interactions.
+**The Ribbon Button (Home Tab).** The primary access point. Click Copilot on the Home tab and the pane opens on the right while your page stays visible on the left. This is the full interface — appropriate for longer summaries, multi-step requests, and iterative conversation.
 
-**The On-Canvas OneNote Icon:** For quicker, more immediate access, Microsoft has placed an on-canvas OneNote icon that allows you to trigger specific Copilot functions — including summaries, rewrites, task lists, notes, and new content ideas — directly from the page context without opening the full pane. As of December 2025, according to documentation from SuperSimple365 (who tracks M365 feature rollouts), the primary features "Summarise Page," "Create a Task List," and "Rewrite Page" now open directly in the Copilot Chat pane — a UI refinement that streamlines the workflow.
+**The On-Canvas OneNote Icon.** For faster access, an on-canvas icon triggers specific Copilot functions — summaries, rewrites, task lists, notes, new content ideas — from the page context without opening the full pane. As of December 2025, according to SuperSimple365's tracking of M365 feature rollouts, "Summarise Page," "Create a Task List," and "Rewrite Page" now open directly in the Copilot Chat pane.
 
-**Right-Click Context Menu:** Microsoft's documentation confirms that right-clicking within a OneNote page surfaces quick Copilot actions in a context menu, providing a fast route to common operations without navigating to the ribbon.
+**Right-Click Context Menu.** Right-clicking on a page surfaces quick Copilot actions — the fastest route to common operations.
 
-One important note from Microsoft's official documentation: Copilot in OneNote is **not available if Windows Information Protection (WIP) is enabled** on your device. If you are on a managed corporate device and WIP is active, you will need to check with IT about your specific access configuration.
+One constraint from Microsoft's documentation: Copilot in OneNote is **not available if Windows Information Protection (WIP) is enabled** on your device. On a managed device with WIP active, check with IT.
 
-For BankUnited professionals, the practical starting point is the ribbon button. Open a notebook page, click Home → Copilot, let the pane open, and begin. The first time you see a page of meeting notes transformed into a clean summary in under thirty seconds, the habit forms itself.
+### The Mobile Reality
+
+Here is the part that matters most for GES, and it is not in most Copilot training material.
+
+Notes at this company are not taken at desks. They are taken standing up, in a noisy hall, on a phone, with one hand, while something is being unloaded. If your capture habit requires sitting down, you do not have a capture habit.
+
+Three mobile patterns are worth building deliberately:
+
+**1. Photo capture of the physical artifact.** Marked-up floor plans, a whiteboard in the show office, a handwritten dock schedule taped inside a freight door, a damaged crate label, a rigging point that does not match the drawing. Photograph it into the page. OneNote's mobile app is genuinely fast at this. The photo *is* the note, and the caption you type under it is what makes it findable later.
+
+**2. Handwriting and ink.** If you work from an iPad with a pencil during walkthroughs — many designers and site survey leads do — Microsoft confirms that Copilot can work with **both typed and handwritten notes on the same page**. Your ink is not a second-class citizen. Sketch the aisle configuration, annotate it, and Copilot can still summarize the page alongside your typed content.
+
+**3. Voice capture.** Talk your notes. Walking from the marshaling yard back to the show office is four minutes of dead time that can become the day's log. Dictate roughly, capture everything, and clean it up later with the rewrite function covered in Section 5. This is the single highest-leverage habit in this chapter for anyone whose job happens on their feet.
+
+The through-line: **capture fast and messy in the field, structure it later with Copilot.** Before AI, messy capture stayed messy, so people either wrote nothing or wasted time trying to write neatly in bad conditions. That trade-off is gone.
+
+:::{tip}
+**The four-minute rule.** Any walk longer than four minutes — hall to office, dock to yard, hotel to venue — is a capture window. Open the page, hit dictate, and empty your head. It will be rough. Copilot cleans up rough. It cannot recover forgotten.
+:::
 
 ---
 
 ## 4. Capability 1 — Summarizing Your Notes
 
-Of all the confirmed Copilot in OneNote capabilities, summarization is the one that most immediately changes how banking professionals relate to their notes. And Microsoft's confirmation of a specific feature makes it especially powerful for a professional context: **when Copilot summarizes your notes, it cites its sources within the response.**
+Summarization is the capability that most immediately changes your relationship with your own notes, and one feature makes it far more useful in a professional setting: **when Copilot summarizes your notes, it cites its sources within the response.**
 
 :::{figure} ../images/ch10-summarize-chaos-to-clarity.png
 :label: fig-ch10-summarize
-:alt: Before/after transformation diagram showing raw meeting notes on the left labeled 'Chaos' — scattered bullets, incomplete sentences, timestamps, tangential remarks — and a clean Copilot-generated summary on the right labeled 'Clarity' with sections for Key Decisions, Action Items, and Open Questions, bridged by a large blue arrow labeled 'Copilot Summarize'
+:alt: Before/after transformation diagram showing raw show floor notes on the left labeled 'Chaos' — scattered bullets, incomplete sentences, timestamps, tangential remarks — and a clean Copilot-generated summary on the right labeled 'Clarity' with sections for Key Decisions, Action Items, and Open Questions, bridged by a large blue arrow labeled 'Copilot Summarize'
 :width: 80%
 :align: center
 
-Summarization is the most immediately impactful Copilot capability for banking professionals. Raw meeting notes become structured summaries with key decisions, open questions, and action items — with Copilot citing the specific parts of your notes it drew from, so you can verify accuracy.
+Raw walkthrough and show-floor notes become structured summaries with decisions, open questions, and action items — with Copilot citing the specific parts of your notes it drew from, so you can verify before anyone acts on it.
 :::
 
-That citation mechanism is not a minor detail. In a banking environment, accuracy is not optional — it is regulatory. When Copilot tells you that it derived a particular point from a specific section of your page, you can verify it. You are not trusting AI's interpretation blindly. You are reviewing AI's synthesis with a clear audit trail back to your source material. Microsoft has designed this into the product precisely because it understands that professionals operating in high-stakes environments need to be able to check the work.
+That citation mechanism is not a detail. On a show floor, a wrong number is not an inconvenience — it is a truck at the wrong dock at the wrong hour with labor on the clock. When Copilot tells you which part of your page a point came from, you can check it.
 
-According to Microsoft's documentation, summarization in OneNote works at three levels of granularity:
+Microsoft's documentation describes three levels of granularity: the **full page** (three screens of site survey notes becoming a structured recap for the account team); **a section or topic** (a walkthrough page that mixes dock and freight logistics with rigging and power, summarized separately for different people); and **a selected passage** (surgical, ideal for dense material like a venue's labor rules).
 
-**A full page summary:** Ask Copilot to summarize everything on the current page. This is the most common use case — you have three pages of notes from a client meeting, and you need a structured recap you can send to a colleague or drop into a credit file.
+Microsoft's own example prompt is instructive: *"Create a summary of the notes on this page. Focus the summary on the chronological order of events and place the events into bullet points."* Naming a focus and a format is what separates a useful summary from a generic one. **The more specific your instruction, the more useful the output.**
 
-**A section summary:** Ask Copilot to summarize a specific topic or section of your notes. This is particularly useful when your page covers multiple threads — the financial discussion in the first half and the relationship conversation in the second half — and you need to summarize each separately.
+A **copy button** moves the result anywhere: into an email to the show organizer, into a Word doc for the show operations manual, into the show's Teams channel, into a new recap page in the same notebook.
 
-**A selection of text:** Highlight a specific passage and ask Copilot to summarize it. For dense regulatory or financial notes, this allows surgical precision — summarize this particular set of points without touching the rest of the page.
+### GES Application: The Site Survey Debrief
 
-Microsoft's documentation even provides an example of a well-crafted summarization prompt: *"Create a summary of the deposition notes on this page. Focus the summary on the chronological order of events and place the events into bullet points."* The specificity of that prompt — naming a focus (chronological order) and specifying a format (bullet points) — illustrates the same principle we encountered in Copilot for Word: **the more specific your instruction, the more useful the output.**
+A show operations manager finishes a two-hour walkthrough at a convention center for a show that moves in eight weeks. The page holds dock configuration and trailer restrictions, the freight elevator weight limit, ceiling rig points that differ from the drawings, marshaling yard capacity and gate hours, union jurisdiction notes from the venue's labor lead, two photos of a blocked service corridor, and a handwritten sketch of a revised aisle layout for hall B. Some of it is bulleted, some dictated fragments, some ink.
 
-Once the summary is generated, a **copy button** allows you to paste it directly into another location — into an email, into a Word document for the credit file, into a Teams message to a colleague, or into a new section of the same notebook for a structured recap page. That portability is part of what makes OneNote the connective tissue of the M365 knowledge ecosystem.
+She prompts: *"Summarize this page. Organize into: Freight and Dock, Rigging and Overhead, Labor and Jurisdiction, Floor Plan Implications, and Open Items. Use bullet points. Note anything that conflicts with what was in the drawings."*
 
-Microsoft's documentation also confirms a feature that reflects the breadth of OneNote's capture capabilities: Copilot can work with **both typed notes and handwritten notes on the same page**. For professionals who use an iPad with an Apple Pencil to take handwritten notes in client meetings, this means their handwritten captures are not second-class citizens — Copilot can synthesize them alongside their typed content.
-
-### BankUnited Application: Post-Meeting Summary
-
-Consider the workflow for a relationship manager who has just completed a 90-minute client site visit. The meeting covered: the company's three-year financial trajectory, an expansion plan requiring \$6.5 million in new financing, concerns about rising construction costs, a conversation about the owner's longer-term exit timeline, and three specific commitments made by the RM (send a term sheet draft, schedule a site appraisal, introduce the owner to a specialist in SBA financing).
-
-All of this is captured in a OneNote page — some of it in structured bullets, some in hasty shorthand captured while listening. The RM opens the Copilot pane and enters: *"Summarize this page. Organize the summary into: Financial Context, Loan Request, Key Concerns, Relationship Notes, and Commitments Made. Use bullet points within each section."*
-
-Copilot returns a structured five-section summary in approximately thirty seconds. The RM reviews it — checking the cited sources to verify accuracy — and then copies it into an email to their credit partner and into a new "Meeting Summary" page in the client notebook. The two-hour post-meeting documentation task that would normally have eaten into the evening is complete before they reach the car.
+Thirty seconds later she has a five-part debrief. She checks the citations, corrects one dock number, and copies it into the show's Teams channel and the venue notebook. The debrief that would normally have been written at 10 p.m. from memory is done before she leaves the building — and it is more accurate, because it was written while she was still standing in it.
 
 ---
 
 ## 5. Capability 2 — Rewriting Notes for Clarity
 
-The second confirmed capability in OneNote is rewriting — taking rough, informal, or incomplete notes and transforming them into clear, polished, professionally usable documentation.
+The second capability takes rough, informal, incomplete notes and turns them into clear documentation.
 
-This capability addresses one of the most persistent tension points in professional note-taking: the trade-off between speed and quality. During a meeting, the optimal note-taking posture is fast and comprehensive — capture everything that might matter, use abbreviations, skip full sentences, worry about polish later. But "later" rarely comes. The rough notes that were captured quickly stay rough because cleaning them up requires time that is always consumed by the next thing.
+This resolves the oldest tension in field note-taking: speed versus quality. During a walkthrough, the right posture is fast and comprehensive — abbreviate, fragment, capture everything. But "I'll clean this up later" almost never happens, because later is move-in.
 
-Copilot's rewrite capability eliminates that trade-off. You capture fast and rough, then ask Copilot to translate your shorthand into clear, complete, professional-quality documentation. According to Microsoft's documentation, "Rewrite Page" is one of the four primary confirmed functions — alongside Summarize, Create Task List, and Take Notes — and as of December 2025, it opens directly in the Copilot Chat pane.
+Copilot's rewrite function removes the trade-off. Microsoft confirms "Rewrite Page" as one of the four primary functions alongside Summarize, Create Task List, and Take Notes. The distinction from summarizing matters: **summarize** condenses, removing detail for clarity; **rewrite** transforms, reconstructing the same content with better structure and clearer language without necessarily shortening it. The detail stays; the rough edges go.
 
-The operational difference between summarizing and rewriting is important:
-
-**Summarize** condenses — it takes a longer body of notes and distills them into key points, removing detail in service of clarity.
-
-**Rewrite** transforms — it takes the same content and reconstructs it with better structure, clearer language, and more professional presentation, without necessarily reducing its length. The detail stays; the rough edges go.
-
-For a banking professional, the rewrite function is particularly valuable for notes that will be used as formal documentation — meeting recaps that will go into a credit file, client interaction logs that might be reviewed in an examination, onboarding documentation that will be shared with new team members. These need to be clear and professional not just for personal reference but for institutional and potentially regulatory purposes.
-
-### Prompt Craft for Rewriting
-
-The way you instruct Copilot to rewrite matters. A plain "Rewrite this page" will improve clarity but may not hit the specific professional register you need. Consider these more directive prompts:
+For GES, rewrite is most valuable for notes that become real documentation: a site survey that goes into the venue folder, a show-week log that feeds the post-show report, a safety observation that must read cleanly for the record, a design debrief a fabrication team will actually build from.
 
 :::{tip}
-**Effective Rewrite Prompts for Banking Professionals**
+**Effective Rewrite Prompts for GES**
 
-- *"Rewrite this page as a formal client interaction record. Use complete sentences, eliminate abbreviations, and organize by: Meeting Context, Discussion Summary, and Follow-Up Actions."*
-- *"Rewrite these notes in a professional tone suitable for a credit file. Remove personal commentary and informal language."*
-- *"Rewrite this section as a clear executive summary that a senior leader could read in two minutes."*
-- *"Rewrite these notes in chronological order, using formal business language."*
+- *"Rewrite this page as a formal site survey report. Complete sentences, no abbreviations. Organize by: Venue Access and Docks, Freight and Material Handling, Labor and Jurisdiction, Utilities and Rigging, Risks and Open Items."*
+- *"Rewrite these dictated notes into a clean show-week daily log entry. Keep every name, time, and booth number exactly as stated."*
+- *"Rewrite this section as a safety walk observation record suitable for the show file. Neutral, factual language. No speculation about cause."*
+- *"Rewrite these design review notes into clear direction for the fabrication team. Separate what was approved from what is still open."*
 :::
 
-Each of these prompts gives Copilot a clear destination — not just "better" but specifically what "better" means for this particular use. The more precisely you define the target, the closer Copilot lands on the first pass.
+Each prompt gives Copilot a destination — not "better" but specifically what better means here.
 
-### BankUnited Application: Formalizing Field Notes
+### GES Application: Dictated Notes to Formal Record
 
-A commercial lender returns from a construction site inspection with a page of rough field notes: scattered observations about the project's progress, some financial concerns noted in shorthand, a few quotes from the contractor, and a reminder to check on the bond status. The notes are accurate but look exactly like what they are — working notes from a site visit, not documentation suitable for a credit file.
+A floor manager finishes day two of move-in. His notes are ninety seconds of dictation captured while walking hall three, plus four photos: a booth set behind schedule, an aisle carpet run installed on the wrong line, an exhibitor whose freight was targeted for 07:00 and landed at 14:30, and an EAC working the north wall without current certificates of insurance on file.
 
-The lender opens Copilot on the page and prompts: *"Rewrite this page as a formal construction loan inspection report. Organize it with sections: Project Progress, Financial Observations, Contractor Comments, Outstanding Issues, and Required Follow-Up Actions. Use professional lending language throughout."*
+He prompts: *"Rewrite this page as a formal move-in day two log. Sections: Set Progress by Hall, Freight and Target Variances, Exhibitor Issues, Contractor and EAC Items, Safety Observations. Keep all booth numbers, times, and names exactly as I said them. Flag anything that needs a decision tomorrow."*
 
-The rewritten page becomes the construction inspection documentation that goes into the loan file — a transformation from rough field notes to formal institutional record in under a minute, requiring only a professional review pass to confirm accuracy before it is filed.
+Two minutes of walking becomes the day's official log — read by the account manager who is off-site, and source material for the post-show report six weeks later, instead of evaporating the way day-two notes usually do.
+
+:::{admonition} T.R.U.E. Check — Excellence
+:class: note
+
+**Excellence: Provide excellent service and execution.**
+
+Rewrite makes your notes look professional. It does not make them true. Copilot will faithfully polish a wrong booth number into a beautifully formatted wrong booth number. Read the output against the facts before it becomes the record — especially where names, times, weights, and dimensions are involved.
+:::
 
 ---
 
-## 6. Capability 3 — Creating Task Lists and Action Items
+## 6. Capability 3 — Task Lists, Punch Lists, and Open Items
 
 :::{figure} ../images/ch10-action-items-generation.png
 :label: fig-ch10-action-items
-:alt: Diagram showing Copilot in OneNote extracting action items from meeting notes — left panel shows a dense OneNote page with client meeting notes containing mentions of follow-ups and commitments, center shows the Copilot sparkle icon with an arrow labeled 'Create Task List', right panel shows a clean checklist with specific action items including 'Follow up with client on financial statements', 'Schedule site visit', 'Send term sheet draft', 'Confirm collateral valuation', with labels showing 'Source: Meeting Notes Page' and 'Output: Action Items with Owners'
+:alt: Diagram showing Copilot in OneNote extracting action items from show floor notes — left panel shows a dense OneNote page with move-in notes containing mentions of follow-ups and commitments, center shows the Copilot sparkle icon with an arrow labeled 'Create Task List', right panel shows a clean checklist with specific action items including 'Confirm revised freight target with organizer', 'Re-lay aisle carpet in hall three', 'Chase EAC certificate of insurance', 'Reconfirm rigging call time with venue', with labels showing 'Source: Move-In Notes Page' and 'Output: Action Items with Owners'
 :width: 80%
 :align: center
 
-Copilot in OneNote automatically extracts action items and commitments buried in meeting notes and organizes them into structured task lists with deadlines and priorities. What once required manual review and extraction now happens in seconds.
+Copilot extracts commitments buried in running notes and organizes them into structured task lists with owners, deadlines, and priorities. On a show floor, this is the difference between a punch list and a memory.
 :::
 
-Action items are the connective tissue between a conversation and a result. Every client meeting, every internal discussion, every regulatory call ends with commitments — things someone promised to do, questions that need answers, documents that need to be requested or delivered. Those commitments, if they are not extracted and tracked, evaporate. The follow-up that should have been made in three days doesn't happen because the commitment was buried in paragraph four of the meeting notes and never surfaced again.
+Every pre-con meeting, every walkthrough, every move-in day ends with commitments: things someone promised to do, questions that need answers, items that must be fixed before doors open. Uncaptured, they evaporate — and on a show with a fixed open date, evaporation is not a soft cost. It shows up in an aisle, in front of a client.
 
-According to Microsoft's official documentation, Copilot in OneNote can create task lists from your notes, a page, or an entire section — and it can incorporate details like tasks, deadlines, and priorities when they are present in the source material. This is one of the four primary confirmed functions of Copilot in OneNote, and it is the one with the most direct impact on daily execution.
+Microsoft confirms that Copilot in OneNote can create task lists from your notes, a page, or an entire section, incorporating deadlines and priorities when they appear in the source. Of the four capabilities, this is the one with the most direct effect on execution. Open Copilot on your notes page, ask it to extract the action items, and it returns a structured list you can copy into Microsoft Tasks, into the show's Teams channel, or into a punch list section of the show notebook.
 
-The mechanism is straightforward. After a meeting, you open the Copilot pane on your meeting notes page and ask it to extract the action items. Copilot reads the page, identifies every commitment, question, and required follow-up it can find, and presents them as a structured task list. You can then copy that list into Microsoft Tasks, paste it into a Teams message to distribute assignments, or keep it in a dedicated "Next Steps" section of your client notebook.
+Specificity in, specificity out. Notes that say "talk to venue about the dock" produce a task that says talk to venue about the dock. Notes that say "Marco (venue ops) to confirm by Thu whether dock 4 can take a 53' trailer without a repositioning move" produce a task you can actually close.
 
-When the source notes are specific — including names, dates, and explicit commitments — Copilot's task list will reflect that specificity. When the notes are vague, the task list will be vague in turn. This is another direct expression of the note-taking discipline principle: the more precise your capture of commitments, the more actionable Copilot's output.
+Prompts worth keeping:
 
-For maximum value, include in your prompt any additional framing that helps Copilot prioritize. For example:
+- *"Create a task list from this page. For each item note the owner where stated, the deadline, and the hall or booth number it affects."*
+- *"Extract all open items and split them into two lists: things GES owns, and things we are waiting on from the organizer, the venue, or an exhibitor."*
+- *"Create a prioritized punch list from this section. Rank by what must be closed before doors open tomorrow versus what can wait until move-out."*
 
-- *"Create a task list from this page. For each task, note who is responsible (where stated) and any deadlines mentioned."*
-- *"Extract all action items and open questions from this page. Separate them into two lists: items I need to do and items I am waiting on from others."*
-- *"Create a prioritized task list from this section. Identify which items are time-sensitive based on the context."*
+That second split — what we own versus what we are waiting on — is the most useful structure in show operations. It separates what is in your control from what needs a phone call.
 
-The separation of "my tasks" from "tasks I am waiting on from others" is a particularly useful structure for relationship managers managing multiple active deals — it distinguishes between what is in your control and what requires a follow-up ping to someone else.
+### GES Application: The Pre-Con Meeting
 
-### BankUnited Application: Post-Call Action Extraction
+An account manager finishes a pre-con with the show organizer, the venue, and the GES operations team: ninety minutes covering the move-in sequence, revised freight targets for two exhibitor categories, a change to the aisle carpet spec, a late sponsorship signage package, union call times, and an organizer request to change the registration area layout. Commitments landed on all sides, captured in conversational flow — the order that is least useful afterwards.
 
-A treasury management officer has just completed a 45-minute call with a corporate client about transitioning their payables and receivables operations. The call covered seven different topics, and at various points in the conversation there were commitments made on both sides — the officer committed to send a product comparison document and schedule a technical integration call; the client committed to send their current bank's ACH volume report and loop in their IT director.
+She prompts: *"Create a task list from this page. Organize as: (1) GES actions with owner and due date, (2) Items we are waiting on from the show organizer, (3) Items we are waiting on from the venue. Note anything with a date inside the next five business days."*
 
-The officer's meeting notes page in OneNote captures all of this but in a conversational flow that does not clearly separate what needs to happen next. She opens Copilot and prompts: *"Create a task list from this page. Organize it as: (1) Tasks I need to complete with target dates, and (2) Items I am waiting to receive from the client."*
-
-Copilot returns a clean two-section task list. Section one has three items, all with implied dates from the conversation. Section two has two items, representing client commitments to follow up on. The officer pastes the list into her CRM notes and into the "Next Steps" section of the client's notebook. Three days later, when she goes to prepare for a follow-up call, both sections are still there — and the client items she is waiting on have become the agenda for the follow-up.
-
-This is not a marginal improvement in efficiency. It is a fundamental change in how knowledge moves from a conversation into a managed workflow.
+The output goes into the show notebook's Open Items section and into the Teams channel. When she runs the follow-up call ten days later, sections two and three are the agenda — already written.
 
 ---
 
 ## 7. Capability 4 — Drafting New Content from Your Notes
 
-The fourth confirmed capability of Copilot in OneNote extends beyond summarizing or transforming existing content — it allows you to **draft entirely new content** from within the context of your notebook. Microsoft's documentation confirms this includes event plans, presentation outlines, meeting agendas, meeting drafts (with discussion points, key objectives, and action items), brainstormed ideas, and new pages and sections.
+The fourth capability goes past transforming what exists: Copilot can **draft new content** grounded in your notebook. Microsoft's documentation confirms this includes event plans, presentation outlines, meeting agendas, meeting drafts with discussion points and objectives, brainstormed ideas, and new pages and sections.
 
-This is where OneNote transitions from a knowledge capture tool to a knowledge generation platform. Your notes become the raw material from which Copilot helps you build the next thing: the next meeting agenda, the next proposal outline, the next strategy document, the next briefing.
+This is where OneNote stops being a capture tool and becomes a generation platform. Your notes become the raw material for the next thing.
 
-The workflow is intuitive. You have a section of notes from several client interactions over the past month. You ask Copilot to draft a meeting agenda for the upcoming quarterly review. Copilot draws on the context in your notes — the themes that have recurred, the open items from previous meetings, the client's stated priorities — and produces a structured agenda that reflects the actual relationship history rather than a generic template.
+You have a section of notes from three site visits and two organizer calls; ask Copilot to draft the agenda for next week's pre-con, and it reflects the actual open items rather than a generic template. You have a Spiro ideation section full of half-formed concepts for a client's next stand; ask Copilot to brainstorm directions that connect the client's stated brand objectives to the constraints you captured on the venue walkthrough. You have four shows' worth of lessons-learned notes; ask Copilot to draft an outline for a team session on what keeps going wrong at move-out.
 
-Or you have notes from a successful deal that closed last year. You ask Copilot to brainstorm ideas for how to apply what you learned from that deal to a new prospect with a similar profile. Copilot draws on the notes and surfaces themes, parallels, and questions you might explore.
+### Using Chat for Analytical Requests
 
-Or you are preparing for an internal strategy session. You have notes from your last three months of client interactions spread across multiple notebook pages. You ask Copilot to draft an outline for a presentation summarizing what your portfolio clients are telling you about their business conditions and financing needs. Rather than manually reviewing every page, Copilot synthesizes across the section and gives you a structured starting point.
+Copilot in OneNote supports **open chat with intelligent responses** in the pane. Beyond the function buttons, you can hold a conversation about your notes — follow-ups, refinements, exploration.
 
-### Using Chat for Complex Requests
+That matters for questions that are analytical rather than mechanical:
 
-Microsoft's documentation confirms that Copilot in OneNote supports **open chat capabilities with intelligent responses** via the Copilot pane. This means that beyond the standard function buttons — Summarize, Create Task List, Rewrite — you can have an iterative conversation with Copilot about your notes, asking follow-up questions, requesting refinements, and exploring your content interactively.
+*"Across the notes in this section from the last four shows at this venue, what problems have recurred? Group by theme and tell me which pages you drew from."*
 
-This is an important capability for complex banking scenarios where the request is not a simple one-shot function but a multi-step exploration. For example:
+*"I have a year of design review notes in this section. What client objections come up most often about sustainability and reuse? Rank by frequency."*
 
-*"Based on the notes in this section about our commercial real estate portfolio reviews, what themes keep coming up about borrower stress? Organize your response by theme and cite which pages you are drawing from."*
+*"Based on the move-in logs in this notebook, what consistently goes wrong in the first 24 hours, and what did we do that worked?"*
 
-Or: *"I have three months of notes from client conversations in this section. Help me identify the five most common financing concerns my clients have raised. Rank them by frequency."*
-
-These are analytical questions that go beyond summarization — they require Copilot to reason across your content and surface patterns. The chat interface is designed exactly for this kind of exploratory use.
+These require reasoning across your content, not just condensing it. The chat interface exists for exactly this — and, as the next sections show, this is where the institutional memory payoff actually lands.
 
 ---
 
-## 8. Building a Client Discovery Notebook for BankUnited Relationship Managers
+## 8. The Venue Notebook — Where Institutional Memory Actually Lives
+
+:::{figure} ../images/ch10-exam-prep-notebook.png
+:label: fig-ch10-venue-notebook
+:alt: Illustration of a OneNote Venue Notebook for a convention center — notebook sidebar shows sections for Venue Profile, Docks and Freight, Labor and Jurisdiction, Utilities and Rigging, Site Survey History, and Lessons Learned — main page shows a structured Docks and Freight page with dock dimensions, trailer restrictions, marshaling yard gate hours and a status table with green checkmarks, and a Copilot summary panel showing recurring issues across past shows
+:width: 80%
+:align: center
+
+The Venue Notebook is the highest-value notebook in this chapter. Everything GES has learned about a building — dock configurations, union jurisdiction, freight quirks, rigging realities — accumulated across every show run there, and made searchable and summarizable by Copilot.
+:::
+
+If you build only one notebook after reading this chapter, build this one.
+
+GES runs **4,000+ live experiences a year** from **24 global production and warehouse facilities**. The same shows come back to the same buildings, year after year. But the people do not. A show operations manager rotates. A floor manager moves regions. A logistics coordinator leaves. And every time that happens, a quantity of hard-won, expensive, entirely undocumented knowledge about a specific building walks out the door with them.
+
+The knowledge is real and it is specific: which dock cannot take a 53-foot trailer, which freight elevator has an undocumented weight limit, which union local claims jurisdiction over what and where the boundary actually falls in practice, which marshaling yard gate jams at shift change, where the ceiling grid diverges from the published drawings, which service corridor floods when it rains, which venue contact actually returns calls.
+
+None of that is in a contract. Most of it is not in any system. It lives in the heads of people who happened to be there — until it does not.
+
+A venue notebook is the fix. And Copilot is what makes a venue notebook worth keeping, because a notebook nobody can search is just a slower filing cabinet.
+
+### Recommended Venue Notebook Structure
+
+**Section 1: Venue Profile.** The stable facts — halls, square footage, ceiling heights, exclusive service providers, in-house restrictions, key contacts with names and direct numbers. Built once, updated as things change.
+
+**Section 2: Docks and Freight.** Dock count, dimensions, trailer restrictions, repositioning requirements, freight elevator capacities, marshaling yard capacity and gate hours, advance warehouse routing, typical target window realities versus what the plan says. Photograph everything.
+
+**Section 3: Labor and Jurisdiction.** Which trades cover what, call times, minimum calls, break rules, overtime thresholds, and — critically — the practical notes about how jurisdiction is interpreted at this specific building, which frequently differs from how it reads on paper.
+
+**Section 4: Utilities and Rigging.** Power drop locations and capacities, floor ports, rig point grids and where they diverge from drawings, weight limits, house lighting and rigging labor requirements.
+
+**Section 5: Site Survey History.** One page per walkthrough, dated, with the survey lead's name. This is where the raw captures from Section 3 of this chapter land. Do not clean them into oblivion — dated, specific, imperfect notes are more useful than a polished summary that lost the detail.
+
+**Section 6: Lessons Learned.** One page per show run at this venue. What went wrong, what we changed, what we would do differently. This is the section that pays for the entire notebook.
+
+### What Copilot Does With It
+
+Once three or four show cycles of material are in there, the notebook becomes something no individual could be:
+
+- *"Summarize everything in the Docks and Freight section into a one-page brief for a show operations manager who has never worked this building."*
+- *"Across the Lessons Learned section, what problems have occurred more than once at this venue? Group by theme and cite the pages."*
+- *"Create a task list of everything in this notebook that should be verified on the next site survey because it may have changed."*
+- *"Based on the Labor and Jurisdiction section, draft a briefing note for the crew leads covering the three things that most commonly get misunderstood here."*
+
+That third prompt is quietly the most valuable one in this chapter. Institutional knowledge decays — venues renovate, contracts change, locals renegotiate. A notebook that surfaces its own staleness stays trustworthy.
+
+:::{admonition} T.R.U.E. Check — Trust
+:class: note
+
+**Trust: Trust each other to always be honest and do what's right.**
+
+A venue notebook is written for the colleague who comes after you and will never get to ask you a question. Write it honestly. Record the thing that went wrong on your show, including the part that was our fault. A lessons-learned section full of tidy successes is worse than no section at all, because it teaches the next team nothing while looking like it does.
+:::
+
+---
+
+## 9. The Show Notebook — One Cycle, Start to Finish
+
+:::{figure} ../images/ch10-deal-review-notebook.png
+:label: fig-ch10-show-notebook
+:alt: Illustration of a OneNote Show Notebook for a trade show cycle — notebook sidebar shows sections for Show Overview, Pre-Con and Planning Calls, Site Surveys, Move-In Daily Log, Exhibitor Issues, Safety Walks, and Move-Out and Lessons Learned — the main page shows a Move-In Daily Log entry with hall-by-hall set progress, freight target variances, a booth issue table and a Copilot-generated punch list on the right side
+:width: 80%
+:align: center
+
+A Show Notebook carries one show cycle from kickoff through post-show reconciliation — planning calls, site surveys, daily logs, exhibitor issues, safety observations, and the lessons that feed next year's edition.
+:::
+
+Where the venue notebook is permanent, the show notebook is a cycle. It opens at kickoff and closes with the post-show report — and then becomes a reference for next year's edition of the same show.
+
+**Section 1: Show Overview.** Dates, venue, organizer, scope of GES services, key contacts across GES, the organizer, and the venue, plus the show's headline numbers — square footage, exhibitor count, hall assignments.
+
+**Section 2: Pre-Con and Planning Calls.** One page per call, dated. This is where the Copilot recaps from Chapter 9 get filed so they live somewhere durable instead of scrolling out of a Teams channel.
+
+**Section 3: Site Surveys.** Walkthrough notes specific to this show. Venue-general findings should be promoted into the venue notebook; show-specific findings stay here.
+
+**Section 4: Move-In Daily Log.** One page per day. The single most valuable section during show week and the one most likely to be skipped. Capture it on a phone, dictated, at the end of each shift — then rewrite it with Copilot in ninety seconds.
+
+**Section 5: Exhibitor Issues.** One page per escalation: exhibitor, booth number, issue, what was promised, what was done, how it closed. This is your record when the organizer asks and your evidence when a charge is disputed.
+
+**Section 6: Safety Walks.** Dated observations from safety walks, with photos. Factual and neutral. Safety performance is a stated GES operating KPI, and observations that only exist in memory contribute nothing to it.
+
+**Section 7: Move-Out and Lessons Learned.** Dismantle notes, freight-out issues, damage, and the candid retrospective.
+
+Copilot prompts that earn their keep here:
+
+- *"Summarize the Move-In Daily Log section into a chronological narrative of how move-in actually ran versus the plan."*
+- *"From the Exhibitor Issues section, group the escalations by root cause and tell me which were within GES control."*
+- *"Draft a post-show lessons-learned outline from this notebook. Separate what worked, what failed, and what we would change for next year's edition."*
+- *"Create a task list of everything in this notebook that must be resolved before final reconciliation."*
+
+That last one is the difference between reconciliation being a reconstruction exercise and reconciliation being a review.
+
+---
+
+## 10. The Account Notebook and the Design Ideation Notebook
 
 :::{figure} ../images/ch10-client-discovery-notebook.png
 :label: fig-ch10-client-discovery
-:alt: Illustration of a structured OneNote Client Discovery Notebook for a banking Relationship Manager — notebook sidebar shows sections for Company Background, Key Contacts, Meeting Notes, Open Questions, and Next Steps, with the main page showing a structured Meeting Notes page with date, attendees, agenda, key discussion points, and a Copilot summary panel at the bottom of the page
+:alt: Illustration of a structured OneNote Account Notebook for a GES account manager — notebook sidebar shows sections for Client Profile, Key Contacts, Show History, Meeting Notes, Open Questions, and Next Steps, with the main page showing a Show History page listing multiple show cycles with dates, scope, results and issues, and a Copilot summary panel at the bottom of the page
 :width: 80%
 :align: center
 
-A Client Discovery Notebook gives BankUnited Relationship Managers a structured, AI-ready knowledge base for every prospect. Five core sections organize everything Copilot needs to generate useful summaries, action lists, and drafts — turning individual client notebooks into a living relationship intelligence system.
+An Account Notebook holds the full arc of a client relationship across show cycles — profile, contacts, history, conversations, and open items — so that relationship knowledge survives a change of account manager.
 :::
 
-Knowing what Copilot in OneNote can do is only half the equation. The other half is building the notebook structure that makes those capabilities maximally useful. A well-structured notebook is not just easier to navigate — it is an AI-ready knowledge base. When your notes are organized, labeled, and consistently structured, Copilot has cleaner source material to work with and produces proportionally better outputs.
+### The Account Notebook
 
-For a relationship manager at BankUnited, the Client Discovery Notebook is the most important notebook to get right. Every prospect and active client deserves one. Here is the recommended structure:
+For account managers, this is the relationship's memory. Same principle as the venue notebook, applied to people and programs instead of buildings.
 
-### Recommended Notebook Structure
+**Client Profile** — who they are, what they exhibit, their objectives, their budget posture, how they measure success, their sustainability commitments, which parts of the GES Collective they use: GES Exhibitions, Spiro, onPeak, SHOWTECH, Visit by GES.
 
-**Section 1: Company Background**
+**Key Contacts** — one page per contact. Name, title, decision authority, communication style, history with GES, and the small human details that make a relationship a relationship.
 
-This is the stable reference section — the facts about the company that do not change from meeting to meeting. Industry, founding date, ownership structure, number of employees, key markets, competitive positioning, and any relevant public information. This section is built once and updated as the relationship evolves.
+**Show History** — one page per show cycle. Scope, spend, what was built, what went wrong, how it was resolved, and what they said afterwards. Over three or four cycles this becomes the most valuable page set in the account.
 
-When you need to bring a colleague or a new team member up to speed on a client quickly, you ask Copilot to summarize this section: *"Summarize the Company Background section. Give me a three-paragraph executive overview of this company."* You get an instant briefing document.
+**Meeting Notes** — dated pages for every call and visit.
 
-**Section 2: Key Contacts**
+**Open Questions** — what we still need to learn or have asked for and not received.
 
-The people who matter: names, titles, roles, relationship to the company (owner, CFO, operating partner), preferred communication channels, and any personal notes (interests, background, communication style). Each key contact gets their own page within this section.
+**Next Steps** — the current active list, refreshed from Copilot's task extraction.
 
-Copilot can draw on this section when you ask it to help draft communications: *"Based on the Key Contacts section, draft a pre-meeting agenda email to send to the CFO before our Thursday call."*
+The prompt that makes this notebook indispensable, typically used the week someone inherits an account:
 
-**Section 3: Meeting Notes**
+*"Summarize this notebook. Give me the client's objectives, the history of our work with them across show cycles, the recurring issues, the open commitments, and the three things I most need to know before my first call."*
 
-One page per meeting or interaction, dated and titled. This is the most active section — the running journal of every conversation, site visit, call, and email thread. Each meeting note page should include: date, attendees, purpose, discussion summary, key points raised, and commitments made.
+Ninety seconds, and a new account manager walks into a client call informed rather than apologetic.
 
-This is the section Copilot uses most heavily. After every meeting: *"Summarize today's meeting notes. Identify key decisions made, open questions, and a list of next steps."*
+### The Spiro Design Ideation Notebook
 
-**Section 4: Open Questions**
+Design work has a different shape. Ideas arrive out of order, half-formed, in the middle of other work, and their value often is not obvious until months later on a different project.
 
-A running list of unanswered questions — things you need to learn about this client, information you have requested but not yet received, due diligence items that are still outstanding. This section prevents important gaps from falling through the cracks.
+A designer's ideation notebook is deliberately looser: a **Concepts** section with one page per idea, photos of sketches, reference images, material samples photographed on site; a **Client Briefs** section holding the objectives and constraints for each active project; a **Constraints and Learnings** section capturing what actually got built versus what was drawn, and why; and a **Material and Fabrication Notes** section for what performed well, what shipped badly, what reused cleanly under the Better Stands approach.
 
-Periodically ask Copilot to review this section alongside your meeting notes: *"Based on the Open Questions section, are there items that have since been addressed in the Meeting Notes section? Flag any questions that remain open."*
+Copilot's value here is not summarizing. It is retrieval and pattern-finding across a year of scattered thinking:
 
-**Section 5: Next Steps**
+- *"Across the Concepts section, which ideas involved modular or reusable structures? Summarize each in two lines."*
+- *"Based on this client's brief and the constraints in the venue notebook for their next show, brainstorm five stand concepts that respect the ceiling height and rigging limits."*
+- *"From the Constraints and Learnings section, what has repeatedly caused a design to change between concept approval and fabrication?"*
 
-The current active task list for this relationship — what needs to happen in the next two weeks. This section is updated by pasting the action items Copilot extracts from Meeting Notes.
-
-With this structure in place, a Relationship Manager's client notebook becomes a living intelligence system. Each time you add new meeting notes, Copilot can instantly update your understanding of the relationship's status, surface what is still outstanding, and help you prepare for the next interaction.
+That last question is a genuinely hard one to answer from memory, and a genuinely valuable one to answer with evidence.
 
 ---
 
-## 9. Building a Deal Review Notebook for Commercial Lending
-
-:::{figure} ../images/ch10-deal-review-notebook.png
-:label: fig-ch10-deal-review
-:alt: Illustration of a OneNote Deal Review Notebook for commercial lending — notebook sidebar shows sections for Deal Overview, Borrower Profile, Financial Analysis, Collateral, Risk Assessment, Credit Committee Notes, and Decision and Conditions — the main page shows Financial Analysis with a revenue table, DSCR ratio, LTV calculation, and financial trend notes, with a Copilot action items list on the right side
-:width: 80%
-:align: center
-
-A Deal Review Notebook centralizes every dimension of a commercial loan in a single structured notebook — from initial borrower profile through financial analysis, collateral review, risk assessment, and credit committee feedback. Copilot can summarize any section, extract outstanding items, and draft new content to support the credit process.
-:::
-
-For commercial lenders and credit officers, the Deal Review Notebook is the deal's living record from initial discussion through credit decision. OneNote's hierarchical structure — notebook → sections → pages — maps naturally onto the deal lifecycle.
-
-### Recommended Deal Review Notebook Structure
-
-**Section 1: Deal Overview**
-
-The deal's summary page — updated as the deal evolves. Loan amount, structure, pricing, collateral, intended use of proceeds, and the deal's current status. This is what a senior leader needs to get oriented quickly.
-
-Copilot use case: *"Summarize the Deal Overview section into a two-paragraph executive summary suitable for a preliminary deal discussion."*
-
-**Section 2: Borrower Profile**
-
-Everything about the borrower: entity structure, ownership, operating history, existing banking relationships, credit history observations, and management team assessment. Each sub-topic gets its own page.
-
-Copilot use case: *"Based on the Borrower Profile section, draft a brief borrower narrative for the credit memo."*
-
-**Section 3: Financial Analysis**
-
-The numbers — revenue history, DSCR calculations, liquidity analysis, balance sheet observations, and financial trend commentary. This section may include pasted tables or screenshots from financial statements alongside the lender's analytical commentary.
-
-Copilot use case: *"Summarize the key financial trends noted in this section. Identify any concerns or strengths that appear repeatedly across the analysis."*
-
-**Section 4: Collateral**
-
-Property descriptions, appraisal notes, inspection findings, title observations, and collateral valuation documentation.
-
-**Section 5: Risk Assessment**
-
-The lender's running assessment of risks — credit, operational, market, concentration, and regulatory. This is a living section updated as new information emerges.
-
-Copilot use case: *"Create a task list from the Risk Assessment section. What items still need to be verified or resolved before credit committee presentation?"*
-
-**Section 6: Credit Committee Notes**
-
-Notes from preliminary conversations with credit officers, the credit committee submission checklist, committee feedback, and conditions attached to any approval.
-
-**Section 7: Decision and Conditions**
-
-The final decision, terms approved, conditions precedent, and documentation requirements. This section becomes the post-approval reference.
-
-With this structure, any member of the credit team can open the Deal Review Notebook and ask Copilot to bring them up to speed instantly. The lead lender who built the notebook has the added benefit of a knowledge base that serves the entire deal team — reducing duplicate questions, improving handoffs, and ensuring consistency across the credit process.
-
----
-
-## 10. Building an Exam Prep Notebook for Regulatory Examinations
-
-:::{figure} ../images/ch10-exam-prep-notebook.png
-:label: fig-ch10-exam-prep
-:alt: Illustration of a OneNote Exam Prep Notebook for OCC and Fed regulatory examiners at a bank — notebook sidebar shows sections for Examination Scope, Key Regulatory Requirements, Evidence Log, Document Index, Open Items, and Examiner Questions and Responses — main page shows a structured Evidence Log with regulatory requirement, supporting document link, date, and status with green checkmarks, and a Copilot summary showing outstanding items count and readiness status
-:width: 80%
-:align: center
-
-An Exam Prep Notebook gives BankUnited compliance and operations leaders a centralized, AI-ready knowledge base for regulatory examinations. Copilot can instantly surface outstanding evidence items, summarize the examination scope, and draft response documentation — transforming examination preparation from a reactive scramble into a proactive, structured readiness process.
-:::
-
-Few events in a bank's operational calendar are more consequential — or more documentation-intensive — than a regulatory examination by the OCC, the Federal Reserve, or state banking regulators. Examination preparation has historically involved enormous manual effort: tracking what examiners have requested, locating evidence documents, drafting responses to findings, and ensuring nothing falls through the cracks in what can be a weeks-long process involving dozens of people.
-
-OneNote, with Copilot, changes the preparation dynamic fundamentally. A structured Exam Prep Notebook becomes the command center for the examination — organized, searchable, and AI-assisted in ways that significantly reduce the coordination burden.
-
-### Recommended Exam Prep Notebook Structure
-
-**Section 1: Examination Scope**
-
-The examination's focus areas and schedule. What are the examiners looking at? What time period does the examination cover? What business lines, processes, or risk categories are in scope? This section is established at the start and refined as the examination scope clarifies.
-
-Copilot use case: *"Summarize the Examination Scope section. What are the three to five highest-priority areas based on the scope documentation?"*
-
-**Section 2: Key Regulatory Requirements**
-
-The relevant regulatory guidance, guidance documents, or supervisory expectations that apply to the examination's focus areas. One page per regulatory topic, with the key requirements documented in plain language alongside references to the source documents.
-
-**Section 3: Evidence Log**
-
-The most critical section during an active examination. One row or entry per requested item, tracking: the regulatory requirement it relates to, the document or evidence provided, the date provided, and its current status (outstanding, in progress, submitted). This section gives the examination team a real-time view of where things stand.
-
-Copilot use case: *"Create a task list from the Evidence Log section. List all items that are still outstanding or in progress, organized by priority."*
-
-**Section 4: Document Index**
-
-A running index of all documents submitted to examiners, with their submission dates and the requests they addressed. This creates a defensible record of what was provided and when.
-
-**Section 5: Open Items**
-
-Examiner questions, requests for additional information, preliminary findings, and management responses. One page per issue, tracking the question, the response being prepared, the responsible team member, and the target response date.
-
-Copilot use case: *"Summarize all Open Items on this page. For each item, note the current status and who is responsible."*
-
-**Section 6: Examiner Questions and Responses**
-
-Formal management responses to examiner findings or requests for information. This section stores both the questions received and the responses prepared and submitted.
-
-Copilot drafting use case: *"Based on the notes in this section about the examiner's question on our BSA monitoring process, draft a formal management response. The response should describe our current process, acknowledge the area for improvement noted, and outline our corrective action plan."*
-
-The Exam Prep Notebook does not just reduce the administrative burden of managing an examination — it also creates a searchable institutional record that improves how the bank prepares for future examinations. The notes, evidence logs, and management responses from one examination become the baseline for the next.
-
----
-
-## 11. Connecting OneNote to Teams and SharePoint for Team Knowledge
+## 11. Team Notebooks — Shared Knowledge in Teams and SharePoint
 
 :::{figure} ../images/ch10-onenote-teams-sharepoint.png
 :label: fig-ch10-teams-sharepoint
-:alt: Integration diagram showing OneNote connected to Microsoft Teams and SharePoint — three icons arranged in a triangle with Teams top left, OneNote top right, and SharePoint bottom center, with bidirectional arrows between all three labeled 'Teams meeting recap to OneNote', 'Team notebook stored in SharePoint', and 'SharePoint docs accessible from OneNote', with a central label reading 'Shared Knowledge Layer' and banking team collaboration context
+:alt: Integration diagram showing OneNote connected to Microsoft Teams and SharePoint — three icons arranged in a triangle with Teams top left, OneNote top right, and SharePoint bottom center, with bidirectional arrows between all three labeled 'Teams meeting recap to OneNote', 'Show notebook stored in SharePoint', and 'SharePoint show documents accessible from OneNote', with a central label reading 'Shared Knowledge Layer' and show team collaboration context
 :width: 80%
 :align: center
 
-OneNote, Teams, and SharePoint form a triangular knowledge ecosystem — Teams generates meeting activity, OneNote captures and organizes it, SharePoint stores and shares it across the team. When a team notebook lives in SharePoint, every team member has access to the same knowledge base, and Copilot's outputs can inform the entire team rather than staying siloed with a single individual.
+Teams, OneNote, and SharePoint form a triangular knowledge ecosystem — Teams generates the conversation, OneNote captures and organizes it, SharePoint stores and shares it. A show notebook that lives in SharePoint is available to the whole show team, in every time zone.
 :::
 
-Individual notebooks are powerful. Team notebooks — shared, maintained collaboratively, and stored in SharePoint — are transformative for groups that need to operate as a unified knowledge organism.
+Individual notebooks are useful. Shared notebooks — stored in SharePoint, tied to a Teams team — are what turn a distributed show team into a single knowledge organism.
 
-Microsoft's M365 ecosystem is designed to support exactly this scenario. A OneNote notebook associated with a Microsoft Teams team or stored in SharePoint is accessible to every member of that team. In July 2025, according to documentation from Schneider IT (who tracks M365 enterprise deployments), Copilot Notebooks gained real-time collaboration capabilities — multiple contributors can work in a shared notebook simultaneously, with content flowing between contributors while preserving structure and annotations.
+A notebook associated with a Teams team or stored in SharePoint is available to every member. In July 2025, according to Schneider IT's tracking of M365 enterprise deployments, Copilot Notebooks gained real-time collaboration — multiple contributors working in a shared notebook simultaneously, with structure and annotations preserved.
 
-For BankUnited, the team notebook scenarios with the highest value include:
+The highest-value shared notebooks at GES:
 
-**Lending Team Notebooks**
+**Show team notebooks.** The show notebook from Section 9, shared. The floor manager captures the daily log, the exhibitor services rep logs escalations, the logistics coordinator records freight variances, the account manager files the organizer call recaps. Everyone works one record instead of five.
 
-A commercial lending team covering a specific market or industry sector can maintain a shared notebook organized by active deals, market observations, and competitive intelligence. When one lender learns something significant from a client conversation — a competitor pricing aggressively, a sector showing stress, an opportunity emerging — it goes into the team notebook. Other team members can ask Copilot to summarize the section or surface recent observations on a specific theme.
+**Facility and regional notebooks.** Venue notebooks shared across the region that services them, so a Toronto team and a Las Vegas team working the same touring show inherit each other's findings.
 
-**Compliance and Operations Notebooks**
+**Onboarding notebooks.** Role guides, process documentation, glossary, accumulated practice. A new exhibitor services rep can ask Copilot to summarize the key processes in a section or draft a 30-day learning plan — instead of consuming a colleague's show week with questions.
 
-Compliance teams managing regulatory requirements across multiple business lines benefit from shared notebooks that track regulatory changes, pending implementation items, and compliance status across the organization. Copilot can summarize sections, extract open items, and help draft implementation notes.
+### The Curation Imperative
 
-**Onboarding Notebooks**
+Schneider IT's documentation flags the risk directly: *"if a notebook omits crucial documents, Copilot can produce confident but incomplete answers — teams must curate notebooks."*
 
-A team notebook dedicated to onboarding new employees — containing role guides, process documentation, FAQs, and accumulated institutional knowledge — benefits enormously from Copilot's ability to help new team members navigate and synthesize the content. A new hire can ask Copilot to summarize the key processes in a section, draft a list of what they need to learn in their first 30 days, or explain how a particular workflow operates based on the team's documentation.
+This is not a flaw. It is a property of every knowledge system. Copilot can only synthesize what is in the notebook. A comprehensive, maintained notebook produces reliable outputs. An incomplete or stale one produces confident nonsense — which is worse than nothing, because it looks authoritative.
 
-**The Curation Imperative**
-
-There is an important caveat that Schneider IT's documentation highlights explicitly: *"if a notebook omits crucial documents, Copilot can produce confident but incomplete answers — teams must curate notebooks."* This is not a flaw — it is a property of any knowledge system. Copilot can only synthesize what is in the notebook. A team notebook that is comprehensive and well-maintained produces comprehensive, reliable Copilot outputs. A notebook that is incomplete or outdated produces incomplete, potentially misleading outputs.
-
-The implication is clear: team notebooks require active curation. Someone on the team needs to own the notebook's quality — ensuring that key documents are referenced, key developments are captured, and outdated information is either updated or clearly marked as historical. This is not a burden unique to AI — it is the work of any serious knowledge management system. AI simply raises the stakes by making the quality of the notebook directly visible in the quality of its outputs.
+The implication: someone must own each shared notebook. For a show notebook, that is the show operations manager. For a venue notebook, the regional operations lead. Ownership means ensuring key findings get captured, promoting show-specific learnings into the venue notebook where they generalize, and marking outdated information as historical rather than silently leaving it to mislead someone in 2028.
 
 ---
 
@@ -453,96 +443,111 @@ The implication is clear: team notebooks require active curation. Someone on the
 
 :::{figure} ../images/ch10-note-taking-discipline.png
 :label: fig-ch10-discipline
-:alt: Two-column infographic showing 'Notes AI Can Work With' on the left — clear headers, consistent structure, named people, specific dates, explicit commitments, numbered action items — versus 'Notes AI Struggles With' on the right — stream of consciousness text, abbreviations without context, no names or dates, jumbled topics — with a quality spectrum bar at the bottom running from red to green and the caption 'Better notes equal better Copilot output'
+:alt: Two-column infographic showing 'Notes AI Can Work With' on the left — clear headers, consistent structure, named people, specific dates, booth and hall numbers, explicit commitments, numbered action items — versus 'Notes AI Struggles With' on the right — stream of consciousness text, abbreviations without context, no names or dates, jumbled topics — with a quality spectrum bar at the bottom running from red to green and the caption 'Better notes equal better Copilot output'
 :width: 80%
 :align: center
 
-The note-taking discipline is not about being more bureaucratic — it is about making your notes AI-ready. Structured notes with clear context, named individuals, specific dates, and explicit commitments give Copilot the raw material to produce genuinely useful summaries and task lists. Vague notes produce vague outputs, regardless of how powerful the AI is.
+Good notes for AI are not more bureaucratic notes — they are notes with names, numbers, dates, and explicit commitments. Structure is what lets Copilot produce something you can act on.
 :::
 
-Throughout this chapter, the same principle has surfaced repeatedly: Copilot's outputs are bounded by the quality of the notes it works with. This is not a limitation of AI — it is a law of information processing that applies to human analysts as much as to artificial ones. The discipline of taking good notes is the prerequisite for getting good Copilot outputs.
+The same principle has surfaced throughout: Copilot's output is bounded by the quality of the notes. Here is what that means concretely in the field.
 
-Here is what "good notes for AI" actually means in practice:
+**Numbers, not adjectives.** "Dock is tight" is unusable. "Dock 4 will not take a 53' trailer without a repositioning move; usable depth approx. 42'" is a note that saves a show. Weights, dimensions, times, booth numbers, hall letters — capture the number.
 
-**Specificity over abbreviation.** When you write "client OK w/ terms," Copilot has nothing useful to work with. When you write "Client confirmed acceptance of proposed rate of 6.75% with a 5-year term amortized over 25 years," Copilot can extract a meaningful action item and include the detail in a summary. The extra 15 seconds you spend writing the full statement pays a dividend every time Copilot works with that page.
+**Name people.** "The venue guy said" loses its meaning in a week. "Marco Silva, venue ops lead" keeps it. Names also make notes searchable, which is how they get reused.
 
-**Named individuals.** Notes that reference "the CFO" or "the owner" without names lose context quickly. Notes that say "Maria Chen, CFO" give Copilot (and your future self) the context to produce useful, specific outputs.
+**State commitments explicitly.** When someone agrees to something, write it as a commitment: "Organizer to confirm revised freight targets for the pharma pavilion by Thursday COB." Implicit commitments buried in narrative are easy for Copilot — and for you — to miss.
 
-**Explicit commitments.** When someone agrees to send something, schedule something, or decide something, state it explicitly in your notes: "Tom agreed to send the most recent rent roll by end of week." Implicit commitments buried in conversational summaries are easy for Copilot to miss. Explicit statements of commitment are easy to extract as action items.
+**Timestamp show-week entries.** During move-in, sequence is everything. A log entry that records when something was observed is evidence. One that does not is an opinion.
 
-**Clear section breaks.** If your notes cover multiple topics — a financial discussion, a relationship conversation, an administrative matter — separate them visually with headers or blank lines. OneNote's formatting tools make this easy. Clear structure helps Copilot understand where one topic ends and another begins.
+**Context at the top.** Date, show, venue, hall, who was present, why you were there. Copilot uses this to frame everything below it, and so will the colleague reading it next year.
 
-**Context at the top.** Start every meeting note page with a brief header: date, attendees, purpose of the meeting. This context helps Copilot frame everything that follows. Without it, Copilot may not know what it is reading or why it matters.
+**Photograph the physical.** Marked-up plans, damaged freight, blocked egress, a whiteboard, a dock schedule taped to a wall. A photo with a one-line typed caption is often the highest-value note you can take, and it takes eight seconds.
 
-**Dates and deadlines where they exist.** When someone mentions a deadline — "we need to be ready before the board meeting on the 15th" — note the date. Copilot can include it in the task list output, and your future self will find it invaluable.
+**Separate topics with headers.** Freight, labor, rigging, exhibitor issues. Clear breaks help Copilot understand where one thread ends and another begins — and let you summarize a single section for a single audience.
 
-None of these habits require significant additional time during note-taking. They require a modest shift in discipline — writing out rather than abbreviating, naming rather than pronoun-referencing, stating explicitly rather than implying. That shift compounds over time: every meeting that is well-captured becomes a permanent, AI-ready asset in your notebook.
+None of this requires meaningfully more time. It requires writing the number instead of the impression, the name instead of the role, and the commitment instead of the gist. That shift compounds: every well-captured walkthrough becomes a permanent, AI-ready asset.
 
 ---
 
 ## 13. What Copilot in OneNote Cannot Do
 
-A serious chapter on Copilot in OneNote would be incomplete without an honest accounting of what it cannot do — because understanding limitations is as important as understanding capabilities for using any tool effectively.
-
 :::{warning}
 **Verified Limitations of Copilot in OneNote**
 
-These are confirmed constraints based on Microsoft's documentation and known platform behavior as of early 2026. They are subject to change as Microsoft continues to develop the product.
+These are confirmed constraints based on Microsoft's documentation and known platform behavior as of early 2026, and are subject to change.
 :::
 
-**It cannot access information outside the notebook context.** Unlike Microsoft 365 Copilot in Teams or Outlook, which can draw on emails, calendar items, and documents across your M365 tenant, Copilot in OneNote works within the context of the open page and notebook. It cannot independently pull a related SharePoint document, check your calendar, or reference an email thread unless that information has been captured in your notebook.
+**It cannot access information outside the notebook context.** Unlike Copilot in Teams or Outlook, Copilot in OneNote works within the open page and notebook. It will not independently pull a floor plan from SharePoint, check the show schedule in your calendar, or read an organizer's email thread unless that content is in your notebook.
 
-**It cannot be explicitly directed to specific sections or notebooks by name** (as of December 2025). According to SuperSimple365's tracking of Microsoft's December 2025 UI update, users can no longer explicitly refer to "this section" or "this notebook" in their prompts in the same way that was previously possible. Copilot works within the active page context by default. This means organizing your notebook so that the content Copilot needs is on the page you are working with, rather than assuming it will search across sections.
+**It cannot be explicitly directed to specific sections or notebooks by name** (as of December 2025). Per SuperSimple365's tracking of Microsoft's December 2025 UI update, users can no longer refer to "this section" or "this notebook" in prompts the way they previously could. Copilot works in the active page context by default — so organize so that what Copilot needs is on the page you are working from.
 
-**It cannot guarantee accuracy.** Copilot synthesizes and summarizes, but it does not verify facts against external sources. If your notes contain an error, Copilot will faithfully reflect that error in its output. The source citation feature is designed precisely to help you verify, but the verification step is your responsibility — always.
+**It cannot guarantee accuracy.** Copilot synthesizes; it does not verify. If your notes say the freight elevator holds 8,000 lbs and it holds 6,000, Copilot will faithfully repeat the error into a document that looks official. Source citations exist to help you check. The checking is yours.
 
-**It is not available if Windows Information Protection (WIP) is enabled.** This is a Microsoft-confirmed constraint. On managed corporate devices where WIP is active, Copilot in OneNote may not be accessible. If you encounter this limitation, contact your IT administrator.
+**It is not available if Windows Information Protection (WIP) is enabled.** A Microsoft-confirmed constraint on some managed devices. Contact IT.
 
-**It does not replace the judgment that notes require.** Copilot can extract what you wrote, but it cannot assess whether you wrote the right things. The decision about what matters in a client meeting, what risk is worth capturing, what commitment is significant — those are professional judgments that belong to you. Copilot helps you work with what you have captured. It cannot tell you what you should have captured but didn't.
+**It does not replace judgment about what to capture.** Copilot works with what you wrote. It cannot tell you that you should have photographed the rig points, or that the offhand comment from the venue's labor lead was the most important thing said all morning. That judgment is the professional skill. Copilot is downstream of it.
 
-**Local-only notebooks are not fully supported.** OneNote notebooks that are saved only locally — not synced to OneDrive or SharePoint — may have limited or no Copilot functionality. For Copilot to work reliably across all platforms (Windows, Mac, iPad, web), notebooks should be synced to Microsoft 365 cloud storage.
+**Local-only notebooks are not fully supported.** Notebooks saved only locally, not synced to OneDrive or SharePoint, may have limited or no Copilot functionality — and, more importantly for a mobile workforce, will not be on your phone when you need them.
 
 ---
 
-## 14. Try This — Build a Client Discovery Notebook
+## 14. Beyond the Notebook — How Copilot Cowork Extends This Work
 
-The best way to internalize the capabilities covered in this chapter is to build something real. This exercise creates a Client Discovery Notebook for an actual prospect or active client relationship — and then uses Copilot to demonstrate the value immediately.
+Everything so far happens inside OneNote. But the most valuable thing about a show-week notebook is what gets *made* from it afterwards — and that is where **Microsoft Copilot Cowork**, generally available worldwide since June 16, 2026, changes the economics.
+
+Copilot Chat is a conversation: one prompt, one response, you steer each step. Cowork is an **assignment**. You describe an outcome; it plans and executes multi-step work across Microsoft 365 and returns finished artifacts — documents, decks, spreadsheets, emails, Teams posts.
+
+Two properties make it directly relevant here. First, Cowork can browse your Work IQ — SharePoint and OneDrive folders, files, emails, Teams content — and assemble across sources, which is exactly the boundary Copilot in OneNote alone cannot cross. Second, it **keeps working when your laptop is off**, running in a protected cloud environment. For someone who assigns a task at the end of a move-out day and reviews it on a phone the next morning at the airport, that is not a footnote. It is the entire point.
+
+### A GES Example: Show Notebook to Finished Deliverables
+
+Move-out finishes on a Thursday. The show operations manager's show notebook holds four daily move-in logs, eleven exhibitor issue pages, three safety walk records, the pre-con recaps, and a move-out page written at midnight. She opens Cowork and assigns this:
+
+> **Outcome:** A post-show lessons-learned document and a client-facing recap for the show organizer, both ready for my review by Monday morning.
+>
+> **Inputs:** The show notebook for this event, the pre-con recaps in the show's Teams channel, the freight and labor variance workbook in the show SharePoint folder, and the venue notebook for this building.
+>
+> **Definition of done:** (1) An internal lessons-learned Word document — what worked, what failed, root cause, and recommendation for next year's edition — saved to the show folder. (2) A client-facing recap in PowerPoint, six slides maximum, covering scope delivered, key metrics, and how issues were resolved. (3) A draft email to my director summarizing the three things I want changed for next year.
+>
+> **Constraints:** Do not contact the organizer or any exhibitor. Keep all commercial and margin information out of the client-facing deck. Use neutral, factual language for anything relating to safety or incidents.
+>
+> **Approval scope:** Show me the email before it is sent. Do not send anything externally under any circumstances.
+
+Cowork works through it — reading the notebook, pulling the workbook, cross-referencing the venue notebook for recurring issues — and pauses for approval before the email. She reviews on Monday, corrects two attributions, approves, and the lessons-learned document goes into the venue notebook's Lessons Learned section where next year's team will find it.
+
+That last step is the whole chapter in one motion: field capture on a phone, structured by Copilot, assembled by Cowork, filed where institutional memory lives.
+
+Note the shape of the request. It follows Cowork's five-part pattern: **Outcome, Inputs, Definition of done, Constraints, Approval scope.** Vague assignments produce vague artifacts. This is the core skill, and Chapter 14 covers it in full.
+
+:::{warning}
+**Approve like your name is on it — because it is.**
+
+Cowork asks permission before sensitive actions, and every task runs with your permissions, sees only what you can see, and is auditable. But a client-facing recap deck built from your notebook is indistinguishable from one you wrote. If the notebook contained an error, the deck contains the error, and the organizer reads it as GES's position. Cowork removes the assembly. It does not remove the responsibility.
+:::
+
+---
+
+## 15. Try This — Build a Venue Notebook
 
 :::{note}
-**Hands-On Exercise: The Client Discovery Notebook**
+**Hands-On Exercise: The Venue Notebook**
 
-**Step 1: Create the notebook structure**
+**Step 1: Create the structure.** In OneNote, create a notebook named for a venue you have worked more than once. Create six sections: Venue Profile, Docks and Freight, Labor and Jurisdiction, Utilities and Rigging, Site Survey History, Lessons Learned. Save it to SharePoint or OneDrive — not locally.
 
-In OneNote, create a new notebook named for your prospect or client. Create five sections:
-1. Company Background
-2. Key Contacts
-3. Meeting Notes
-4. Open Questions
-5. Next Steps
+**Step 2: Empty your head into it.** Take twenty minutes and write down everything you personally know about this building that is not written down anywhere official. Dock quirks, elevator limits, jurisdiction realities, the contact who actually answers, the corridor that floods. Do not polish it. Use the discipline principles from Section 12: numbers, names, explicit statements.
 
-**Step 2: Populate the Meeting Notes section**
+**Step 3: Summarize it.** Open the Copilot pane (Home → Copilot). Prompt: *"Summarize this page into a briefing for a show operations manager who has never worked this venue. Organize by: Access and Freight, Labor, Utilities and Rigging, and Things That Commonly Surprise People."*
 
-Take 10 minutes to write up the notes from your most recent client or prospect interaction — as much detail as you can recall. Use the discipline principles from this chapter: named individuals, specific commitments, explicit dates, clear section breaks.
+Review the output and check the citations. Where the summary is thin, your notes were thin.
 
-**Step 3: Ask Copilot to summarize**
+**Step 4: Generate a verification list.** Prompt: *"Create a task list of everything in these notes that should be verified on the next site survey because it may have changed or because I am not certain of it."*
 
-Open the Copilot pane (Home → Copilot). Prompt: *"Summarize the notes on this page. Organize the summary into: Context of Meeting, Key Discussion Points, Commitments Made, and Open Questions."*
+This becomes your survey checklist — and it is honest about what you actually know versus what you assume.
 
-Review the output. Check the cited sources. Note where Copilot captured the meeting accurately and where the summary revealed gaps in your notes.
+**Step 5: Share it.** Move the notebook into your team's SharePoint site or Teams team. Tell one colleague it exists and ask them to add one thing they know that you did not.
 
-**Step 4: Generate a task list**
-
-Follow up with: *"Now create a task list from this page. Separate tasks by: Actions I Need to Take and Items I'm Waiting On From the Client."*
-
-Copy the task list into your Next Steps section.
-
-**Step 5: Draft a follow-up agenda**
-
-Use the chat: *"Based on the notes and open questions on this page, draft an agenda for my next meeting with this client. The meeting will be 45 minutes."*
-
-Review the draft. How closely does it reflect the relationship's actual state? What did it get right, and what did it miss?
-
-**Reflection:** The value of this exercise is not just the outputs — it is what the outputs reveal about the notes. Where Copilot struggled, your notes were thin. Where it performed well, your notes were specific. That feedback loop is itself a teaching instrument — it makes you a better note-taker in real time.
+**Reflection:** Notice how much of what you wrote in Step 2 existed nowhere else. That is the size of the risk this company carries every time someone changes roles. Now notice how long Step 2 actually took. That asymmetry — between the value of the knowledge and the cost of capturing it — is the argument for this entire chapter.
 :::
 
 ---
@@ -551,7 +556,7 @@ Review the draft. How closely does it reflect the relationship's actual state? W
 
 ```{glossary}
 Copilot Pane
-  The sidebar panel that opens on the right side of OneNote when Copilot is activated via the Home tab. The primary interface for entering prompts, receiving Copilot responses, and copying output.
+  The sidebar panel that opens on the right side of OneNote when Copilot is activated via the Home tab. The primary interface for entering prompts, receiving responses, and copying output.
 
 Summarize (OneNote)
   A confirmed Copilot capability that generates structured summaries of a page, a selection of text, or a specific topic, with cited sources indicating which parts of the notes were used.
@@ -560,52 +565,59 @@ Create Task List
   A confirmed Copilot capability that extracts action items, commitments, and follow-up items from notes and organizes them into a structured list, optionally with deadlines and priorities where noted.
 
 Rewrite Page
-  A confirmed Copilot capability that transforms rough or informal notes into clearer, more professional, and better-organized documentation without necessarily reducing the length or detail.
+  A confirmed Copilot capability that transforms rough or informal notes into clearer, better-organized documentation without necessarily reducing length or detail.
 
 Source Citations
-  A feature of Copilot's summarization outputs in OneNote — Copilot identifies which parts of the notes it drew from when generating a summary, enabling users to verify the accuracy of the synthesis.
+  A feature of Copilot's summarization output in OneNote — Copilot identifies which parts of the notes it drew from, enabling verification of the synthesis.
 
 Team Notebook
-  A OneNote notebook stored in SharePoint or associated with a Microsoft Teams team, accessible to all members of the team. Supports real-time collaboration as of Microsoft's 2025 updates.
+  A OneNote notebook stored in SharePoint or associated with a Microsoft Teams team, accessible to all members. Supports real-time collaboration as of Microsoft's 2025 updates.
 
 Windows Information Protection (WIP)
-  A Windows security feature that, when enabled on a managed corporate device, prevents Copilot in OneNote from functioning. Users on WIP-enabled devices should consult IT for access options.
+  A Windows security feature that, when enabled on a managed device, prevents Copilot in OneNote from functioning.
 
-Client Discovery Notebook
-  A OneNote notebook structure designed for banking Relationship Managers, organized into sections for Company Background, Key Contacts, Meeting Notes, Open Questions, and Next Steps — built to be AI-ready for Copilot summarization and task extraction.
+Venue Notebook
+  A OneNote notebook holding everything GES has learned about a specific building — profile, docks and freight, labor and jurisdiction, utilities and rigging, site survey history, and lessons learned — accumulated across every show run there.
 
-Deal Review Notebook
-  A OneNote notebook structure designed for commercial lenders, organized by deal lifecycle sections including Borrower Profile, Financial Analysis, Collateral, Risk Assessment, and Credit Committee Notes.
+Show Notebook
+  A OneNote notebook covering one show cycle from kickoff to post-show, including pre-con and planning call recaps, site surveys, move-in daily logs, exhibitor issues, safety walks, and move-out lessons learned.
 
-Exam Prep Notebook
-  A OneNote notebook structure designed for compliance and operations teams managing regulatory examinations, organized by Examination Scope, Evidence Log, Open Items, and Examiner Questions and Responses.
+Account Notebook
+  A OneNote notebook holding a client relationship across show cycles — client profile, key contacts, show history, meeting notes, open questions, and next steps.
+
+Ideation Notebook
+  A loosely structured OneNote notebook used by Spiro designers to capture concepts, sketches, client briefs, constraints, and fabrication learnings, with Copilot used for retrieval and pattern-finding across projects.
 
 Knowledge Capture Layer
-  The conceptual role OneNote plays in the Microsoft 365 ecosystem — positioned between the communication tools (Teams, Outlook) and the storage infrastructure (SharePoint, OneDrive), where information from conversations and meetings is distilled into structured, searchable, persistent records.
+  OneNote's conceptual role in the Microsoft 365 ecosystem — positioned between communication tools (Teams, Outlook) and storage (SharePoint, OneDrive), where conversations and observations are distilled into structured, searchable records.
 
 Note-Taking Discipline
-  The professional practice of capturing notes with specificity, named individuals, explicit commitments, and clear structure — the prerequisite for producing high-quality Copilot outputs from note-based content.
+  The practice of capturing notes with specific numbers, named individuals, explicit commitments, timestamps, and clear structure — the prerequisite for high-quality Copilot output.
 
 On-Canvas Icon
-  The OneNote-integrated Copilot icon accessible directly from a notebook page, providing quick access to Summarize, Create Task List, Rewrite, and other functions without navigating to the ribbon.
+  The OneNote-integrated Copilot icon accessible directly from a page, providing quick access to Summarize, Create Task List, Rewrite, and other functions without using the ribbon.
 ```
 
 ---
 
 ## Discussion
 
-Copilot in OneNote is about more than productivity — it is about the relationship between how we capture knowledge and what we are able to do with it. Before AI, the value of a note was essentially fixed at the moment of capture: what you wrote was what you had. With Copilot, the value of a note is dynamic — every note you take is now also potential raw material for summaries, action lists, new content, and analytical insight that can be generated on demand.
+Before AI, a note's value was fixed at the moment of capture: what you wrote was what you had. With Copilot, that value is dynamic — every note is now potential raw material for summaries, punch lists, briefings, and pattern analysis generated on demand.
 
-That shift raises a question worth exploring as a team: **How does the availability of AI-assisted note synthesis change how your team should think about knowledge capture?**
+That shift raises a question worth working through as a team: **if a well-structured set of notes is now an asset the whole company can query, what should GES be capturing that it currently is not?**
 
-Consider: if a thorough, well-structured set of notes is now not just a personal reference but an asset that can be summarized, analyzed, and transformed into new content — does that change what notes are worth capturing? Does it change how they should be structured? Does it change who on a team should have access to what knowledge? Does it change how institutional knowledge should be maintained as teams evolve and people change roles?
+1. Think about a venue or a show you know well. What do you personally know about it that exists nowhere in writing? What happens to that knowledge when you move to another region or another role?
+2. GES has served the same organizers and the same buildings for decades — in some cases since long before any of us arrived. Where has the company clearly lost knowledge between show cycles, and what would have prevented it?
+3. Most of this workforce is not at a desk. What would a capture habit have to look like to actually survive a twelve-hour move-in day? Be specific about the tools and the moments.
+4. Who should own a shared venue or show notebook, and what does "owning" it actually require week to week?
+5. Where is the line between a notebook that is useful and a notebook that creates risk — for example, notes about incidents, contractor performance, or commercial terms?
 
-:::{note}
-**Discussion Guidelines**
+:::{admonition} Discussion Guidelines
+:class: tip
 
-Write an initial response of at least 250 words addressing the prompt above. Draw on at least one scholarly or credible source in your response — consider academic research on knowledge management, Microsoft's own documentation, or industry reporting on AI in financial services. After posting your response, return to the discussion and reply substantively to **at least two peers** — not with simple agreement or disagreement, but with a response that extends the conversation: adds a perspective they did not consider, challenges an assumption they made, or connects their point to a specific scenario from your own banking context.
+Write a substantive initial response drawing on your actual work at GES, not hypotheticals. Reference at least one credible source — Microsoft's documentation, research on organizational knowledge management, or event industry reporting — to support a claim you make.
 
-Avoid framing this as a group activity with assigned roles. This is an individual reflection exercise conducted asynchronously — the goal is a genuine exchange of professional perspectives, not a structured classroom debate.
+Then reply substantively to at least **two peers**. Not agreement — extension: a perspective they did not consider, an assumption worth challenging, or a contrasting example from your region, facility, or part of the GES Collective.
 :::
 
 ---
@@ -614,16 +626,32 @@ Avoid framing this as a group activity with assigned roles. This is an individua
 
 OneNote has always been where knowledge goes to be organized. Copilot is what finally makes that organized knowledge work for you.
 
-The confirmed capabilities of Copilot in OneNote — summarize, create task lists, rewrite, and draft new content — are individually useful and collectively powerful. The summarization capability, with its source citations, gives banking professionals a verified synthesis engine that turns pages of meeting notes into structured recaps in seconds. The task list capability extracts commitments buried in conversational notes and surfaces them as actionable items before they are forgotten. The rewrite capability elevates rough field captures to formal documentation without the hours of manual editing that would otherwise be required. The content drafting capability turns your accumulated notes into the starting material for everything that comes next: meeting agendas, presentation outlines, briefings, and strategy documents grounded in your actual knowledge of the relationship or deal.
+The four confirmed capabilities are individually useful and collectively powerful. **Summarize**, with its source citations, turns a two-hour walkthrough into a verified debrief before you leave the building. **Create Task List** pulls commitments out of a dictated move-in log and turns them into a punch list with owners. **Rewrite** takes ninety seconds of talking into your phone in a noisy hall and produces documentation that belongs in the show file. **Draft New Content** turns your accumulated notes into the agenda, the briefing, the design direction, and the lessons-learned outline that comes next. Copilot Cowork extends the chain further, assembling a whole notebook into finished deliverables while you are asleep.
 
-The notebook structures described in this chapter — Client Discovery, Deal Review, Exam Prep — are not arbitrary frameworks. They are the result of thinking carefully about where banking professionals lose time and institutional knowledge, and designing OneNote notebooks that address those losses directly. Build them, use them, and the return on investment is visible within weeks.
-
-The most important takeaway from this chapter is not about Copilot. It is about notes. The discipline of taking clear, specific, structured notes is now one of the highest-leverage professional skills a banking professional can develop — because every well-captured note is now an AI-ready asset that can generate value far beyond the original capture moment.
+The notebook structures in this chapter — Venue, Show, Account, Ideation — are not arbitrary frameworks. They map to where GES actually loses knowledge: between show cycles, between regions, and between the person who learned something and the person who needed to know it.
 
 ::::{important}
 **Leader's Takeaway**
 
-The professionals on your team who develop strong note-taking habits are no longer just more organized than their peers. They are building an AI-powered knowledge advantage that compounds over time. Every well-structured client notebook is a relationship intelligence system. Every thorough deal review notebook is an institutional memory that survives transitions. Every comprehensive exam prep notebook is a competitive advantage in the examination room.
+GES has been running events since 1939. Since December 31, 2024, it has been doing that independently for the first time in 55 years — with the freedom, and the obligation, to build its own operating model. One of the most valuable assets in that model costs almost nothing to build: a written, searchable record of what this company knows about the buildings it works in, the shows it runs, and the clients it serves.
 
-The investment in note-taking discipline — a modest one in terms of time — pays returns that were never possible before Copilot. Help your team see that connection, and you will see both the quality of their notes and the quality of their AI-assisted work improve together.
+Right now that knowledge is mostly in people's heads. It is real, it is expensive, and it leaves when they do. Across 4,000+ events a year, 24 facilities, 150,000+ exhibitors, and 75+ countries, that leakage is continuous and almost entirely invisible until move-in morning.
+
+The people on your team who build good capture habits are not merely more organized than their peers. They are converting personal expertise into company capability. Your job as a leader is to make that conversion normal: give shared notebooks an owner, ask for the site survey to land in the venue notebook rather than an inbox, treat the lessons-learned page as a deliverable rather than a courtesy, and read what your team writes so they know it is read.
+
+Do that consistently for four show cycles and the next operations manager to walk into a building GES has worked for twenty years will walk in knowing what we know. That is the whole point.
 ::::
+
+:::{seealso}
+**Related chapters:**
+
+- **Chapter 5 — Prompting Essentials:** the prompt structure underlying every example in this chapter
+- **Chapter 9 — Copilot in Teams:** the pre-con and planning call recaps that get filed into the show notebook
+- **Chapter 12 — Copilot in SharePoint:** where show folders and venue knowledge libraries actually live
+- **Chapter 14 — Copilot Cowork:** the full treatment of delegating multi-step work from your notebooks
+
+**External references:**
+
+- Microsoft Copilot Prompt Gallery — [copilot.cloud.microsoft/prompts](https://copilot.cloud.microsoft/prompts)
+- Microsoft Learn documentation on Copilot in OneNote
+:::

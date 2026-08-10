@@ -62,6 +62,20 @@ node skills/book-writer/scripts/generate-image.js \
    - When a concept needs a long word, use an ICON instead of a label.
    - Never request paragraphs, sentences, body copy, or fake UI screenshot text.
 
+6. **NO FABRICATED ATTRIBUTION — CRITICAL.** The model invents fake footers when not
+   forbidden. Confirmed real failures: "© 2024 Exhibition Strategies Solutions. All rights
+   reserved.", "ges.com/human-advantage", "TRADE SHOW STRATEGIES | 2024", "ECGP",
+   "Source: Corporate Fintech Analysis".
+   These are fake companies, fake URLs, and fake copyright lines in a CLIENT DELIVERABLE.
+   Every prompt MUST include: "Do not include any copyright notice, company name, website
+   URL, web address, date, year, source citation, byline, logo, watermark, or footer text
+   of any kind."
+
+7. **NO DESCRIPTIVE SENTENCES UNDER LABELS.** The model adds explanatory sub-captions like
+   "Contextual decision-making & ethical discernment." Forbid this explicitly: "Each label
+   must be the label word alone with no descriptive sentence, subtitle, or caption beneath
+   it."
+
 6. **If the image needs a company name, use "GES"** — never "BankUnited". Do not attempt to
    reproduce the real GES logo; use the plain letters "GES" or no branding at all.
 

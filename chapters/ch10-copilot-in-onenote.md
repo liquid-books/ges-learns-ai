@@ -28,19 +28,17 @@ Copilot in OneNote changes how GES people capture, organize, and act on what the
 
 Think about the last venue walkthrough you did.
 
-You were standing up. You had a hard hat under one arm and a phone in your hand. The venue ops lead was walking fast and talking faster. You learned that dock four cannot take a 53-foot trailer without a repositioning move, that the freight elevator in the north hall has a weight limit nobody has written down anywhere official, that the union call time for the venue's electrical crew is a half hour earlier than the show organizer assumed, and that the ceiling rig points in hall B are on a different grid than the drawings show. You typed some of it. You photographed the dock. You wrote three words on a printed floor plan and shoved it in your bag.
+You were standing up. Hard hat under one arm, phone in your hand, the venue ops lead walking fast and talking faster. You learned that dock four cannot take a 53-foot trailer without a repositioning move, that the freight elevator in the north hall has a weight limit nobody has written down anywhere official, that the union call time for the venue's electrical crew is a half hour earlier than the show organizer assumed, and that the ceiling rig points in hall B are on a different grid than the drawings show. You typed some of it. You photographed the dock. You wrote three words on a printed floor plan and shoved it in your bag.
 
 Now think about what happened to all of that.
 
-For most people in this business, the honest answer is uncomfortable. Some of it made it into an email. Some of it lived in your head until you moved to another show and it left with you. Most of it went nowhere. And eighteen months later the same show comes back to the same venue, a different GES team runs it, and somebody discovers dock four all over again — on move-in morning, with trucks stacked in the marshaling yard.
+For most people in this business the honest answer is uncomfortable. Some of it made it into an email. Some of it lived in your head until you moved to another show and it left with you. Most went nowhere. Eighteen months later the same show comes back to the same venue, a different GES team runs it, and somebody discovers dock four all over again — on move-in morning, with trucks stacked in the marshaling yard.
 
-That is not a note-taking problem. That is an institutional memory problem, and it is the single most expensive knowledge failure in the event business.
+That is not a note-taking problem. It is an institutional memory problem, and it is the most expensive knowledge failure in the event business.
 
-This is what Copilot in OneNote is built to fix. Not the act of taking notes — OneNote always did that — but the gap between capturing something and being able to use it. Getting from raw capture to structured summary. From a page of move-in observations to a punch list with owners. From shorthand scrawled at a marshaling yard gate to documentation a colleague can actually act on. From four years of scattered venue notes to an answer in ten seconds.
+This is what Copilot in OneNote is built to fix. Not the act of taking notes — OneNote always did that — but the gap between capturing something and being able to use it. From a page of move-in observations to a punch list with owners. From shorthand scrawled at a marshaling yard gate to documentation a colleague can act on. From four years of scattered venue notes to an answer in ten seconds.
 
-According to Microsoft's documentation, Copilot in OneNote is available with a Microsoft 365 Copilot (Work) license on OneNote for Windows, Mac, iPad, and OneNote for the web, and with eligible M365 subscription plans on OneNote for Windows. That platform coverage matters more at GES than at almost any company we could name. **Most of the GES workforce is not at a desk.** They are on show floors, in warehouses, in marshaling yards, in venues in 75+ countries. A tool that only works on a laptop in an office is a tool most of this company cannot use. OneNote is not that tool.
-
-This chapter covers how Copilot in OneNote works, how to reach it, and how GES people — show operations managers, floor managers, Spiro designers, account managers, logistics coordinators, exhibitor services reps — can apply it to the knowledge work that actually defines the job.
+Microsoft's documentation confirms Copilot in OneNote is available with a Microsoft 365 Copilot (Work) license on OneNote for Windows, Mac, iPad, and the web, and with eligible M365 subscription plans on OneNote for Windows. That platform coverage matters more at GES than almost anywhere. **Most of the GES workforce is not at a desk.** They are on show floors, in warehouses, in marshaling yards, in venues across 75+ countries. A tool that only works on a laptop in an office is a tool most of this company cannot use. OneNote is not that tool.
 
 :::{admonition} T.R.U.E. Check — Responsibility
 :class: note
@@ -104,9 +102,9 @@ Microsoft's documentation confirms three access points, each suited to a differe
 The Copilot pane opens on the right side of OneNote from the Home tab. From here you can enter prompts, get summaries and task lists, chat about your notes, and copy the output straight into another page, an email, or a Teams message.
 :::
 
-**The Ribbon Button (Home Tab).** The primary access point. Click Copilot on the Home tab and the pane opens on the right while your page stays visible on the left. This is the full interface — appropriate for longer summaries, multi-step requests, and iterative conversation.
+**The Ribbon Button (Home Tab).** The primary access point. Click Copilot on the Home tab and the pane opens on the right while your page stays visible. This is the full interface — for longer summaries, multi-step requests, and iterative conversation.
 
-**The On-Canvas OneNote Icon.** For faster access, an on-canvas icon triggers specific Copilot functions — summaries, rewrites, task lists, notes, new content ideas — from the page context without opening the full pane. As of December 2025, according to SuperSimple365's tracking of M365 feature rollouts, "Summarise Page," "Create a Task List," and "Rewrite Page" now open directly in the Copilot Chat pane.
+**The On-Canvas OneNote Icon.** An on-canvas icon triggers specific functions — summaries, rewrites, task lists, notes, new content ideas — from the page context without opening the full pane. As of December 2025, according to SuperSimple365's tracking of M365 feature rollouts, "Summarise Page," "Create a Task List," and "Rewrite Page" now open directly in the Copilot Chat pane.
 
 **Right-Click Context Menu.** Right-clicking on a page surfaces quick Copilot actions — the fastest route to common operations.
 
@@ -114,17 +112,15 @@ One constraint from Microsoft's documentation: Copilot in OneNote is **not avail
 
 ### The Mobile Reality
 
-Here is the part that matters most for GES, and it is not in most Copilot training material.
+Here is the part that matters most for GES, and it is in almost no Copilot training material.
 
 Notes at this company are not taken at desks. They are taken standing up, in a noisy hall, on a phone, with one hand, while something is being unloaded. If your capture habit requires sitting down, you do not have a capture habit.
 
-Three mobile patterns are worth building deliberately:
+**Photograph the physical artifact.** Marked-up floor plans, the whiteboard in the show office, a handwritten dock schedule taped inside a freight door, a damaged crate label, a rig point that does not match the drawing. The photo *is* the note; the one-line caption you type under it is what makes it findable later.
 
-**1. Photo capture of the physical artifact.** Marked-up floor plans, a whiteboard in the show office, a handwritten dock schedule taped inside a freight door, a damaged crate label, a rigging point that does not match the drawing. Photograph it into the page. OneNote's mobile app is genuinely fast at this. The photo *is* the note, and the caption you type under it is what makes it findable later.
+**Use ink freely.** If you work from an iPad with a pencil during walkthroughs — many designers and site survey leads do — Microsoft confirms Copilot works with **both typed and handwritten notes on the same page**. Sketch the aisle configuration, annotate it, and Copilot still summarizes it alongside your typed content.
 
-**2. Handwriting and ink.** If you work from an iPad with a pencil during walkthroughs — many designers and site survey leads do — Microsoft confirms that Copilot can work with **both typed and handwritten notes on the same page**. Your ink is not a second-class citizen. Sketch the aisle configuration, annotate it, and Copilot can still summarize the page alongside your typed content.
-
-**3. Voice capture.** Talk your notes. Walking from the marshaling yard back to the show office is four minutes of dead time that can become the day's log. Dictate roughly, capture everything, and clean it up later with the rewrite function covered in Section 5. This is the single highest-leverage habit in this chapter for anyone whose job happens on their feet.
+**Talk your notes.** Walking from the marshaling yard back to the show office is four minutes of dead time that can become the day's log. Dictate roughly, capture everything, clean it up later with the rewrite function in Section 5. For anyone whose job happens on their feet, this is the highest-leverage habit in the chapter.
 
 The through-line: **capture fast and messy in the field, structure it later with Copilot.** Before AI, messy capture stayed messy, so people either wrote nothing or wasted time trying to write neatly in bad conditions. That trade-off is gone.
 
@@ -149,19 +145,17 @@ Raw walkthrough and show-floor notes become structured summaries with decisions,
 
 That citation mechanism is not a detail. On a show floor, a wrong number is not an inconvenience — it is a truck at the wrong dock at the wrong hour with labor on the clock. When Copilot tells you which part of your page a point came from, you can check it.
 
-Microsoft's documentation describes three levels of granularity: the **full page** (three screens of site survey notes becoming a structured recap for the account team); **a section or topic** (a walkthrough page that mixes dock and freight logistics with rigging and power, summarized separately for different people); and **a selected passage** (surgical, ideal for dense material like a venue's labor rules).
+Microsoft's documentation describes three levels of granularity: the **full page**, **a section or topic** (useful when a walkthrough page mixes freight logistics with rigging and power and different people need different parts), and **a selected passage** (surgical, ideal for dense material like a venue's labor rules).
 
-Microsoft's own example prompt is instructive: *"Create a summary of the notes on this page. Focus the summary on the chronological order of events and place the events into bullet points."* Naming a focus and a format is what separates a useful summary from a generic one. **The more specific your instruction, the more useful the output.**
-
-A **copy button** moves the result anywhere: into an email to the show organizer, into a Word doc for the show operations manual, into the show's Teams channel, into a new recap page in the same notebook.
+Microsoft's own example prompt is instructive: *"Create a summary of the notes on this page. Focus the summary on the chronological order of events and place the events into bullet points."* Naming a focus and a format is what separates a useful summary from a generic one. **The more specific your instruction, the more useful the output.** A **copy button** then moves the result anywhere — an email to the organizer, a Word doc for the show operations manual, the show's Teams channel, a new recap page.
 
 ### GES Application: The Site Survey Debrief
 
-A show operations manager finishes a two-hour walkthrough at a convention center for a show that moves in eight weeks. The page holds dock configuration and trailer restrictions, the freight elevator weight limit, ceiling rig points that differ from the drawings, marshaling yard capacity and gate hours, union jurisdiction notes from the venue's labor lead, two photos of a blocked service corridor, and a handwritten sketch of a revised aisle layout for hall B. Some of it is bulleted, some dictated fragments, some ink.
+A show operations manager finishes a two-hour walkthrough for a show that moves in eight weeks. The page holds dock configuration and trailer restrictions, the freight elevator weight limit, ceiling rig points that differ from the drawings, marshaling yard capacity and gate hours, union jurisdiction notes from the venue's labor lead, two photos of a blocked service corridor, and a handwritten sketch of a revised aisle layout for hall B. Some bulleted, some dictated fragments, some ink.
 
 She prompts: *"Summarize this page. Organize into: Freight and Dock, Rigging and Overhead, Labor and Jurisdiction, Floor Plan Implications, and Open Items. Use bullet points. Note anything that conflicts with what was in the drawings."*
 
-Thirty seconds later she has a five-part debrief. She checks the citations, corrects one dock number, and copies it into the show's Teams channel and the venue notebook. The debrief that would normally have been written at 10 p.m. from memory is done before she leaves the building — and it is more accurate, because it was written while she was still standing in it.
+Thirty seconds later she has a five-part debrief. She checks the citations, corrects one dock number, and copies it into the show's Teams channel and the venue notebook. The debrief that would normally have been written at 10 p.m. from memory is done before she leaves the building — and it is more accurate, because it was written while she was standing in it.
 
 ---
 
@@ -169,11 +163,11 @@ Thirty seconds later she has a five-part debrief. She checks the citations, corr
 
 The second capability takes rough, informal, incomplete notes and turns them into clear documentation.
 
-This resolves the oldest tension in field note-taking: speed versus quality. During a walkthrough, the right posture is fast and comprehensive — abbreviate, fragment, capture everything. But "I'll clean this up later" almost never happens, because later is move-in.
+This resolves the oldest tension in field note-taking: speed versus quality. During a walkthrough the right posture is fast and comprehensive — abbreviate, fragment, capture everything. But "I'll clean this up later" almost never happens, because later is move-in.
 
 Copilot's rewrite function removes the trade-off. Microsoft confirms "Rewrite Page" as one of the four primary functions alongside Summarize, Create Task List, and Take Notes. The distinction from summarizing matters: **summarize** condenses, removing detail for clarity; **rewrite** transforms, reconstructing the same content with better structure and clearer language without necessarily shortening it. The detail stays; the rough edges go.
 
-For GES, rewrite is most valuable for notes that become real documentation: a site survey that goes into the venue folder, a show-week log that feeds the post-show report, a safety observation that must read cleanly for the record, a design debrief a fabrication team will actually build from.
+At GES, rewrite is most valuable for notes that become real documentation: a site survey going into the venue folder, a show-week log feeding the post-show report, a safety observation that must read cleanly for the record, a design debrief a fabrication team will build from.
 
 :::{tip}
 **Effective Rewrite Prompts for GES**
@@ -215,11 +209,11 @@ Rewrite makes your notes look professional. It does not make them true. Copilot 
 Copilot extracts commitments buried in running notes and organizes them into structured task lists with owners, deadlines, and priorities. On a show floor, this is the difference between a punch list and a memory.
 :::
 
-Every pre-con meeting, every walkthrough, every move-in day ends with commitments: things someone promised to do, questions that need answers, items that must be fixed before doors open. Uncaptured, they evaporate — and on a show with a fixed open date, evaporation is not a soft cost. It shows up in an aisle, in front of a client.
+Every pre-con, every walkthrough, every move-in day ends with commitments: things someone promised to do, questions that need answers, items that must be fixed before doors open. Uncaptured, they evaporate — and on a show with a fixed open date, evaporation is not a soft cost. It shows up in an aisle, in front of a client.
 
-Microsoft confirms that Copilot in OneNote can create task lists from your notes, a page, or an entire section, incorporating deadlines and priorities when they appear in the source. Of the four capabilities, this is the one with the most direct effect on execution. Open Copilot on your notes page, ask it to extract the action items, and it returns a structured list you can copy into Microsoft Tasks, into the show's Teams channel, or into a punch list section of the show notebook.
+Microsoft confirms Copilot in OneNote can create task lists from your notes, a page, or an entire section, incorporating deadlines and priorities when they appear in the source. Of the four capabilities this has the most direct effect on execution. Open Copilot on your notes, ask it to extract the action items, and copy the structured list into Microsoft Tasks, the show's Teams channel, or a punch list section of the show notebook.
 
-Specificity in, specificity out. Notes that say "talk to venue about the dock" produce a task that says talk to venue about the dock. Notes that say "Marco (venue ops) to confirm by Thu whether dock 4 can take a 53' trailer without a repositioning move" produce a task you can actually close.
+Specificity in, specificity out. "Talk to venue about the dock" produces a task that says talk to venue about the dock. "Marco (venue ops) to confirm by Thu whether dock 4 can take a 53' trailer without a repositioning move" produces a task you can close.
 
 Prompts worth keeping:
 
@@ -243,15 +237,11 @@ The output goes into the show notebook's Open Items section and into the Teams c
 
 The fourth capability goes past transforming what exists: Copilot can **draft new content** grounded in your notebook. Microsoft's documentation confirms this includes event plans, presentation outlines, meeting agendas, meeting drafts with discussion points and objectives, brainstormed ideas, and new pages and sections.
 
-This is where OneNote stops being a capture tool and becomes a generation platform. Your notes become the raw material for the next thing.
-
-You have a section of notes from three site visits and two organizer calls; ask Copilot to draft the agenda for next week's pre-con, and it reflects the actual open items rather than a generic template. You have a Spiro ideation section full of half-formed concepts for a client's next stand; ask Copilot to brainstorm directions that connect the client's stated brand objectives to the constraints you captured on the venue walkthrough. You have four shows' worth of lessons-learned notes; ask Copilot to draft an outline for a team session on what keeps going wrong at move-out.
+This is where OneNote stops being a capture tool and becomes a generation platform. You have a section of notes from three site visits and two organizer calls; ask Copilot to draft the agenda for next week's pre-con, and it reflects the actual open items rather than a generic template. You have a Spiro ideation section full of half-formed concepts; ask Copilot to brainstorm directions that connect the client's brand objectives to the constraints you captured on the venue walkthrough. You have four shows' worth of lessons-learned notes; ask Copilot to draft an outline for a team session on what keeps going wrong at move-out.
 
 ### Using Chat for Analytical Requests
 
-Copilot in OneNote supports **open chat with intelligent responses** in the pane. Beyond the function buttons, you can hold a conversation about your notes — follow-ups, refinements, exploration.
-
-That matters for questions that are analytical rather than mechanical:
+Copilot in OneNote also supports **open chat with intelligent responses** in the pane — follow-ups, refinements, exploration. That matters for questions that are analytical rather than mechanical:
 
 *"Across the notes in this section from the last four shows at this venue, what problems have recurred? Group by theme and tell me which pages you drew from."*
 
@@ -276,31 +266,31 @@ The Venue Notebook is the highest-value notebook in this chapter. Everything GES
 
 If you build only one notebook after reading this chapter, build this one.
 
-GES runs **4,000+ live experiences a year** from **24 global production and warehouse facilities**. The same shows come back to the same buildings, year after year. But the people do not. A show operations manager rotates. A floor manager moves regions. A logistics coordinator leaves. And every time that happens, a quantity of hard-won, expensive, entirely undocumented knowledge about a specific building walks out the door with them.
+GES runs **4,000+ live experiences a year** from **24 global production and warehouse facilities**. The same shows come back to the same buildings year after year. The people do not. A show operations manager rotates, a floor manager moves regions, a logistics coordinator leaves — and every time, hard-won, expensive, entirely undocumented knowledge about a specific building walks out with them.
 
-The knowledge is real and it is specific: which dock cannot take a 53-foot trailer, which freight elevator has an undocumented weight limit, which union local claims jurisdiction over what and where the boundary actually falls in practice, which marshaling yard gate jams at shift change, where the ceiling grid diverges from the published drawings, which service corridor floods when it rains, which venue contact actually returns calls.
+That knowledge is real and specific: which dock cannot take a 53-foot trailer, which freight elevator has an undocumented weight limit, which union local claims jurisdiction over what and where the boundary actually falls in practice, which marshaling yard gate jams at shift change, where the ceiling grid diverges from the published drawings, which service corridor floods when it rains, which venue contact returns calls.
 
-None of that is in a contract. Most of it is not in any system. It lives in the heads of people who happened to be there — until it does not.
+None of that is in a contract. Most of it is in no system at all. It lives in the heads of people who happened to be there — until it does not.
 
-A venue notebook is the fix. And Copilot is what makes a venue notebook worth keeping, because a notebook nobody can search is just a slower filing cabinet.
+A venue notebook is the fix. Copilot is what makes it worth keeping, because a notebook nobody can search is just a slower filing cabinet.
 
 ### Recommended Venue Notebook Structure
 
-**Section 1: Venue Profile.** The stable facts — halls, square footage, ceiling heights, exclusive service providers, in-house restrictions, key contacts with names and direct numbers. Built once, updated as things change.
+**Section 1: Venue Profile.** Stable facts — halls, square footage, ceiling heights, exclusive service providers, in-house restrictions, key contacts with names and direct numbers.
 
-**Section 2: Docks and Freight.** Dock count, dimensions, trailer restrictions, repositioning requirements, freight elevator capacities, marshaling yard capacity and gate hours, advance warehouse routing, typical target window realities versus what the plan says. Photograph everything.
+**Section 2: Docks and Freight.** Dock count, dimensions, trailer restrictions, repositioning requirements, freight elevator capacities, marshaling yard capacity and gate hours, advance warehouse routing, and what target windows actually look like here versus what the plan says. Photograph everything.
 
-**Section 3: Labor and Jurisdiction.** Which trades cover what, call times, minimum calls, break rules, overtime thresholds, and — critically — the practical notes about how jurisdiction is interpreted at this specific building, which frequently differs from how it reads on paper.
+**Section 3: Labor and Jurisdiction.** Which trades cover what, call times, minimum calls, break rules, overtime thresholds — and, critically, how jurisdiction is interpreted at this specific building, which frequently differs from how it reads on paper.
 
 **Section 4: Utilities and Rigging.** Power drop locations and capacities, floor ports, rig point grids and where they diverge from drawings, weight limits, house lighting and rigging labor requirements.
 
-**Section 5: Site Survey History.** One page per walkthrough, dated, with the survey lead's name. This is where the raw captures from Section 3 of this chapter land. Do not clean them into oblivion — dated, specific, imperfect notes are more useful than a polished summary that lost the detail.
+**Section 5: Site Survey History.** One page per walkthrough, dated, with the survey lead's name — where the raw field captures land. Do not clean them into oblivion; dated, specific, imperfect notes beat a polished summary that lost the detail.
 
-**Section 6: Lessons Learned.** One page per show run at this venue. What went wrong, what we changed, what we would do differently. This is the section that pays for the entire notebook.
+**Section 6: Lessons Learned.** One page per show run at this venue. What went wrong, what we changed, what we would do differently. This section pays for the entire notebook.
 
 ### What Copilot Does With It
 
-Once three or four show cycles of material are in there, the notebook becomes something no individual could be:
+Once three or four show cycles are in there, the notebook becomes something no individual could be:
 
 - *"Summarize everything in the Docks and Freight section into a one-page brief for a show operations manager who has never worked this building."*
 - *"Across the Lessons Learned section, what problems have occurred more than once at this venue? Group by theme and cite the pages."*
@@ -332,19 +322,19 @@ A Show Notebook carries one show cycle from kickoff through post-show reconcilia
 
 Where the venue notebook is permanent, the show notebook is a cycle. It opens at kickoff and closes with the post-show report — and then becomes a reference for next year's edition of the same show.
 
-**Section 1: Show Overview.** Dates, venue, organizer, scope of GES services, key contacts across GES, the organizer, and the venue, plus the show's headline numbers — square footage, exhibitor count, hall assignments.
+**Show Overview** — dates, venue, organizer, scope of GES services, key contacts across GES, the organizer and the venue, plus headline numbers: square footage, exhibitor count, hall assignments.
 
-**Section 2: Pre-Con and Planning Calls.** One page per call, dated. This is where the Copilot recaps from Chapter 9 get filed so they live somewhere durable instead of scrolling out of a Teams channel.
+**Pre-Con and Planning Calls** — one page per call, dated. Where the Copilot meeting recaps from Chapter 9 get filed so they live somewhere durable instead of scrolling out of a Teams channel.
 
-**Section 3: Site Surveys.** Walkthrough notes specific to this show. Venue-general findings should be promoted into the venue notebook; show-specific findings stay here.
+**Site Surveys** — walkthrough notes specific to this show. Venue-general findings get promoted into the venue notebook; show-specific findings stay here.
 
-**Section 4: Move-In Daily Log.** One page per day. The single most valuable section during show week and the one most likely to be skipped. Capture it on a phone, dictated, at the end of each shift — then rewrite it with Copilot in ninety seconds.
+**Move-In Daily Log** — one page per day. The most valuable section during show week and the one most likely to be skipped. Dictate it on a phone at the end of each shift, then rewrite it with Copilot in ninety seconds.
 
-**Section 5: Exhibitor Issues.** One page per escalation: exhibitor, booth number, issue, what was promised, what was done, how it closed. This is your record when the organizer asks and your evidence when a charge is disputed.
+**Exhibitor Issues** — one page per escalation: exhibitor, booth number, issue, what was promised, what was done, how it closed. Your record when the organizer asks, and your evidence when a charge is disputed.
 
-**Section 6: Safety Walks.** Dated observations from safety walks, with photos. Factual and neutral. Safety performance is a stated GES operating KPI, and observations that only exist in memory contribute nothing to it.
+**Safety Walks** — dated observations with photos, factual and neutral. Safety performance is a stated GES operating KPI, and observations that exist only in memory contribute nothing to it.
 
-**Section 7: Move-Out and Lessons Learned.** Dismantle notes, freight-out issues, damage, and the candid retrospective.
+**Move-Out and Lessons Learned** — dismantle notes, freight-out issues, damage, and the candid retrospective.
 
 Copilot prompts that earn their keep here:
 
@@ -372,17 +362,13 @@ An Account Notebook holds the full arc of a client relationship across show cycl
 
 For account managers, this is the relationship's memory. Same principle as the venue notebook, applied to people and programs instead of buildings.
 
-**Client Profile** — who they are, what they exhibit, their objectives, their budget posture, how they measure success, their sustainability commitments, which parts of the GES Collective they use: GES Exhibitions, Spiro, onPeak, SHOWTECH, Visit by GES.
+**Client Profile** — who they are, what they exhibit, their objectives, budget posture, how they measure success, their sustainability commitments, and which parts of the GES Collective they use: GES Exhibitions, Spiro, onPeak, SHOWTECH, Visit by GES.
 
-**Key Contacts** — one page per contact. Name, title, decision authority, communication style, history with GES, and the small human details that make a relationship a relationship.
+**Key Contacts** — one page per contact: name, title, decision authority, communication style, history with GES, and the small human details that make a relationship a relationship.
 
-**Show History** — one page per show cycle. Scope, spend, what was built, what went wrong, how it was resolved, and what they said afterwards. Over three or four cycles this becomes the most valuable page set in the account.
+**Show History** — one page per show cycle. Scope, spend, what was built, what went wrong, how it was resolved, what they said afterwards. Over three or four cycles this becomes the most valuable page set in the account.
 
-**Meeting Notes** — dated pages for every call and visit.
-
-**Open Questions** — what we still need to learn or have asked for and not received.
-
-**Next Steps** — the current active list, refreshed from Copilot's task extraction.
+**Meeting Notes**, **Open Questions**, and **Next Steps** round it out — dated pages for every call and visit, what we still need to learn or have asked for and not received, and the current active list refreshed from Copilot's task extraction.
 
 The prompt that makes this notebook indispensable, typically used the week someone inherits an account:
 
@@ -394,7 +380,7 @@ Ninety seconds, and a new account manager walks into a client call informed rath
 
 Design work has a different shape. Ideas arrive out of order, half-formed, in the middle of other work, and their value often is not obvious until months later on a different project.
 
-A designer's ideation notebook is deliberately looser: a **Concepts** section with one page per idea, photos of sketches, reference images, material samples photographed on site; a **Client Briefs** section holding the objectives and constraints for each active project; a **Constraints and Learnings** section capturing what actually got built versus what was drawn, and why; and a **Material and Fabrication Notes** section for what performed well, what shipped badly, what reused cleanly under the Better Stands approach.
+A designer's ideation notebook is deliberately looser: a **Concepts** section with one page per idea, photos of sketches, reference images, material samples photographed on site; a **Client Briefs** section holding objectives and constraints for each active project; a **Constraints and Learnings** section capturing what actually got built versus what was drawn, and why; and a **Material and Fabrication Notes** section for what performed well, what shipped badly, what reused cleanly under the Better Stands approach.
 
 Copilot's value here is not summarizing. It is retrieval and pattern-finding across a year of scattered thinking:
 
@@ -417,25 +403,17 @@ That last question is a genuinely hard one to answer from memory, and a genuinel
 Teams, OneNote, and SharePoint form a triangular knowledge ecosystem — Teams generates the conversation, OneNote captures and organizes it, SharePoint stores and shares it. A show notebook that lives in SharePoint is available to the whole show team, in every time zone.
 :::
 
-Individual notebooks are useful. Shared notebooks — stored in SharePoint, tied to a Teams team — are what turn a distributed show team into a single knowledge organism.
+Individual notebooks are useful. Shared notebooks — stored in SharePoint, tied to a Teams team — are what turn a distributed show team into a single knowledge organism. In July 2025, according to Schneider IT's tracking of M365 enterprise deployments, Copilot Notebooks gained real-time collaboration: multiple contributors working simultaneously with structure and annotations preserved.
 
-A notebook associated with a Teams team or stored in SharePoint is available to every member. In July 2025, according to Schneider IT's tracking of M365 enterprise deployments, Copilot Notebooks gained real-time collaboration — multiple contributors working in a shared notebook simultaneously, with structure and annotations preserved.
-
-The highest-value shared notebooks at GES:
-
-**Show team notebooks.** The show notebook from Section 9, shared. The floor manager captures the daily log, the exhibitor services rep logs escalations, the logistics coordinator records freight variances, the account manager files the organizer call recaps. Everyone works one record instead of five.
-
-**Facility and regional notebooks.** Venue notebooks shared across the region that services them, so a Toronto team and a Las Vegas team working the same touring show inherit each other's findings.
-
-**Onboarding notebooks.** Role guides, process documentation, glossary, accumulated practice. A new exhibitor services rep can ask Copilot to summarize the key processes in a section or draft a 30-day learning plan — instead of consuming a colleague's show week with questions.
+Three shared notebooks earn their keep at GES. **Show team notebooks** — the show notebook from Section 9, shared, where the floor manager captures the daily log, the exhibitor services rep logs escalations, the logistics coordinator records freight variances, and the account manager files the organizer call recaps. Everyone works one record instead of five. **Facility and regional notebooks** — venue notebooks shared across the region that services them, so a Toronto team and a Las Vegas team working the same touring show inherit each other's findings. **Onboarding notebooks** — role guides, process documentation, glossary, accumulated practice, where a new exhibitor services rep can ask Copilot to summarize key processes or draft a 30-day learning plan instead of consuming a colleague's show week with questions.
 
 ### The Curation Imperative
 
 Schneider IT's documentation flags the risk directly: *"if a notebook omits crucial documents, Copilot can produce confident but incomplete answers — teams must curate notebooks."*
 
-This is not a flaw. It is a property of every knowledge system. Copilot can only synthesize what is in the notebook. A comprehensive, maintained notebook produces reliable outputs. An incomplete or stale one produces confident nonsense — which is worse than nothing, because it looks authoritative.
+That is not a flaw. It is a property of every knowledge system. A comprehensive, maintained notebook produces reliable outputs. An incomplete or stale one produces confident nonsense — worse than nothing, because it looks authoritative.
 
-The implication: someone must own each shared notebook. For a show notebook, that is the show operations manager. For a venue notebook, the regional operations lead. Ownership means ensuring key findings get captured, promoting show-specific learnings into the venue notebook where they generalize, and marking outdated information as historical rather than silently leaving it to mislead someone in 2028.
+So someone must own each shared notebook. For a show notebook, the show operations manager. For a venue notebook, the regional operations lead. Ownership means ensuring key findings get captured, promoting show-specific learnings into the venue notebook where they generalize, and marking outdated information as historical rather than leaving it to mislead someone in 2028.
 
 ---
 
@@ -454,19 +432,15 @@ The same principle has surfaced throughout: Copilot's output is bounded by the q
 
 **Numbers, not adjectives.** "Dock is tight" is unusable. "Dock 4 will not take a 53' trailer without a repositioning move; usable depth approx. 42'" is a note that saves a show. Weights, dimensions, times, booth numbers, hall letters — capture the number.
 
-**Name people.** "The venue guy said" loses its meaning in a week. "Marco Silva, venue ops lead" keeps it. Names also make notes searchable, which is how they get reused.
+**Name people.** "The venue guy said" loses meaning in a week. "Marco Silva, venue ops lead" keeps it — and makes the note searchable, which is how it gets reused.
 
-**State commitments explicitly.** When someone agrees to something, write it as a commitment: "Organizer to confirm revised freight targets for the pharma pavilion by Thursday COB." Implicit commitments buried in narrative are easy for Copilot — and for you — to miss.
+**State commitments explicitly.** Write them as commitments: "Organizer to confirm revised freight targets for the pharma pavilion by Thursday COB." Implicit commitments buried in narrative are easy for Copilot — and for you — to miss.
 
 **Timestamp show-week entries.** During move-in, sequence is everything. A log entry that records when something was observed is evidence. One that does not is an opinion.
 
-**Context at the top.** Date, show, venue, hall, who was present, why you were there. Copilot uses this to frame everything below it, and so will the colleague reading it next year.
+**Context at the top, headers in the middle.** Date, show, venue, hall, who was present, why you were there — Copilot uses this to frame everything below it, and so will the colleague reading it next year. Then break the body by topic: freight, labor, rigging, exhibitor issues. Clear breaks let you summarize one thread for one audience.
 
-**Photograph the physical.** Marked-up plans, damaged freight, blocked egress, a whiteboard, a dock schedule taped to a wall. A photo with a one-line typed caption is often the highest-value note you can take, and it takes eight seconds.
-
-**Separate topics with headers.** Freight, labor, rigging, exhibitor issues. Clear breaks help Copilot understand where one thread ends and another begins — and let you summarize a single section for a single audience.
-
-None of this requires meaningfully more time. It requires writing the number instead of the impression, the name instead of the role, and the commitment instead of the gist. That shift compounds: every well-captured walkthrough becomes a permanent, AI-ready asset.
+None of this takes meaningfully more time. It takes writing the number instead of the impression, the name instead of the role, and the commitment instead of the gist. That shift compounds: every well-captured walkthrough becomes a permanent, AI-ready asset.
 
 ---
 
@@ -498,11 +472,11 @@ Everything so far happens inside OneNote. But the most valuable thing about a sh
 
 Copilot Chat is a conversation: one prompt, one response, you steer each step. Cowork is an **assignment**. You describe an outcome; it plans and executes multi-step work across Microsoft 365 and returns finished artifacts — documents, decks, spreadsheets, emails, Teams posts.
 
-Two properties make it directly relevant here. First, Cowork can browse your Work IQ — SharePoint and OneDrive folders, files, emails, Teams content — and assemble across sources, which is exactly the boundary Copilot in OneNote alone cannot cross. Second, it **keeps working when your laptop is off**, running in a protected cloud environment. For someone who assigns a task at the end of a move-out day and reviews it on a phone the next morning at the airport, that is not a footnote. It is the entire point.
+Two properties matter here. First, Cowork browses your Work IQ — SharePoint and OneDrive folders, files, emails, Teams content — and assembles across sources, which is exactly the boundary Copilot in OneNote alone cannot cross. Second, it **keeps working when your laptop is off**, in a protected cloud environment. For someone who assigns a task at the end of a move-out day and reviews it on a phone the next morning at the airport, that is not a footnote. It is the entire point.
 
 ### A GES Example: Show Notebook to Finished Deliverables
 
-Move-out finishes on a Thursday. The show operations manager's show notebook holds four daily move-in logs, eleven exhibitor issue pages, three safety walk records, the pre-con recaps, and a move-out page written at midnight. She opens Cowork and assigns this:
+Move-out finishes on a Thursday. The show operations manager's notebook holds four daily move-in logs, eleven exhibitor issue pages, three safety walk records, the pre-con recaps, and a move-out page written at midnight. She opens Cowork and assigns this:
 
 > **Outcome:** A post-show lessons-learned document and a client-facing recap for the show organizer, both ready for my review by Monday morning.
 >
@@ -626,7 +600,7 @@ Then reply substantively to at least **two peers**. Not agreement — extension:
 
 OneNote has always been where knowledge goes to be organized. Copilot is what finally makes that organized knowledge work for you.
 
-The four confirmed capabilities are individually useful and collectively powerful. **Summarize**, with its source citations, turns a two-hour walkthrough into a verified debrief before you leave the building. **Create Task List** pulls commitments out of a dictated move-in log and turns them into a punch list with owners. **Rewrite** takes ninety seconds of talking into your phone in a noisy hall and produces documentation that belongs in the show file. **Draft New Content** turns your accumulated notes into the agenda, the briefing, the design direction, and the lessons-learned outline that comes next. Copilot Cowork extends the chain further, assembling a whole notebook into finished deliverables while you are asleep.
+**Summarize**, with its source citations, turns a two-hour walkthrough into a verified debrief before you leave the building. **Create Task List** pulls commitments out of a dictated move-in log and turns them into a punch list with owners. **Rewrite** takes ninety seconds of talking into your phone in a noisy hall and produces documentation that belongs in the show file. **Draft New Content** turns accumulated notes into the agenda, the briefing, the design direction, and the lessons-learned outline that comes next. Cowork extends the chain further, assembling a whole notebook into finished deliverables while you sleep.
 
 The notebook structures in this chapter — Venue, Show, Account, Ideation — are not arbitrary frameworks. They map to where GES actually loses knowledge: between show cycles, between regions, and between the person who learned something and the person who needed to know it.
 

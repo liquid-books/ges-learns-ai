@@ -64,7 +64,35 @@ Closing that gap is the entire purpose of this book.
 >
 > — **Alex Schwartz**, Founder & Chief Executive Officer, be hmn
 
-The curriculum, examples, and exercises in this book were developed by **Dr. Ernesto Lee**, Chief Data Officer and Co-founder of be hmn, working from GES operational context — show operations, exhibit design and graphics production, freight and material handling, exhibitor services, event technology, and the corporate functions behind all of it.
+## A Message from the Author
+
+:::{figure} ../images/ch00-author-message.png
+:label: fig-ch00-author
+:alt: Illustration of a practitioner-teacher bridging technical AI capability and working professionals, representing hands-on instruction grounded in real operational work
+:width: 80%
+:align: center
+
+This book is a practitioner's book. Every technique in it has been run against real work before it was written down.
+:::
+
+I want to tell you why this book exists, and why it is written the way it is.
+
+I have spent my career in two worlds that rarely talk to each other. In one, I work with data and AI systems — building them, breaking them, and figuring out where they actually hold up under load. In the other, I teach. Not to engineers, mostly. To people with real jobs and no patience for jargon, who need a thing to work on Monday morning and do not care what architecture it runs on.
+
+Those two worlds produce very different books about AI. The technical one produces books that are correct and useless. The teaching one produces books that are inspiring and empty. I have tried to write the third thing: a book that is honest about how these tools actually behave, and specific enough that you can use them before you finish the chapter.
+
+That is why the examples in this book are not generic. A generic AI book would tell you to "summarize a document." This one asks you to summarize an exhibitor service kit, because that is a document you actually have, with quirks a generic example would never surface. It would tell you to "analyze a spreadsheet." This one compares overtime *within* a union jurisdiction, because comparing across jurisdictions produces a number that looks fine and is wrong. The specificity is the point. Anything less would be a book about AI rather than a book about your work.
+
+I also want to be direct about the limits, because most AI writing is not. These tools are extraordinary and they are also confidently wrong on a regular basis. They will invent a figure that looks plausible. They will produce a clean, well-formatted answer built on a stale rate sheet. Throughout this book, wherever a technique has a failure mode, I have written the failure mode down next to it. You should not trust anyone who sells you the capability without the caveat.
+
+Here is what I actually want for you. Not that you finish this book impressed by AI — that is easy and worth very little. I want you to finish it with a handful of habits you keep. The habit of giving a tool enough context to be useful. The habit of checking the number before your name goes on it. The habit of noticing when a task you do every week is a task you should never do manually again.
+
+Do that, and the specific products in these pages can change — and they will — without any of your skill going out of date.
+
+Let's get to work.
+
+— **Dr. Ernesto Lee**
+Author; Chief Data Officer & Co-founder, be hmn
 
 ## Why GES? Why Now?
 

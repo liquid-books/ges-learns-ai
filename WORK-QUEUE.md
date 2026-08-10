@@ -23,7 +23,17 @@ Concurrency cap is 5 subagents. Launch queued items as slots free.
 - [ ] ch14 — HAS ZERO IMAGES AND ZERO FIGURE REFERENCES. 13,461 words, 16 sections,
       no figures at all. Needs ~12 figure directives INSERTED into the chapter, then
       12 images generated. This is an insertion job, not a regeneration job.
-- [ ] img-ch15 — new NanoBanana chapter images (after chapter written)
+- [ ] img-ch15 — new NanoBanana chapter images (after chapter written), 10 files
+- [ ] img-ch16 — new Power Automate chapter images (after chapter written), 12 files
+
+## VERIFY AGAINST LIVE SITE, NOT COMMITS
+Lesson 2026-08-10: pushing != rendering. Verify at the real URLs.
+- Chapter URL pattern is FLAT: https://geslearnsai.com/ch01-the-essentials
+  (NOT /chapters/ch01-...). A wrong guess returns the GitHub 404 page.
+- MyST rewrites images to hashed build paths: /build/<name>-<hash>.png
+  Source path ../images/foo.png is NOT served at /images/foo.png.
+- To count images on a live page:
+  curl -sSL https://geslearnsai.com/<chapter> | grep -oE 'src="/build/[^"]*"' | wc -l
 
 ## SCREENSHOT POLICY (decided 2026-08-10)
 Dr. Lee asked about capturing real screenshots. Constraint: we have NO licensed M365

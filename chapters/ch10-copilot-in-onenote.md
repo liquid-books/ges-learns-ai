@@ -38,7 +38,7 @@ That is not a note-taking problem. It is an institutional memory problem, and it
 
 This is what Copilot in OneNote is built to fix. Not the act of taking notes — OneNote always did that — but the gap between capturing something and being able to use it. From a page of move-in observations to a punch list with owners. From shorthand scrawled at a marshaling yard gate to documentation a colleague can act on. From four years of scattered venue notes to an answer in ten seconds.
 
-Microsoft's documentation confirms Copilot in OneNote is available with a Microsoft 365 Copilot (Work) license on OneNote for Windows, Mac, iPad, and the web, and with eligible M365 subscription plans on OneNote for Windows. That platform coverage matters more at GES than almost anywhere. **Most of the GES workforce is not at a desk.** They are on show floors, in warehouses, in marshaling yards, in venues across 75+ countries. A tool that only works on a laptop in an office is a tool most of this company cannot use. OneNote is not that tool.
+Microsoft's documentation confirms Copilot in OneNote runs on Windows, Mac, iPad, and the web with a Microsoft 365 Copilot (Work) license, and on Windows with eligible M365 subscription plans. That coverage matters more here than almost anywhere. **Most of the GES workforce is not at a desk.** They are on show floors, in warehouses, in marshaling yards, in venues across 75+ countries. A tool that only works on a laptop in an office is a tool most of this company cannot use. OneNote is not that tool.
 
 :::{admonition} T.R.U.E. Check — Responsibility
 :class: note
@@ -54,9 +54,9 @@ A commitment you make on a show floor and do not write down is not a commitment.
 
 There is a tempting misconception: if AI can summarize and recap automatically, why bother taking careful notes at all?
 
-This gets the relationship exactly backwards. **The quality of Copilot's output is directly proportional to the quality of the notes it works with.** AI amplifies what you give it. Hand the best production coordinator at GES a napkin with three illegible bullets and their output is limited by what you gave them. Hand them a site survey with dock dimensions, named venue contacts, and specific labor constraints, and you get something useful. Copilot organizes, synthesizes, and extends. It does not manufacture facts you never captured.
+This gets the relationship backwards. **The quality of Copilot's output is directly proportional to the quality of the notes it works with.** Hand the best production coordinator at GES a napkin with three illegible bullets and their output is limited by what you gave them. Hand them a site survey with dock dimensions, named venue contacts, and specific labor constraints, and you get something useful. Copilot organizes, synthesizes, and extends. It does not manufacture facts you never captured.
 
-So the discipline matters more now, not less. A floor manager who captures structured move-in notes has an asset Copilot can turn into punch lists, exhibitor escalation summaries, and a lessons-learned document that outlives the show. An account manager whose client notebook holds four show cycles of history can be brought current on a relationship in ninety seconds.
+So the discipline matters more now, not less. A floor manager who captures structured move-in notes has an asset Copilot turns into punch lists, escalation summaries, and a lessons-learned document that outlives the show. An account manager whose client notebook holds four show cycles of history can be brought current on a relationship in ninety seconds.
 
 OneNote was always the right tool for structured capture. Copilot does not change what OneNote is for. It multiplies the return on the time you already spend using it.
 
@@ -73,19 +73,13 @@ OneNote was always the right tool for structured capture. Copilot does not chang
 OneNote occupies the knowledge capture layer of the Microsoft 365 stack — between the communication tools above it and the storage infrastructure below. That placement makes it the connective tissue of the M365 knowledge ecosystem, and the place where what happens in a venue turns into something the company can keep.
 :::
 
-Microsoft 365 is a knowledge ecosystem, not a bag of apps. Each layer does a distinct job.
-
-**Teams and Outlook** are the communication layer — where calls happen and information moves in real time. Ephemeral by design. A Teams chat scrolls away. A pre-con call ends and the conversation dissipates.
-
-**SharePoint and OneDrive** are the storage layer — where finished documents live: show operations manuals, exhibitor service kits, floor plans, contracts. Excellent at storage and retrieval, poor at the messy, iterative work of capturing knowledge while it is still forming.
+Microsoft 365 is a knowledge ecosystem, not a bag of apps. **Teams and Outlook** are the communication layer — ephemeral by design. A Teams chat scrolls away; a pre-con call ends and the conversation dissipates. **SharePoint and OneDrive** are the storage layer, where finished documents live: show operations manuals, exhibitor service kits, floor plans, contracts. Excellent at retrieval, poor at the messy, iterative work of capturing knowledge while it is still forming.
 
 **OneNote** is the knowledge capture layer in between — where the ephemeral gets distilled into something structured and persistent, and where the raw material for formal documentation gets organized before it is ready for final form. It is a notebook, not a document. Flexible, hierarchical, permanent.
 
 In practice, most GES teams use Teams and SharePoint constantly and OneNote barely. The reasons are familiar: "I keep notes in email," "I have my own system," "I never set it up," "I'm never at a computer anyway."
 
-Those are exactly the answers you would expect from people who have never had an AI assistant living inside their notebook. A notebook that syncs across devices was never quite compelling enough to displace an existing habit. A notebook that also reads everything you have written, summarizes it on demand, extracts your commitments, and makes four years of venue history searchable is a categorically different proposition.
-
-The setup cost is one afternoon. The payoff compounds every show cycle.
+Those are the answers you would expect from people who have never had an AI assistant living inside their notebook. A notebook that syncs across devices was never quite compelling enough to displace an existing habit. A notebook that also reads everything you have written, summarizes it on demand, extracts your commitments, and makes four years of venue history searchable is a categorically different proposition. The setup cost is one afternoon. The payoff compounds every show cycle.
 
 ---
 
@@ -102,11 +96,11 @@ Microsoft's documentation confirms three access points, each suited to a differe
 The Copilot pane opens on the right side of OneNote from the Home tab. From here you can enter prompts, get summaries and task lists, chat about your notes, and copy the output straight into another page, an email, or a Teams message.
 :::
 
-**The Ribbon Button (Home Tab).** The primary access point. Click Copilot on the Home tab and the pane opens on the right while your page stays visible. This is the full interface — for longer summaries, multi-step requests, and iterative conversation.
+**The Ribbon Button (Home Tab).** The primary access point. Click Copilot and the pane opens on the right while your page stays visible — the full interface, for longer summaries, multi-step requests, and iterative conversation.
 
-**The On-Canvas OneNote Icon.** An on-canvas icon triggers specific functions — summaries, rewrites, task lists, notes, new content ideas — from the page context without opening the full pane. As of December 2025, according to SuperSimple365's tracking of M365 feature rollouts, "Summarise Page," "Create a Task List," and "Rewrite Page" now open directly in the Copilot Chat pane.
+**The On-Canvas OneNote Icon.** Triggers specific functions — summaries, rewrites, task lists, new content ideas — from the page context without opening the full pane. As of December 2025, according to SuperSimple365's tracking of M365 feature rollouts, "Summarise Page," "Create a Task List," and "Rewrite Page" now open directly in the Copilot Chat pane.
 
-**Right-Click Context Menu.** Right-clicking on a page surfaces quick Copilot actions — the fastest route to common operations.
+**Right-Click Context Menu.** The fastest route to common operations.
 
 One constraint from Microsoft's documentation: Copilot in OneNote is **not available if Windows Information Protection (WIP) is enabled** on your device. On a managed device with WIP active, check with IT.
 
@@ -122,7 +116,7 @@ Notes at this company are not taken at desks. They are taken standing up, in a n
 
 **Talk your notes.** Walking from the marshaling yard back to the show office is four minutes of dead time that can become the day's log. Dictate roughly, capture everything, clean it up later with the rewrite function in Section 5. For anyone whose job happens on their feet, this is the highest-leverage habit in the chapter.
 
-The through-line: **capture fast and messy in the field, structure it later with Copilot.** Before AI, messy capture stayed messy, so people either wrote nothing or wasted time trying to write neatly in bad conditions. That trade-off is gone.
+The through-line: **capture fast and messy in the field, structure it later with Copilot.** Before AI, messy capture stayed messy, so people either wrote nothing or wasted time writing neatly in bad conditions. That trade-off is gone.
 
 :::{tip}
 **The four-minute rule.** Any walk longer than four minutes — hall to office, dock to yard, hotel to venue — is a capture window. Open the page, hit dictate, and empty your head. It will be rough. Copilot cleans up rough. It cannot recover forgotten.
@@ -186,7 +180,7 @@ A floor manager finishes day two of move-in. His notes are ninety seconds of dic
 
 He prompts: *"Rewrite this page as a formal move-in day two log. Sections: Set Progress by Hall, Freight and Target Variances, Exhibitor Issues, Contractor and EAC Items, Safety Observations. Keep all booth numbers, times, and names exactly as I said them. Flag anything that needs a decision tomorrow."*
 
-Two minutes of walking becomes the day's official log — read by the account manager who is off-site, and source material for the post-show report six weeks later, instead of evaporating the way day-two notes usually do.
+Two minutes of walking becomes the day's official log — read by the off-site account manager, and source material for the post-show report six weeks later.
 
 :::{admonition} T.R.U.E. Check — Excellence
 :class: note
@@ -225,19 +219,19 @@ That second split — what we own versus what we are waiting on — is the most 
 
 ### GES Application: The Pre-Con Meeting
 
-An account manager finishes a pre-con with the show organizer, the venue, and the GES operations team: ninety minutes covering the move-in sequence, revised freight targets for two exhibitor categories, a change to the aisle carpet spec, a late sponsorship signage package, union call times, and an organizer request to change the registration area layout. Commitments landed on all sides, captured in conversational flow — the order that is least useful afterwards.
+An account manager finishes a pre-con with the show organizer, the venue, and the GES operations team: ninety minutes covering the move-in sequence, revised freight targets for two exhibitor categories, a change to the aisle carpet spec, a late sponsorship signage package, union call times, and an organizer request to change the registration area layout. Commitments landed on all sides, captured in conversational flow — the order least useful afterwards.
 
 She prompts: *"Create a task list from this page. Organize as: (1) GES actions with owner and due date, (2) Items we are waiting on from the show organizer, (3) Items we are waiting on from the venue. Note anything with a date inside the next five business days."*
 
-The output goes into the show notebook's Open Items section and into the Teams channel. When she runs the follow-up call ten days later, sections two and three are the agenda — already written.
+The output goes into the show notebook's Open Items section and the Teams channel. When she runs the follow-up call ten days later, sections two and three are the agenda — already written.
 
 ---
 
 ## 7. Capability 4 — Drafting New Content from Your Notes
 
-The fourth capability goes past transforming what exists: Copilot can **draft new content** grounded in your notebook. Microsoft's documentation confirms this includes event plans, presentation outlines, meeting agendas, meeting drafts with discussion points and objectives, brainstormed ideas, and new pages and sections.
+The fourth capability goes past transforming what exists: Copilot can **draft new content** grounded in your notebook. Microsoft's documentation confirms this includes event plans, presentation outlines, meeting agendas and drafts with discussion points and objectives, brainstormed ideas, and new pages and sections.
 
-This is where OneNote stops being a capture tool and becomes a generation platform. You have a section of notes from three site visits and two organizer calls; ask Copilot to draft the agenda for next week's pre-con, and it reflects the actual open items rather than a generic template. You have a Spiro ideation section full of half-formed concepts; ask Copilot to brainstorm directions that connect the client's brand objectives to the constraints you captured on the venue walkthrough. You have four shows' worth of lessons-learned notes; ask Copilot to draft an outline for a team session on what keeps going wrong at move-out.
+This is where OneNote stops being a capture tool and becomes a generation platform. Ask Copilot to draft the agenda for next week's pre-con from a section of site visit and organizer call notes, and it reflects the actual open items rather than a generic template. Ask it to brainstorm directions that connect a client's brand objectives to the constraints you captured on the venue walkthrough. Ask it to outline a team session on what keeps going wrong at move-out, from four shows' worth of lessons-learned notes.
 
 ### Using Chat for Analytical Requests
 
@@ -297,7 +291,7 @@ Once three or four show cycles are in there, the notebook becomes something no i
 - *"Create a task list of everything in this notebook that should be verified on the next site survey because it may have changed."*
 - *"Based on the Labor and Jurisdiction section, draft a briefing note for the crew leads covering the three things that most commonly get misunderstood here."*
 
-That third prompt is quietly the most valuable one in this chapter. Institutional knowledge decays — venues renovate, contracts change, locals renegotiate. A notebook that surfaces its own staleness stays trustworthy.
+That third prompt is quietly the most valuable in the chapter. Institutional knowledge decays — venues renovate, contracts change, locals renegotiate. A notebook that surfaces its own staleness stays trustworthy.
 
 :::{admonition} T.R.U.E. Check — Trust
 :class: note
@@ -320,9 +314,9 @@ A venue notebook is written for the colleague who comes after you and will never
 A Show Notebook carries one show cycle from kickoff through post-show reconciliation — planning calls, site surveys, daily logs, exhibitor issues, safety observations, and the lessons that feed next year's edition.
 :::
 
-Where the venue notebook is permanent, the show notebook is a cycle. It opens at kickoff and closes with the post-show report — and then becomes a reference for next year's edition of the same show.
+Where the venue notebook is permanent, the show notebook is a cycle. It opens at kickoff, closes with the post-show report, and then becomes the reference for next year's edition.
 
-**Show Overview** — dates, venue, organizer, scope of GES services, key contacts across GES, the organizer and the venue, plus headline numbers: square footage, exhibitor count, hall assignments.
+**Show Overview** — dates, venue, organizer, scope of GES services, key contacts, and headline numbers: square footage, exhibitor count, hall assignments.
 
 **Pre-Con and Planning Calls** — one page per call, dated. Where the Copilot meeting recaps from Chapter 9 get filed so they live somewhere durable instead of scrolling out of a Teams channel.
 
@@ -360,13 +354,13 @@ An Account Notebook holds the full arc of a client relationship across show cycl
 
 ### The Account Notebook
 
-For account managers, this is the relationship's memory. Same principle as the venue notebook, applied to people and programs instead of buildings.
+For account managers, this is the relationship's memory — the venue notebook principle applied to people and programs instead of buildings.
 
-**Client Profile** — who they are, what they exhibit, their objectives, budget posture, how they measure success, their sustainability commitments, and which parts of the GES Collective they use: GES Exhibitions, Spiro, onPeak, SHOWTECH, Visit by GES.
+**Client Profile** — who they are, what they exhibit, objectives, budget posture, how they measure success, sustainability commitments, and which parts of the GES Collective they use: GES Exhibitions, Spiro, onPeak, SHOWTECH, Visit by GES.
 
 **Key Contacts** — one page per contact: name, title, decision authority, communication style, history with GES, and the small human details that make a relationship a relationship.
 
-**Show History** — one page per show cycle. Scope, spend, what was built, what went wrong, how it was resolved, what they said afterwards. Over three or four cycles this becomes the most valuable page set in the account.
+**Show History** — one page per show cycle: scope, spend, what was built, what went wrong, how it was resolved, what they said afterwards. Over three or four cycles this becomes the most valuable page set in the account.
 
 **Meeting Notes**, **Open Questions**, and **Next Steps** round it out — dated pages for every call and visit, what we still need to learn or have asked for and not received, and the current active list refreshed from Copilot's task extraction.
 
@@ -378,9 +372,9 @@ Ninety seconds, and a new account manager walks into a client call informed rath
 
 ### The Spiro Design Ideation Notebook
 
-Design work has a different shape. Ideas arrive out of order, half-formed, in the middle of other work, and their value often is not obvious until months later on a different project.
+Design work has a different shape. Ideas arrive out of order, half-formed, and their value often is not obvious until months later on a different project.
 
-A designer's ideation notebook is deliberately looser: a **Concepts** section with one page per idea, photos of sketches, reference images, material samples photographed on site; a **Client Briefs** section holding objectives and constraints for each active project; a **Constraints and Learnings** section capturing what actually got built versus what was drawn, and why; and a **Material and Fabrication Notes** section for what performed well, what shipped badly, what reused cleanly under the Better Stands approach.
+A designer's ideation notebook is deliberately looser: **Concepts** (one page per idea, sketch photos, reference images, material samples shot on site), **Client Briefs** (objectives and constraints per project), **Constraints and Learnings** (what got built versus what was drawn, and why), and **Material and Fabrication Notes** (what performed, what shipped badly, what reused cleanly under Better Stands).
 
 Copilot's value here is not summarizing. It is retrieval and pattern-finding across a year of scattered thinking:
 
@@ -388,7 +382,7 @@ Copilot's value here is not summarizing. It is retrieval and pattern-finding acr
 - *"Based on this client's brief and the constraints in the venue notebook for their next show, brainstorm five stand concepts that respect the ceiling height and rigging limits."*
 - *"From the Constraints and Learnings section, what has repeatedly caused a design to change between concept approval and fabrication?"*
 
-That last question is a genuinely hard one to answer from memory, and a genuinely valuable one to answer with evidence.
+That last question is hard to answer from memory and valuable to answer with evidence.
 
 ---
 
@@ -403,7 +397,7 @@ That last question is a genuinely hard one to answer from memory, and a genuinel
 Teams, OneNote, and SharePoint form a triangular knowledge ecosystem — Teams generates the conversation, OneNote captures and organizes it, SharePoint stores and shares it. A show notebook that lives in SharePoint is available to the whole show team, in every time zone.
 :::
 
-Individual notebooks are useful. Shared notebooks — stored in SharePoint, tied to a Teams team — are what turn a distributed show team into a single knowledge organism. In July 2025, according to Schneider IT's tracking of M365 enterprise deployments, Copilot Notebooks gained real-time collaboration: multiple contributors working simultaneously with structure and annotations preserved.
+Individual notebooks are useful. Shared notebooks — stored in SharePoint, tied to a Teams team — turn a distributed show team into a single knowledge organism. In July 2025, according to Schneider IT's tracking of M365 enterprise deployments, Copilot Notebooks gained real-time collaboration: multiple contributors working simultaneously with structure and annotations preserved.
 
 Three shared notebooks earn their keep at GES. **Show team notebooks** — the show notebook from Section 9, shared, where the floor manager captures the daily log, the exhibitor services rep logs escalations, the logistics coordinator records freight variances, and the account manager files the organizer call recaps. Everyone works one record instead of five. **Facility and regional notebooks** — venue notebooks shared across the region that services them, so a Toronto team and a Las Vegas team working the same touring show inherit each other's findings. **Onboarding notebooks** — role guides, process documentation, glossary, accumulated practice, where a new exhibitor services rep can ask Copilot to summarize key processes or draft a 30-day learning plan instead of consuming a colleague's show week with questions.
 
@@ -411,9 +405,9 @@ Three shared notebooks earn their keep at GES. **Show team notebooks** — the s
 
 Schneider IT's documentation flags the risk directly: *"if a notebook omits crucial documents, Copilot can produce confident but incomplete answers — teams must curate notebooks."*
 
-That is not a flaw. It is a property of every knowledge system. A comprehensive, maintained notebook produces reliable outputs. An incomplete or stale one produces confident nonsense — worse than nothing, because it looks authoritative.
+That is a property of every knowledge system, not a flaw. A maintained notebook produces reliable outputs. A stale one produces confident nonsense — worse than nothing, because it looks authoritative.
 
-So someone must own each shared notebook. For a show notebook, the show operations manager. For a venue notebook, the regional operations lead. Ownership means ensuring key findings get captured, promoting show-specific learnings into the venue notebook where they generalize, and marking outdated information as historical rather than leaving it to mislead someone in 2028.
+So someone must own each shared notebook: the show operations manager for a show notebook, the regional operations lead for a venue notebook. Ownership means ensuring key findings get captured, promoting show-specific learnings into the venue notebook where they generalize, and marking outdated information as historical rather than leaving it to mislead someone in 2028.
 
 ---
 
@@ -452,17 +446,17 @@ None of this takes meaningfully more time. It takes writing the number instead o
 These are confirmed constraints based on Microsoft's documentation and known platform behavior as of early 2026, and are subject to change.
 :::
 
-**It cannot access information outside the notebook context.** Unlike Copilot in Teams or Outlook, Copilot in OneNote works within the open page and notebook. It will not independently pull a floor plan from SharePoint, check the show schedule in your calendar, or read an organizer's email thread unless that content is in your notebook.
+**It cannot access information outside the notebook context.** Unlike Copilot in Teams or Outlook, it works within the open page and notebook. It will not pull a floor plan from SharePoint, check your calendar, or read an organizer's email thread unless that content is in your notebook.
 
-**It cannot be explicitly directed to specific sections or notebooks by name** (as of December 2025). Per SuperSimple365's tracking of Microsoft's December 2025 UI update, users can no longer refer to "this section" or "this notebook" in prompts the way they previously could. Copilot works in the active page context by default — so organize so that what Copilot needs is on the page you are working from.
+**It cannot be explicitly directed to specific sections or notebooks by name** (as of December 2025). Per SuperSimple365's tracking of Microsoft's December 2025 UI update, users can no longer refer to "this section" or "this notebook" in prompts the way they previously could. Copilot works in the active page context — so organize so that what it needs is on the page you are working from.
 
 **It cannot guarantee accuracy.** Copilot synthesizes; it does not verify. If your notes say the freight elevator holds 8,000 lbs and it holds 6,000, Copilot will faithfully repeat the error into a document that looks official. Source citations exist to help you check. The checking is yours.
 
 **It is not available if Windows Information Protection (WIP) is enabled.** A Microsoft-confirmed constraint on some managed devices. Contact IT.
 
-**It does not replace judgment about what to capture.** Copilot works with what you wrote. It cannot tell you that you should have photographed the rig points, or that the offhand comment from the venue's labor lead was the most important thing said all morning. That judgment is the professional skill. Copilot is downstream of it.
+**It does not replace judgment about what to capture.** It cannot tell you that you should have photographed the rig points, or that the offhand comment from the venue's labor lead was the most important thing said all morning. That judgment is the professional skill; Copilot is downstream of it.
 
-**Local-only notebooks are not fully supported.** Notebooks saved only locally, not synced to OneDrive or SharePoint, may have limited or no Copilot functionality — and, more importantly for a mobile workforce, will not be on your phone when you need them.
+**Local-only notebooks are not fully supported.** Notebooks not synced to OneDrive or SharePoint may have limited or no Copilot functionality — and, for a mobile workforce, will not be on your phone when you need them.
 
 ---
 
@@ -472,7 +466,7 @@ Everything so far happens inside OneNote. But the most valuable thing about a sh
 
 Copilot Chat is a conversation: one prompt, one response, you steer each step. Cowork is an **assignment**. You describe an outcome; it plans and executes multi-step work across Microsoft 365 and returns finished artifacts — documents, decks, spreadsheets, emails, Teams posts.
 
-Two properties matter here. First, Cowork browses your Work IQ — SharePoint and OneDrive folders, files, emails, Teams content — and assembles across sources, which is exactly the boundary Copilot in OneNote alone cannot cross. Second, it **keeps working when your laptop is off**, in a protected cloud environment. For someone who assigns a task at the end of a move-out day and reviews it on a phone the next morning at the airport, that is not a footnote. It is the entire point.
+Two properties matter here. First, Cowork browses your Work IQ — SharePoint and OneDrive folders, files, emails, Teams content — assembling across sources, which is exactly the boundary Copilot in OneNote alone cannot cross. Second, it **keeps working when your laptop is off**, in a protected cloud environment. For someone who assigns a task at the end of a move-out day and reviews it on a phone the next morning at the airport, that is the entire point.
 
 ### A GES Example: Show Notebook to Finished Deliverables
 
@@ -488,9 +482,7 @@ Move-out finishes on a Thursday. The show operations manager's notebook holds fo
 >
 > **Approval scope:** Show me the email before it is sent. Do not send anything externally under any circumstances.
 
-Cowork works through it — reading the notebook, pulling the workbook, cross-referencing the venue notebook for recurring issues — and pauses for approval before the email. She reviews on Monday, corrects two attributions, approves, and the lessons-learned document goes into the venue notebook's Lessons Learned section where next year's team will find it.
-
-That last step is the whole chapter in one motion: field capture on a phone, structured by Copilot, assembled by Cowork, filed where institutional memory lives.
+Cowork works through it — reading the notebook, pulling the workbook, cross-referencing the venue notebook for recurring issues — and pauses for approval before the email. She reviews on Monday, corrects two attributions, approves, and the lessons-learned document goes into the venue notebook's Lessons Learned section where next year's team will find it. That last step is the whole chapter in one motion: field capture on a phone, structured by Copilot, assembled by Cowork, filed where institutional memory lives.
 
 Note the shape of the request. It follows Cowork's five-part pattern: **Outcome, Inputs, Definition of done, Constraints, Approval scope.** Vague assignments produce vague artifacts. This is the core skill, and Chapter 14 covers it in full.
 
@@ -511,17 +503,13 @@ Cowork asks permission before sensitive actions, and every task runs with your p
 
 **Step 2: Empty your head into it.** Take twenty minutes and write down everything you personally know about this building that is not written down anywhere official. Dock quirks, elevator limits, jurisdiction realities, the contact who actually answers, the corridor that floods. Do not polish it. Use the discipline principles from Section 12: numbers, names, explicit statements.
 
-**Step 3: Summarize it.** Open the Copilot pane (Home → Copilot). Prompt: *"Summarize this page into a briefing for a show operations manager who has never worked this venue. Organize by: Access and Freight, Labor, Utilities and Rigging, and Things That Commonly Surprise People."*
+**Step 3: Summarize it.** Open the Copilot pane (Home → Copilot). Prompt: *"Summarize this page into a briefing for a show operations manager who has never worked this venue. Organize by: Access and Freight, Labor, Utilities and Rigging, and Things That Commonly Surprise People."* Review the output and check the citations. Where the summary is thin, your notes were thin.
 
-Review the output and check the citations. Where the summary is thin, your notes were thin.
-
-**Step 4: Generate a verification list.** Prompt: *"Create a task list of everything in these notes that should be verified on the next site survey because it may have changed or because I am not certain of it."*
-
-This becomes your survey checklist — and it is honest about what you actually know versus what you assume.
+**Step 4: Generate a verification list.** Prompt: *"Create a task list of everything in these notes that should be verified on the next site survey because it may have changed or because I am not certain of it."* This becomes your survey checklist — honest about what you know versus what you assume.
 
 **Step 5: Share it.** Move the notebook into your team's SharePoint site or Teams team. Tell one colleague it exists and ask them to add one thing they know that you did not.
 
-**Reflection:** Notice how much of what you wrote in Step 2 existed nowhere else. That is the size of the risk this company carries every time someone changes roles. Now notice how long Step 2 actually took. That asymmetry — between the value of the knowledge and the cost of capturing it — is the argument for this entire chapter.
+**Reflection:** Notice how much of what you wrote in Step 2 existed nowhere else. That is the size of the risk this company carries every time someone changes roles. Then notice how long Step 2 actually took. That asymmetry — between the value of the knowledge and the cost of capturing it — is the argument for this entire chapter.
 :::
 
 ---
@@ -607,13 +595,13 @@ The notebook structures in this chapter — Venue, Show, Account, Ideation — a
 ::::{important}
 **Leader's Takeaway**
 
-GES has been running events since 1939. Since December 31, 2024, it has been doing that independently for the first time in 55 years — with the freedom, and the obligation, to build its own operating model. One of the most valuable assets in that model costs almost nothing to build: a written, searchable record of what this company knows about the buildings it works in, the shows it runs, and the clients it serves.
+GES has been running events since 1939, and since December 31, 2024, it has done so independently for the first time in 55 years — with the freedom, and the obligation, to build its own operating model. One of the most valuable assets in that model costs almost nothing to build: a written, searchable record of what this company knows about the buildings it works in, the shows it runs, and the clients it serves.
 
 Right now that knowledge is mostly in people's heads. It is real, it is expensive, and it leaves when they do. Across 4,000+ events a year, 24 facilities, 150,000+ exhibitors, and 75+ countries, that leakage is continuous and almost entirely invisible until move-in morning.
 
 The people on your team who build good capture habits are not merely more organized than their peers. They are converting personal expertise into company capability. Your job as a leader is to make that conversion normal: give shared notebooks an owner, ask for the site survey to land in the venue notebook rather than an inbox, treat the lessons-learned page as a deliverable rather than a courtesy, and read what your team writes so they know it is read.
 
-Do that consistently for four show cycles and the next operations manager to walk into a building GES has worked for twenty years will walk in knowing what we know. That is the whole point.
+Do that for four show cycles and the next operations manager to walk into a building GES has worked for twenty years will walk in knowing what we know. That is the whole point.
 ::::
 
 :::{seealso}

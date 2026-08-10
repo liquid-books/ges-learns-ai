@@ -84,7 +84,7 @@ The basic user answers a question with Copilot. The advanced user uses Copilot t
 
 The most powerful thing you can do with Copilot in Excel is not ask it a question. It is use Copilot to design a **template** — a structured workbook that produces the same rigorous output every time, regardless of who runs it or which show it is pointed at.
 
-Consider the monthly freight and labor review. Every show operations director needs to know how shows performed against freight targets, how actual I&D hours landed against forecast, where overtime concentrated by jurisdiction, and which shows closed below their pre-show margin estimate. Historically that required either a dedicated analyst or an ops director who knew Excel well enough to build formula chains under deadline — during move-in, which is when the question always arrives.
+Consider the monthly freight and labor review. Every show operations director needs to know how shows performed against freight targets, how actual I&D hours landed against forecast, where overtime concentrated by jurisdiction, and which shows closed below their pre-show margin estimate. Historically that required a dedicated analyst, or an ops director building formula chains under deadline during move-in — which is when the question always arrives.
 
 :::{figure} ../images/ch13-workflow-template-design.png
 :label: fig-ch13-workflow-template
@@ -97,7 +97,7 @@ A well-designed template separates concerns across five layers. Copilot accelera
 
 ### Designing the Template Architecture
 
-**Step 1 — Define the input zone.** One clean sheet where the raw export lands, from the reconciliation system, the warehouse receiving system, or the ordering platform. Nothing else lives there. Headers must be identical across every export — the header discipline Chapter 7 argued for: `Inbound Weight (lbs)`, not `Wt`; `I&D Straight Time Hours`, not `Hrs`.
+**Step 1 — Define the input zone.** One clean sheet where the raw export lands. Nothing else lives there. Headers must be identical across every export — the discipline Chapter 7 argued for: `Inbound Weight (lbs)`, not `Wt`; `I&D Straight Time Hours`, not `Hrs`.
 
 **Step 2 — Use Copilot to build the validation layer.** Ask:
 
@@ -155,41 +155,37 @@ Vague questions produce vague flags. The useful pattern defines the **comparison
 
 **Drayage and material handling billing anomalies:**
 
-> *"Compare material handling charge per hundredweight for every shipment in this file against the median for the same venue and the same shipment type. Flag any line more than two standard deviations above or below that median. Show flagged lines sorted by dollar impact, stating the value, the venue median, and the variance."*
+> *"Compare material handling charge per hundredweight for every shipment against the median for the same venue and the same shipment type. Flag any line more than two standard deviations above or below that median. Show flagged lines sorted by dollar impact, stating the value, the venue median, and the variance."*
 
-Notice the baseline: same venue, same shipment type. A direct-to-show-floor shipment at one venue and an advance warehouse shipment at another are not comparable, and treating them as comparable will flag thirty normal lines and bury the one real error.
+The baseline is the design decision: same venue, same shipment type. A direct-to-show-floor shipment at one venue and an advance warehouse shipment at another are not comparable, and treating them as comparable will flag thirty normal lines and bury the one real error.
 
 **Freight target variance outliers by venue:**
 
-> *"For every show, calculate freight actual versus target as a percentage. Group by venue and show which venues have a consistent overage pattern — more than half their shows over target — versus which have isolated outliers. Present a summary by venue and flag the shows driving each pattern."*
+> *"For every show, calculate freight actual versus target as a percentage. Group by venue and show which venues have a consistent overage pattern — more than half their shows over target — versus which have isolated outliers. Flag the shows driving each pattern."*
 
 That is a different question from "which shows blew their freight target." A venue with a *systematic* pattern means the targets are wrong. A venue with one bad show means the show was unusual. Different findings, different owners, different actions — and only the grouped question distinguishes them.
 
 **Labor overtime spikes by jurisdiction and crew:**
 
-> *"Calculate overtime as a percentage of total I&D hours for each crew call. Compare each call to the median overtime share for the same union jurisdiction and the same phase — move-in or move-out. Flag any call in the top decile for its jurisdiction and phase, showing jurisdiction, show code, phase, forecast hours, actual hours, and overtime share."*
+> *"Calculate overtime as a percentage of total I&D hours for each crew call. Compare each call to the median for the same union jurisdiction and the same phase — move-in or move-out. Flag any call in the top decile for its jurisdiction and phase."*
 
-Comparing within jurisdiction is essential. A jurisdiction whose straight-time window closes at 3:30pm produces a structurally higher overtime share than one running to 5:00pm. A portfolio-wide comparison would rank jurisdictions by their contracts rather than rank crews by their performance.
+Comparing within jurisdiction is essential. A jurisdiction whose straight-time window closes at 3:30pm produces a structurally higher overtime share than one running to 5:00pm. A portfolio-wide comparison ranks jurisdictions by their contracts rather than crews by their performance.
 
 **Margin erosion show-over-show:**
 
-> *"For every recurring show appearing three or more times, calculate reconciled gross margin percentage per edition and identify any show where margin declined in each successive edition. For each, show margin by edition and break out the change in revenue per net square foot, material handling revenue, and labor cost per net square foot so I can see which line is moving."*
+> *"For every recurring show appearing three or more times, calculate reconciled gross margin percentage per edition and identify any show where margin declined in each successive edition. For each, break out the change in revenue per net square foot, material handling revenue, and labor cost per net square foot so I can see which line is moving."*
 
 Margin erosion is the highest-value anomaly here and the hardest to see manually, because it is slow. Two points a year for three years is a six-point problem that never once triggered an alarm on a single reconciliation.
 
 **Exhibitor attach rate anomalies:**
 
-> *"Calculate service attach rate — exhibitors ordering at least one service divided by total exhibitors — for every show. Flag any recurring show where attach rate dropped more than 5 percentage points versus its own prior edition, and any show where attach rate is above 70 percent but service revenue per exhibitor is below the portfolio median."*
+> *"Calculate service attach rate for every show. Flag any recurring show where attach rate dropped more than 5 percentage points versus its own prior edition, and any show where attach rate is above 70 percent but service revenue per exhibitor is below the portfolio median."*
 
-That second condition finds shows where exhibitors *are* buying but buying small. That is a pricing and packaging question, not an outreach question, and no single-metric ranking surfaces it.
+That second condition finds shows where exhibitors *are* buying but buying small — a pricing and packaging question, not an outreach question, and one no single-metric ranking surfaces.
 
 ### Validating What Copilot Flags
 
-Every flag clears two gates before it is treated as significant.
-
-**Data validation.** Is the pattern real or an artifact? Tie the flagged line to source — the invoice, the freight manifest, the crew call sheet, the receiving record. Export format drift, a rebill posted to the wrong show code, or a pounds/kilograms mismatch will manufacture convincing false positives all day.
-
-**Operational validation.** If the data is right, is the pattern explainable? A material handling spike at a heavy-equipment show where 12,000-pound crates are routine is normal. An overtime spike on a show where the prior tenant ran long is explainable and was probably escalated at the time. Checking context before escalating protects the credibility you will need on the day a flag turns out to be real.
+Every flag clears two gates. **Data validation:** tie the flagged line to source — the invoice, the freight manifest, the crew call sheet, the receiving record. Export drift, a rebill posted to the wrong show code, or a pounds/kilograms mismatch will manufacture convincing false positives all day. **Operational validation:** if the data is right, is the pattern explainable? A material handling spike at a heavy-equipment show where 12,000-pound crates are routine is normal. An overtime spike where the prior tenant ran long was probably escalated at the time. Checking context before escalating protects the credibility you will need on the day a flag turns out to be real.
 
 ::::{admonition} 🔑 The Anomaly Investigation Protocol
 :class: tip
@@ -218,9 +214,7 @@ When a system flags a name — a crew, a venue lead, a show team — go find the
 
 ## 4. Scenario Modeling and Sensitivity Analysis
 
-If one advanced Excel capability has historically required either specialized software or a very senior analyst, it is scenario modeling. *"What happens to margin if this show moves from Las Vegas to Chicago"* sounds simple. Building the model that answers it — defensible assumptions, consistent logic, clear output — is laborious.
-
-Copilot substantially reduces construction time without reducing rigor, provided you bring the right assumptions.
+If one advanced Excel capability has historically required specialized software or a very senior analyst, it is scenario modeling. *"What happens to margin if this show moves from Las Vegas to Chicago"* sounds simple. Building the model that answers it — defensible assumptions, consistent logic, clear output — is laborious. Copilot cuts the construction time without cutting the rigor, provided you bring the right assumptions.
 
 :::{figure} ../images/ch13-scenario-modeling-framework.png
 :label: fig-ch13-scenario-modeling
@@ -235,13 +229,13 @@ A well-structured scenario model presents clear alternatives with consistent ass
 
 An account director asks: the organizer is considering moving a 250,000 net square foot show to a different city. What happens to our cost structure and our margin?
 
-**Step 1 — Define the scenario precisely.** "Moving venues" is not a model input. The inputs are: the union jurisdiction and its straight-time window, the hourly rates under that agreement, the material handling tariff at the new facility, the drayage distance from advance warehouse to dock, the dock count and how it constrains the move-in schedule, and the freight lane costs to the new city. Every one is a real number in a real document. **Copilot cannot supply any of them.** You bring them.
+**Step 1 — Define the scenario precisely.** "Moving venues" is not a model input. The inputs are the union jurisdiction and its straight-time window, the hourly rates under that agreement, the material handling tariff at the new facility, the drayage distance from advance warehouse to dock, the dock count and how it constrains move-in, and the freight lane costs to the new city. Every one is a real number in a real document. **Copilot cannot supply any of them.**
 
-**Step 2 — Build the assumption layer.** One clearly labeled table, a row per variable, a column per scenario, a source note per row. Every downstream formula reads from this table and nowhere else.
+**Step 2 — Build the assumption layer.** One labeled table, a row per variable, a column per scenario, a source note per row. Every downstream formula reads from this table and nowhere else.
 
 > *"I have an assumption table with rows for Union Straight Time Rate, Overtime Multiplier, Straight Time Window End, Material Handling Rate per 100 lbs, Advance Warehouse Storage Rate per 100 lbs, Estimated Inbound Weight, Net Booth Square Footage, Move-In Days Available, and Available Dock Positions, with columns for Scenario A, B, and C. Build the calculation structure deriving total labor hours, overtime hours, total labor cost, total material handling cost, and total direct cost for each scenario. Explain each formula and list every assumption the structure makes that I did not explicitly give you."*
 
-That last sentence is the most valuable clause you can put in a scenario prompt. Copilot will make implicit assumptions — how crew size scales with square footage, whether overtime applies to all hours or only those beyond the threshold, whether storage is charged per day or per event. Asking it to enumerate them converts silent risk into a review checklist.
+That last sentence is the most valuable clause you can put in a scenario prompt. Copilot will make implicit assumptions — how crew size scales with square footage, whether overtime applies to all hours or only those beyond the threshold, whether storage is charged per day or per event. Enumerating them converts silent risk into a review checklist.
 
 ### The Move-In Compression Scenario
 
@@ -253,11 +247,11 @@ Build this once and reuse it constantly, because the question recurs on nearly e
 
 ### Sensitivity Analysis
 
-A sensitivity table shows how the output moves as one input varies across a range — which reveals which assumptions actually matter.
+A sensitivity table shows how the output moves as one input varies across a range — revealing which assumptions actually matter.
 
 > *"Build a sensitivity table showing total labor cost as overtime share varies from 10 percent to 60 percent in 10-point increments, holding total hours constant at the Scenario B value. Use Excel's data table functionality and explain the setup."*
 
-Run the same structure on the inputs that drive the business: material handling rate against total drayage revenue, attach rate against service revenue, room block pickup against attrition exposure. In most GES cost models two or three inputs explain nearly all the variance and the rest is noise. The sensitivity table tells you which is which — and therefore where to spend estimating effort on every future show.
+Run the same structure on the inputs that drive the business: material handling rate against drayage revenue, attach rate against service revenue, room block pickup against attrition exposure. In most GES cost models two or three inputs explain nearly all the variance and the rest is noise. The sensitivity table tells you which is which — and therefore where to spend estimating effort on every future show.
 
 ### onPeak Pickup Forecasting and Attrition Risk
 
@@ -265,11 +259,7 @@ Housing is a forecasting problem with a contractual cliff at the end of it, whic
 
 > *"Using the historical pickup curves in this table — cumulative room nights booked by week out from show date for the last eight editions — build a projected pickup curve for the current show based on bookings to date, and calculate projected final pickup as a percentage of the contracted block. Then calculate attrition exposure in dollars at the contracted threshold for three cases: projected pickup, projected minus 10 points, and projected minus 20 points."*
 
-Then the strategic version:
-
-> *"Across all eight editions, is the booking window compressing — are bookings arriving later relative to show date each year? Show the week-out distribution by edition and quantify the shift."*
-
-If the booking curve is compressing across the portfolio, that changes how blocks are sized and when attrition is renegotiated — invisible in any one show, unmistakable across thirty.
+Then the strategic version: *"Across all eight editions, is the booking window compressing — are bookings arriving later relative to show date each year? Show the week-out distribution by edition and quantify the shift."* If the curve is compressing across the portfolio, that changes how blocks are sized and when attrition is renegotiated — invisible in any one show, unmistakable across thirty.
 
 ::::{admonition} ⚠️ A Model Is Only As Good As Its Assumptions
 :class: warning
@@ -303,9 +293,9 @@ The template from Section 2 produces the analysis. Cowork runs it without you.
 >
 > **Inputs:** The post-show reconciliation files in the SharePoint library *Show Reconciliation FY26*, the venue and jurisdiction attributes in *Ops Reference Data.xlsx*, and the rate reference sheet in *Tariff Reference — Current.xlsx*.
 >
-> **Definition of done:** One Excel workbook saved to the *Monthly Analytics* SharePoint folder, named with the reporting month, containing these labeled tabs — *Summary*, *Cost per CWT by Venue*, *Advance Warehouse vs. Direct Split*, *Freight Target Variance by Show*, *Flagged Lines*, and *Source Notes* listing every file used and the date pulled. Plus a Teams post in the *Logistics Analytics* channel with a five-bullet summary and a link to the workbook.
+> **Definition of done:** One Excel workbook saved to the *Monthly Analytics* SharePoint folder, named with the reporting month, with labeled tabs — *Summary*, *Cost per CWT by Venue*, *Advance Warehouse vs. Direct Split*, *Freight Target Variance by Show*, *Flagged Lines*, and *Source Notes* listing every file used and the date pulled. Plus a Teams post in the *Logistics Analytics* channel with a five-bullet summary and a link.
 >
-> **Constraints:** Use only rates present in the rate reference sheet — do not infer, estimate, or supply any rate not found there. If the rate reference sheet's effective date predates any show's move-in date, flag it prominently on the Summary tab and do not proceed with per-unit cost calculations for that show. Flag missing fields rather than filling gaps. Keep the Summary tab to one screen.
+> **Constraints:** Use only rates present in the rate reference sheet — do not infer, estimate, or supply any rate not found there. If the reference sheet's effective date predates any show's move-in date, flag it on the Summary tab and do not calculate per-unit costs for that show. Flag missing fields rather than filling gaps. Keep the Summary tab to one screen.
 >
 > **Approval scope:** Ask me before posting to Teams. Do not email anyone.
 >
@@ -319,15 +309,15 @@ The more powerful pattern fires on an event rather than a date. A show closes. T
 
 > **Outcome:** A post-show reconciliation package, produced when the final labor actuals file lands in the show's SharePoint folder.
 >
-> **Inputs:** The freight manifest, the labor actuals file, the exhibitor order extract, and the pre-show estimate — all in the show's SharePoint library.
+> **Inputs:** The freight manifest, labor actuals, exhibitor order extract, and pre-show estimate — all in that library.
 >
-> **Definition of done:** An Excel workbook with a margin bridge from pre-show estimate to reconciled actual, a variance tab isolating freight, labor, and service revenue contributions, and an exceptions tab listing every line that failed a validation check. A one-page Word summary for the account director. A draft email to the show team — **held for my review, not sent**.
+> **Definition of done:** An Excel workbook with a margin bridge from pre-show estimate to reconciled actual, a variance tab isolating freight, labor, and service revenue contributions, and an exceptions tab listing every line that failed validation. A one-page Word summary for the account director. A draft email to the show team — **held for my review, not sent**.
 >
-> **Constraints:** Rates come only from the show's exhibitor service kit and the applicable labor agreement, both of which are in the folder. Do not contact the organizer or any exhibitor. If the labor file is missing a jurisdiction on any crew call, flag it rather than inferring it from the venue.
+> **Constraints:** Rates come only from the show's exhibitor service kit and the applicable labor agreement, both in the folder. Do not contact the organizer or any exhibitor. If a crew call is missing a jurisdiction, flag it rather than inferring it from the venue.
 >
-> **Approval scope:** Ask before sending anything. Ask before sharing the workbook outside the show team.
+> **Approval scope:** Ask before sending anything or sharing outside the show team.
 
-The value here is timing, not effort. A reconciliation that starts the moment the last file lands — rather than the moment an analyst has a free afternoon — closes days earlier. Across a 4,000-show calendar, days earlier on every reconciliation is a materially different reporting and working-capital position for the business.
+The value here is timing, not effort. A reconciliation that starts the moment the last file lands — rather than when an analyst has a free afternoon — closes days earlier. Across a 4,000-show calendar, that is a materially different reporting position for the business.
 
 ```{list-table} Recurring GES Analyses Worth Automating with Cowork
 :header-rows: 1
@@ -367,31 +357,27 @@ The value here is timing, not effort. A reconciliation that starts the moment th
   - Reporting cadence is fixed and externally committed
 ```
 
-### The Portfolio and Benchmarking Assignments
+### Three Assignments That Are Impossible Manually
 
-Three Cowork patterns deserve calling out because they are effectively impossible manually and routine once automated.
+**Multi-show portfolio analysis for an account.** An account director covering six shows across four venues for one organizer needs a consolidated view before every QBR: reconciled performance across all six for the last eight editions, with tabs for revenue and margin by show, attach rate trend, freight variance, labor cost per net square foot by venue, and a movers tab naming the five largest year-over-year changes in either direction. Run quarterly, one week ahead of the QBR cycle.
 
-**Multi-show portfolio analysis for an account.** An account director covering six shows across four venues for one organizer needs a consolidated view before every quarterly business review. The assignment: consolidate reconciled performance across all six shows for the last eight editions, with tabs for revenue and margin by show, attach rate trend, freight variance, labor cost per net square foot by venue, and a movers tab identifying the five largest year-over-year changes in either direction. Run quarterly, one week before the QBR cycle.
+**Cost per square foot benchmarking across 24 facilities.** Nobody was ever going to build this by hand for a Tuesday planning meeting. For every show at every facility in the last 24 months, calculate total direct cost per net square foot split into material handling, labor, and other, normalize for show size band, and rank with each facility's own trend alongside. The output reframes the conversation about which venues are structurally expensive versus which shows were run expensively — different problems, different owners.
 
-**Cost per square foot benchmarking across 24 facilities.** Nobody was ever going to build this by hand for a Tuesday planning meeting. The assignment: for every show produced at every facility in the last 24 months, calculate total direct cost per net square foot split into material handling, labor, and other, normalize for show size band, and produce a ranked comparison with each facility's own trend. Run quarterly. The output reframes the conversation about which venues are structurally expensive versus which shows were run expensively — different problems, different owners.
-
-**ESG and emissions trend modeling.** Emissions per net square foot and per exhibitor, reuse rate on structural stand components, waste diverted from landfill — normalized by region and tracked over time. GES EMEA's data-led emissions reporting and the Roadmap to Net Zero are exactly the kind of externally committed, fixed-cadence reporting where a scheduled assembly job pays for itself immediately.
+**ESG and emissions trend modeling.** Emissions per net square foot and per exhibitor, reuse rate on structural stand components, waste diverted from landfill — normalized by region and tracked over time. GES EMEA's data-led emissions reporting and the Roadmap to Net Zero are exactly the externally committed, fixed-cadence reporting where a scheduled assembly job pays for itself immediately.
 
 ::::{admonition} ⚠️ Automation Multiplies Whatever You Built
 :class: danger
-
-A scheduled task is a force multiplier in both directions.
 
 An analysis with a subtle logic error, run once, produces one wrong answer someone probably catches. The same error on a monthly schedule produces twelve wrong answers, each more credible than the last because the format is familiar and nobody re-reads a report they have seen eleven times.
 
 Before putting any analysis on a schedule:
 
 - **Run it manually at least twice** and verify both outputs against source documents end to end.
-- **Require a Source Notes tab** on every artifact, listing every file used and the date pulled. Read it. It is the only way to notice when an upstream file stopped updating.
+- **Require a Source Notes tab** listing every file used and the date pulled. Read it. It is the only way to notice when an upstream file stopped updating.
 - **Build in a staleness check** — flag if any input file is older than expected, or if the rate reference predates the show.
-- **Set a review cadence for the automation itself.** Once a quarter, someone re-verifies the scheduled job against source. Automation is not fire-and-forget. It is fire-and-audit.
+- **Set a review cadence for the automation itself.** Once a quarter, re-verify the scheduled job against source. Automation is not fire-and-forget. It is fire-and-audit.
 
-Every Cowork task runs with **your** permissions and sees only what you can see. Data stays in the tenant, permissions are respected, and every action is auditable. Microsoft's own guidance stands: always review details before approving. People remain responsible for business decisions — and that responsibility does not lapse because the task ran at 6am while you were asleep.
+Every Cowork task runs with **your** permissions and sees only what you can see. Data stays in the tenant, permissions are respected, actions are auditable. Microsoft's own guidance stands: always review details before approving. People remain responsible for business decisions — and that does not lapse because the task ran at 6am while you were asleep.
 ::::
 
 ::::{admonition} 🧭 T.R.U.E. Check — Responsibility
@@ -399,9 +385,9 @@ Every Cowork task runs with **your** permissions and sees only what you can see.
 
 **Be responsible for our actions and deliver on our commitments.**
 
-Delegating an analysis to a scheduled task does not delegate accountability for it. If a report goes to a show operations director with your name in the "prepared by" field, you own it — whether you assembled it at your desk or reviewed it on your phone between a dock meeting and a labor call.
+Delegating an analysis to a scheduled task does not delegate accountability for it. If a report reaches a show operations director with your name in the "prepared by" field, you own it — whether you assembled it at your desk or reviewed it on your phone between a dock meeting and a labor call.
 
-The discipline that makes automation safe is simple and non-negotiable: **you read every artifact before anyone else does.** If you would not have time to review it, you do not have time to schedule it.
+The discipline that makes automation safe is non-negotiable: **you read every artifact before anyone else does.** If you would not have time to review it, you do not have time to schedule it.
 ::::
 
 ---
@@ -561,13 +547,13 @@ Individual capability is valuable. Institutional capability is transformational.
 A well-structured playbook converts individual expertise into institutional capability. Each section addresses a distinct failure mode — missing templates, weak prompts, skipped verification, inconsistent data, and unclear escalation.
 :::
 
-**Standard Templates.** Pre-built, validated workbooks for the analyses that run on a cadence: monthly cross-show drayage variance, per-show reconciliation, quarterly cost-per-square-foot benchmark, weekly onPeak pickup and attrition review, the venue-move and move-in compression models. Each with documentation covering inputs, outputs, and meaning.
+**Standard Templates.** Validated workbooks for the analyses that run on a cadence: monthly cross-show drayage variance, per-show reconciliation, quarterly cost-per-square-foot benchmark, weekly onPeak pickup and attrition review, the venue-move and compression models. Each documented for inputs, outputs, and meaning.
 
-**Proven Prompt and Assignment Library.** Curated Copilot prompts and Cowork assignments that have produced reliable, validated outputs — organized by analysis type, each recording the context it assumes, what it produces, and its known limitations. The Cowork assignments matter most here: a well-constructed five-part assignment with tested constraints is a genuine asset, and rewriting one from memory every quarter is exactly the waste this chapter exists to eliminate.
+**Proven Prompt and Assignment Library.** Copilot prompts and Cowork assignments that have produced reliable, validated outputs — organized by analysis type, each recording the context it assumes, what it produces, and its known limitations. The Cowork assignments matter most: a five-part assignment with tested constraints is a genuine asset, and rewriting one from memory every quarter is exactly the waste this chapter exists to eliminate.
 
-**Verification Protocols by Stakes Level.** Three tiers — lightweight (internal working analysis), standard (shared with management), rigorous (organizer-facing, settlement, or externally reported ESG figures) — with specific required steps at each. This prevents both under-verification of high-stakes outputs and over-verification that slows routine work to a crawl.
+**Verification Protocols by Stakes Level.** Three tiers — lightweight (internal working analysis), standard (shared with management), rigorous (organizer-facing, settlement, or externally reported ESG figures) — with required steps at each. Prevents both under-verification of high-stakes outputs and over-verification that slows routine work to a crawl.
 
-**Data Standards.** How data must be formatted before entering any template: column naming with units spelled out, required structure, source system documentation, currency normalization rules for international shows, and the known quality issues in common exports. Data standards prevent the failure mode where the formula is right and the input is wrong.
+**Data Standards.** How data must be formatted before entering any template: column naming with units spelled out, required structure, source system documentation, currency normalization for international shows, and the known quality issues in common exports. Prevents the failure mode where the formula is right and the input is wrong.
 
 **Escalation Guidelines.** What a flagged anomaly requires, from whom, through what channel. Prevents both under-escalation of real findings and the credibility damage of escalating routine variation.
 
@@ -575,7 +561,7 @@ A well-structured playbook converts individual expertise into institutional capa
 
 > *"I have built and validated a monthly cross-show drayage variance template. Write a one-page documentation brief covering: what it produces, what data goes in and in what format, what the key outputs mean, what verification steps the user must run before circulating, and who to contact when a number looks wrong. Write for a coordinator with solid Excel skills and no analytics background."*
 
-The playbook is the institutional return on every hour invested in this capability. It means the analysis does not live in one person's head or one person's laptop. It lives in the company — which, since **December 31, 2024**, when GES completed its separation from Viad under Truelink Capital and became independent for the first time in 55 years, is a company that sets its own standard and owns its own roadmap. Nobody else defines what good looks like here. That is a responsibility and an opportunity in the same sentence.
+The playbook is the institutional return on every hour invested in this capability. It means the analysis does not live in one person's head or one person's laptop. It lives in the company — which, since **December 31, 2024**, when GES completed its separation from Viad under Truelink Capital and became independent for the first time in 55 years, is a company that sets its own standard. Nobody else defines what good looks like here. That is a responsibility and an opportunity in the same sentence.
 
 ---
 
@@ -588,29 +574,27 @@ Build a scenario model in Excel using Copilot, then apply the full review protoc
 
 **Time required:** 30–40 minutes
 
-**Setup.** Create a workbook in your OneDrive for Business. Build two tables.
+**Setup.** In a OneDrive workbook, build two tables (Ctrl + T on each).
 
-*Table 1 — Show Profile:* Show Code, Venue, Union Jurisdiction, Net Booth Sq Ft, Exhibitor Count, Estimated Inbound Weight (lbs), Move-In Days Available.
+*Show Profile:* Show Code, Venue, Union Jurisdiction, Net Booth Sq Ft, Exhibitor Count, Estimated Inbound Weight (lbs), Move-In Days Available.
 
-*Table 2 — Assumptions:* one row per variable — Union Straight Time Rate (USD/hr), Overtime Multiplier, Straight Time Hours per Day, Crew Size, Estimated Install Hours per 1,000 Net Sq Ft, Material Handling Rate per 100 lbs (USD) — with columns for Value, **Source**, and **Effective Date**. Use realistic placeholder values. Format both as Excel tables (Ctrl + T).
+*Assumptions:* one row per variable — Union Straight Time Rate (USD/hr), Overtime Multiplier, Straight Time Hours per Day, Crew Size, Estimated Install Hours per 1,000 Net Sq Ft, Material Handling Rate per 100 lbs (USD) — with columns for Value, **Source**, and **Effective Date**. Realistic placeholder values are fine.
 
-**Step 1 — Baseline.** Ask Copilot: *"Using my Assumptions table, calculate total required install hours for the show in my Show Profile table, then split those hours into straight time and overtime given the available move-in days, crew size, and straight-time hours per day. Calculate total labor cost. Explain each formula and list every assumption you made that I did not provide."*
+**Step 1 — Baseline.** *"Using my Assumptions table, calculate total required install hours for the show in my Show Profile table, then split those hours into straight time and overtime given the available move-in days, crew size, and straight-time hours per day. Calculate total labor cost. Explain each formula and list every assumption you made that I did not provide."*
 
-Read the enumerated assumptions carefully. This is the most important output of the exercise.
+Read the enumerated assumptions carefully. That list is the most important output of this exercise.
 
-**Step 2 — Compression.** Ask: *"Now model the same show with move-in days reduced from 5 to 3, holding total required install hours constant. Show straight time hours, overtime hours, overtime share, and total labor cost for both cases, plus the incremental cost of compression in dollars and as a percentage of the baseline."*
+**Step 2 — Compression.** *"Model the same show with move-in days reduced from 5 to 3, holding total required install hours constant. Show straight time hours, overtime hours, overtime share, and total labor cost for both cases, plus the incremental cost of compression in dollars and as a percentage of baseline."*
 
-**Step 3 — Sensitivity.** Ask: *"Build a sensitivity table showing total labor cost as Estimated Install Hours per 1,000 Net Sq Ft varies from 6 to 16 in increments of 2, at 3 move-in days. Use Excel's data table functionality and explain the setup."*
+**Step 3 — Sensitivity.** *"Build a sensitivity table showing total labor cost as Estimated Install Hours per 1,000 Net Sq Ft varies from 6 to 16 in increments of 2, at 3 move-in days. Use Excel's data table functionality and explain the setup."* Which input moves the answer most? That is where your estimating effort belongs on every future show.
 
-Which input moves the answer most? That is where your estimating effort belongs on every future show.
+**Step 4 — Rate Sheet Rule check.** Go through the Assumptions table row by row. For every value, can you name the document it came from and its effective date? Any blank in the Source column is a guess — and a model built on it is a guess with better formatting. Fix it or flag it on the face of the model.
 
-**Step 4 — Rate Sheet Rule check.** Go through your Assumptions table row by row. For every value, can you name the document it came from and its effective date? If any row is blank in the Source column, that row is a guess — and a model built on it is a guess with better formatting. Fix it or flag it on the face of the model.
+**Step 5 — Review protocol.** Apply all five steps. Logic review on every formula. Assumption audit using Copilot's own enumeration. Boundary test at zero move-in days and at 100 percent overtime share. Source verification against a closed show whose answer you already know. Then have a colleague review the methodology.
 
-**Step 5 — Review protocol.** Apply all five steps. Logic review on every formula. Assumption audit using Copilot's own enumeration. Boundary test — what happens at zero move-in days, at 100 percent overtime share? Source verification against a closed show you already know the answer to. Then ask a colleague to review the methodology.
+**Step 6 — Write the assignment.** Write (do not run) a Cowork assignment using the five-part structure that would run this model across an account's full portfolio quarterly. Include an explicit Rate Sheet Rule constraint and a staleness check on the Effective Date column.
 
-**Step 6 — Write the assignment.** Finally, write (do not run) a Cowork assignment using the five-part structure that would run this model across every show in an account's portfolio on a quarterly schedule. Include an explicit constraint invoking the Rate Sheet Rule and a staleness check on the Effective Date column.
-
-Notice how different that feels from writing a prompt. You are specifying a deliverable to a colleague who will work while you sleep — which is exactly the professional shift this chapter has been building toward.
+Notice how different that feels from writing a prompt. You are specifying a deliverable to a colleague who will work while you sleep — the professional shift this chapter has been building toward.
 ::::
 
 ---
@@ -618,71 +602,47 @@ Notice how different that feels from writing a prompt. You are specifying a deli
 ## Glossary
 
 ```{glossary}
-Anomaly Detection
-  The process of identifying data points that deviate significantly from expected patterns. In exhibition analytics, used to flag unusual material handling charges, freight target overages, overtime spikes, and margin erosion across shows.
-
 Analytical Template
-  A pre-built, validated workbook designed to produce consistent output when given new input data, allowing any qualified user to run the same rigorous analysis without rebuilding it.
+  A pre-built, validated workbook that produces consistent output when given new input data, letting any qualified user run the same rigorous analysis without rebuilding it.
 
-Attrition
-  The contractual penalty owed when a contracted hotel room block is not filled to its committed level — the exposure that makes onPeak pickup forecasting a recurring modeled analysis.
-
-Cost per Net Square Foot
-  Total direct cost divided by net booth square footage — the primary normalization metric for comparing shows of different sizes and benchmarking across facilities.
+Anomaly Detection
+  Identifying data points that deviate significantly from expected patterns — at GES, unusual material handling charges, freight overages, overtime spikes, and margin erosion.
 
 Copilot Cowork
   Microsoft 365 Copilot's delegated-work experience, generally available June 16, 2026. Executes long-running, multi-step, multi-file tasks in a hosted cloud environment and returns finished artifacts. Supports scheduled prompts and event-driven tasks, and keeps working while your device is off.
 
-Drayage
-  The movement of exhibitor freight from the dock or advance warehouse to the booth space on the show floor and back out at move-out. Billed by weight, typically per hundredweight, under a published tariff.
-
-Dynamic Arrays
-  Excel functions (FILTER, SORT, SORTBY, UNIQUE, SEQUENCE) that automatically expand to fit the result size, eliminating manual range adjustment in templates that run on changing datasets.
+Cost per Net Square Foot
+  Total direct cost divided by net booth square footage — the primary normalization metric for comparing shows of different sizes and benchmarking across facilities.
 
 Event-Driven Task
-  A Cowork automation pattern that runs when something happens — a file posting, an email arriving, a Teams message — rather than on a fixed schedule. The natural trigger for post-show reconciliation.
-
-Freight Target
-  The budgeted freight cost for a show, against which actual freight cost is measured. Persistent variance at a venue indicates a target problem; isolated variance indicates a show problem.
-
-I&D (Install & Dismantle)
-  The labor function of building and tearing down exhibits and show infrastructure, tracked in crew hours against forecast and split by straight time, overtime, and double time.
+  A Cowork pattern that runs when something happens — a file posting, an email arriving — rather than on a fixed schedule. The natural trigger for post-show reconciliation.
 
 LET Function
-  An Excel function that names intermediate calculations within a formula, making complex logic readable and auditable — essential for any composite score a colleague will need to review.
+  An Excel function that names intermediate calculations within a formula, making complex logic readable and auditable — essential for any composite score a colleague must review.
 
 Margin Erosion
-  A sustained decline in reconciled gross margin across successive editions of the same recurring show. Rarely visible in a single reconciliation; reliably visible across a series.
+  A sustained decline in reconciled gross margin across successive editions of the same recurring show. Rarely visible in one reconciliation; reliably visible across a series.
 
 Move-In Compression
-  A reduction in the available move-in window without a corresponding reduction in required install work — the most common and most costly scenario modeled in show operations, driven primarily by overtime.
+  A reduction in the available move-in window without a matching reduction in required install work — the most common and most costly scenario modeled in show operations, driven primarily by overtime.
 
 Python in Excel
-  A Microsoft 365 feature allowing Python code to execute directly within Excel worksheets, accessing libraries including pandas, matplotlib, and scikit-learn, with execution in a secure Microsoft cloud environment.
+  A Microsoft 365 feature allowing Python to execute directly within Excel worksheets, accessing pandas, matplotlib, and scikit-learn, running in a secure Microsoft cloud environment.
 
 Rate Sheet Rule
   The GES discipline that Copilot may perform arithmetic on rates but must never supply them. Drayage tariffs, union hourly rates, and venue charges come from the published tariff, exhibitor service kit, or labor agreement — never from a generated answer.
 
-Room Block Pickup
-  The percentage of a contracted hotel room block actually booked by attendees, managed by onPeak. The forecast target for attrition exposure modeling.
-
 Scenario Modeling
-  An analytical technique evaluating outcomes under multiple defined future states — used at GES for venue changes, move-in compression, crew sizing, and portfolio planning.
+  Evaluating outcomes under multiple defined future states — at GES, venue changes, move-in compression, crew sizing, and portfolio planning.
 
 Scheduled Prompt
-  A Cowork automation pattern that runs a defined assignment on a recurring cadence, producing finished artifacts without a human initiating each run.
+  A Cowork pattern that runs a defined assignment on a recurring cadence, producing finished artifacts without a human initiating each run.
 
 Sensitivity Analysis
-  A technique showing how an output changes as a single input is systematically varied, revealing which assumptions actually drive the result and which are noise.
-
-Service Attach Rate
-  The percentage of exhibitors at a show purchasing at least one GES service. Analyzed alongside service revenue per exhibitor, since high attach with low revenue per exhibitor is a distinct commercial pattern.
+  Showing how an output changes as a single input is systematically varied, revealing which assumptions actually drive the result and which are noise.
 
 Union Jurisdiction
-  The labor agreement and work rules governing a venue or city — determining trades, rates, and the straight-time window. The correct comparison baseline for any labor anomaly analysis.
-
-XLOOKUP
-  An Excel function that searches a range or array and returns a corresponding value, with reverse search, multiple match modes, and explicit missing-value handling — the workhorse for joining venue and jurisdiction attributes onto operational files.
+  The labor agreement and work rules governing a venue or city — trades, rates, and the straight-time window. The correct comparison baseline for any labor anomaly analysis.
 ```
 
 ---

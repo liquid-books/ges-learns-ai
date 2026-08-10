@@ -45,8 +45,22 @@ node skills/book-writer/scripts/generate-image.js \
    Appointed Contractor), show organizer, exhibitor, exhibitor service kit, site survey,
    post-show reconciliation, union jurisdiction, carnet.
 
-5. **Text in images must be MINIMAL and CORRECT.** Image models garble long text. Use short
-   labels of 1–4 words. Never request paragraphs. Prefer 4–8 labeled elements maximum.
+5. **Text in images must be MINIMAL and CORRECT — THIS IS THE #1 FAILURE MODE.**
+   Image models garble text badly. Observed real failures: "FREISHT SEHEDULE" (freight
+   schedule), "EAPANDED FLOOR PLAN" (expanded), "POWER DISTINATION MAP" (distribution),
+   "FALL ECOURITOR LIST" (exhibitor list), "EVENT EENT".
+
+   HARD RULES to avoid this:
+   - **Maximum 6 text labels per image.** Fewer is better.
+   - **Every label must be 1–3 words.** Never 4+.
+   - **Prefer COMMON, SHORT words.** Long or industry-jargon words garble most often.
+     Risky: "distribution", "reconciliation", "jurisdiction", "schedule", "exhibitor".
+     Safer: "freight", "floor plan", "crew", "booth", "setup", "budget", "review".
+   - **Say this in the prompt explicitly:** "Render all text crisply and spell every word
+     correctly. Use only these exact labels: [list them]. Do not add any other text,
+     captions, watermarks, or small print anywhere in the image."
+   - When a concept needs a long word, use an ICON instead of a label.
+   - Never request paragraphs, sentences, body copy, or fake UI screenshot text.
 
 6. **If the image needs a company name, use "GES"** — never "BankUnited". Do not attempt to
    reproduce the real GES logo; use the plain letters "GES" or no branding at all.

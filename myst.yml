@@ -2,7 +2,7 @@
 # Docs: https://mystmd.org/guide/configuration
 version: 1
 project:
-  title: "GES Learns AI: A Microsoft Copilot & Cowork Master Class"
+  title: "GES Learns AI: A Microsoft Copilot Upskilling Master Class"
   authors:
     - name: Dr. Ernesto Lee
   # Book-level attributes
@@ -60,9 +60,9 @@ project:
 
 site:
   url: https://geslearnsai.com
-  title: "GES Learns AI: A Microsoft Copilot & Cowork Master Class"
+  title: "GES Learns AI: A Microsoft Copilot Upskilling Master Class"
   options:
-    logo_text: "GES Learns AI: A Microsoft Copilot & Cowork Master Class"
+    logo_text: "GES Learns AI: A Microsoft Copilot Upskilling Master Class"
     logo_url: "https://geslearnsai.com"
   parts:
     primary_sidebar_footer: primary-sidebar-footer.md

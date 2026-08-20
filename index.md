@@ -1,21 +1,21 @@
 ---
-title: "GES Learns AI: A Microsoft Copilot & Cowork Master Class"
+title: "GES Learns AI: A Microsoft Copilot Upskilling Master Class"
 description: |
   A hands-on master class in AI, Microsoft Copilot, and Copilot Cowork designed exclusively for GES professionals. Master the concepts, tools, and mindsets that will define competitive advantage in the experience industry for the next decade.
 ---
 
 :::{figure} ./images/cover.png
 :label: fig-cover
-:alt: GES Learns AI — A Microsoft Copilot & Cowork Master Class by Dr. Ernesto Lee
+:alt: GES Learns AI — A Microsoft Copilot Upskilling Master Class by Dr. Ernesto Lee
 :width: 100%
 :align: center
 
-*GES Learns AI: A Microsoft Copilot & Cowork Master Class* · Dr. Ernesto Lee
+*GES Learns AI: A Microsoft Copilot Upskilling Master Class* · Dr. Ernesto Lee
 :::
 
 # GES Learns AI
 
-**A Microsoft Copilot & Cowork Master Class for Global Experience Specialists**
+**A Microsoft Copilot Upskilling Master Class for Global Experience Specialists**
 *By Dr. Ernesto Lee*
 
 ---
